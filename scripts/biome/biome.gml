@@ -7,6 +7,9 @@ function biome(z){
 		var t = imgGrass;
 		if(ww.inBiome == Zone.cave){ t = imgDirt; }
 		if(ww.inBiome == Zone.beach){ t = imgSandBeach; }
+		if(ww.inBiome == Zone.jungle){ t = imgGrassJungle; }
+		if(ww.inBiome == Zone.deepForest){ t = imgGrassDeep; }
+		if(ww.inBiome == Zone.longGrass){ t = imgGrassLong; }
 		
 		
 		ww.fmap[a, b] = t;

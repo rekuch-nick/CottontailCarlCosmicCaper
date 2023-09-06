@@ -34,11 +34,17 @@ function worldGetRoom(xxx, yyy){ //26 x 14
 		if(xxx == 10 && yyy == 7){ // start screen
 			ww.bmap[7, 5] = imgNPCTurtle;
 			ww.txt = "The Dragons are attacking from SPACE, I can't believe it! \n\nOwl lives at south beach, he will know what to do.";
+			if(pc.eventTrigger[Event.gotStar]){
+				ww.txt = "You got the STAR!\n\nTake it to the PALACE just west of here.";
+			}
 		}
 		if(xxx == 11 && yyy == 9){ // wol's house
 			ww.bmap[7, 5] = imgNPCOwl;
 			pc.eventTrigger[Event.owlMarksStar] = true;
 			ww.txt = "A STAR fell to the east. If you follow the beach you might just find it.";
+			if(pc.eventTrigger[Event.gotStar]){
+				ww.txt = "You have a STAR!\n\nTurtle knows where all the SPACE DOORS are.\n\nYou should check with him anytime you feel lost.";
+			}
 		}
 		
 		
@@ -48,10 +54,29 @@ function worldGetRoom(xxx, yyy){ //26 x 14
 	
 	worldGetRoomGrass(xxx, yyy);
 	worldGetRoomBeach(xxx, yyy);
+	worldGetRoomJungle(xxx, yyy);
+	worldGetRoomDeepForest(xxx, yyy);
+	worldGetRoomLongGrass(xxx, yyy);
+	worldGetRoomSparse(xxx, yyy);
 	
 	
 	
-	
+	if(pc.xMap == 20 && pc.yMap == 0){
+		ww.txt = "The STAR pulses in your hand.\n\nThe universe wants you to defeat the dragon invasion, but cannot interfere directly.\n\nChoose a boon, to help you on your way:";
+		wmap("CCCCCCCCCCCCCCC");
+		wmap("CCCCCCCCCCCCCCC");
+		wmap("CCCCCCCCCCCCCCC");
+		wmap("CCCCCCCCCCCCCCC");
+		wmap("CCCCCCCCCCCCCCC");
+		wmap("CcccccccccccccC");
+		wmap("CcccccccccccccC");
+		wmap("CcccccccccccccC");
+		wmap("CcccccccccccccC");
+		wmap("CcccccccccccccC");
+		wmap("CcccccccccccccC");
+		wmap("CCCCCCCCCCCCCCC");
+		
+	}
 	
 	
 	

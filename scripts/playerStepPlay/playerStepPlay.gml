@@ -131,6 +131,10 @@ function playerStepPlay(){
 	
 	
 	
+	if(eventTrigger[Event.gotHealingHeart]){
+		hp = clamp(hp + .01, 0, hpMax);
+	}
+	
 	
 	
 	//animate
@@ -142,6 +146,11 @@ function playerStepPlay(){
 	}
 	var f = walkFrame;
 	
+	image_alpha = 1;
+	if(hurtTime > 0){
+		f = 10;
+		image_alpha = random_range(0, 1);
+	}
 	
 	image_index = f;
 	

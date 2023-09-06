@@ -34,6 +34,7 @@ enum State {
 	scroll,
 	load,
 	useStairs,
+	warpWind
 }
 
 enum Zone {
@@ -44,9 +45,13 @@ enum Zone {
 	longGrass,
 	beach,
 	desert,
-	swamp,
-	lava,
+	jungle,
+	deepForest,
+	volcano,
 	hills,
 	grave,
 	snow,
+	darkHills,
+	waste,
+	sparse,
 }

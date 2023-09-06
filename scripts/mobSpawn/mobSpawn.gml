@@ -1,5 +1,9 @@
 function mobSpawn(){
 	
+	if(pc.blockMobSpawn){
+		pc.blockMobSpawn = false;
+		return;
+	}
 	
 	var n = choose(3, 4);
 	var nWater = 0;
@@ -31,7 +35,7 @@ function mobSpawn(){
 		if(nWater > 0){
 			if(!ww.fmap[a, b].isWater){ continue; }
 			nWater --;
-			t = objMob;
+			t = objMobJelly;
 		} else {
 			if(ww.fmap[a, b].isWater){ continue; }
 		}
