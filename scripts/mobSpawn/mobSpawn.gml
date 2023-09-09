@@ -30,6 +30,22 @@ function mobSpawn(){
 		var b = irandom_range(1, 10);
 		var t = objMob;
 		
+		if(ww.inBiome == Zone.grass){
+			t = choose(objMob, objMob, objMob, objMobSnake);
+		}
+		
+		if(ww.inBiome == Zone.forest){
+			t = choose(objMobMossman);
+		}
+		
+		if(ww.inBiome == Zone.beach){
+			t = choose(objMobCrab);
+		}
+		
+		if(ww.inBiome == Zone.jungle){
+			t = choose(objMobGoon);
+		}
+		
 		if(ww.bmap[a, b] != noone){ continue; }
 		
 		if(nWater > 0){

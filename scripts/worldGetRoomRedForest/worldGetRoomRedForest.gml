@@ -1,0 +1,3 @@
+function worldGetRoomRedForest(xxx, yyy){
+
+}

@@ -4,7 +4,7 @@ function worldGetRoomBeach(xxx, yyy){
 		biome(Zone.beach);
 		wmap("pp.........pppp");
 		wmap("pp...........pp");
-		wmap("...............");
+		wmap("p..............");
 		wmap("...............");
 		wmap(".....pppp......");
 		wmap("......p........");
@@ -194,5 +194,71 @@ function worldGetRoomBeach(xxx, yyy){
 		wmap("pp..........~~~");
 	}
 	
+	
+	
+	
+	if(xxx == 9 && yyy == 9){
+		biome(Zone.beach);
+		wmap("ppppppppppppppp");
+		wmap("pp...........pp");
+		wmap("p.............p");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("~~~.........~~~");
+		wmap("~~~~~......~~~~");
+		wmap("~~~~~~~~~~~~~~~");
+	}
+	
+	if(xxx == 8 && yyy == 9){
+		biome(Zone.beach);
+		wmap("//pppp...pppppp");
+		wmap("///ppp...pppppp");
+		wmap("///ppp...pppppp");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
+	}
+	
+	if(xxx == 7 && yyy == 9){
+		biome(Zone.beach);
+		wmap("pppppp...ppp///");
+		wmap("pppppp...pppp//");
+		wmap("pppppp...pppp//");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("...............");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
+	}
+	
+	if(xxx == 6 && yyy == 9){
+		biome(Zone.beach);
+		wmap("~~ppppppppppppp");
+		wmap("~~ppppppppppppp");
+		wmap("~~ppppppppppppp");
+		wmap("~~.............");
+		wmap("~~.............");
+		wmap("~~.............");
+		wmap("~~~............");
+		wmap("~~~~~~~........");
+		wmap("~~~~~~~~~~.....");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
+	}
 
 }

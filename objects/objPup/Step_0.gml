@@ -23,6 +23,7 @@ if(gotIt){
 		pc.xWarpPoint = ww.roomWidth / 2; 
 		pc.yWarpPoint = (10 * 64 + 32);
 		pc.blockMobSpawn = true;
+		pc.hp = pc.hpMax;
 	} else if(pc.xMap == 20 && pc.yMap == 0){
 		instance_create_depth(0, 0, ww.layerE, objTornado);
 		ww.state = State.warpWind;

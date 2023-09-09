@@ -26,12 +26,16 @@ yTarTile = yTile;
 
 hurtTime = 0;
 
+rot = 0;
+
 hp = 15;
 hpMax = 15;
 
 shotKind = objMobShotShort;
 shootCDMax = 30 * 3;
 shootCD = shootCDMax - choose(0, 10, 20);
+shotCuster = 0; shotClusterMax = 0; shotClusterCDMas = 20;
+onlyShootWhilePlayerShoots = false;
 
 bumpPow = 20;
 

@@ -51,7 +51,7 @@ if(ySpeed < 0 && y < yTar){ y = yTar; ySpeed = 0; }
 	
 
 
-
+image_angle += rot * getDirection(image_xscale);
 
 
 xTile = floor(x / 64); yTile = floor(y / 64);
@@ -60,9 +60,22 @@ xTile = floor(x / 64); yTile = floor(y / 64);
 
 
 if(shotKind != noone){
-	shootCD --;
+	if(!onlyShootWhilePlayerShoots || pc.mouseLHold || pc.mouseRHold){
+		shootCD --;
+	}
 	if(shootCD < 1){
 		shootCD = shootCDMax;
+		
+		if(shotClusterMax > 0){
+			if(shotCuster > 0){
+				shotCuster --;
+				shootCD = shotClusterCDMas;
+			} else {
+				shotCuster = shotClusterMax;
+			}
+		}
+		
+		
 		instance_create_depth(x, y, ww.layerE, shotKind);
 	}
 }

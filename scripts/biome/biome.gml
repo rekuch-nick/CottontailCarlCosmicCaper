@@ -10,6 +10,7 @@ function biome(z){
 		if(ww.inBiome == Zone.jungle){ t = imgGrassJungle; }
 		if(ww.inBiome == Zone.deepForest){ t = imgGrassDeep; }
 		if(ww.inBiome == Zone.longGrass){ t = imgGrassLong; }
+		if(ww.inBiome == Zone.sparse){ t = imgGrassSparse; }
 		
 		
 		ww.fmap[a, b] = t;

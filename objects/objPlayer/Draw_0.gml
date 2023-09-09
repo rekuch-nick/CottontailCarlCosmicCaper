@@ -14,7 +14,7 @@ if(ww.txt != "" && ww.txtTime > 0){
 	
 	var s = ww.txt;
 	var sl = string_length(s);
-	var slMax = ceil(ww.txtTime / 2);
+	var slMax = ceil(ww.txtTime / 1.5);
 	if(sl > slMax){
 		s = string_delete(s, slMax, string_length(s) );
 	}
