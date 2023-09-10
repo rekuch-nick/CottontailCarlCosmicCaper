@@ -34,7 +34,10 @@ enum State {
 	scroll,
 	load,
 	useStairs,
-	warpWind
+	warpWind,
+	enteringSpace,
+	leaveSpace,
+	pause,
 }
 
 enum Zone {
@@ -54,4 +57,11 @@ enum Zone {
 	darkHills,
 	waste,
 	sparse,
+}
+
+enum Move {
+	randomPoint,
+	hunt,
+	stayTop,
+	avoid,
 }

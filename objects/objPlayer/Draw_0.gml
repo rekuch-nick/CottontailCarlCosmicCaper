@@ -22,8 +22,25 @@ if(ww.txt != "" && ww.txtTime > 0){
 	draw_text_ext_transformed(48, 48, s, 32, (ww.roomWidth - (48 * 2)), 1, 1, 0);
 }
 
-
+if(mutter != ""){
+	draw_rectangle_color(x - 240, y - 130, x + 240, y - 50, c_black, c_black, c_black, c_black, false);
+	draw_set_halign(fa_center);
+	var yo = 120;
+	draw_text_ext_transformed(x, y - yo, mutter, 40, 460, 1, 1, 0);
+	draw_set_halign(fa_left);
+	mutter = "";
+}
 
 
 
 draw_self();
+if(inSpace){
+	draw_sprite_stretched(imgPupStar, 0, x-(8 * image_yscale), y, 16 * image_yscale, 16 * image_yscale);
+}
+if(sp >= spMax){
+	var s = imgPlayerShield;
+	var xo = getDirection(pc.image_xscale) == 1 ? -16 : -48;
+	var yo = -20;
+	if(pc.image_index == 1){ yo += 4; }
+	draw_sprite_stretched(s, 0, x+xo, y+yo, 64, 64);
+}

@@ -1,9 +1,7 @@
 if(pc.hurtTime > 0){ return; }
 
 
-pc.hp -= pow; ///
-pc.hurtTime = 30; ///
 
-
+hurtPlayer(pow, isBlockable);
 
 if(destroyOnHit){ instance_destroy(); }

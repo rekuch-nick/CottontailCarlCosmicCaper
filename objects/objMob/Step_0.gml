@@ -15,17 +15,21 @@ if(falling){
 
 
 
-
+creatureBuffDecay();
+if(burnTime > 0){ hp -= .15; }
 
 thinkCD --;
 if(thinkCD < 1){
 	thinkCD = thinkCDMax;
+	if(turnOnThink){
+		image_angle += choose(90, -90);
+	}
 	if(gridMove){
 		mobChooseAdjacentTile();
 		xTar = xTarTile * 64 + 32;
 		yTar = yTarTile * 64 + 32;
 	} else {
-				
+		mobChooseMoveTarget();
 	}
 	
 	
@@ -88,7 +92,7 @@ hurtTime = clamp(hurtTime - 1, 0, 60);
 
 if(hp < 1){
 	if(irandom_range(0, 99) < dropChance){
-		instance_create_depth(x, y, ww.layerP, dropRoll);
+		instance_create_depth(x, y, ww.layerP, mobRollDrop());
 	}
 	instance_destroy();
 }

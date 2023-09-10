@@ -215,9 +215,9 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 8 && yyy == 9){
 		biome(Zone.beach);
-		wmap("//pppp...pppppp");
-		wmap("///ppp...pppppp");
-		wmap("///ppp...pppppp");
+		wmap("/..........pppp");
+		wmap("/..........pppp");
+		wmap("/........pppppp");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");

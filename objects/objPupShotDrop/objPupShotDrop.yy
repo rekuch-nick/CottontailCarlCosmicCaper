@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgPupShotUpMore",
-    "path": "sprites/imgPupShotUpMore/imgPupShotUpMore.yy",
+    "name": "imgPupFindShotUpMore",
+    "path": "sprites/imgPupFindShotUpMore/imgPupFindShotUpMore.yy",
   },
   "spriteMaskId": null,
   "visible": true,

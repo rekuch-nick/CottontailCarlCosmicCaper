@@ -46,6 +46,10 @@ function mobSpawn(){
 			t = choose(objMobGoon);
 		}
 		
+		if(ww.inBiome == Zone.sparse){
+			t = choose(objMobWorm);
+		}
+		
 		if(ww.bmap[a, b] != noone){ continue; }
 		
 		if(nWater > 0){

@@ -23,35 +23,62 @@ if(pc.eventTrigger[Event.owlMarksStar] && !pc.eventTrigger[Event.gotStar]){
 	draw_rectangle_color(xx+4, yy+4, xx+12, yy+12, c, c, c, c, false);
 }
 
-s = "$ " + string(pc.coins); // + " * " + string(0);
+s = "$ " + string(pc.coins) + "       B " + string(pc.bombs);
 draw_text(x + 10, 422, s);
 
 
 
 /// bars
 var x1 = x + 8;
-var w = (pc.hp / pc.hpMax) * 304;
+var w = max((pc.hp / pc.hpMax) * 304, 0);
 var y1 = y + (44 * 4);
 var y2 = y1 + 32;
 draw_rectangle_color(x1, y1, x1 + w, y2, c_maroon, c_maroon, c_red, c_red, false);
 draw_text(x1+4, y1+8, string(floor(pc.hp)));
 
 if(pc.spMax > 0){
-	w = (pc.sp / pc.spMax) * 304;
+	w = max((pc.sp / pc.spMax) * 304, 0);
 	y1 = y + (54 * 4);
 	y2 = y1 + 20;
 	draw_rectangle_color(x1, y1, x1 + w, y2, c_dkgray, c_dkgray, c_ltgray, c_ltgray, false);
 }
 
-w = (pc.mp / pc.mpMax) * 304;
+w = max((pc.mp / pc.mpMax) * 304, 0);
 y1 = y + (92 * 4);
 y2 = y1 + 20;
 draw_rectangle_color(x1, y1, x1 + w, y2, c_blue, c_blue, c_aqua, c_aqua, false);
 draw_text(x1+4, y1+2, string(floor(pc.mp)));
 
 if(pc.bpMax > 0){
-	w = (pc.bp / pc.bpMax) * 304;
+	w = max((pc.bp / pc.bpMax) * 304, 0);
 	y1 = y + (99 * 4);
 	y2 = y1 + 20;
 	draw_rectangle_color(x1, y1, x1 + w, y2, c_orange, c_orange, c_yellow, c_yellow, false);
 }
+
+
+
+var im = imgPupShotUpNormal;
+if(pc.shotPower == Shot.rapid){ im = imgPupShotUpFast; }
+if(pc.shotPower == Shot.wide){ im = imgPupShotUpWide; }
+if(pc.shotPower == Shot.burst){ im = imgPupShotUpBurst; }
+draw_sprite_stretched(im, 0, x + (8), y + (68 * 4), 64, 64);
+
+
+im = imgBlank;
+if(pc.wepSelected == 0){ im = imgPlayerRang; }
+if(pc.wepSelected == 1){ im = imgPlayerStar; }
+if(pc.wepSelected == 2){ im = imgPupTorch; }
+if(pc.wepSelected == 3){ im = imgPupBomb; }
+draw_sprite_stretched(im, 0, x + (128), y + (68 * 4), 64, 64);
+
+
+
+for(var i=0; i<11; i++){
+	if(pc.wepLevels[i] > 0){
+		if(i != 3 || pc.bombs > 0){
+			draw_sprite_stretched(imgWepNotSelected, 0, x + 8 + (i * 28), y + (68 * 5), 24, 24);
+		}
+	}
+}
+draw_sprite_stretched(imgWepSelected, 0, x + 8 + (pc.wepSelected * 28), y + (68 * 5), 24, 24);

@@ -5,6 +5,8 @@ ySpeed = 0;
 grav = 0;
 
 
+isBlockable = true;
+
 pow = 10;
 moveSpeed = 10;
 

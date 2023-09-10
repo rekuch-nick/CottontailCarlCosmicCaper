@@ -17,3 +17,10 @@ xTurn = true;
 hurtTime = 0;
 hp = 10;
 hpMax = 10;
+
+burnTime = 0;
+poisonTime = 0;
+slowTime = 0;
+tangleTime = 0;
+muteTime = 0;
+stunTime = 0;

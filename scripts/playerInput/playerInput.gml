@@ -34,9 +34,21 @@ function playerInput(){
 	
 	
 	
+	charPressed = "";
+	if(keyboard_check_pressed(ord("1"))){ charPressed = "1"; }
+	if(keyboard_check_pressed(ord("2"))){ charPressed = "2"; }
+	if(keyboard_check_pressed(ord("3"))){ charPressed = "3"; }
+	if(keyboard_check_pressed(ord("4"))){ charPressed = "4"; }
+	if(keyboard_check_pressed(ord("5"))){ charPressed = "5"; }
+	if(keyboard_check_pressed(ord("6"))){ charPressed = "6"; }
+	if(keyboard_check_pressed(ord("7"))){ charPressed = "7"; }
+	if(keyboard_check_pressed(ord("8"))){ charPressed = "8"; }
+	if(keyboard_check_pressed(ord("9"))){ charPressed = "9"; }
+	if(keyboard_check_pressed(ord("0"))){ charPressed = "0"; }
 	
-	
-	
+	zIn = 0;
+	if(mouse_wheel_down()){ zIn ++; }
+	if(mouse_wheel_up()){ zIn --; }
 	
 	
 	

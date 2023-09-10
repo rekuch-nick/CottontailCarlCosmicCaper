@@ -10,6 +10,5 @@ onlyShootWhilePlayerShoots = true;
 
 bumpPow = 20;
 
-dropChance = 100;
-dropRoll = choose(objPupCoin);
+
 

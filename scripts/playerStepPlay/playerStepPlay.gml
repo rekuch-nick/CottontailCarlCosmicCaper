@@ -2,6 +2,13 @@ function playerStepPlay(){
 	if(ww.txtTime < 30 * 30){ ww.txtTime ++; }
 	
 	
+	if(inSpace){ playerStepPlaySpace(); }
+	
+	
+	
+		
+	
+	
 	
 	if(xIn < 0 && image_xscale > 0){ image_xscale *= -1; }
 	if(xIn > 0 && image_xscale < 0){ image_xscale *= -1; }
@@ -101,14 +108,74 @@ function playerStepPlay(){
 	
 	
 	if(shootCD > 0){ shootCD --; } 
-	if (mouseLHold){
+	if(mouseLHold){
 		if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
 		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
 		if(shootCD < 1){
 			shootCD = shootCDMax;
+			if(pc.shotPower == Shot.rapid){ shootCD -= 10; }
+			var n = pc.shotAmount;
+			if(pc.shotPower == Shot.wide){ n += 2; }
 			var xo = image_xscale > 0 ? 20 : -20;
-			instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerBeams);
+			for(var i=0; i<n; i++){
+				var s = instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerBeams);
+				var nn = ceil(i / 2) * 2;
+				if(i % 2 == 1){ nn *= -1; }
+				s.offSet = nn;
+			}
 		}
+		
+	} else if(mouseRHold){
+		if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
+		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
+		
+			//boomarangs
+		if(wepSelected == 0 && wepLevels[0] > 0 && shootCD < 1 && 
+							instance_number(objPlayerRang) < rangsMax &&
+							mp >= wepCost[wepSelected]
+			){
+				shootCD = wepCDMax[wepSelected];
+				mp -= wepCost[wepSelected];
+				instance_create_depth(x, y, ww.layerE, objPlayerRang);
+			
+		}
+		
+			//stars
+		if(wepSelected == 1 && wepLevels[1] > 0 && shootCD < 1 && 
+							mp >= wepCost[wepSelected]
+			){
+				shootCD = wepCDMax[wepSelected];
+				mp -= wepCost[wepSelected];
+				for(var i=0; i<5; i++){
+					var s = instance_create_depth(x, y, ww.layerE, objPlayerStar);
+					var nn = ceil(i / 2) * 3;
+					if(i % 2 == 1){ nn *= -1; }
+					s.offSet = nn;
+				}
+			
+		}
+		
+			//torch
+		if(wepSelected == 2 && wepLevels[2] > 0 && shootCD < 1 && 
+							mp >= wepCost[wepSelected]
+			){
+				shootCD = wepCDMax[wepSelected];
+				mp -= wepCost[wepSelected];
+				instance_create_depth(x, y, ww.layerE, objPlayerFire);
+			
+		}
+		
+			//boomarangs
+		if(wepSelected == 3 && wepLevels[3] > 0 && shootCD < 1 && bombs > 0){
+				shootCD = wepCDMax[wepSelected];
+				bombs --;
+				instance_create_depth(x, y, ww.layerE, objPlayerBomb);
+		}
+		
+		
+			
+			
+		
 		
 	}
 	
@@ -129,13 +196,35 @@ function playerStepPlay(){
 		}
 	}
 	
+	if(!inOverworld){
+		if(xTile >= 0 && yTile >= 0 && xTile < 15 && yTile < 12){
+			if(ww.fmap[xTile, yTile] != noone && ww.fmap[xTile, yTile].sprite_index == imgSpaceDoor){
+				if(eventTrigger[Event.gotStar]){
+					if(xMap == 8 && yMap == 6){ spaceLevel = 1; }
+					if(spaceLevel != 0){
+						ww.state = State.enteringSpace;
+						xCave = x;
+						yCave = y + 64;
+					}
+				} else {
+					mutter = "I can't use a space door without a STAR!";
+				}
+			}
+		}
+	}
+	
 	
 	
 	if(eventTrigger[Event.gotHealingHeart]){
 		hp = clamp(hp + .01, 0, hpMax);
 	}
 	
+	var mpGain = .01;
+	mp = clamp(mp + mpGain, 0, mpMax);
 	
+	if(eventTrigger[Event.gotShield]){
+		sp = clamp(sp + 1, -900, spMax);
+	}
 	
 	//animate
 	aniCD --;
@@ -144,6 +233,7 @@ function playerStepPlay(){
 		aniCD = 20;
 		walkFrame = walkFrame == 0 ? 1 : 0;
 	}
+	if(inSpace){ walkFrame = 1; }
 	var f = walkFrame;
 	
 	image_alpha = 1;
