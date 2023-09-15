@@ -24,6 +24,10 @@ function wmap(s){
 		ww.rockWall = imgRockWallGrey;
 	}
 	
+	if(ww.inBiome == Zone.redForest){
+		ww.bush1 = imgBushRed;
+	}
+	
 	
 	
 	for(var a=0; a<15; a++){
@@ -43,6 +47,9 @@ function wmap(s){
 		if(c == "T"){ ww.bmap[a, b] = imgPalaceWallTop; }
 		if(c == "A"){ ww.bmap[a, b] = imgSkullBlock; }
 		if(c == "F"){ ww.bmap[a, b] = imgFireBlock; }
+		
+		
+		if(c == "X"){ ww.bmap[a, b] = imgMobArmorStill; }
 		
 		
 		if(c == "="){ ww.fmap[a, b] = imgDoorway; }

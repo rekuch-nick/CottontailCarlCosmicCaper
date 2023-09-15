@@ -30,7 +30,7 @@ function worldGetRoomCave(xxx, yyy){
 	if(xxx == 11 && yyy == 9){ // owl's house
 		ww.bmap[7, 5] = imgNPCOwl;
 		pc.eventTrigger[Event.owlMarksStar] = true;
-		ww.txt = "A STAR fell to the east. If you follow the beach you might just find it.";
+		ww.txt = "A STAR fell to the east. If you follow the beach you might just find it.\n\nI'll mark your map.";
 		if(pc.eventTrigger[Event.gotStar]){
 			ww.txt = "You have a STAR!\n\nTurtle knows where all the SPACE DOORS are.\n\nYou should check with him anytime you feel lost.";
 		}

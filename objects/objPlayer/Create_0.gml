@@ -12,7 +12,7 @@ mutter = "";
 pushingTime = 0;
 
 xMap = 10; yMap = 7;
-//xMap = 17; yMap = 5;
+	//xMap = 12; yMap = 6;
 
 xWarpPoint = x;
 yWarpPoint = y;
@@ -52,6 +52,9 @@ wepLevels = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
 wepCost = [10, 2, 10, 0, 2, 2, 2, 2, 2, 2 , 2];
 wepCDMax = [30, 12, 25, 30, 30, 30, 30, 30, 30, 30, 30];
 
+
+lionCD = irandom_range(5, 7);
+lionCDMax = 7;
 
 
 for(var i=0; i<100; i++){

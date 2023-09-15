@@ -5,6 +5,17 @@ function mobSpawn(){
 		return;
 	}
 	
+	
+	if(!pc.inOverworld){ return; } ///
+	
+	if(pc.xMap > 18){ return; }
+	
+	
+	
+	
+	
+	
+	
 	var n = choose(3, 4);
 	var nWater = 0;
 	
@@ -21,6 +32,18 @@ function mobSpawn(){
 	
 	
 	if(!pc.inOverworld){ n = 0; }
+	
+	
+	if(n > 0){
+		pc.lionCD --;
+		if(pc.lionCD  < 1){
+			pc.lionCD = pc.lionCDMax - irandom_range(0, 2);
+			instance_create_depth(ww.roomWidth / 2, room_height / 2, ww.layerE, objLionEvent);
+			return;
+		}
+	}
+	
+	
 	
 	
 	
@@ -47,7 +70,16 @@ function mobSpawn(){
 		}
 		
 		if(ww.inBiome == Zone.sparse){
-			t = choose(objMobWorm);
+			//t = choose(objMobWorm);
+			t = choose(objMobSpinner);
+		}
+		
+		if(ww.inBiome == Zone.redForest){
+			t = choose(objMobHunter);
+		}
+		
+		if(ww.inBiome == Zone.longGrass){
+			t = choose(objMobLobber);
 		}
 		
 		if(ww.bmap[a, b] != noone){ continue; }

@@ -1,6 +1,12 @@
 if(ww.state != State.play){ return; }
 if(firstFrame){
 	firstFrame = false;
+	
+	if(isLob){
+		ySpeed = -10; grav = 1;
+		xTar = pc.x >= x ? 1000 : - 10;
+	}
+	
 	var angle = arctan2(yTar - y, xTar - x);
 	xSpeed = cos(angle) * moveSpeed;
 	ySpeed = sin(angle) * moveSpeed;
@@ -13,6 +19,7 @@ if(firstFrame){
 
 x += xSpeed;
 y += ySpeed;
+ySpeed += grav;
 
 xTile = floor(x / 64);
 yTile = floor(y / 64);

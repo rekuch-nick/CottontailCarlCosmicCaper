@@ -25,5 +25,7 @@ yTar = pc.y;
 
 firstFrame = true;
 
+isLob = false;
+
 hitList = [];
 destroyOnHit = true;
