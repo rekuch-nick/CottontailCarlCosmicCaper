@@ -3,6 +3,7 @@ function creatureCanPoint(a, b, o){
 		o = id;
 	}
 	
+	if(o == pc && pc.debug){ return true; }
 	
 	var blo = collision_point(a, b, objBlock, true, true);
 	if(blo != noone){ return false; }

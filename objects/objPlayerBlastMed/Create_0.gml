@@ -17,3 +17,5 @@ destroyOnHit = false;
 passWall = true;
 
 image_alpha = .4;
+
+isBasicShot = false;

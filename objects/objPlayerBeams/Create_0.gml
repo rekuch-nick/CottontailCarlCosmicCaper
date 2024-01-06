@@ -5,7 +5,7 @@ aly = 1;
 
 pow = 10;
 
-moveSpeed = 14;
+moveSpeed = 18;
 
 pointAtTarget = true;
 xTar = mouse_x;

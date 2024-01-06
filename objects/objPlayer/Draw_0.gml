@@ -1,3 +1,9 @@
+if(debug){
+	draw_set_alpha(.15);
+	draw_rectangle_color(x - 32, y - 32, x + 32, y + 32, c_lime, c_yellow, c_aqua, c_white, false);
+	draw_set_alpha(1);
+}
+
 if(ww.state == State.useStairs){
 	draw_set_alpha(ww.stairAlpha);
 	draw_rectangle_color(0, 0, ww.roomWidth, room_height, c_black, c_black, c_black, c_black, false);

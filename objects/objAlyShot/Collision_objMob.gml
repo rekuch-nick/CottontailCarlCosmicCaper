@@ -1,9 +1,13 @@
 if(!arrayContains(hitList, other)){
 	arrayAdd(hitList, other);
 	
-	other.hurtTime = 20;
-	other.burnTime = max(other.burnTime, burnPow);
-	hurtMonster(other, id);
+	if(other.basicImmunity && isBasicShot){ 
+		show_debug_message(123123)
+	} else {
+		other.hurtTime = 20;
+		other.burnTime = max(other.burnTime, burnPow);
+		hurtMonster(other, id);
+	}
 	
 	if(destroyOnHit){ timeCD = 0; }
 	

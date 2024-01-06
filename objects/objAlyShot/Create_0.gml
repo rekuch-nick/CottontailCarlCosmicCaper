@@ -30,3 +30,5 @@ firstFrame = true;
 
 hitList = [];
 destroyOnHit = true;
+
+isBasicShot = true;

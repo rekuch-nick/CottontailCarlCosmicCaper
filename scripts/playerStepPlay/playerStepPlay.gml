@@ -16,6 +16,7 @@ function playerStepPlay(){
 	
 	
 	var spd = moveSpeed;
+	if(debug){ spd *= 2; }
 	if(xIn != 0 && yIn != 0){
 		spd /= 1.4;
 	}

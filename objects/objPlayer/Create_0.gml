@@ -3,7 +3,8 @@ image_xscale = 4;
 image_yscale = 4;
 icd = 0;
 depth = -900;
-
+debug = false;
+debugPossible = true;
 
 playerInput();
 mutter = "";

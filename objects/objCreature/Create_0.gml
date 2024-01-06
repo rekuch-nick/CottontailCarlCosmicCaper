@@ -24,3 +24,5 @@ slowTime = 0;
 tangleTime = 0;
 muteTime = 0;
 stunTime = 0;
+
+basicImmunity = false;

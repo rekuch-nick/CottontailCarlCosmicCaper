@@ -1,5 +1,9 @@
 function playerStepPlayOrPause(){
 	
+	if(debugPossible && keyboard_check_pressed(vk_backspace)){
+		debug = !debug;
+	}
+	
 	if(charPressed == "1" && wepLevels[0] > 0){ wepSelected = 0; }
 	if(charPressed == "2" && wepLevels[1] > 0){ wepSelected = 1; }
 	if(charPressed == "3" && wepLevels[2] > 0){ wepSelected = 2; }

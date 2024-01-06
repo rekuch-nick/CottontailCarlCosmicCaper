@@ -69,6 +69,10 @@ function mobSpawn(){
 			t = choose(objMobGoon);
 		}
 		
+		if(ww.inBiome == Zone.deepForest){
+			t = choose(objMobEnt);
+		}
+		
 		if(ww.inBiome == Zone.sparse){
 			//t = choose(objMobWorm);
 			t = choose(objMobSpinner);
@@ -81,6 +85,8 @@ function mobSpawn(){
 		if(ww.inBiome == Zone.longGrass){
 			t = choose(objMobLobber);
 		}
+		
+		
 		
 		if(ww.bmap[a, b] != noone){ continue; }
 		

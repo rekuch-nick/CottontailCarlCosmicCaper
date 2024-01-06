@@ -17,3 +17,5 @@ timeCD = 60;
 image_alpha = .6;
 destroyOnHit = false;
 gro = .1;
+
+isBasicShot = false;
