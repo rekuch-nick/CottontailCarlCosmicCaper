@@ -2,6 +2,12 @@ function playerStepPlayOrPause(){
 	
 	if(debugPossible && keyboard_check_pressed(vk_backspace)){
 		debug = !debug;
+		if(debug){
+			hp = hpMax;
+			mp = mpMax;
+			coins = coinsMax;
+			bombs = bombsMax;
+		}
 	}
 	
 	if(charPressed == "1" && wepLevels[0] > 0){ wepSelected = 0; }

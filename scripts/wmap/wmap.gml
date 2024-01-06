@@ -19,6 +19,10 @@ function wmap(s){
 		ww.bush1 = imgBushDeep;
 	}
 	
+	if(ww.inBiome == Zone.desert){
+		ww.bush1 = imgCactus;
+	}
+	
 	if(ww.inBiome == Zone.longGrass){
 		ww.bush1 = imgBushRed;
 		ww.rockWall = imgRockWallGrey;

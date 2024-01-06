@@ -12,6 +12,8 @@ function biome(z){
 		if(ww.inBiome == Zone.longGrass){ t = imgGrassLong; }
 		if(ww.inBiome == Zone.sparse){ t = imgGrassSparse; }
 		if(ww.inBiome == Zone.redForest){ t = imgGrassSparse; }
+		if(ww.inBiome == Zone.hills){ t = imgDirtLight; }
+		if(ww.inBiome == Zone.desert){ t = imgSand; }
 		
 		
 		ww.fmap[a, b] = t;

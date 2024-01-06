@@ -23,9 +23,10 @@ if(pc.eventTrigger[Event.owlMarksStar] && !pc.eventTrigger[Event.gotStar]){
 	draw_rectangle_color(xx+4, yy+4, xx+12, yy+12, c, c, c, c, false);
 }
 
-s = "$ " + string(pc.coins) + "       B " + string(pc.bombs);
+s = "$ " + string(pc.coins);
 draw_text(x + 10, 422, s);
-
+s = "B " + string(pc.bombs);
+draw_text(x + 210, 422, s);
 
 
 /// bars
