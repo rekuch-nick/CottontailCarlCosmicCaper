@@ -1,5 +1,6 @@
 function playerStepScroll(){
 	var ss = 32;
+	if(pc.debug){ ss = 64 * 3; }
 	scrollTime -= ss;
 	if(scrollDir == 1){ with(objTile){ y += ss; } }
 	if(scrollDir == 2){ with(objTile){ x -= ss; } }

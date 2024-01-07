@@ -12,6 +12,8 @@ layerM = -300;
 layerE = -400;
 
 
+mobList = noone;
+
 draw_set_font(fntPlain);
 txt = "";
 txtTime = 0;

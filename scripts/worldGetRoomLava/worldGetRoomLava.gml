@@ -1,25 +1,25 @@
 function worldGetRoomLava(xxx, yyy){
 	
 	if(xxx == 2 && yyy == 0){
-		biome(Zone.grave);
-		wmap("##...........##");
-		wmap("##...........##");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("##...........##");
-		wmap("##...........##");
+		biome(Zone.volcano);
+		wmap("//LL///////////");
+		wmap("//LL///////////");
+		wmap("~~~~~..........");
+		wmap("~~~~...........");
+		wmap("~~.............");
+		wmap("~~.............");
+		wmap("~~.............");
+		wmap("~~.............");
+		wmap("~~.............");
+		wmap("~~~~~..........");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
 	}
 	
 	
 	
 	if(xxx == 3 && yyy == 0){
-		biome(Zone.grave);
+		biome(Zone.volcano);
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
@@ -35,7 +35,7 @@ function worldGetRoomLava(xxx, yyy){
 	}
 	
 	if(xxx == 3 && yyy == 1){
-		biome(Zone.grave);
+		biome(Zone.volcano);
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
@@ -51,7 +51,7 @@ function worldGetRoomLava(xxx, yyy){
 	}
 	
 	if(xxx == 3 && yyy == 2){
-		biome(Zone.grave);
+		biome(Zone.volcano);
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
@@ -70,7 +70,7 @@ function worldGetRoomLava(xxx, yyy){
 	
 	
 	if(xxx == 4 && yyy == 0){
-		biome(Zone.grave);
+		biome(Zone.volcano);
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
@@ -86,7 +86,7 @@ function worldGetRoomLava(xxx, yyy){
 	}
 	
 	if(xxx == 4 && yyy == 1){
-		biome(Zone.grave);
+		biome(Zone.volcano);
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
@@ -102,7 +102,7 @@ function worldGetRoomLava(xxx, yyy){
 	}
 	
 	if(xxx == 4 && yyy == 2){
-		biome(Zone.grave);
+		biome(Zone.volcano);
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
@@ -122,7 +122,7 @@ function worldGetRoomLava(xxx, yyy){
 	
 	
 	if(xxx == 5 && yyy == 0){
-		biome(Zone.grave);
+		biome(Zone.volcano);
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
@@ -138,7 +138,7 @@ function worldGetRoomLava(xxx, yyy){
 	}
 	
 	if(xxx == 5 && yyy == 1){
-		biome(Zone.grave);
+		biome(Zone.volcano);
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
@@ -154,36 +154,36 @@ function worldGetRoomLava(xxx, yyy){
 	}
 	
 	if(xxx == 6 && yyy == 0){
-		biome(Zone.grave);
-		wmap("##...........##");
-		wmap("##...........##");
+		biome(Zone.volcano);
+		wmap("///////////L///");
+		wmap("///////////L///");
+		wmap("....///////L///");
+		wmap("........///L///");
+		wmap("..........~~~~~");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("##...........##");
-		wmap("##...........##");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
 	}
 	
 	
 	if(xxx == 7 && yyy == 0){
-		biome(Zone.grave);
-		wmap("##...........##");
-		wmap("##...........##");
+		biome(Zone.volcano);
+		wmap("//L////////////");
+		wmap("/LL////////////");
+		wmap("/L////////.....");
+		wmap("/L///..........");
+		wmap("~~~............");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("##...........##");
-		wmap("##...........##");
+		wmap("~~~~~~~~~~~~///");
+		wmap("~~~~~~~~~~~~~//");
+		wmap("~~~~~~~~~~~////");
 	}
 	
 	

@@ -17,6 +17,7 @@ function mobSpawn(){
 	
 	
 	var n = choose(3, 4);
+	if(ww.mobList != noone){ n = ww.mobList[0]; }
 	var nWater = 0;
 	
 	if(ww.inBiome == Zone.beach){
@@ -87,6 +88,12 @@ function mobSpawn(){
 		}
 		
 		
+		if(ww.mobList != noone){
+			if(n < array_length(ww.mobList)){
+				t = ww.mobList[n];
+			}
+		}
+		
 		
 		if(ww.bmap[a, b] != noone){ continue; }
 		
@@ -105,5 +112,5 @@ function mobSpawn(){
 	}
 	
 	
-	
+	ww.mobList = noone;
 }

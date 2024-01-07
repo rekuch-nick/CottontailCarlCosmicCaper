@@ -37,6 +37,15 @@ function worldGetRoomCave(xxx, yyy){
 	}
 	
 	
+	if(xxx == 17 && yyy == 8){ // jungle cat house
+		ww.bmap[7, 5] = imgNPCCat;
+		ww.txt = "You're out here looking for the STAR? Well I hope you know better than to try to fight every monster you see.\n\nYou can just run past them and still be a hero, you know.";
+		if(pc.eventTrigger[Event.gotStar]){
+			ww.txt = "King Lion will reward those who help him defend the relm.";
+		}
+	}
+	
+	
 	
 	
 	if(xxx == 8 && yyy == 8){

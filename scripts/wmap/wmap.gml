@@ -39,6 +39,13 @@ function wmap(s){
 	
 	if(ww.inBiome == Zone.volcano){
 		ww.waterKind = imgLava;
+		ww.rockWall = imgRockWallGrey;
+	}
+	
+	if(ww.inBiome == Zone.darkHills){
+		ww.waterKind = imgWaterDark;
+		ww.rockWall = imgRockWallDark;
+		ww.bush1 = imgBushDeadDark;
 	}
 	
 	
