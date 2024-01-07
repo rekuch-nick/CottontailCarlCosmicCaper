@@ -1,0 +1,3 @@
+function worldGetRoomDark(xxx, yyy){
+
+}

@@ -27,6 +27,11 @@ function worldGetRoom(xxx, yyy){ //26 x 14
 	worldGetRoomForest(xxx, yyy);
 	worldGetRoomHills(xxx, yyy);
 	worldGetRoomDesert(xxx, yyy);
+	worldGetRoomWaste(xxx, yyy);
+	worldGetRoomDark(xxx, yyy);
+	worldGetRoomSnow(xxx, yyy);
+	worldGetRoomLava(xxx, yyy);
+	worldGetRoomGrave(xxx, yyy);
 	
 	
 	

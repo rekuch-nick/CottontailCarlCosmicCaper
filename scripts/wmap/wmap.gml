@@ -9,6 +9,7 @@ function wmap(s){
 	
 	ww.rockWall = imgRockWall;
 	
+	ww.waterKind = imgWater;
 	
 	if(ww.inBiome == Zone.beach){
 		ww.rock1 = imgRockBrown;
@@ -32,6 +33,14 @@ function wmap(s){
 		ww.bush1 = imgBushRed;
 	}
 	
+	if(ww.inBiome == Zone.waste){
+		ww.bush1 = imgBushDead;
+	}
+	
+	if(ww.inBiome == Zone.volcano){
+		ww.waterKind = imgLava;
+	}
+	
 	
 	
 	for(var a=0; a<15; a++){
@@ -44,6 +53,7 @@ function wmap(s){
 		if(c == "%"){ ww.bmap[a, b] = ww.bush1; }
 		if(c == "b"){ ww.bmap[a, b] = ww.bush2; }
 		if(c == "/"){ ww.bmap[a, b] = ww.rockWall; }
+		if(c == "L"){ ww.bmap[a, b] = imgRockWallGreyLava; }
 		if(c == "p"){ ww.bmap[a, b] = imgPalmTree; }
 		if(c == "C"){ ww.bmap[a, b] = imgSpaceBlock; }
 		
@@ -57,13 +67,15 @@ function wmap(s){
 		
 		
 		if(c == "="){ ww.fmap[a, b] = imgDoorway; }
-		if(c == "~"){ ww.fmap[a, b] = imgWater; }
+		if(c == "~"){ ww.fmap[a, b] = ww.waterKind; }
 		if(c == "0"){ ww.fmap[a, b] = imgSpaceDoor; }
 		
 		if(c == "s"){ ww.fmap[a, b] = imgSand; }
 		if(c == "f"){ ww.fmap[a, b] = imgGrassFlowers; }
 		
 		if(c == "c"){ ww.fmap[a, b] = imgSpaceCloud; }
+		
+		if(c == "h"){ ww.fmap[a, b] = imgGrassSparse; }
 	}
 	
 	ww.mapRow ++;

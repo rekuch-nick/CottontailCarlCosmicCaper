@@ -14,6 +14,11 @@ function biome(z){
 		if(ww.inBiome == Zone.redForest){ t = imgGrassSparse; }
 		if(ww.inBiome == Zone.hills){ t = imgDirtLight; }
 		if(ww.inBiome == Zone.desert){ t = imgSand; }
+		if(ww.inBiome == Zone.waste){ t = imgGrassWaste; }
+		if(ww.inBiome == Zone.grave){ t = imgDirtGrave; }
+		if(ww.inBiome == Zone.snow){ t = imgSnow; }
+		if(ww.inBiome == Zone.volcano){ t = imgDirtLight; }
+		if(ww.inBiome == Zone.darkHills){ t = imgDirtDark; }
 		
 		
 		ww.fmap[a, b] = t;
