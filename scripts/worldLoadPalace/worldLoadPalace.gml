@@ -5,6 +5,7 @@ function worldLoadPalace(){
 	
 	
 	if(pc.spaceLevel == 1){
+		var egg = pc.eventTrigger[Event.palace1Clear] ? objPupCoinPile : objPupEgg;
 		pc.palaceWaves = [
 			{
 				initMobs: [],
@@ -15,9 +16,25 @@ function worldLoadPalace(){
 				rockKind: noone, rockChance: 100, rockWait: 90,
 			},
 			{
+				initMobs: [objMobSpaceSnake],
+				laterMobs: [objMobSpaceSnake, objMobSpaceSnake, objMobSpaceSnake],
+				waitBetweenMobs: 60,
+				waitForPups: false,
+				floorItem: noone,
+				rockKind: noone, rockChance: 100, rockWait: 90,
+			},
+			{
 				initMobs: [objMobWorm, objMobWorm, objMobWorm, objMobWorm],
 				laterMobs: [],
 				waitBetweenMobs: 150,
+				waitForPups: false,
+				floorItem: noone,
+				rockKind: noone, rockChance: 100, rockWait: 90,
+			},
+			{
+				initMobs: [objMobWorm, objMobWorm, objMobWorm, objMobWorm],
+				laterMobs: [objMobTube, objMobTube, objMobTube, objMobTube, objMobTube, objMobTube, objMobTube],
+				waitBetweenMobs: 30,
 				waitForPups: false,
 				floorItem: noone,
 				rockKind: noone, rockChance: 100, rockWait: 90,
@@ -35,7 +52,7 @@ function worldLoadPalace(){
 				laterMobs: [],
 				waitBetweenMobs: 150,
 				waitForPups: true,
-				floorItem: objPupCoinBag,
+				floorItem: egg,
 				rockKind: noone, rockChance: 100, rockWait: 90,
 			},
 		];

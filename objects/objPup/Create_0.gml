@@ -19,3 +19,4 @@ yTxtOffset = 0;
 desc = "";
 
 coinPrice = 0;
+

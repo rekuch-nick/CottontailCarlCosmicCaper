@@ -27,6 +27,7 @@ yTarTile = yTile;
 hurtTime = 0;
 
 rot = 0;
+rotOnThink = 0;
 
 hp = 15;
 hpMax = 15;

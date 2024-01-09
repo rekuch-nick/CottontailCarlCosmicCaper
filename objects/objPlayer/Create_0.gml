@@ -5,6 +5,7 @@ icd = 0;
 depth = -900;
 debug = false;
 debugPossible = true;
+blockInput = true;
 
 playerInput();
 mutter = "";
@@ -61,6 +62,8 @@ lionCDMax = 7;
 for(var i=0; i<100; i++){
 	eventTrigger[i] = false;
 }
+eventTrigger[Event.gotStar] = true; ///
+
 enum Event {
 	owlMarksStar,
 	gotStar,

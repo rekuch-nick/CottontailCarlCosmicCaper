@@ -87,6 +87,10 @@ function mobSpawn(){
 			t = choose(objMobLobber);
 		}
 		
+		if(ww.inBiome == Zone.darkHills){
+			t = choose(objMobMushMan);
+		}
+		
 		
 		if(ww.mobList != noone){
 			if(n < array_length(ww.mobList)){

@@ -45,6 +45,18 @@ if(gotIt){
 	if(sprite_index == imgPupTorch){ pc.wepLevels[2] = max(pc.wepLevels[2], 1); }
 	
 	if(sprite_index == imgPlayerShield){ pc.eventTrigger[Event.gotShield] = true; pc.sp = pc.spMax; }
+	
+	if(sprite_index == imgEgg){
+		if(pc.spaceLevel == 1){ pc.eventTrigger[Event.palace1Clear] = true; }
+		if(pc.spaceLevel == 2){ pc.eventTrigger[Event.palace2Clear] = true; }
+		if(pc.spaceLevel == 3){ pc.eventTrigger[Event.palace3Clear] = true; }
+		if(pc.spaceLevel == 4){ pc.eventTrigger[Event.palace4Clear] = true; }
+		if(pc.spaceLevel == 5){ pc.eventTrigger[Event.palace5Clear] = true; }
+		if(pc.spaceLevel == 6){ pc.eventTrigger[Event.palace6Clear] = true; }
+		if(pc.spaceLevel == 7){ pc.eventTrigger[Event.palace7Clear] = true; }
+		if(pc.spaceLevel == 8){ pc.eventTrigger[Event.palace8Clear] = true; }
+		if(pc.spaceLevel == 9){ pc.eventTrigger[Event.palace9Clear] = true; }
+	}
 
 	instance_destroy();
 	

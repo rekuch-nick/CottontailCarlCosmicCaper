@@ -2,6 +2,14 @@ function playerStepPlay(){
 	if(ww.txtTime < 30 * 30){ ww.txtTime ++; }
 	
 	
+	if(!blockInput && bagPressed){
+		blockInput = true;
+		ww.state = State.inventory;
+		return;
+	}
+	
+	
+	
 	if(inSpace){ playerStepPlaySpace(); }
 	
 	
@@ -74,7 +82,7 @@ function playerStepPlay(){
 	
 	
 	
-	if(pushingTime > 3){
+	if(pushingTime > 3 && !inSpace){
 		
 		var d = 0;
 		if(x <= 0 + xFat){ d = 4; x = ww.roomWidth - 28; }
@@ -166,7 +174,7 @@ function playerStepPlay(){
 			
 		}
 		
-			//boomarangs
+			//bombs
 		if(wepSelected == 3 && wepLevels[3] > 0 && shootCD < 1 && bombs > 0){
 				shootCD = wepCDMax[wepSelected];
 				bombs --;

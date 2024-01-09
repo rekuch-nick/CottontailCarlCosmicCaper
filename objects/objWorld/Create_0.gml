@@ -40,6 +40,7 @@ enum State {
 	enteringSpace,
 	leaveSpace,
 	pause,
+	inventory,
 }
 
 enum Zone {

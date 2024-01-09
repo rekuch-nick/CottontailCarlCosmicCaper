@@ -83,3 +83,7 @@ for(var i=0; i<11; i++){
 	}
 }
 draw_sprite_stretched(imgWepSelected, 0, x + 8 + (pc.wepSelected * 28), y + (68 * 5), 24, 24);
+
+
+
+if(ww.state == State.inventory){ hudDrawInventory(); }

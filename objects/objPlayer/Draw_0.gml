@@ -11,6 +11,7 @@ if(ww.state == State.useStairs){
 	return;
 }
 if(ww.state == State.scroll){ return; }
+if(ww.state == State.inventory){ return; }
 
 
 
@@ -43,7 +44,7 @@ draw_self();
 if(inSpace){
 	draw_sprite_stretched(imgPupStar, 0, x-(8 * image_yscale), y, 16 * image_yscale, 16 * image_yscale);
 }
-if(sp >= spMax){
+if(sp >= spMax && ww.state == State.play){
 	var s = imgPlayerShield;
 	var xo = getDirection(pc.image_xscale) == 1 ? -16 : -48;
 	var yo = -20;

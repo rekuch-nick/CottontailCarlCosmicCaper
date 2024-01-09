@@ -24,6 +24,7 @@ if(thinkCD < 1){
 	if(turnOnThink){
 		image_angle += choose(90, -90);
 	}
+	image_angle += choose(-rotOnThink, rotOnThink);
 	if(gridMove){
 		mobChooseAdjacentTile();
 		xTar = xTarTile * 64 + 32;

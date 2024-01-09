@@ -46,15 +46,15 @@ function playerStepPlaySpace(){
 			newWave = true;
 		} else {
 			
-			if(spaceLevel == 1){ eventTrigger[Event.palace1Clear] = true; }
-			if(spaceLevel == 2){ eventTrigger[Event.palace2Clear] = true; }
-			if(spaceLevel == 3){ eventTrigger[Event.palace3Clear] = true; }
-			if(spaceLevel == 4){ eventTrigger[Event.palace4Clear] = true; }
-			if(spaceLevel == 5){ eventTrigger[Event.palace5Clear] = true; }
-			if(spaceLevel == 6){ eventTrigger[Event.palace6Clear] = true; }
-			if(spaceLevel == 7){ eventTrigger[Event.palace7Clear] = true; }
-			if(spaceLevel == 8){ eventTrigger[Event.palace8Clear] = true; }
-			if(spaceLevel == 9){ eventTrigger[Event.palace9Clear] = true; }
+			//if(spaceLevel == 1){ eventTrigger[Event.palace1Clear] = true; }
+			//if(spaceLevel == 2){ eventTrigger[Event.palace2Clear] = true; }
+			//if(spaceLevel == 3){ eventTrigger[Event.palace3Clear] = true; }
+			//if(spaceLevel == 4){ eventTrigger[Event.palace4Clear] = true; }
+			//if(spaceLevel == 5){ eventTrigger[Event.palace5Clear] = true; }
+			//if(spaceLevel == 6){ eventTrigger[Event.palace6Clear] = true; }
+			//if(spaceLevel == 7){ eventTrigger[Event.palace7Clear] = true; }
+			//if(spaceLevel == 8){ eventTrigger[Event.palace8Clear] = true; }
+			//if(spaceLevel == 9){ eventTrigger[Event.palace9Clear] = true; }
 			
 			ww.state = State.leaveSpace;
 			with(objEffect){ instance_destroy(); }

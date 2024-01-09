@@ -51,6 +51,8 @@ function playerInput(){
 	if(mouse_wheel_up()){ zIn --; }
 	
 	
+	bagPressed = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("I"));
+	
 	
 	
 
