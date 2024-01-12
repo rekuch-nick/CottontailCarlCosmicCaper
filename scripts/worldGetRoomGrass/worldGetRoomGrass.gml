@@ -88,13 +88,15 @@ function worldGetRoomGrass(xxx, yyy){
 	
 	if(xxx == 10 && yyy == 8){ // path to beach
 		biome(Zone.grass);
+		ww.secBlock = imgBushGrass; ww.secX = 1; ww.secY = 4; ww.secType = Sec.burn;
+		
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("##............#");
-		wmap("##............#");
-		wmap("##............r");
-		wmap("##............r");
-		wmap("##...........##");
+		wmap("###...........#");
+		wmap("#=#...........r");
+		wmap("#.............r");
+		wmap("#............##");
 		wmap("##......s....s#");
 		wmap("###.s..s..s..s#");
 		wmap("##.s.ss..s.s.##");

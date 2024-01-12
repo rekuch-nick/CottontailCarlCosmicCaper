@@ -26,6 +26,8 @@ function worldLoadRoom(dir){
 			if(s.sprite_index == imgWater){ s.isWater = true; s.isLand = false; }
 			
 			
+			
+			
 			ww.fmap[a, b] = s;
 		}
 		
@@ -34,6 +36,12 @@ function worldLoadRoom(dir){
 			var s = instance_create_depth(a * 64 + xo, b * 64 + yo, ww.layerB, objBlock);
 			s.sprite_index = ww.bmap[a, b];
 			ww.bmap[a, b] = s;
+			
+			if(!ww.secExposed[pc.xMap, pc.yMap]){
+				if(a == ww.secX && b == ww.secY){
+					s.isSec = true;
+				}
+			}
 		}
 		
 		

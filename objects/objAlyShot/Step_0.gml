@@ -32,6 +32,24 @@ if(!passWall && passWallTime < 1){
 	}
 }
 
+if(!ww.secExposed[pc.xMap, pc.yMap]){
+	if(secType != noone && secType == ww.secType){
+		var disMax = max(sprite_width, sprite_height) / 2;
+		with(objBlock){ if(isSec){
+			var dis = point_distance(x + 32, y + 32, other.x, other.y);
+			if(dis <= disMax){
+				xTile = floor(x / 64); yTile = floor(y / 64);
+				ww.secExposed[pc.xMap, pc.yMap] = true;
+				ww.bmap[xTile, yTile] = noone;
+				instance_destroy();
+			}
+		}}
+		
+		
+		
+	}
+}
+
 image_xscale += gro;
 image_yscale += gro;
 image_angle += rot * getDirection(image_xscale);

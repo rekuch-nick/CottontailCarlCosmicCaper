@@ -18,6 +18,10 @@ draw_set_font(fntPlain);
 txt = "";
 txtTime = 0;
 
+for(var a=0; a<30; a++){ for(var b=0; b<20; b++){
+	secExposed[a, b] = false;
+}}
+
 for(var a=0; a<ww.W; a++){ for(var b=0; b<ww.H; b++){
 	fmap[a, b] = noone;
 	bmap[a, b] = noone;
@@ -67,4 +71,8 @@ enum Move {
 	hunt,
 	stayTop,
 	avoid,
+}
+
+enum Sec {
+	push, burn, bomb
 }

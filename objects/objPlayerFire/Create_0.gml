@@ -16,6 +16,8 @@ timeCD = 60;
 
 image_alpha = .6;
 destroyOnHit = false;
+passWall = true;
 gro = .1;
 
 isBasicShot = false;
+secType = Sec.burn;

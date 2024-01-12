@@ -1,6 +1,8 @@
 function wmap(s){
 	var b = ww.mapRow;
 	
+	ww.hiddenDoor = noone;
+	
 	ww.rock1 = imgRock;
 	ww.rock2 = imgRockBrown;
 	
@@ -10,6 +12,10 @@ function wmap(s){
 	ww.rockWall = imgRockWall;
 	
 	ww.waterKind = imgWater;
+	
+	ww.secBurn = imgBush;
+	ww.secPush = imgRock;
+	ww.secBlast = imgRockWall;
 	
 	if(ww.inBiome == Zone.beach){
 		ww.rock1 = imgRockBrown;
@@ -69,6 +75,7 @@ function wmap(s){
 		if(c == "%"){ ww.bmap[a, b] = ww.bush1; }
 		if(c == "b"){ ww.bmap[a, b] = ww.bush2; }
 		if(c == "/"){ ww.bmap[a, b] = ww.rockWall; }
+		
 		if(c == "L"){ ww.bmap[a, b] = imgRockWallGreyLava; }
 		if(c == "p"){ ww.bmap[a, b] = imgPalmTree; }
 		if(c == "g"){ ww.bmap[a, b] = imgGrave; }
@@ -97,6 +104,17 @@ function wmap(s){
 		
 		if(c == "c"){ ww.fmap[a, b] = imgSpaceCloud; }
 		if(c == "h"){ ww.fmap[a, b] = imgGrassSparse; }
+		
+		
+		if(!ww.secExposed[pc.xMap, pc.yMap]){
+			if(ww.secBlock != noone && a == ww.secX && b == ww.secY){
+				ww.bmap[a, b] = ww.secBlock;
+			}
+		}
+		
+		
+		
+		
 	}
 	
 	ww.mapRow ++;

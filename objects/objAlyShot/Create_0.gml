@@ -32,3 +32,4 @@ hitList = [];
 destroyOnHit = true;
 
 isBasicShot = true;
+secType = noone;

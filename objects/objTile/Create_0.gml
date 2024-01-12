@@ -5,3 +5,4 @@ isWater = false;
 isLava = false;
 isPoison = false;
 isLand = true;
+isSec = false;

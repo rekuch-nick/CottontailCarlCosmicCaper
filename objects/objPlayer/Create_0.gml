@@ -63,6 +63,7 @@ for(var i=0; i<100; i++){
 	eventTrigger[i] = false;
 }
 eventTrigger[Event.gotStar] = true; ///
+wepLevels[2]  = 1; // torch
 
 enum Event {
 	owlMarksStar,

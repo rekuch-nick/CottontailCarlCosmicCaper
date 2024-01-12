@@ -35,7 +35,7 @@ function worldLoadPalace(){
 				initMobs: [objMobWorm, objMobWorm, objMobWorm, objMobWorm],
 				laterMobs: [objMobTube, objMobTube, objMobTube, objMobTube, objMobTube, objMobTube, objMobTube],
 				waitBetweenMobs: 30,
-				waitForPups: false,
+				waitForPups: true,
 				floorItem: noone,
 				rockKind: noone, rockChance: 100, rockWait: 90,
 			},

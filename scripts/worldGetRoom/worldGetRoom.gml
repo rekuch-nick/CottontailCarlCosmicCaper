@@ -16,6 +16,7 @@ function worldGetRoom(xxx, yyy){ //26 x 14
 		return;
 	}
 	
+	ww.secBlock = noone; ww.secX = 5; ww.secY = 5; ww.secType = noone;
 	
 	worldGetRoomGrass(xxx, yyy);
 	worldGetRoomBeach(xxx, yyy);
@@ -32,6 +33,7 @@ function worldGetRoom(xxx, yyy){ //26 x 14
 	worldGetRoomSnow(xxx, yyy);
 	worldGetRoomLava(xxx, yyy);
 	worldGetRoomGrave(xxx, yyy);
+	
 	
 	
 	
