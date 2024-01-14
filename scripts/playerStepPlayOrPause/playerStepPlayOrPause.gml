@@ -7,6 +7,8 @@ function playerStepPlayOrPause(){
 			mp = mpMax;
 			coins = coinsMax;
 			bombs = bombsMax;
+			
+			with(objMob){ hp = 0; }
 		}
 	}
 	

@@ -3,8 +3,7 @@ function playerStepPlay(){
 	
 	
 	if(!blockInput && bagPressed){
-		blockInput = true;
-		ww.state = State.inventory;
+		playerLoadInventory();
 		return;
 	}
 	

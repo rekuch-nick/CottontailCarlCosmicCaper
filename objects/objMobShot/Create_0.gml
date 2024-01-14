@@ -29,3 +29,10 @@ isLob = false;
 
 hitList = [];
 destroyOnHit = true;
+
+seek = 0;
+seekCD = 40;
+seekCDMax = 40;
+speedUpOnSeek = false;
+
+

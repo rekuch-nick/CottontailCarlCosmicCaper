@@ -17,6 +17,26 @@ if(firstFrame){
 }
 
 
+if(seek > 0){
+	seekCD --;
+	if(seekCD < 1){
+		if(speedUpOnSeek){ moveSpeed ++; }
+		seekCD = seekCDMax;
+		seek --;
+		
+		var angle = arctan2(pc.y - y, pc.x - x);
+		xSpeed = cos(angle) * moveSpeed;
+		ySpeed = sin(angle) * moveSpeed;
+	}
+	
+}
+
+
+
+
+
+
+
 x += xSpeed;
 y += ySpeed;
 ySpeed += grav;
