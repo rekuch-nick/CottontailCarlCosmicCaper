@@ -67,6 +67,13 @@ if(gotIt){
 	
 	if(sprite_index == imgMap){ pc.eventTrigger[Event.gotMap] = true; }
 	if(sprite_index == imgPupChargeCharm){ pc.eventTrigger[Event.gotChargeShot] = true; }
+	if(sprite_index == imgPupMPShell){ pc.eventTrigger[Event.gotMPShell] = true; }
+	
+	if(sprite_index == imgPlayerRangPack){ pc.eventTrigger[Event.gotRangPack] = true; pc.rangsMax = 3; }
+	
+	if(sprite_index == imgPupPotionFire || sprite_index == imgPupPotionPoison){
+		if(pc.potion == noone){ pc.potion = sprite_index; } else { potionUse(sprite_index); }
+	}
 
 	instance_destroy();
 	

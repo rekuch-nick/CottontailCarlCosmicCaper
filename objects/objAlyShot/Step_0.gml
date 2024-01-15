@@ -57,7 +57,6 @@ if(!ww.secExposed[pc.xMap, pc.yMap]){
 		}}
 		
 		
-		
 	}
 }
 

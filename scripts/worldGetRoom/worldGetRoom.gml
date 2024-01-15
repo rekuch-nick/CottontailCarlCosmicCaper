@@ -1,5 +1,8 @@
 function worldGetRoom(xxx, yyy){ //26 x 14
 	
+	ww.canLion = true;
+	ww.noMobs = false;
+	ww.noFall = false;
 	
 	for(var a=0; a<ww.W; a++){ for(var b=0; b<ww.H; b++){
 		ww.fmap[a, b] = noone;

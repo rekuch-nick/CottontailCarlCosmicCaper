@@ -57,6 +57,9 @@ function worldGetRoomHills(xxx, yyy){
 	
 	if(xxx == 8 && yyy == 3){ // golem
 		biome(Zone.hills);
+		ww.canLion = false;
+		ww.mobList = [1, objMobGolemBoss];////
+		ww.noFall = true;
 		wmap("//...........//");
 		wmap("/s.s.........//");
 		wmap("sss...........%");

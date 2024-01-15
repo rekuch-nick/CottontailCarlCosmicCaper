@@ -17,6 +17,8 @@ if(falling){
 
 creatureBuffDecay();
 if(burnTime > 0){ hp -= .15; }
+if(poisonTime > 0){ hp -= .15; }
+if(inert != noone){ thinkCD ++; shootCD ++; }
 
 thinkCD --;
 if(thinkCD < 1){
@@ -67,11 +69,15 @@ xTile = floor(x / 64); yTile = floor(y / 64);
 if(shotKind != noone){
 	if(!onlyShootWhilePlayerShoots || pc.mouseLHold || pc.mouseRHold){
 		shootCD --;
+		if(shootFasterAsDying && hp / hpMax < .6){ shootCD --; }
+		if(shootFasterAsDying && hp / hpMax < .3){ shootCD --; }
 	}
 	
 	if(revengeShot && hp + 9 < hpLast){
 		shootCD = 0;
 	}
+	
+	
 	
 	if(shootCD < 1){
 		shootCD = shootCDMax;
@@ -85,8 +91,14 @@ if(shotKind != noone){
 			}
 		}
 		
+		repeat(shootRepeat){
+			var s = instance_create_depth(x, y, ww.layerE, shotKind);
+			s.dropChance = 0;
+		}
 		
-		instance_create_depth(x, y, ww.layerE, shotKind);
+		if(shotSwap != noone){
+			shotKind = shotSwap[irandom_range(0, array_length(shotSwap) - 1)];
+		}
 	}
 }
 
@@ -107,6 +119,17 @@ if(blockFrame != noone){
 }
 
 
+if(shatterAtHalf && hp / hpMax <= .5){
+	shatterAtHalf = false;
+	if(object_index == objMobGolemBoss){
+		shotKind = objMobShotRandom;
+		shootRepeat = 8;
+	} else {
+		repeat(20){ instance_create_depth(x, y, ww.layerE, objMobShotRandom); }
+	}
+}
+
+
 hurtTime = clamp(hurtTime - 1, 0, 60);
 
 
@@ -117,5 +140,5 @@ if(hp < 1){
 	instance_destroy();
 }
 
-
+if(hp < hpMax){ inert = noone; }
 hpLast = hp;

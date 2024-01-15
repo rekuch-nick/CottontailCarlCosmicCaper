@@ -53,6 +53,8 @@ function playerInput(){
 	
 	bagPressed = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("I"));
 	
+	potPressed = keyboard_check_pressed(ord("Q"));
+	
 	
 	
 

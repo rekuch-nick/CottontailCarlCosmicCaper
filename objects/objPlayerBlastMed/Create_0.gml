@@ -19,3 +19,5 @@ passWall = true;
 image_alpha = .4;
 
 isBasicShot = false;
+
+secType = Sec.bomb;

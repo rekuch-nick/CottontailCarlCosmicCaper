@@ -81,6 +81,10 @@ if(pc.wepSelected == 2){ im = imgPupTorch; }
 if(pc.wepSelected == 3){ im = imgPupBomb; }
 draw_sprite_stretched(im, 0, x + (128), y + (68 * 4), 64, 64);
 
+//im = imgPupPotionEmpty;
+im = imgBlank;
+if(pc.potion != noone){ im = pc.potion; }
+draw_sprite_stretched(im, 0, x + (248), y + (68 * 4), 64, 64);
 
 
 for(var i=0; i<11; i++){

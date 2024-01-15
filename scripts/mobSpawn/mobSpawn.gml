@@ -20,7 +20,7 @@ function mobSpawn(){
 	if(ww.mobList != noone){ n = ww.mobList[0]; }
 	var nWater = 0;
 	
-	if(ww.inBiome == Zone.beach){
+	if(ww.inBiome == Zone.beach && ww.mobList == noone){
 		nWater = 1;
 	}
 	
@@ -33,7 +33,7 @@ function mobSpawn(){
 	
 	
 	if(!pc.inOverworld){ n = 0; }
-	
+	if(ww.noMobs){ n = 0; }
 	
 	for(var i=0; i<array_length(pc.killMemory); i++){
 		if(pc.killMemory[i].a == pc.xMap && pc.killMemory[i].b == pc.yMap){
@@ -43,7 +43,7 @@ function mobSpawn(){
 	
 	
 	
-	if(n > 0){
+	if(n > 0 && ww.canLion){
 		pc.lionCD --;
 		if(pc.lionCD  < 1){
 			pc.lionCD = pc.lionCDMax - irandom_range(0, 2);
@@ -122,8 +122,15 @@ function mobSpawn(){
 		}
 		
 		n --;
-		var s = instance_create_depth(a * 64 + 32, b * 64 + 32, ww.layerM - 1, objShadow);
-		s.mobKind = t;
+		
+		if(ww.noFall){
+			if(n == 0){ a = 7; b = 5; }
+			var s = instance_create_depth(a * 64 + 32, b * 64 + 32, ww.layerM, t);
+		} else {
+		
+			var s = instance_create_depth(a * 64 + 32, b * 64 + 32, ww.layerM - 1, objShadow);
+			s.mobKind = t;
+		}
 		
 	}
 	

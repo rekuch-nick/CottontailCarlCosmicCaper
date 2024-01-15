@@ -37,16 +37,22 @@ shotKind = objMobShotShort;
 shootCDMax = 30 * 3;
 shootCD = shootCDMax - choose(0, 10, 20);
 shotCuster = 0; shotClusterMax = 0; shotClusterCDMas = 20;
+shootRepeat = 1;
 onlyShootWhilePlayerShoots = false;
 revengeShot = false;
+shatterAtHalf = false;
+inert = noone;
 
 bumpPow = 20;
 
 dropChance = 50;
 dropsBombs = false;
+dropsPotions = true;
+drop = noone;
 
 turnOnThink = false;
-
+shootFasterAsDying = false;
+shotSwap = noone;
 
 blockFrame = noone;
 blockTime = 0;

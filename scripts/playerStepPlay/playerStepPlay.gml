@@ -121,7 +121,7 @@ function playerStepPlay(){
 		if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
 		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
 		if(shootCD < 1){
-			beamChargeCD = 30;
+			beamChargeCD = 90;
 			shootCD = shootCDMax;
 			if(pc.shotPower == Shot.rapid){ shootCD -= 10; }
 			var n = pc.shotAmount;
@@ -134,7 +134,7 @@ function playerStepPlay(){
 				s.offSet = nn;
 				if(bp >= bpThresh){ s.sprite_index = imgPlayerBeamsCharged; }
 			}
-			bp = clamp(bp - 10, 0, bpMax);
+			bp = clamp(bp - 15, 0, bpMax);
 		}
 		
 	} else if(mouseRHold){
@@ -142,8 +142,9 @@ function playerStepPlay(){
 		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
 		
 			//boomarangs
+		var rangMax = eventTrigger[Event.gotRangPack] ? 3 : 1;	
 		if(wepSelected == 0 && wepLevels[0] > 0 && shootCD < 1 && 
-							instance_number(objPlayerRang) < rangsMax &&
+							instance_number(objPlayerRang) < rangMax &&
 							mp >= wepCost[wepSelected]
 			){
 				shootCD = wepCDMax[wepSelected];
@@ -191,6 +192,11 @@ function playerStepPlay(){
 		
 	}
 	
+	if(potPressed && potion != noone){
+		potionUse(potion);
+		potion = noone;
+	}
+	
 	if(hurtTime > 0){ hurtTime --; }
 	
 	
@@ -234,6 +240,7 @@ function playerStepPlay(){
 	}
 	
 	var mpGain = .01;
+	if(eventTrigger[Event.gotMPShell]){ mpGain += .01; }
 	mp = clamp(mp + mpGain, 0, mpMax);
 	
 	if(eventTrigger[Event.gotShield]){

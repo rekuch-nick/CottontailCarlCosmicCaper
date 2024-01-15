@@ -247,6 +247,9 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 6 && yyy == 9){
 		biome(Zone.beach);
+		ww.canLion = false;
+		//if(!pc.eventTrigger[Event.gotMPShell]){ ww.mobList = [1, objMobCrabBoss]; }
+		ww.mobList = [1, objMobCrabBoss];
 		wmap("~~ppppppppppppp");
 		wmap("~~ppppppppppppp");
 		wmap("~~ppppppppppppp");

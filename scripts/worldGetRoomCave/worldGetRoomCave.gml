@@ -61,6 +61,13 @@ function worldGetRoomCave(xxx, yyy){
 		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
 		ww.txt = "The Purple Crab Monsters shoot while you're shooting.\n\nTry just tapping the shoot button while fighting them.";
 	}
+	if(xxx == 11 && yyy == 7){
+		ww.bmap[7, 6] = imgNPCDuck;
+		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
+		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
+		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
+		ww.txt = "Use numbers or mouse wheel to swap items.\n\nPress [Enter] to look at your inventory.\n\nPress [Q] to use a potion.\n\nItem managment is key to success!";
+	}
 	
 	
 	
@@ -88,6 +95,17 @@ function worldGetRoomCave(xxx, yyy){
 		ww.bmap[7, 5] = imgNPCDog;
 		if(ww.caveCoins[pc.xMap, pc.yMap] > 0){
 			ww.txt = "I hope these coins help you on your quest.";
+		}
+	}
+	
+	
+	if( (xxx == 7 && yyy == 3) ){ // rang cat
+		ww.bmap[7, 5] = imgNPCCat;
+		if(pc.eventTrigger[Event.gotRangPack]){
+			ww.txt = "King Lion's castle is north of the graveyard.";
+		} else {
+			ww.txt = "You really only have one boomarang?\n\nI guess you should take some of mine.";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupRangPack);
 		}
 	}
 	
