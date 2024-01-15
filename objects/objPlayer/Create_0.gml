@@ -43,7 +43,7 @@ hp = 100; hpMax = 100;
 mp = 100; mpMax = 100;
 coins = 0; coinsMax = 255;
 sp = 0; spMax = 900;
-bp = 0; bpMax = 600;
+bp = 0; bpMax = 600; bpThresh = 400;
 bombs = 0; bombsMax = 8;
 
 
@@ -59,20 +59,58 @@ lionCD = irandom_range(5, 7);
 lionCDMax = 7;
 
 
-for(var i=0; i<100; i++){
+for(var i=0; i<200; i++){
 	eventTrigger[i] = false;
 }
 eventTrigger[Event.gotStar] = true; ///
-//wepLevels[2]  = 1; // torch
+eventTrigger[Event.gotMap] = true; ///
+//eventTrigger[Event.gotChargeShot] = true; ///
+//wepLevels[1]  = 1; eventTrigger[Event.gotStars] = true; // ninja stars
+wepLevels[2]  = 1; eventTrigger[Event.gotTorch] = true; // torch
+
+eventTrigger[Event.palace1Clear] = true; ///
+
+
+
+fullHealing = false;
+beamChargeCD = 30;
+killMemory = [
+	{a: 0, b: 0, mobsLeft: 10},
+	{a: 0, b: 0, mobsLeft: 10},
+	{a: 0, b: 0, mobsLeft: 10},
+	{a: 0, b: 0, mobsLeft: 10},
+	{a: 0, b: 0, mobsLeft: 10},
+	{a: 0, b: 0, mobsLeft: 10},
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 enum Event {
 	owlMarksStar,
 	gotStar,
+	
 	gotHealingHeart,
 	gotMonocule,
 	
 	gotShield,
-	
+	gotTorch,
+	gotStars,
+	gotMap,
+	gotChargeShot,
 	
 	
 	palace1Clear,

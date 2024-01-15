@@ -26,6 +26,12 @@ function worldGetRoomCave(xxx, yyy){
 		if(pc.eventTrigger[Event.gotStar]){
 			ww.txt = "You got the STAR!\n\nTake it to the PALACE just west of here.";
 		}
+		if(pc.eventTrigger[Event.palace1Clear]){
+			ww.txt = "You'll need a torch to find the next SPACE DOOR. The Lizard Brother's store near here sells one.";
+		}
+		if(pc.eventTrigger[Event.palace1Clear] && pc.eventTrigger[Event.gotTorch]){
+			ww.txt = "North of the last PALACE is a desert. The SPACE DOOR is hidden under a cactus there.";
+		}
 	}
 	if(xxx == 11 && yyy == 9){ // owl's house
 		ww.bmap[7, 5] = imgNPCOwl;
@@ -59,7 +65,9 @@ function worldGetRoomCave(xxx, yyy){
 	
 	
 	
-	if(xxx == 9 && yyy == 7){ // lizard shop
+	if( (xxx == 9 && yyy == 7)
+		|| (xxx == 6 && yyy == 4)
+			){ // lizard shop
 		ww.bmap[7, 5] = imgNPCLizard;
 		ww.bmap[8, 5] = imgBlank;
 		ww.txt = "In dangerous times like these, Lizard Brothers Retail is the only store you can trust.";
@@ -73,8 +81,22 @@ function worldGetRoomCave(xxx, yyy){
 	
 	
 	
+	
+	if( (xxx == 7 && yyy == 4) 
+		|| (xxx == 10 && yyy == 8) 
+		){ // dog gifts
+		ww.bmap[7, 5] = imgNPCDog;
+		if(ww.caveCoins[pc.xMap, pc.yMap] > 0){
+			ww.txt = "I hope these coins help you on your quest.";
+		}
+	}
+	
+	
+	
 	ww.mapRow = 0;
-	if(xxx == 8 && yyy == 6){ // palace 1
+	if(	(xxx == 8 && yyy == 6)
+		|| (xxx == 7 && yyy == 1)
+				){ 
 		wmap("///////////////");
 		wmap("//...F...F...//");
 		wmap("/.F....AAA.FF./");
@@ -88,11 +110,23 @@ function worldGetRoomCave(xxx, yyy){
 		wmap("//...........//");
 		wmap("//////...//////");
 		
-		if(pc.eventTrigger[Event.palace1Clear]){
+		if( (xxx == 8 && yyy == 6 && pc.eventTrigger[Event.palace1Clear])
+			|| (xxx == 7 && yyy == 1 && pc.eventTrigger[Event.palace2Clear])
+		
+		){
 			ww.fmap[5, 4] = imgGrassFlowers; ww.fmap[6, 4] = imgGrassFlowers; ww.fmap[7, 4] = imgGrassFlowers; ww.fmap[8, 4] = imgGrassFlowers;
 			ww.fmap[5, 5] = imgGrassFlowers; ww.fmap[6, 5] = imgGrassFlowers; ww.fmap[8, 5] = imgGrassFlowers; ww.fmap[9, 5] = imgGrassFlowers;
 			ww.fmap[6, 6] = imgGrassFlowers; ww.fmap[7, 6] = imgGrassFlowers; ww.fmap[8, 6] = imgGrassFlowers;
 			ww.fmap[6, 7] = imgGrassFlowers; ww.fmap[7, 7] = imgGrassFlowers;
 		}
 	}
+	
+	
+
+	
+	repeat(ww.caveCoins[pc.xMap, pc.yMap]){
+		instance_create_depth(irandom_range(150, ww.roomWidth - 150), irandom_range(480, 500), ww.layerP, objPupCoin);
+	}
+	
+	
 }

@@ -7,7 +7,9 @@ if(frameCount >= 30){ frameCount = 0; }
 var s = string(pc.xMap) + ", " + string(pc.yMap);
 draw_text(x + 10, 244, s);
 
-draw_sprite_stretched(imgMap002, 0, x + 8, y + 8, 76 * 4, 40 * 4);
+if(pc.eventTrigger[Event.gotMap]){
+	draw_sprite_stretched(imgMap002, 0, x + 8, y + 8, 76 * 4, 40 * 4);
+}
 
 var xx = x + 8 + (pc.xMap * 4 * 4);
 var yy = y + 8 + (pc.yMap * 4 * 4);
@@ -54,7 +56,13 @@ if(pc.bpMax > 0){
 	w = max((pc.bp / pc.bpMax) * 304, 0);
 	y1 = y + (99 * 4);
 	y2 = y1 + 20;
-	draw_rectangle_color(x1, y1, x1 + w, y2, c_orange, c_orange, c_yellow, c_yellow, false);
+	if(pc.bp >= pc.bpThresh){
+		draw_rectangle_color(x1, y1, x1 + w, y2, c_orange, c_orange, c_yellow, c_yellow, false);
+	} else {
+		draw_set_alpha(.4);
+		draw_rectangle_color(x1, y1, x1 + w, y2, c_orange, c_orange, c_yellow, c_yellow, false);
+		draw_set_alpha(1);
+	}
 }
 
 

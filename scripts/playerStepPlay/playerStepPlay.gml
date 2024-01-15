@@ -96,6 +96,7 @@ function playerStepPlay(){
 		
 		
 		if(d != 0){
+			playerKillMemoryUpdate();
 			if(d == 1){ yMap --; }
 			if(d == 2){ xMap ++; }
 			if(d == 3){ yMap ++; }
@@ -114,12 +115,13 @@ function playerStepPlay(){
 	
 	
 	
-	
+		// beams
 	if(shootCD > 0){ shootCD --; } 
 	if(mouseLHold){
 		if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
 		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
 		if(shootCD < 1){
+			beamChargeCD = 30;
 			shootCD = shootCDMax;
 			if(pc.shotPower == Shot.rapid){ shootCD -= 10; }
 			var n = pc.shotAmount;
@@ -130,7 +132,9 @@ function playerStepPlay(){
 				var nn = ceil(i / 2) * 2;
 				if(i % 2 == 1){ nn *= -1; }
 				s.offSet = nn;
+				if(bp >= bpThresh){ s.sprite_index = imgPlayerBeamsCharged; }
 			}
+			bp = clamp(bp - 10, 0, bpMax);
 		}
 		
 	} else if(mouseRHold){
@@ -198,6 +202,7 @@ function playerStepPlay(){
 	if(inOverworld){
 		if(xTile >= 0 && yTile >= 0 && xTile < 15 && yTile < 12){
 			if(ww.fmap[xTile, yTile] != noone && ww.fmap[xTile, yTile].sprite_index == imgDoorway){
+				playerKillMemoryUpdate();
 				ww.state = State.useStairs;
 				ww.stairAlpha = 0;
 			}
@@ -209,6 +214,7 @@ function playerStepPlay(){
 			if(ww.fmap[xTile, yTile] != noone && ww.fmap[xTile, yTile].sprite_index == imgSpaceDoor){
 				if(eventTrigger[Event.gotStar]){
 					if(xMap == 8 && yMap == 6){ spaceLevel = 1; }
+					if(xMap == 7 && yMap == 1){ spaceLevel = 2; }
 					if(spaceLevel != 0){
 						ww.state = State.enteringSpace;
 						xCave = x;
@@ -233,6 +239,13 @@ function playerStepPlay(){
 	if(eventTrigger[Event.gotShield]){
 		sp = clamp(sp + 1, -900, spMax);
 	}
+	
+	if(eventTrigger[Event.gotChargeShot]){
+		if(beamChargeCD > 0){ beamChargeCD --; } else {
+			bp = clamp(bp + 1, 0, bpMax);
+		}
+	}
+	
 	
 	//animate
 	aniCD --;

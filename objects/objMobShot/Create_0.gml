@@ -35,4 +35,4 @@ seekCD = 40;
 seekCDMax = 40;
 speedUpOnSeek = false;
 
-
+isFall = false;

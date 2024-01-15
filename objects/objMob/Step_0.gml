@@ -68,6 +68,11 @@ if(shotKind != noone){
 	if(!onlyShootWhilePlayerShoots || pc.mouseLHold || pc.mouseRHold){
 		shootCD --;
 	}
+	
+	if(revengeShot && hp + 9 < hpLast){
+		shootCD = 0;
+	}
+	
 	if(shootCD < 1){
 		shootCD = shootCDMax;
 		
@@ -85,7 +90,21 @@ if(shotKind != noone){
 	}
 }
 
-
+//blockFrames
+if(blockFrame != noone){
+	if(blockTime > 0){
+		blockTime --;
+		shootCD ++;
+		if(blockTime < 1){ thinkCD = 0; }
+	} else {
+		blockCD --;
+		xSpeed = 0; ySpeed = 0;
+		if(blockCD < 1){
+			blockCD = blockCDMax;
+			blockTime = blockCDMax;
+		}
+	}
+}
 
 
 hurtTime = clamp(hurtTime - 1, 0, 60);
@@ -97,3 +116,6 @@ if(hp < 1){
 	}
 	instance_destroy();
 }
+
+
+hpLast = hp;

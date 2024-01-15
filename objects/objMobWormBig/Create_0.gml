@@ -14,7 +14,7 @@ bumpPow = 20;
 moveSpeed = 2;
 
 gridMove = false;
-driftMove = Move.randomPoint;
+driftMove = Move.hunt;
 
 turnOnThink = true;
 

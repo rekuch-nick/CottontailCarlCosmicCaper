@@ -1,3 +1,4 @@
+if(other.blockTime > 0){ return; }
 if(!arrayContains(hitList, other)){
 	arrayAdd(hitList, other);
 	

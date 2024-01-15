@@ -20,7 +20,11 @@ txtTime = 0;
 
 for(var a=0; a<30; a++){ for(var b=0; b<20; b++){
 	secExposed[a, b] = false;
+	caveCoins[a, b] = 0;
 }}
+caveCoins[7, 4] = 20;
+caveCoins[10, 8] = 20;
+
 
 for(var a=0; a<ww.W; a++){ for(var b=0; b<ww.H; b++){
 	fmap[a, b] = noone;

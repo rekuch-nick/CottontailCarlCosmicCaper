@@ -9,6 +9,7 @@ isMajor = false;
 coinValue = 0;
 hpGain = 0;
 mpGain = 0;
+bpGain = 0;
 bombValue = 0;
 
 gotIt = false;

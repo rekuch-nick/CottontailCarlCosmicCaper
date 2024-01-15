@@ -23,6 +23,12 @@ function playerStepPlaySpace(){
 	
 	
 	if(wave.rockKind != noone){
+		rockCD --;
+		if(rockCD < 1){
+			rockCD = rockCDMax;
+			instance_create_depth(irandom_range(50, room_width-50), -50, ww.layerM + 1, wave.rockKind);
+		}
+		
 		
 	}
 	

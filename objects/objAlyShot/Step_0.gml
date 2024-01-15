@@ -16,6 +16,9 @@ if(firstFrame){
 	if(pointAtTarget){
 		image_angle = point_direction(x, y, xTar, yTar);
 	}
+	
+	if(sprite_index == imgPlayerBeamsCharged){ pow *= 2; }
+	
 }
 
 
@@ -30,6 +33,14 @@ if(!passWall && passWallTime < 1){
 			timeCD = 0;
 		}
 	}
+	
+	var rock = collision_point(x, y, objSpaceRock, true, true);
+	if(rock != noone){
+		if(rock.blockShots){
+			timeCD = 0;
+		}
+	}
+	
 }
 
 if(!ww.secExposed[pc.xMap, pc.yMap]){

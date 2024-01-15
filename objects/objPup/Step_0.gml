@@ -8,10 +8,16 @@ if(pc.inSpace){
 }
 
 if(gotIt){
+	
+	if(sprite_index == imgCoin && !pc.inOverworld && !pc.inSpace){
+		ww.caveCoins[pc.xMap, pc.yMap] --;
+	}
+	
 	pc.coins -= coinPrice;
 	
 	pc.hp = clamp(pc.hp + hpGain, 0, pc.hpMax);
 	pc.mp = clamp(pc.mp + mpGain, 0, pc.mpMax);
+	pc.bp = clamp(pc.bp + bpGain, 0, pc.bpMax);
 	pc.coins = clamp(pc.coins + coinValue, 0, pc.coinsMax);
 	pc.bombs = clamp(pc.bombs + bombValue, 0, pc.bombsMax);
 	
@@ -26,7 +32,7 @@ if(gotIt){
 		pc.xWarpPoint = ww.roomWidth / 2; 
 		pc.yWarpPoint = (10 * 64 + 32);
 		pc.blockMobSpawn = true;
-		pc.hp = pc.hpMax;
+		pc.fullHealing = true;
 	} else if(pc.xMap == 20 && pc.yMap == 0){
 		instance_create_depth(0, 0, ww.layerE, objTornado);
 		ww.state = State.warpWind;
@@ -40,13 +46,14 @@ if(gotIt){
 	if(sprite_index == imgPupShotUpFast){ pc.shotPower = Shot.rapid; }
 	if(sprite_index == imgPupShotUpBurst){ pc.shotPower = Shot.burst; }
 	
-	if(sprite_index == imgPlayerRang){ pc.wepLevels[0] = max(pc.wepLevels[0], 1); }
-	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); }
-	if(sprite_index == imgPupTorch){ pc.wepLevels[2] = max(pc.wepLevels[2], 1); }
+	//if(sprite_index == imgPlayerRang){ pc.wepLevels[0] = max(pc.wepLevels[0], 1); }
+	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); pc.eventTrigger[Event.gotStars] = true; }
+	if(sprite_index == imgPupTorch){ pc.wepLevels[2] = max(pc.wepLevels[2], 1); pc.eventTrigger[Event.gotTorch] = true; }
 	
 	if(sprite_index == imgPlayerShield){ pc.eventTrigger[Event.gotShield] = true; pc.sp = pc.spMax; }
 	
 	if(sprite_index == imgEgg){
+		pc.fullHealing = true;
 		if(pc.spaceLevel == 1){ pc.eventTrigger[Event.palace1Clear] = true; }
 		if(pc.spaceLevel == 2){ pc.eventTrigger[Event.palace2Clear] = true; }
 		if(pc.spaceLevel == 3){ pc.eventTrigger[Event.palace3Clear] = true; }
@@ -57,6 +64,9 @@ if(gotIt){
 		if(pc.spaceLevel == 8){ pc.eventTrigger[Event.palace8Clear] = true; }
 		if(pc.spaceLevel == 9){ pc.eventTrigger[Event.palace9Clear] = true; }
 	}
+	
+	if(sprite_index == imgMap){ pc.eventTrigger[Event.gotMap] = true; }
+	if(sprite_index == imgPupChargeCharm){ pc.eventTrigger[Event.gotChargeShot] = true; }
 
 	instance_destroy();
 	

@@ -2,7 +2,11 @@
 
 playerInput();
 
-
+if(fullHealing){
+	hp = clamp(hp + 1, 0, hpMax);
+	mp = clamp(mp + 1, 0, mpMax);
+	if(hp == hpMax && mp == mpMax){ fullHealing = false; }
+}
 
 
 if(ww.state == State.scroll){ playerStepScroll(); }

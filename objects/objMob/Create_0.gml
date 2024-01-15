@@ -31,12 +31,14 @@ rotOnThink = 0;
 
 hp = 15;
 hpMax = 15;
+hpLast = hp;
 
 shotKind = objMobShotShort;
 shootCDMax = 30 * 3;
 shootCD = shootCDMax - choose(0, 10, 20);
 shotCuster = 0; shotClusterMax = 0; shotClusterCDMas = 20;
 onlyShootWhilePlayerShoots = false;
+revengeShot = false;
 
 bumpPow = 20;
 
@@ -44,3 +46,9 @@ dropChance = 50;
 dropsBombs = false;
 
 turnOnThink = false;
+
+
+blockFrame = noone;
+blockTime = 0;
+blockCD = 0;
+blockCDMax = 90;

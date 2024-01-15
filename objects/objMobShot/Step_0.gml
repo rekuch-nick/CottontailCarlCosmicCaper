@@ -11,6 +11,11 @@ if(firstFrame){
 	xSpeed = cos(angle) * moveSpeed;
 	ySpeed = sin(angle) * moveSpeed;
 	
+	if(isFall){
+		xSpeed = 0;
+		ySpeed = moveSpeed;
+	}
+	
 	if(pointAtTarget){
 		image_angle = point_direction(x, y, xTar, yTar);
 	}
@@ -49,6 +54,15 @@ if(!passWall && passWallTime < 1){
 			timeCD = 0;
 		}
 	}
+	
+	
+	var rock = collision_point(x, y, objSpaceRock, true, true);
+	if(rock != noone){
+		if(rock.blockShots){
+			timeCD = 0;
+		}
+	}
+	
 }
 
 

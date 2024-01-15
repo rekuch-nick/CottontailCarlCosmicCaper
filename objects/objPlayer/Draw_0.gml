@@ -51,3 +51,5 @@ if(sp >= spMax && ww.state == State.play){
 	if(pc.image_index == 1){ yo += 4; }
 	draw_sprite_stretched(s, 0, x+xo, y+yo, 64, 64);
 }
+
+

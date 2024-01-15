@@ -35,6 +35,14 @@ function mobSpawn(){
 	if(!pc.inOverworld){ n = 0; }
 	
 	
+	for(var i=0; i<array_length(pc.killMemory); i++){
+		if(pc.killMemory[i].a == pc.xMap && pc.killMemory[i].b == pc.yMap){
+			n = min(n, pc.killMemory[i].mobsLeft);
+		}
+	}
+	
+	
+	
 	if(n > 0){
 		pc.lionCD --;
 		if(pc.lionCD  < 1){
@@ -56,6 +64,10 @@ function mobSpawn(){
 		
 		if(ww.inBiome == Zone.grass){
 			t = choose(objMob, objMob, objMob, objMobSnake);
+		}
+		
+		if(ww.inBiome == Zone.desert){
+			t = choose(objMobDesertFace, objMobDesertBlob);
 		}
 		
 		if(ww.inBiome == Zone.forest){

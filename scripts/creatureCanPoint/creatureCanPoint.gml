@@ -8,10 +8,14 @@ function creatureCanPoint(a, b, o){
 	var blo = collision_point(a, b, objBlock, true, true);
 	if(blo != noone){ return false; }
 	
-	//if(id == pc){
+	if(id == pc){
 	//	var mob = collision_point(a, b, objMob, true, true);
 	//	if(mob != noone){ return false; }
-	//}
+		
+		var rock = collision_point(a, b, objSpaceRock, true, true);
+		if(rock != noone && rock.blockPlayer){ return false; }
+	
+	}
 	
 	
 	var f = collision_point(a, b, objTile, true, true);
