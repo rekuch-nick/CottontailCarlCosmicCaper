@@ -2,8 +2,10 @@ draw_self();
 
 for(var ii=9; ii>=0; ii--){
 	if(img[ii] != noone){
-		i = ii;
-		break;
+		if(pc.eventTrigger[eve[ii]]){
+			i = ii;
+			break;
+		}
 	}
 }
 

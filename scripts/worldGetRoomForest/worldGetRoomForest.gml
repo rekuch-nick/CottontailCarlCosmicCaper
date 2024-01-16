@@ -185,6 +185,7 @@ function worldGetRoomForest(xxx, yyy){
 	
 	if(xxx == 10 && yyy == 6){
 		biome(Zone.forest);
+		ww.secBlock = imgBushGrass; ww.secX = 8; ww.secY = 9; ww.secType = Sec.burn;
 		wmap("%%%%%%...%%%%%%");
 		wmap("%%%%%.....%%%%%");
 		wmap("%%%%%...%%%%%%%");

@@ -22,7 +22,7 @@ function worldGetRoomCave(xxx, yyy){
 		
 	if(xxx == 10 && yyy == 7){ // start screen
 		ww.bmap[7, 5] = imgNPCTurtle;
-		ww.txt = "The Dragons are attacking from SPACE, I can't believe it! \n\nOwl lives at the south beach, he will know what to do.";
+		ww.txt = "The Dragons are attacking from SPACE, I can't believe it! \n\nOwl lives at the beach to the south, he will know what to do.";
 		if(pc.eventTrigger[Event.gotStar]){
 			ww.txt = "You got the STAR!\n\nTake it to the PALACE just west of here.";
 		}
@@ -91,6 +91,8 @@ function worldGetRoomCave(xxx, yyy){
 	
 	if( (xxx == 7 && yyy == 4) 
 		|| (xxx == 10 && yyy == 8) 
+		|| (xxx == 5 && yyy == 3) 
+		|| (xxx == 6 && yyy == 3) 
 		){ // dog gifts
 		ww.bmap[7, 5] = imgNPCDog;
 		if(ww.caveCoins[pc.xMap, pc.yMap] > 0){

@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgMobDragonGreenYellow",
-    "path": "sprites/imgMobDragonGreenYellow/imgMobDragonGreenYellow.yy",
+    "name": "imgMobDragonYellow",
+    "path": "sprites/imgMobDragonYellow/imgMobDragonYellow.yy",
   },
   "spriteMaskId": null,
   "visible": true,

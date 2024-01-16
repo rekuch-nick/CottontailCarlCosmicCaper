@@ -12,6 +12,18 @@ function playerLoadInventory(){
 	var s = instance_create_depth(3 * 64, 2 * 63, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotChargeShot; s.img[0] = imgPupChargeCharm;
 	s.desc[0] = "This charm will power up your lazer eyes if you don't use them for a while.";
+	s.eve[1] = Event.gotChargeShot2; s.img[1] = imgPupChargeCharm2;
+	s.desc[1] = "This charm will power up your lazer eyes if you don't use them for a while.";
+	
+	var s = instance_create_depth(4 * 64, 2 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotSpeedShot; s.img[0] = imgPupSpeedCharm;
+	s.desc[0] = "This charm will make your lazer eyes a little faster.";
+	s.eve[1] = Event.gotSpeedShot2; s.img[1] = imgPupSpeedCharm2;
+	
+	var s = instance_create_depth(5 * 64, 2 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotMightShot; s.img[0] = imgPupMightCharm;
+	s.desc[0] = "This charm will increase the power of your lazer eyes.";
+	s.eve[1] = Event.gotMightShot2; s.img[1] = imgPupMightCharm2;
 	
 	
 	var s = instance_create_depth(2 * 64, 3 * 63, hud.depth - 1, objItemTooltip);
@@ -22,9 +34,20 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotRangPack; s.img[0] = imgPlayerRangPack;
 	s.desc[0] = "Some spare boomerangs, donated by a judgmental cat. Lets you throw more at a time.";
 	
-	var s = instance_create_depth(8 * 64, 3 * 63, hud.depth - 1, objItemTooltip);
+	var s = instance_create_depth(7 * 64, 3 * 63, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotTorch; s.img[0] = imgPupTorch;
 	s.desc[0] = "The torch lets you burn monsters and open secret doors hidden under things like bushes.";
+	
+	
+	var s = instance_create_depth(10 * 64, 3 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.haveBombs; s.img[0] = imgPupBomb;
+	s.desc[0] = "Bombs are a superior combat item, and can also open some secret doors.";
+	
+	
+	
+	var s = instance_create_depth(2 * 64, 4 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotStars; s.img[0] = imgPlayerStar;
+	s.desc[0] = "A low damage, high speed weapon.";
 	
 	
 	

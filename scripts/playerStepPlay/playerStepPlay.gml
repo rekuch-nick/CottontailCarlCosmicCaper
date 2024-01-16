@@ -1,5 +1,5 @@
 function playerStepPlay(){
-	if(ww.txtTime < 30 * 30){ ww.txtTime ++; }
+	if(ww.txtTime < 30 * 30){ ww.txtTime += 2; }
 	
 	
 	if(!blockInput && bagPressed){
@@ -124,6 +124,8 @@ function playerStepPlay(){
 			beamChargeCD = 90;
 			shootCD = shootCDMax;
 			if(pc.shotPower == Shot.rapid){ shootCD -= 10; }
+			if(eventTrigger[Event.gotSpeedShot]){ shootCD -= 5; }
+			if(eventTrigger[Event.gotSpeedShot2]){ shootCD -= 5; }
 			var n = pc.shotAmount;
 			if(pc.shotPower == Shot.wide){ n += 2; }
 			var xo = image_xscale > 0 ? 20 : -20;

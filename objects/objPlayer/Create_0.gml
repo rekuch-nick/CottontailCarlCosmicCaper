@@ -117,6 +117,11 @@ enum Event {
 	gotStars,
 	gotMap,
 	gotChargeShot,
+	gotMightShot,
+	gotSpeedShot,
+	gotChargeShot2,
+	gotMightShot2,
+	gotSpeedShot2,
 	gotMPShell,
 	
 	haveBombs,

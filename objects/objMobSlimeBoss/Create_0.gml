@@ -11,7 +11,7 @@ shootCD = shootCDMax - choose(0, 10, 20);
 
 
 
-//drop = pc.eventTrigger[Event.gotMPShell] ? objPupCoin : objPupMPShell;
-//dropChance = 100;
+drop = pc.eventTrigger[Event.gotSpeedShot] ? objPupCoin : objPupSpeedCharm;
+dropChance = 100;
 
 //shatterAtHalf = true;

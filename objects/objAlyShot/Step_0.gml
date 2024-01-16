@@ -17,7 +17,11 @@ if(firstFrame){
 		image_angle = point_direction(x, y, xTar, yTar);
 	}
 	
-	if(sprite_index == imgPlayerBeamsCharged){ pow *= 2; }
+	if(sprite_index == imgPlayerBeamsCharged){ pow += 10; }
+	if(sprite_index == imgPlayerBeams || sprite_index == imgPlayerBeamsCharged){
+		if(pc.eventTrigger[Event.gotMightShot]){ pow += 5; }
+		if(pc.eventTrigger[Event.gotMightShot2]){ pow += 5; }
+	}
 	
 }
 

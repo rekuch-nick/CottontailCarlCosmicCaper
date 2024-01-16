@@ -16,6 +16,13 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 		var t = objPupHPOrb;
 		var p = 5;
 		var desc = "Recover a small amount of HEALTH.\n\nYou probably have better things to spend your money on.";
+		
+		if(!pc.eventTrigger[Event.gotStars]){
+			t = objPupStars;
+			p = 110;
+			desc = "Low damage, high speed weapon with a wide range.";
+		}
+		
 	}
 	
 	if(a == 9){

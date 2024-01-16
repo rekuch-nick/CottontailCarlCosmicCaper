@@ -49,6 +49,7 @@ if(gotIt){
 	//if(sprite_index == imgPlayerRang){ pc.wepLevels[0] = max(pc.wepLevels[0], 1); }
 	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); pc.eventTrigger[Event.gotStars] = true; }
 	if(sprite_index == imgPupTorch){ pc.wepLevels[2] = max(pc.wepLevels[2], 1); pc.eventTrigger[Event.gotTorch] = true; }
+	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); pc.eventTrigger[Event.gotStars] = true; }
 	
 	if(sprite_index == imgPlayerShield){ pc.eventTrigger[Event.gotShield] = true; pc.sp = pc.spMax; }
 	
@@ -66,7 +67,14 @@ if(gotIt){
 	}
 	
 	if(sprite_index == imgMap){ pc.eventTrigger[Event.gotMap] = true; }
+	
 	if(sprite_index == imgPupChargeCharm){ pc.eventTrigger[Event.gotChargeShot] = true; }
+	if(sprite_index == imgPupChargeCharm2){ pc.eventTrigger[Event.gotChargeShot2] = true; }
+	if(sprite_index == imgPupMightCharm){ pc.eventTrigger[Event.gotMightShot] = true; }
+	if(sprite_index == imgPupMightCharm2){ pc.eventTrigger[Event.gotMightShot2] = true; }
+	if(sprite_index == imgPupSpeedCharm){ pc.eventTrigger[Event.gotSpeedShot] = true; }
+	if(sprite_index == imgPupSpeedCharm2){ pc.eventTrigger[Event.gotSpeedShot2] = true; }
+	
 	if(sprite_index == imgPupMPShell){ pc.eventTrigger[Event.gotMPShell] = true; }
 	
 	if(sprite_index == imgPlayerRangPack){ pc.eventTrigger[Event.gotRangPack] = true; pc.rangsMax = 3; }
@@ -74,6 +82,8 @@ if(gotIt){
 	if(sprite_index == imgPupPotionFire || sprite_index == imgPupPotionPoison){
 		if(pc.potion == noone){ pc.potion = sprite_index; } else { potionUse(sprite_index); }
 	}
+	
+	
 
 	instance_destroy();
 	

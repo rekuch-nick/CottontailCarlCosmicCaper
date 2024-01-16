@@ -38,6 +38,14 @@ function worldLoardPalace02(){
 			rockKind: noone, rockChance: 100, rockWait: 90,
 		},
 		{
+			initMobs: [objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb],
+			laterMobs: [objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb],
+			waitBetweenMobs: 40,
+			waitForPups: true,
+			floorItem: noone,
+			rockKind: noone, rockChance: 100, rockWait: 90,
+		},
+		{
 			initMobs: [],
 			laterMobs: [],
 			waitBetweenMobs: 30,
