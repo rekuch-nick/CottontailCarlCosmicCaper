@@ -68,6 +68,12 @@ image_xscale += gro;
 image_yscale += gro;
 image_angle += rot * getDirection(image_xscale);
 
+if(speedChange != 1){
+	xSpeed *= speedChange;
+	ySpeed *= speedChange;
+}
+
+
 passWallTime = clamp(passWallTime - 1, 0, passWallTime);
 timeCD --;
 if(x < 0 || y < 0 || x > ww.roomWidth || y > room_height){
@@ -86,7 +92,16 @@ if(isRang && bounces < 1){
 }
 
 
+if(cloneAwayFromPlayer && timeCD == 10){
+	//if(x > 60 && y > 60 && x < ww.roomWidth - 60 && y < room_height - 60){
+		instance_create_depth(x, y, depth, object_index);
+	//}
+}
+	
+
 if(timeCD < 1){
+	
+	
 	if(object_index == objPlayerBeams && pc.shotPower == Shot.burst){
 		var s = instance_create_depth(x, y, depth, objPlayerBlastSmall);
 		s.pow = pow;

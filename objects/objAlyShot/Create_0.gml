@@ -9,6 +9,8 @@ offSet = 0;
 pow = 10;
 moveSpeed = 10;
 burnPow = 0;
+freezePow = 0;
+freezeChance = 0;
 
 passWall = false;
 passWallTime = 0;
@@ -33,3 +35,7 @@ destroyOnHit = true;
 
 isBasicShot = true;
 secType = noone;
+
+cloneAwayFromPlayer = false;
+speedChange = 1;
+

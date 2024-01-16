@@ -51,5 +51,8 @@ if(sp >= spMax && ww.state == State.play){
 	if(pc.image_index == 1){ yo += 4; }
 	draw_sprite_stretched(s, 0, x+xo, y+yo, 64, 64);
 }
+if(windUP){
+	draw_sprite_ext(imgWindShield, 0, x, y, 4, 4, windAngle, c_white, random_range(.5, .8));
+}
 
 

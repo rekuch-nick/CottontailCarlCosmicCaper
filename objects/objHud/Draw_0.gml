@@ -79,6 +79,8 @@ if(pc.wepSelected == 0){ im = imgPlayerRang; }
 if(pc.wepSelected == 1){ im = imgPlayerStar; }
 if(pc.wepSelected == 2){ im = imgPupTorch; }
 if(pc.wepSelected == 3){ im = imgPupBomb; }
+if(pc.wepSelected == 4){ im = imgPupWindStone; }
+if(pc.wepSelected == 5){ im = imgPupIceStone; }
 draw_sprite_stretched(im, 0, x + (128), y + (68 * 4), 64, 64);
 
 //im = imgPupPotionEmpty;

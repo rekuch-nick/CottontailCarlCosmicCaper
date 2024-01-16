@@ -24,5 +24,8 @@ slowTime = 0;
 tangleTime = 0;
 muteTime = 0;
 stunTime = 0;
+frozenTime = 0;
 
+isDragon = false;
 basicImmunity = false;
+canFreeze = true;

@@ -18,3 +18,4 @@ drop = pc.eventTrigger[Event.gotMPShell] ? objPupCoin : objPupMPShell;
 dropChance = 100;
 
 shatterAtHalf = true;
+canFreeze = false;

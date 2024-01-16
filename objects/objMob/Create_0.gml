@@ -58,3 +58,8 @@ blockFrame = noone;
 blockTime = 0;
 blockCD = 0;
 blockCDMax = 90;
+
+spec = noone;
+specCD = 0;
+specCDMax = 0;
+specLimit = -1;

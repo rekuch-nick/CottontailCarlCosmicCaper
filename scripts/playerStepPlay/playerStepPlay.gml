@@ -6,14 +6,14 @@ function playerStepPlay(){
 		playerLoadInventory();
 		return;
 	}
-	
+	windUP = false;
 	
 	
 	if(inSpace){ playerStepPlaySpace(); }
 	
 	
 	
-		
+	
 	
 	
 	
@@ -27,6 +27,7 @@ function playerStepPlay(){
 	if(xIn != 0 && yIn != 0){
 		spd /= 1.4;
 	}
+	if(stunTime > 0){ spd = 0; }
 	
 	xSpeed = xIn * spd;
 	ySpeed = yIn * spd;
@@ -116,7 +117,8 @@ function playerStepPlay(){
 	
 	
 		// beams
-	if(shootCD > 0){ shootCD --; } 
+	if(shootCD > 0){ shootCD --; }
+	if(stunTime > 0 && shootCD < 1){ shootCD = 1; }
 	if(mouseLHold){
 		if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
 		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
@@ -137,6 +139,9 @@ function playerStepPlay(){
 				if(bp >= bpThresh){ s.sprite_index = imgPlayerBeamsCharged; }
 			}
 			bp = clamp(bp - 15, 0, bpMax);
+			if(wepSelected == 5 && wepLevels[5] > 0 && irandom_range(1, 100) < 60){
+				instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerIceShotSmall);
+			}
 		}
 		
 	} else if(mouseRHold){
@@ -187,6 +192,37 @@ function playerStepPlay(){
 				instance_create_depth(x, y, ww.layerE, objPlayerBomb);
 		}
 		
+			//windstone
+		if(wepSelected == 4 && wepLevels[4] > 0 && shootCD < 1 && mp >= wepCost[wepSelected]){
+				shootCD = wepCDMax[wepSelected];
+				mp -= wepCost[wepSelected];
+				windAngle += 10;
+				if(windAngle > 360){ windAngle -= 360; }
+				windUP = true;
+				with(objMobShot){ if(isWindDeflectable){
+					if(point_distance(x, y, pc.x, pc.y) < 128){
+						instance_create_depth(x, y, ww.layerE, objShotDeflected);
+						instance_destroy();
+					}
+				}}
+		}
+		
+			//icestone
+		if(wepSelected == 5 && wepLevels[5] > 0 && shootCD < 1 && mp >= wepCost[wepSelected]){
+				shootCD = wepCDMax[wepSelected];
+				mp -= wepCost[wepSelected];
+				
+				var a = mouse_x; var b = mouse_y;
+				var angle = arctan2(b - y, a - x);
+				var aa = cos(angle) * 100;
+				var bb = sin(angle) * 100;
+				while(inBoundsPoint(a, b)){ a += aa; b += bb; }
+				xIceTar = a; yIceTar = b;
+				iceFace = image_xscale > 0 ? 1 : -1;
+				instance_create_depth(x, y, ww.layerE, objPlayerColdBlast);
+				
+		}
+		
 		
 			
 			
@@ -200,7 +236,10 @@ function playerStepPlay(){
 	}
 	
 	if(hurtTime > 0){ hurtTime --; }
+	if(stunTime > 0){ stunTime --; }
 	
+	
+	playerFreezeWater();
 	
 	
 	
@@ -254,6 +293,8 @@ function playerStepPlay(){
 			bp = clamp(bp + 1, 0, bpMax);
 		}
 	}
+	
+	
 	
 	
 	//animate

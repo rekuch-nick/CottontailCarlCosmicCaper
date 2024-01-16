@@ -22,3 +22,4 @@ shatterAtHalf = true;
 
 inert = imgMobArmorStill; 
 thinkCD = 1;
+canFreeze = false;

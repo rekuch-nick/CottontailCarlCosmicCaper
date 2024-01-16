@@ -15,3 +15,4 @@ drop = pc.eventTrigger[Event.gotSpeedShot] ? objPupCoin : objPupSpeedCharm;
 dropChance = 100;
 
 //shatterAtHalf = true;
+canFreeze = false;

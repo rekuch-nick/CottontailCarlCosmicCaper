@@ -21,6 +21,7 @@ if(poisonTime > 0){ hp -= .15; }
 if(inert != noone){ thinkCD ++; shootCD ++; }
 
 thinkCD --;
+if(frozenTime > 0 && thinkCD < 1){ thinkCD = 1; }
 if(thinkCD < 1){
 	thinkCD = thinkCDMax;
 	if(turnOnThink){
@@ -46,7 +47,7 @@ if(thinkCD < 1){
 	}
 }
 
-
+if(frozenTime > 0){ xSpeed = 0; ySpeed = 0; }
 x += xSpeed;
 y += ySpeed;
 
@@ -66,7 +67,7 @@ xTile = floor(x / 64); yTile = floor(y / 64);
 
 
 
-if(shotKind != noone){
+if(shotKind != noone && frozenTime < 1){
 	if(!onlyShootWhilePlayerShoots || pc.mouseLHold || pc.mouseRHold){
 		shootCD --;
 		if(shootFasterAsDying && hp / hpMax < .6){ shootCD --; }
@@ -102,7 +103,32 @@ if(shotKind != noone){
 	}
 }
 
+
+if(spec != noone && frozenTime < 1){
+	specCD --; if(specCD < 1){
+		specCD = specCDMax;
+		
+		if(spec == imgLightning){
+			if(x > pc.x && image_xscale > 0){ image_xscale *= -1; }
+			if(x < pc.x && image_xscale < 0){ image_xscale *= -1; }
+			xSpeed = 0; ySpeed = 0; thinkCD = 30;
+			var l = instance_create_depth(x, y, ww.layerE, objLightning);
+			l.image_angle = point_direction(x, y, pc.x, pc.y);
+			hurtPlayer(bumpPow, false);
+			pc.stunTime = max(pc.stunTime, 20);
+		}
+		
+		if(specLimit != -1){
+			specLimit --;
+			if(specLimit == 0){
+				spec = noone;
+			}
+		}
+	}
+}
+
 //blockFrames
+if(frozenTime > 0){ blockTime = 0; }
 if(blockFrame != noone){
 	if(blockTime > 0){
 		blockTime --;

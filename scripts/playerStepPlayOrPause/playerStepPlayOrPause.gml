@@ -7,7 +7,7 @@ function playerStepPlayOrPause(){
 			mp = mpMax;
 			coins = coinsMax;
 			bombs = bombsMax;
-			
+			eventTrigger[Event.gotStar] = true;
 			with(objMob){ hp = 0; }
 		}
 	}

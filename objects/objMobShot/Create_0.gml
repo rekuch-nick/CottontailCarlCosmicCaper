@@ -6,6 +6,7 @@ grav = 0;
 
 
 isBlockable = true;
+isWindDeflectable = true;
 
 pow = 10;
 moveSpeed = 10;
