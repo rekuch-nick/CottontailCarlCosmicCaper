@@ -246,7 +246,7 @@ function playerStepPlay(){
 	//check for stairs
 	xTile = floor(x / 64);
 	yTile = floor(y / 64);
-	if(inOverworld){
+	if(inOverworld && !debug){
 		if(xTile >= 0 && yTile >= 0 && xTile < 15 && yTile < 12){
 			if(ww.fmap[xTile, yTile] != noone && ww.fmap[xTile, yTile].sprite_index == imgDoorway){
 				playerKillMemoryUpdate();

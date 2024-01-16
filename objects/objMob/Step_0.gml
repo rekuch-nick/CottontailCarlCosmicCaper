@@ -50,6 +50,12 @@ if(thinkCD < 1){
 if(frozenTime > 0){ xSpeed = 0; ySpeed = 0; }
 x += xSpeed;
 y += ySpeed;
+if(stopAtDis){
+	disToTarget -= moveSpeed;
+	if(disToTarget < 1){
+		xSpeed = 0; ySpeed = 0;
+	}
+}
 
 
 if(xSpeed > 0 && x > xTar){ x = xTar; xSpeed = 0; }
@@ -134,6 +140,10 @@ if(blockFrame != noone){
 		blockTime --;
 		shootCD ++;
 		if(blockTime < 1){ thinkCD = 0; }
+		if(object_index == objMobSandworm && irandom_range(1, 4) == 1){
+			instance_create_depth(x + irandom_range(-64, 64), y + 64, ww.layerE, objDirtChip);
+			blockTime ++;
+		}
 	} else {
 		blockCD --;
 		xSpeed = 0; ySpeed = 0;
@@ -166,5 +176,10 @@ if(hp < 1){
 	instance_destroy();
 }
 
+
+
 if(hp < hpMax){ inert = noone; }
 hpLast = hp;
+
+
+depth = ww.layerM - floor(y / 10);

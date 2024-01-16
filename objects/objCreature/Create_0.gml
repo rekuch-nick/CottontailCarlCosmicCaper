@@ -29,3 +29,4 @@ frozenTime = 0;
 isDragon = false;
 basicImmunity = false;
 canFreeze = true;
+avoidEdges = 0;

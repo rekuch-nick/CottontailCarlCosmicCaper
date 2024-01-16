@@ -2,7 +2,7 @@ function playerFreezeWater(){
 	
 	if(ww.state == State.scroll){ return; }
 	
-	if(wepSelected == 5 && wepLevels[5] > 0 && mp >= 10){
+	if(wepSelected == 5 && wepLevels[5] > 0 && mp >= 5){
 		
 		var frozeSomething = false;
 		
@@ -22,7 +22,7 @@ function playerFreezeWater(){
 		}
 		
 		if(frozeSomething){
-			mp -= 10;
+			mp -= 5;
 		}
 	}
 

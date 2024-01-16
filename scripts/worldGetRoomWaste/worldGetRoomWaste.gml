@@ -67,16 +67,16 @@ function worldGetRoomWaste(xxx, yyy){
 	if(xxx == 3 && yyy == 3){ 
 		biome(Zone.waste);
 		wmap("%.............%");
+		wmap("..............%");
+		wmap("..............%");
 		wmap("...............");
 		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
+		wmap("..............%");
+		wmap("..............%");
+		wmap("..............%");
+		wmap("..............%");
+		wmap("..............%");
+		wmap("..............%");
 		wmap("%.............%");
 	}
 	
@@ -150,14 +150,15 @@ function worldGetRoomWaste(xxx, yyy){
 	
 	if(xxx == 5 && yyy == 5){ 
 		biome(Zone.waste);
+		ww.secBlock = imgRockBrown; ww.secX = 9; ww.secY = 6; ww.secType = Sec.bomb;
 		wmap("%%%%%%%/////%//");
 		wmap("............./h");
 		wmap("............./h");
 		wmap("...........r./h");
-		wmap(".........../rrh");
-		wmap("........../hhhh");
+		wmap("..........//rrh");
+		wmap("........////hhh");
 		wmap("..........hhhhh");
-		wmap("...........hhhh");
+		wmap("..........rhhhh");
 		wmap("...........rhhh");
 		wmap("............/hh");
 		wmap("............./h");

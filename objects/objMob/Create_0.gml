@@ -11,7 +11,8 @@ fallTo = y;
 xTile = floor(x / 64);
 yTile = floor(y / 64);
 
-
+disToTarget = 1000;
+stopAtDis = false;
 thinkCD = 0;
 thinkCDMax = choose(40, 50, 60);
 moveSpeed = 8;
@@ -58,6 +59,7 @@ blockFrame = noone;
 blockTime = 0;
 blockCD = 0;
 blockCDMax = 90;
+harmlessWhileBlocking = false;
 
 spec = noone;
 specCD = 0;

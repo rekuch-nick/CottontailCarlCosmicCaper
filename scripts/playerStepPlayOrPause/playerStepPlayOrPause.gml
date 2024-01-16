@@ -8,6 +8,7 @@ function playerStepPlayOrPause(){
 			coins = coinsMax;
 			bombs = bombsMax;
 			eventTrigger[Event.gotStar] = true;
+			eventTrigger[Event.gotMap] = true;
 			with(objMob){ hp = 0; }
 		}
 	}
