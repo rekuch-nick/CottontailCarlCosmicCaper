@@ -38,6 +38,27 @@ function worldGetRoomCave(xxx, yyy){
 		if(pc.eventTrigger[Event.palace3Clear]){
 			ww.txt = "To the west is the red forest. It holds the next PALACE, and the 4th SPACE DOOR.";
 		}
+		if(pc.eventTrigger[Event.palace4Clear]){
+			ww.txt = "Far to the south-west is a land cursed with unnatural cold. Perhaps helping its residents will yeild the next egg.";
+		}
+		if(pc.eventTrigger[Event.palace5Clear]){
+			ww.txt = "Use your ICE STONE at the south beach to reach new places and you'll find the next SPACE DOOR.";
+		}
+		if(pc.eventTrigger[Event.palace6Clear]){
+			ww.txt = "The graveyard to the noth-west calls. You'll need to use you WAND at the right place.";
+		}
+		if(pc.eventTrigger[Event.palace7Clear]){
+			ww.txt = "It's time to go to the mountians in the north. Leave no stone unturned.";
+		}
+		if(pc.eventTrigger[Event.palace8Clear]){
+			ww.txt = "The deep forest in the east, near where you found the STAR. Be brave, something terrible is there.";
+		}
+		if(pc.eventTrigger[Event.palace9Clear]){
+			ww.txt = "In the north mountians, where the rock melts and fire flows like water. Can you feel the eggs start to pulse?";
+		}
+		if(pc.eventTrigger[Event.palace10Clear]){
+			ww.txt = "There is a cursed land in the north-east, blighted by darkness. The shore there holds a secret.";
+		}
 	}
 	if(xxx == 11 && yyy == 9){ // owl's house
 		ww.bmap[7, 5] = imgNPCOwl;
@@ -115,6 +136,8 @@ function worldGetRoomCave(xxx, yyy){
 	
 	
 	worldGetRoomCaveCarrot(xxx, yyy, 5, 2, Event.gotCarrot02);
+	worldGetRoomCaveCarrot(xxx, yyy, 12, 8, Event.gotCarrot04);
+	worldGetRoomCaveCarrot(xxx, yyy, 12, 7, Event.gotCarrot05);
 	
 	
 	if( (xxx == 7 && yyy == 3) ){ // rang cat

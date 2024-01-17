@@ -91,6 +91,10 @@ killMemory = [
 	{a: 0, b: 0, mobsLeft: 10},
 	{a: 0, b: 0, mobsLeft: 10},
 	{a: 0, b: 0, mobsLeft: 10},
+	{a: 0, b: 0, mobsLeft: 10},
+	{a: 0, b: 0, mobsLeft: 10},
+	{a: 0, b: 0, mobsLeft: 10},
+	{a: 0, b: 0, mobsLeft: 10},
 ];
 
 

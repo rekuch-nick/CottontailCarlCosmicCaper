@@ -66,8 +66,8 @@ function worldGetRoomWaste(xxx, yyy){
 	
 	if(xxx == 3 && yyy == 3){ 
 		biome(Zone.waste);
-		wmap("%.............%");
-		wmap("..............%");
+		wmap("%%%////..////%%");
+		wmap("..........%...%");
 		wmap("..............%");
 		wmap("...............");
 		wmap("...............");
