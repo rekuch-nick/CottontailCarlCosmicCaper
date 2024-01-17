@@ -24,6 +24,9 @@ function worldLoadRoom(dir){
 			if(a % 3 == 0 && b % 3 == 0){ s.image_index = 2; }
 			
 			if(s.sprite_index == imgWater){ s.isWater = true; s.isLand = false; }
+			if(s.sprite_index == imgWaterDark){ s.isWater = true; s.isLand = false; }
+			
+			if(s.sprite_index == imgLava){ s.isWater = true; s.isLand = false; }
 			
 			
 			

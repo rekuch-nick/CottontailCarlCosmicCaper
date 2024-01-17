@@ -50,6 +50,7 @@ dropChance = 50;
 dropsBombs = false;
 dropsPotions = true;
 drop = noone;
+dropEventNumber = noone;
 
 turnOnThink = false;
 shootFasterAsDying = false;
@@ -65,3 +66,10 @@ spec = noone;
 specCD = 0;
 specCDMax = 0;
 specLimit = -1;
+
+showHP = false;
+
+regen = 0;
+wob = false;
+weakToFire = noone;
+weakToRang = false;

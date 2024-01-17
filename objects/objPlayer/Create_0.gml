@@ -74,7 +74,7 @@ eventTrigger[Event.gotRang] = true;
 //eventTrigger[Event.gotRangPack] = true;
 //wepLevels[1]  = 1; eventTrigger[Event.gotStars] = true; // ninja stars
 //wepLevels[2]  = 1; eventTrigger[Event.gotTorch] = true; // torch
-wepLevels[4]  = 1; eventTrigger[Event.gotWindStone] = true; // wind stone
+//wepLevels[4]  = 1; eventTrigger[Event.gotWindStone] = true; // wind stone
 wepLevels[5]  = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
 
 //eventTrigger[Event.palace1Clear] = true; ///
@@ -144,6 +144,30 @@ enum Event {
 	palace7Clear,
 	palace8Clear,
 	palace9Clear,
+	palace10Clear,
+	palace11Clear,
+	
+	
+	gotCarrot01,
+	gotCarrot02,
+	gotCarrot03,
+	gotCarrot04,
+	gotCarrot05,
+	gotCarrot06,
+	gotCarrot07,
+	gotCarrot08,
+	gotCarrot09,
+	gotCarrot10,
+	gotCarrot11,
+	gotCarrot12,
+	gotCarrot13,
+	gotCarrot14,
+	gotCarrot15,
+	gotCarrot16,
+	gotCarrot17,
+	gotCarrot18,
+	gotCarrot19,
+	gotCarrot20,
 }
 
 shotPower = noone;

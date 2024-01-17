@@ -16,11 +16,20 @@ if(falling){
 
 
 creatureBuffDecay();
-if(burnTime > 0){ hp -= .15; }
+if(burnTime > 0){ 
+	hp -= .15; 
+	if(weakToFire != noone){
+		sprite_index = weakToFire;
+		regen = 0;
+		moveSpeed --;
+		weakToFire = noone;
+	}
+}
 if(poisonTime > 0){ hp -= .15; }
 if(inert != noone){ thinkCD ++; shootCD ++; }
 
 thinkCD --;
+if(thinkCD < 1 && stunTime > 0){ thinkCD = 1; }
 if(frozenTime > 0 && thinkCD < 1){ thinkCD = 1; }
 if(thinkCD < 1){
 	thinkCD = thinkCDMax;
@@ -47,7 +56,7 @@ if(thinkCD < 1){
 	}
 }
 
-if(frozenTime > 0){ xSpeed = 0; ySpeed = 0; }
+if(frozenTime > 0 || stunTime > 0){ xSpeed = 0; ySpeed = 0; }
 x += xSpeed;
 y += ySpeed;
 if(stopAtDis){
@@ -66,14 +75,14 @@ if(ySpeed < 0 && y < yTar){ y = yTar; ySpeed = 0; }
 
 
 image_angle += rot * getDirection(image_xscale);
-
+if(wob){ image_angle += choose(-4, 4); }
 
 xTile = floor(x / 64); yTile = floor(y / 64);
 
 
 
 
-if(shotKind != noone && frozenTime < 1){
+if(shotKind != noone && frozenTime < 1 && stunTime < 1){
 	if(!onlyShootWhilePlayerShoots || pc.mouseLHold || pc.mouseRHold){
 		shootCD --;
 		if(shootFasterAsDying && hp / hpMax < .6){ shootCD --; }
@@ -110,7 +119,7 @@ if(shotKind != noone && frozenTime < 1){
 }
 
 
-if(spec != noone && frozenTime < 1){
+if(spec != noone && frozenTime < 1 && stunTime < 1){
 	specCD --; if(specCD < 1){
 		specCD = specCDMax;
 		
@@ -134,13 +143,13 @@ if(spec != noone && frozenTime < 1){
 }
 
 //blockFrames
-if(frozenTime > 0){ blockTime = 0; }
+if(frozenTime > 0 || stunTime > 0){ blockTime = 0; }
 if(blockFrame != noone){
 	if(blockTime > 0){
 		blockTime --;
 		shootCD ++;
 		if(blockTime < 1){ thinkCD = 0; }
-		if(object_index == objMobSandworm && irandom_range(1, 4) == 1){
+		if(isSandworm && irandom_range(1, 4) == 1){
 			instance_create_depth(x + irandom_range(-64, 64), y + 64, ww.layerE, objDirtChip);
 			blockTime ++;
 		}
@@ -171,12 +180,13 @@ hurtTime = clamp(hurtTime - 1, 0, 60);
 
 if(hp < 1){
 	if(irandom_range(0, 99) < dropChance){
-		instance_create_depth(x, y, ww.layerP, mobRollDrop());
+		var d = instance_create_depth(x, y, ww.layerP, mobRollDrop());
+		if(dropEventNumber != noone){ d.eventNumber = dropEventNumber; }
 	}
 	instance_destroy();
 }
 
-
+if(hp < hpMax){ hp += regen; }
 
 if(hp < hpMax){ inert = noone; }
 hpLast = hp;

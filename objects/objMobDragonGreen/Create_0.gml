@@ -21,3 +21,5 @@ thinkCDMax = 30;
 
 isDragon = true;
 canFreeze = false;
+
+showHP = true;

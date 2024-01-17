@@ -64,6 +64,8 @@ function playerStepPlaySpace(){
 			
 			ww.state = State.leaveSpace;
 			with(objEffect){ instance_destroy(); }
+			with(objSpaceRock){ instance_destroy(); }
+			with(objPup){ instance_destroy(); }
 		}
 	}
 	

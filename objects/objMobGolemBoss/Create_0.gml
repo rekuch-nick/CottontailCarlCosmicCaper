@@ -15,11 +15,18 @@ moveSpeed = 16;
 bumpPow = 20;
 
 
-//drop = pc.eventTrigger[Event.gotMPShell] ? objPupCoin : objPupMPShell;
-//dropChance = 100;
+drop = objPupCoin;
+if(!pc.eventTrigger[Event.gotCarrot01]){
+	drop = objPupCarrot;
+	dropEventNumber = Event.gotCarrot01;
+}
+dropChance = 100;
+
 
 shatterAtHalf = true;
 
 inert = imgMobArmorStill; 
 thinkCD = 1;
 canFreeze = false;
+canStun = false;
+showHP = true;

@@ -5,6 +5,7 @@ function creatureBuffDecay(){
 		poisonTime = 0;
 		stunTime = 0;
 		frozenTime = 0;
+		stunTime = 0;
 	}
 	
 	if(burnTime > 0){ burnTime --; }

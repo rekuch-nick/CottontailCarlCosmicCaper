@@ -26,3 +26,5 @@ specCD = 120;
 specCDMax = 180;
 
 canFreeze = false;
+
+showHP = true;

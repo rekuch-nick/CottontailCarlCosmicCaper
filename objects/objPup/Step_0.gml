@@ -66,6 +66,8 @@ if(gotIt){
 		if(pc.spaceLevel == 7){ pc.eventTrigger[Event.palace7Clear] = true; }
 		if(pc.spaceLevel == 8){ pc.eventTrigger[Event.palace8Clear] = true; }
 		if(pc.spaceLevel == 9){ pc.eventTrigger[Event.palace9Clear] = true; }
+		if(pc.spaceLevel == 10){ pc.eventTrigger[Event.palace10Clear] = true; }
+		if(pc.spaceLevel == 11){ pc.eventTrigger[Event.palace11Clear] = true; }
 	}
 	
 	if(sprite_index == imgMap){ pc.eventTrigger[Event.gotMap] = true; }
@@ -85,6 +87,15 @@ if(gotIt){
 		if(pc.potion == noone){ pc.potion = sprite_index; } else { potionUse(sprite_index); }
 	}
 	
+	if(sprite_index == imgCarrot){
+		pc.hp += 5; pc.hpMax += 5;
+		pc.eventTrigger[eventNumber] = true;
+		with(objTile){ if(sprite_index == imgNPCFox){
+			ww.txt = "";
+			instance_create_depth(x, y, ww.layerE, objFoxGo);
+			instance_destroy();
+		}}
+	}
 	
 
 	instance_destroy();

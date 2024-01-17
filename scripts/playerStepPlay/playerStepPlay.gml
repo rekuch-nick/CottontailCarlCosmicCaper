@@ -262,6 +262,15 @@ function playerStepPlay(){
 				if(eventTrigger[Event.gotStar]){
 					if(xMap == 8 && yMap == 6){ spaceLevel = 1; }
 					if(xMap == 7 && yMap == 1){ spaceLevel = 2; }
+					if(xMap == 15 && yMap == 4){ spaceLevel = 3; }
+					if(xMap == 4 && yMap == 7){ spaceLevel = 4; }
+					if(xMap == 0 && yMap == 9){ spaceLevel = 5; }
+					if(xMap == 18 && yMap == 9){ spaceLevel = 6; }
+					if(xMap == 0 && yMap == 5){ spaceLevel = 7; }
+					if(xMap == 10 && yMap == 0){ spaceLevel = 8; }
+					if(xMap == 16 && yMap == 4){ spaceLevel = 9; }
+					if(xMap == 4 && yMap == 0){ spaceLevel = 10; }
+					if(xMap == 18 && yMap == 1){ spaceLevel = 11; }
 					if(spaceLevel != 0){
 						ww.state = State.enteringSpace;
 						xCave = x;

@@ -16,6 +16,9 @@ shotSwap = [objMobShotRandom, objMobShot];
 
 drop = pc.eventTrigger[Event.gotMPShell] ? objPupCoin : objPupMPShell;
 dropChance = 100;
+dropEventNumber = noone;
 
 shatterAtHalf = true;
 canFreeze = false;
+canStun = false;
+showHP = true;

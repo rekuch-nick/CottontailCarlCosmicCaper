@@ -13,9 +13,9 @@ function wmap(s){
 	
 	ww.waterKind = imgWater;
 	
-	ww.secBurn = imgBush;
-	ww.secPush = imgRock;
-	ww.secBlast = imgRockWall;
+	//ww.secBurn = imgBush;
+	//ww.secPush = imgRock;
+	//ww.secBlast = imgRockWall;
 	
 	if(ww.inBiome == Zone.beach){
 		ww.rock1 = imgRockBrown;
@@ -89,6 +89,8 @@ function wmap(s){
 		if(c == "A"){ ww.bmap[a, b] = imgSkullBlock; }
 		if(c == "F"){ ww.bmap[a, b] = imgFireBlock; }
 		
+		if(c == "N"){ ww.bmap[a, b] = imgNest; }
+		
 		
 		if(c == "X"){ ww.bmap[a, b] = imgMobArmorStill; }
 		
@@ -104,6 +106,11 @@ function wmap(s){
 		
 		if(c == "c"){ ww.fmap[a, b] = imgSpaceCloud; }
 		if(c == "h"){ ww.fmap[a, b] = imgGrassSparse; }
+		
+		if(c == ":"){ ww.fmap[a, b] = imgBlackTile; }
+		if(c == "+"){ ww.fmap[a, b] = imgLadder; }
+		
+		
 		
 		
 		if(!ww.secExposed[pc.xMap, pc.yMap]){

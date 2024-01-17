@@ -26,7 +26,9 @@ muteTime = 0;
 stunTime = 0;
 frozenTime = 0;
 
+isSandworm = false;
 isDragon = false;
 basicImmunity = false;
 canFreeze = true;
+canStun = true;
 avoidEdges = 0;

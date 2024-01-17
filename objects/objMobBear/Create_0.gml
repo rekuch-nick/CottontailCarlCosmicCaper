@@ -1,13 +1,13 @@
 event_inherited();
 
-hp = 90;
-hpMax = 90;
+hp = 80;
+hpMax = 80;
 
 shotKind = objMobShot;
-shootCDMax = 20;
+shootCDMax = 24;
 shootCD = shootCDMax - choose(0, 10, 20);
 
 bumpPow = 20;
 
-
+dropsBombs = true;
 

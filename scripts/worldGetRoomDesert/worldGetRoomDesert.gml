@@ -4,7 +4,7 @@ function worldGetRoomDesert(xxx, yyy){
 	if(xxx == 4 && yyy == 3){
 		biome(Zone.desert);
 		ww.canLion = false;
-		ww.mobList = [4, objMobSandworm, objMobSandworm, objMobSandworm, objMobSandworm];////
+		ww.mobList = [4, objMobSandwormCarrot, objMobSandworm, objMobSandworm, objMobSandworm];////
 		ww.noFall = true;
 		wmap("///////////////");
 		wmap("/............./");

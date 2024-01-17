@@ -32,6 +32,12 @@ function worldGetRoomCave(xxx, yyy){
 		if(pc.eventTrigger[Event.palace1Clear] && pc.eventTrigger[Event.gotTorch]){
 			ww.txt = "North of the last PALACE is a desert. The SPACE DOOR is hidden under a cactus there.";
 		}
+		if(pc.eventTrigger[Event.palace2Clear]){
+			ww.txt = "Travel east, to where the grass grows tall. There you'll find another PALACE, with the 3rd SPACE DOOR.";
+		}
+		if(pc.eventTrigger[Event.palace3Clear]){
+			ww.txt = "To the west is the red forest. It holds the next PALACE, and the 4th SPACE DOOR.";
+		}
 	}
 	if(xxx == 11 && yyy == 9){ // owl's house
 		ww.bmap[7, 5] = imgNPCOwl;
@@ -53,7 +59,7 @@ function worldGetRoomCave(xxx, yyy){
 	
 	
 	
-	
+	//advice mallards
 	if(xxx == 8 && yyy == 8){
 		ww.bmap[7, 6] = imgNPCDuck;
 		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
@@ -67,6 +73,13 @@ function worldGetRoomCave(xxx, yyy){
 		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
 		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
 		ww.txt = "Use numbers or mouse wheel to swap items.\n\nPress [Enter] to look at your inventory.\n\nPress [Q] to use a potion.\n\nItem managment is key to success!";
+	}
+	if(xxx == 15 && yyy == 5){
+		ww.bmap[7, 6] = imgNPCDuck;
+		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
+		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
+		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
+		ww.txt = "Your eye lazers are powerful, but don't neglect you secondary weapons.\n\nMost of them do extra damage to particular monster types.";
 	}
 	
 	
@@ -101,6 +114,9 @@ function worldGetRoomCave(xxx, yyy){
 	}
 	
 	
+	worldGetRoomCaveCarrot(xxx, yyy, 5, 2, Event.gotCarrot02);
+	
+	
 	if( (xxx == 7 && yyy == 3) ){ // rang cat
 		ww.bmap[7, 5] = imgNPCCat;
 		if(pc.eventTrigger[Event.gotRangPack]){
@@ -116,6 +132,15 @@ function worldGetRoomCave(xxx, yyy){
 	ww.mapRow = 0;
 	if(	(xxx == 8 && yyy == 6)
 		|| (xxx == 7 && yyy == 1)
+		|| (xxx == 15 && yyy == 4)
+		|| (xxx == 4 && yyy == 7)
+		|| (xxx == 0 && yyy == 9)
+		|| (xxx == 18 && yyy == 9)
+		|| (xxx == 0 && yyy == 5)
+		|| (xxx == 10 && yyy == 0)
+		|| (xxx == 16 && yyy == 4)
+		|| (xxx == 4 && yyy == 0)
+		|| (xxx == 18 && yyy == 1)
 				){ 
 		wmap("///////////////");
 		wmap("//...F...F...//");
@@ -132,6 +157,15 @@ function worldGetRoomCave(xxx, yyy){
 		
 		if( (xxx == 8 && yyy == 6 && pc.eventTrigger[Event.palace1Clear])
 			|| (xxx == 7 && yyy == 1 && pc.eventTrigger[Event.palace2Clear])
+			|| (xxx == 15 && yyy == 4 && pc.eventTrigger[Event.palace3Clear])
+			|| (xxx == 4 && yyy == 7 && pc.eventTrigger[Event.palace4Clear])
+			|| (xxx == 0 && yyy == 9 && pc.eventTrigger[Event.palace5Clear])
+			|| (xxx == 18 && yyy == 9 && pc.eventTrigger[Event.palace6Clear])
+			|| (xxx == 0 && yyy == 5 && pc.eventTrigger[Event.palace7Clear])
+			|| (xxx == 10 && yyy == 0 && pc.eventTrigger[Event.palace8Clear])
+			|| (xxx == 16 && yyy == 4 && pc.eventTrigger[Event.palace9Clear])
+			|| (xxx == 4 && yyy == 0 && pc.eventTrigger[Event.palace10Clear])
+			|| (xxx == 18 && yyy == 1 && pc.eventTrigger[Event.palace11Clear])
 		
 		){
 			ww.fmap[5, 4] = imgGrassFlowers; ww.fmap[6, 4] = imgGrassFlowers; ww.fmap[7, 4] = imgGrassFlowers; ww.fmap[8, 4] = imgGrassFlowers;

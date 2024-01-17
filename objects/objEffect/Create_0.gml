@@ -6,5 +6,5 @@ ySpeed = 0;
 grav = 0;
 gro = 0;
 fade = 0;
-
+flicker = false;
 timeCD = 40;

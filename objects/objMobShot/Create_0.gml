@@ -37,3 +37,4 @@ seekCDMax = 40;
 speedUpOnSeek = false;
 
 isFall = false;
+driftChance = 0;

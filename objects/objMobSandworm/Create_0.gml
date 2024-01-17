@@ -24,3 +24,9 @@ blockCDMax = 150;
 harmlessWhileBlocking = true;
 avoidEdges = 2;
 stopAtDis = true;
+
+canFreeze = false;
+isSandworm = true;
+dropsBombs = true;
+canStun = false;
+showHP = true;

@@ -6,6 +6,7 @@ function worldLoadPalace(){
 	
 	if(pc.spaceLevel == 1){ worldLoardPalace01(); }
 	if(pc.spaceLevel == 2){ worldLoardPalace02(); }
+	if(pc.spaceLevel == 3){ worldLoardPalace03(); }
 	
 	
 	

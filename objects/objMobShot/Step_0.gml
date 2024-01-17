@@ -46,6 +46,11 @@ x += xSpeed;
 y += ySpeed;
 ySpeed += grav;
 
+if(irandom_range(1, 100) < driftChance){
+	x += choose(-1, 0, 1);
+	y += choose(-1, 0, 1);
+}
+
 xTile = floor(x / 64);
 yTile = floor(y / 64);
 if(!passWall && passWallTime < 1){

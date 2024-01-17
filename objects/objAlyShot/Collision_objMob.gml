@@ -10,6 +10,11 @@ if(!arrayContains(hitList, other)){
 		if(other.canFreeze && irandom_range(1, 100) < freezeChance){
 			other.frozenTime = max(other.frozenTime, freezePow);
 		}
+		if(other.canStun && irandom_range(1, 100) < stunChance){
+			other.stunTime = max(other.stunTime, stunPow);
+		}
+		
+		
 		hurtMonster(other, id);
 	}
 	

@@ -11,6 +11,8 @@ moveSpeed = 10;
 burnPow = 0;
 freezePow = 0;
 freezeChance = 0;
+stunPow = 0;
+stunChance = 0;
 
 passWall = false;
 passWallTime = 0;
