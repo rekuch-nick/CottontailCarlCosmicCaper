@@ -110,6 +110,8 @@ function wmap(s){
 		if(c == ":"){ ww.fmap[a, b] = imgBlackTile; }
 		if(c == "+"){ ww.fmap[a, b] = imgLadder; }
 		
+		if(c == "W"){ ww.fmap[a, b] = imgWarpSpot; }
+		
 		
 		
 		

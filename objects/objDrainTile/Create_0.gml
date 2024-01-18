@@ -1,0 +1,10 @@
+image_xscale = 4;
+image_yscale = 4;
+image_speed = 0;
+isWater = false;
+isLava = false;
+isPoison = false;
+isLand = true;
+isSec = false;
+a = floor(x / 64);
+b = floor(y / 64);

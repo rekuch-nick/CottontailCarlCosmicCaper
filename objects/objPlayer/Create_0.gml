@@ -55,12 +55,25 @@ rangsMax = 1;
 
 wepSelected = 0;
 wepLevels = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
-wepCost = [10, 2, 10, 0, .5, 2, 2, 2, 2, 2 , 2];
-wepCDMax = [20, 12, 25, 30, 1, 30, 30, 30, 30, 30, 30];
+wepCost = [10, 2, 10, 0, .5, 2, 2, 2, 20, 2 , 2];
+wepCDMax = [20, 12, 25, 30, 1, 30, 30, 30, 45, 30, 30];
 
 
 lionCD = irandom_range(5, 7);
 lionCDMax = 7;
+
+warpIndex = 0;
+warpSpots = [
+	{a: 10, b: 7},
+	{a: 15, b: 6},
+	{a: 11, b: 2},
+	{a: 3, b: 4},
+	{a: 1, b: 7},
+];
+holdWandTime = 0;
+drainLakeSpots = [
+	{a: 11, b: 6},
+];
 
 
 for(var i=0; i<200; i++){
@@ -72,10 +85,11 @@ eventTrigger[Event.gotRang] = true;
 //eventTrigger[Event.gotChargeShot] = true; ///
 //eventTrigger[Event.gotMPShell] = true; ///
 //eventTrigger[Event.gotRangPack] = true;
-//wepLevels[1]  = 1; eventTrigger[Event.gotStars] = true; // ninja stars
-//wepLevels[2]  = 1; eventTrigger[Event.gotTorch] = true; // torch
-//wepLevels[4]  = 1; eventTrigger[Event.gotWindStone] = true; // wind stone
-wepLevels[5]  = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
+//wepLevels[1] = 1; eventTrigger[Event.gotStars] = true; // ninja stars
+//wepLevels[2] = 1; eventTrigger[Event.gotTorch] = true; // torch
+//wepLevels[4] = 1; eventTrigger[Event.gotWindStone] = true; // wind stone
+wepLevels[5] = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
+wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
 
 //eventTrigger[Event.palace1Clear] = true; ///
 //eventTrigger[Event.palace2Clear] = true; ///
@@ -135,6 +149,7 @@ enum Event {
 	gotMPShell,
 	gotWindStone,
 	gotIceStone,
+	gotWand,
 	
 	haveBombs,
 	
@@ -172,6 +187,10 @@ enum Event {
 	gotCarrot18,
 	gotCarrot19,
 	gotCarrot20,
+	
+	gotCarrotDragonGreen,
+	gotCarrotDragonBlue,
+	gotCarrotDragonYellow,
 }
 
 shotPower = noone;

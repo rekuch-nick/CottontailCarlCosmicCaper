@@ -83,7 +83,7 @@ function worldGetRoomGrass(xxx, yyy){
 		wmap(".....////......");
 		wmap("##...//=/....##");
 		wmap("##...........##");
-		wmap("###..........##");
+		wmap("###....W.....##");
 		wmap("###..........##");
 		wmap("##...........##");
 	}
@@ -112,6 +112,7 @@ function worldGetRoomGrass(xxx, yyy){
 		biome(Zone.grass);
 		ww.canLion = false;
 		ww.mobList = [4, objMobBear, objMobBear, objMobBear, objMobBear];
+		ww.secX = 8; ww.secY = 6;
 		wmap("##%%%%...%%%%##");
 		wmap("#..%%....%%..%#");
 		wmap("#..............");

@@ -23,3 +23,12 @@ isDragon = true;
 canFreeze = false;
 
 showHP = true;
+
+
+
+drop = objPupCoin;
+if(!pc.eventTrigger[Event.gotCarrotDragonGreen]){
+	drop = objPupCarrot;
+	dropEventNumber = Event.gotCarrotDragonGreen;
+}
+dropChance = 100;

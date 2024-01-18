@@ -1,4 +1,6 @@
 function playerStepUseStairs(){
+	var getOutOfLake = false;
+	
 	ww.stairAlpha += .03;
 	if(ww.stairAlpha > 1){
 		ww.stairAlpha = 0;
@@ -18,9 +20,20 @@ function playerStepUseStairs(){
 		} else {
 			x = xOverworld;
 			y = yOverworld;
+			
+			if(playerOnArraySpot(pc.drainLakeSpots)){
+				getOutOfLake = true;
+			}
+			
 		}
 		inOverworld = !inOverworld;
 		worldLoadRoom(0);
+		if(getOutOfLake){
+			while(ww.fmap[floor(pc.x / 64)][floor(pc.y / 64)].isWater){
+				pc.y ++;
+			}
+			pc.y += 22
+		}
 		ww.state = State.play;
 		
 		mobSpawn();

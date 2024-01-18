@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "worldGetRoomDark",
+  "name": "playerOnWarpSpot",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

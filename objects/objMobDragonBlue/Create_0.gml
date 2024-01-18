@@ -28,3 +28,12 @@ specCDMax = 180;
 canFreeze = false;
 
 showHP = true;
+
+
+
+drop = objPupCoin;
+if(!pc.eventTrigger[Event.gotCarrotDragonBlue]){
+	drop = objPupCarrot;
+	dropEventNumber = Event.gotCarrotDragonBlue;
+}
+dropChance = 100;

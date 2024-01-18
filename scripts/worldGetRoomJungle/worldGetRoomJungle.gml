@@ -188,8 +188,8 @@ function worldGetRoomJungle(xxx, yyy){
 		wmap("p..............");
 		wmap("p..p..%..p..p..");
 		wmap("p..............");
-		wmap("p..............");
-		wmap("ppp%pppp%%pp%pp");
+		wmap("p......W.......");
+		wmap("ppp%p.....pp%pp");
 		wmap("p%pppp%ppppp%pp");
 	}
 	

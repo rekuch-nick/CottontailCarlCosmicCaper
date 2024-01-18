@@ -222,6 +222,8 @@ function playerStepPlay(){
 				instance_create_depth(x, y, ww.layerE, objPlayerColdBlast);
 				
 		}
+		playerUseWand();
+		
 		
 		
 			
