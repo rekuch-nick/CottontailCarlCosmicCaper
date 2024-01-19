@@ -17,4 +17,4 @@ dropChance = 100;
 //shatterAtHalf = true;
 canFreeze = false;
 
-showHP = true;
+showHPTop = true;

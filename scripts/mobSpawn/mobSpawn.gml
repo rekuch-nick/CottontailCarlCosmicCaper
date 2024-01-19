@@ -71,7 +71,7 @@ function mobSpawn(){
 		}
 		
 		if(ww.inBiome == Zone.forest){
-			t = choose(objMobMossman);
+			t = choose(objMobMossman, objMobMossman, objMobFingerClaw);
 		}
 		
 		if(ww.inBiome == Zone.beach){

@@ -36,7 +36,7 @@ function worldLoadRoom(dir){
 		
 		
 		if(ww.bmap[a, b] != noone){
-			var s = instance_create_depth(a * 64 + xo, b * 64 + yo, ww.layerB, objBlock);
+			var s = instance_create_depth(a * 64 + xo, b * 64 + yo, ww.layerB - b, objBlock);
 			s.sprite_index = ww.bmap[a, b];
 			ww.bmap[a, b] = s;
 			

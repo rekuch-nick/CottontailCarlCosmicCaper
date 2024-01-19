@@ -56,6 +56,7 @@ function wmap(s){
 	
 	if(ww.inBiome == Zone.snow){
 		ww.rockWall = imgRockWallGrey;
+		ww.bush1 = imgBushDeadIce;
 	}
 	
 	if(ww.inBiome == Zone.grave){
@@ -74,6 +75,7 @@ function wmap(s){
 		if(c == "r"){ ww.bmap[a, b] = ww.rock2; }
 		if(c == "%"){ ww.bmap[a, b] = ww.bush1; }
 		if(c == "b"){ ww.bmap[a, b] = ww.bush2; }
+		if(c == "B"){ ww.bmap[a, b] = imgBushLarge; }
 		if(c == "/"){ ww.bmap[a, b] = ww.rockWall; }
 		
 		if(c == "L"){ ww.bmap[a, b] = imgRockWallGreyLava; }
@@ -106,6 +108,8 @@ function wmap(s){
 		
 		if(c == "c"){ ww.fmap[a, b] = imgSpaceCloud; }
 		if(c == "h"){ ww.fmap[a, b] = imgGrassSparse; }
+		if(c == "w"){ ww.fmap[a, b] = imgGrassWaste; }
+		if(c == "i"){ ww.fmap[a, b] = imgWaterFrozen; }
 		
 		if(c == ":"){ ww.fmap[a, b] = imgBlackTile; }
 		if(c == "+"){ ww.fmap[a, b] = imgLadder; }

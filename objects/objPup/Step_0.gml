@@ -7,6 +7,26 @@ if(pc.inSpace){
 	}
 }
 
+if(sprite_index == imgCoin && (pc.inOverworld || pc.inSpace) && pc.eventTrigger[Event.gotMagnet]){
+	if(x > pc.x){ x --; }
+	if(x < pc.x){ x ++; }
+	if(y > pc.y){ y --; }
+	if(y < pc.y){ y ++; }
+}
+
+if((sprite_index == imgPupHPOrb || sprite_index == imgPupMPOrb || sprite_index == imgPupBPOrb) && pc.eventTrigger[Event.gotPinwheel] && pc.windUP){
+	if(x > pc.x){ x -= 17; }
+	if(x < pc.x){ x += 17; }
+	if(y > pc.y){ y -= 17; }
+	if(y < pc.y){ y += 17; }
+}
+
+if(slowFall != noone){
+	if(y < slowFall){
+		y += 2;
+	}
+}
+
 if(gotIt){
 	
 	if(sprite_index == imgCoin && !pc.inOverworld && !pc.inSpace){
@@ -49,9 +69,11 @@ if(gotIt){
 	//if(sprite_index == imgPlayerRang){ pc.wepLevels[0] = max(pc.wepLevels[0], 1); }
 	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); pc.eventTrigger[Event.gotStars] = true; }
 	if(sprite_index == imgPupTorch){ pc.wepLevels[2] = max(pc.wepLevels[2], 1); pc.eventTrigger[Event.gotTorch] = true; }
-	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); pc.eventTrigger[Event.gotStars] = true; }
+	
 	if(sprite_index == imgPupWindStone){ pc.wepLevels[4] = max(pc.wepLevels[4], 1); pc.eventTrigger[Event.gotWindStone] = true; }
 	if(sprite_index == imgPupIceStone){ pc.wepLevels[5] = max(pc.wepLevels[5], 1); pc.eventTrigger[Event.gotIceStone] = true; }
+	
+	if(sprite_index == imgPupWand){ pc.wepLevels[8] = max(pc.wepLevels[8], 1); pc.eventTrigger[Event.gotWand] = true; }
 	
 	if(sprite_index == imgPlayerShield){ pc.eventTrigger[Event.gotShield] = true; pc.sp = pc.spMax; }
 	
@@ -80,6 +102,19 @@ if(gotIt){
 	if(sprite_index == imgPupSpeedCharm2){ pc.eventTrigger[Event.gotSpeedShot2] = true; }
 	
 	if(sprite_index == imgPupMPShell){ pc.eventTrigger[Event.gotMPShell] = true; }
+	if(sprite_index == imgPupMagnet){ pc.eventTrigger[Event.gotMagnet] = true; }
+	
+	if(sprite_index == imgPupHoneycomb){ pc.eventTrigger[Event.gotHoneycomb] = true; }
+	if(sprite_index == imgPupCauldren1){ pc.eventTrigger[Event.gotCauldren1] = true; }
+	if(sprite_index == imgPupCauldren2){ 
+		pc.eventTrigger[Event.gotCauldren1] = true; 
+		pc.eventTrigger[Event.gotCauldren2] = true; 
+	}
+	if(sprite_index == imgPupCauldren3){ 
+		pc.eventTrigger[Event.gotCauldren1] = true; 
+		pc.eventTrigger[Event.gotCauldren2] = true; 
+		pc.eventTrigger[Event.gotCauldren3] = true; 
+	}
 	
 	if(sprite_index == imgPlayerRangPack){ pc.eventTrigger[Event.gotRangPack] = true; pc.rangsMax = 3; }
 	
@@ -104,7 +139,7 @@ if(gotIt){
 
 
 
-if(coinPrice > 0){
+if(coinPrice > 0 && desc != ""){
 	if( 
 			abs(pc.xTile - floor(x / 64)) <= 1 && 
 			(pc.yTile - floor(y / 64) == 0 || pc.yTile - floor(y / 64) == 1 || pc.yTile - floor(y / 64) == 2 ) 

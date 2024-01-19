@@ -68,8 +68,10 @@ specCDMax = 0;
 specLimit = -1;
 
 showHP = false;
+showHPTop = false;
 
 regen = 0;
 wob = false;
 weakToFire = noone;
 weakToRang = false;
+goldFrame = noone;

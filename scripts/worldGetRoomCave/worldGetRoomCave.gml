@@ -152,6 +152,22 @@ function worldGetRoomCave(xxx, yyy){
 	
 	
 	
+	if( xxx == 8 && yyy = 5 ){ //bee shop
+		ww.bmap[2, 5] = imgNPCBee; ww.bmap[3, 5] = imgNPCBee; ww.bmap[5, 5] = imgNPCBee; ww.bmap[7, 5] = imgNPCBee; ww.bmap[8, 5] = imgNPCBee; ww.bmap[10, 5] = imgNPCBee; ww.bmap[11, 5] = imgNPCBee; ww.bmap[13, 5] = imgNPCBee;
+		ww.bmap[1, 6] = imgNPCBee; ww.bmap[2, 6] = imgNPCBee; ww.bmap[5, 6] = imgNPCBee; ww.bmap[6, 6] = imgNPCBee; ww.bmap[7, 6] = imgNPCBee; ww.bmap[8, 6] = imgNPCBee; ww.bmap[12, 6] = imgNPCBee; ww.bmap[13, 6] = imgNPCBee;
+		ww.bmap[1, 7] = imgNPCBee; ww.bmap[3, 7] = imgNPCBee; ww.bmap[13, 7] = imgNPCBee;
+		if(!pc.eventTrigger[Event.gotHoneycomb]){
+			ww.txt = "Carry this into space, and we will fight by your side.";
+			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupHoneycomb);
+			s.coinPrice = 230;
+			s.desc = "";
+		}
+	}
+	
+	
+	
+	
+	
 	ww.mapRow = 0;
 	if(	(xxx == 8 && yyy == 6)
 		|| (xxx == 7 && yyy == 1)

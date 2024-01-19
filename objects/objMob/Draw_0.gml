@@ -1,6 +1,14 @@
-if(showHP){
+if(showHP && inert == noone){
 	var x1 = x - abs(sprite_width / 2);
 	var y1 = y + sprite_height / 2;
+	var y2 = y1 - 8;
+	var w = abs(sprite_width);
+	var percent = hp / hpMax;
+	draw_rectangle_color(x1, y1, x1 + (w * percent), y2, c_maroon, c_maroon, c_red, c_red, false);
+}
+if(showHPTop && inert == noone){
+	var x1 = x - abs(sprite_width / 2);
+	var y1 = y - sprite_height / 2;
 	var y2 = y1 - 8;
 	var w = abs(sprite_width);
 	var percent = hp / hpMax;

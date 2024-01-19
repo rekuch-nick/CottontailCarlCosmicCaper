@@ -4,6 +4,8 @@ function worldGetRoomGrass(xxx, yyy){
 	
 	if(xxx == 8 && yyy == 7){ 
 		biome(Zone.grass);
+		ww.mobList = [24, objMob, objMob, objMob, objMob, objMob, objMob];
+		ww.canLion = false;
 		wmap("##...........##");
 		wmap("#.............#");
 		wmap("#.............#");

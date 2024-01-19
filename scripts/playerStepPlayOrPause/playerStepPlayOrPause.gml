@@ -11,6 +11,7 @@ function playerStepPlayOrPause(){
 			eventTrigger[Event.gotMap] = true;
 			wepLevels[2]  = 1; eventTrigger[Event.gotTorch] = true; // torch
 			with(objMob){ hp = 0; }
+			
 		}
 	}
 	

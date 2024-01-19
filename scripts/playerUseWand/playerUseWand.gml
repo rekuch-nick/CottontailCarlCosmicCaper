@@ -44,7 +44,30 @@ function playerUseWand(){
 					instance_destroy();
 				}
 			}
+		} else if (pc.xMap == 10 && pc.yMap == 5 && !pc.eventTrigger[Event.gotCarrot06]) {
+			with(objPup){ if(sprite_index == imgCarrot){
+				slowFall = 300;
+			}}
+		} else if (instance_number(objStarBomb) > 0) {
+			with(objStarBomb){
+				//var sb = instance_create_depth(x, 0, ww.layerE, objStarBombFall);
+				//sb.yTar = y;
+				var s = instance_create_depth(x, y, depth, objPlayerBlastMed);
+				s.pow = 40;
+				instance_destroy();
+			}
 		} else if (instance_number(objMob) > 0) {
+			var golded = false;
+			with(objMob){
+				if(goldFrame != noone){
+					golded = true;
+					instance_create_depth(x, y, ww.layerE, goldFrame);
+					instance_destroy();
+				}
+			}
+			
+			if(golded){ return; }
+			
 			var m = instance_find(objMob, irandom_range(0, instance_number(objMob) - 1));
 			var r = irandom_range(1, 3);
 			if(r == 1){ m.burnTime += 120; }

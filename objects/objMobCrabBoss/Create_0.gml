@@ -21,4 +21,4 @@ dropEventNumber = noone;
 shatterAtHalf = true;
 canFreeze = false;
 canStun = false;
-showHP = true;
+showHPTop = true;

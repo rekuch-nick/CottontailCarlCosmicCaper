@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgPupMPShell",
-    "path": "sprites/imgPupMPShell/imgPupMPShell.yy",
+    "name": "imgPupWindStone",
+    "path": "sprites/imgPupWindStone/imgPupWindStone.yy",
   },
   "spriteMaskId": null,
   "visible": true,

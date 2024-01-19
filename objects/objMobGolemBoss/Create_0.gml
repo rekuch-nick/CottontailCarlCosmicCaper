@@ -29,4 +29,4 @@ inert = imgMobArmorStill;
 thinkCD = 1;
 canFreeze = false;
 canStun = false;
-showHP = true;
+showHPTop = true;

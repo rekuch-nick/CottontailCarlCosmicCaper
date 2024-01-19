@@ -83,6 +83,10 @@ eventTrigger[Event.gotRang] = true;
 //eventTrigger[Event.gotStar] = true; ///
 //eventTrigger[Event.gotMap] = true; ///
 //eventTrigger[Event.gotChargeShot] = true; ///
+//eventTrigger[Event.gotMagnet] = true; ///
+//eventTrigger[Event.gotPinwheel] = true; ///
+//eventTrigger[Event.gotHoneycomb] = true; ///
+//eventTrigger[Event.gotCauldren3] = true; ///
 //eventTrigger[Event.gotMPShell] = true; ///
 //eventTrigger[Event.gotRangPack] = true;
 //wepLevels[1] = 1; eventTrigger[Event.gotStars] = true; // ninja stars
@@ -97,6 +101,8 @@ wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
 
 
 fullHealing = false;
+healingC1 = false;
+healingC2 = false;
 beamChargeCD = 30;
 killMemory = [
 	{a: 0, b: 0, mobsLeft: 10},
@@ -150,6 +156,12 @@ enum Event {
 	gotWindStone,
 	gotIceStone,
 	gotWand,
+	gotMagnet,
+	gotPinwheel,
+	gotCauldren1,
+	gotCauldren2,
+	gotCauldren3,
+	gotHoneycomb,
 	
 	haveBombs,
 	

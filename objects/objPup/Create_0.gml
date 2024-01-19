@@ -20,4 +20,4 @@ yTxtOffset = 0;
 desc = "";
 
 coinPrice = 0;
-
+slowFall = noone;
