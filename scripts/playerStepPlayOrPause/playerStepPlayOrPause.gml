@@ -10,6 +10,9 @@ function playerStepPlayOrPause(){
 			eventTrigger[Event.gotStar] = true;
 			eventTrigger[Event.gotMap] = true;
 			wepLevels[2]  = 1; eventTrigger[Event.gotTorch] = true; // torch
+			wepLevels[5] = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
+			wepLevels[7] = 1; eventTrigger[Event.gotHole] = true; // portable hole
+			wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
 			with(objMob){ hp = 0; }
 			
 		}

@@ -38,3 +38,4 @@ speedUpOnSeek = false;
 
 isFall = false;
 driftChance = 0;
+changeChance = 10;

@@ -66,6 +66,14 @@ if(stopAtDis){
 	}
 }
 
+if(driftMove == Move.bull){
+	y += jumpSpeed;
+	if(y < yGround){ jumpSpeed += 2; } else { jumpSpeed = 0; }
+	
+	if(y >= yGround){ jumpSpeed = jumpPow; }
+}
+
+
 
 if(xSpeed > 0 && x > xTar){ x = xTar; xSpeed = 0; }
 if(xSpeed < 0 && x < xTar){ x = xTar; xSpeed = 0; }

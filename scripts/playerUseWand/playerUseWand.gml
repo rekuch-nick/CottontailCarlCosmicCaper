@@ -48,6 +48,28 @@ function playerUseWand(){
 			with(objPup){ if(sprite_index == imgCarrot){
 				slowFall = 300;
 			}}
+		} else if (!pc.eventTrigger[Event.gotPhiloStone] && pc.xMap == 3 && pc.yMap == 9) {
+			with(objTile){
+				if(sprite_index == imgBlank || sprite_index == imgMobDragonSleeping){
+					if(sprite_index == imgMobDragonSleeping){
+						instance_create_depth(x + 128, y + 48, ww.layerM, objMobDragonSnapGreen);
+					}
+					ww.bmap[floor(x/64), floor(y/64)] = noone;
+					instance_destroy();
+				}
+			}
+		} else if (pc.xMap == 0 && pc.yMap == 5) {
+			with(objTile){
+				if(sprite_index == imgBlank || sprite_index == imgGraveBig){
+					if(sprite_index == imgGraveBig){
+						repeat(70){
+							instance_create_depth(x + irandom_range(0, sprite_width), y + irandom_range(0, sprite_height), ww.layerE, objChip);
+						}
+					}
+					ww.bmap[floor(x/64), floor(y/64)] = noone;
+					instance_destroy();
+				}
+			}
 		} else if (instance_number(objStarBomb) > 0) {
 			with(objStarBomb){
 				//var sb = instance_create_depth(x, 0, ww.layerE, objStarBombFall);

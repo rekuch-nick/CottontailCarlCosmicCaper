@@ -123,7 +123,14 @@ function playerStepPlay(){
 		if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
 		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
 		if(shootCD < 1){
-			beamChargeCD = 90;
+			var beamType = objPlayerBeams;
+			if(wepSelected == 10 && wepLevels[10] > 0 && coins > 0){
+				beamType = objPlayerBeamsPhilo;
+				coins --;
+			} else {
+				beamChargeCD = 90;
+				bp = clamp(bp - 15, 0, bpMax);
+			}
 			shootCD = shootCDMax;
 			if(pc.shotPower == Shot.rapid){ shootCD -= 10; }
 			if(eventTrigger[Event.gotSpeedShot]){ shootCD -= 5; }
@@ -132,13 +139,12 @@ function playerStepPlay(){
 			if(pc.shotPower == Shot.wide){ n += 2; }
 			var xo = image_xscale > 0 ? 20 : -20;
 			for(var i=0; i<n; i++){
-				var s = instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerBeams);
+				var s = instance_create_depth(x + xo, y - 12, ww.layerE, beamType);
 				var nn = ceil(i / 2) * 2;
 				if(i % 2 == 1){ nn *= -1; }
 				s.offSet = nn;
 				if(bp >= bpThresh){ s.sprite_index = imgPlayerBeamsCharged; }
 			}
-			bp = clamp(bp - 15, 0, bpMax);
 			if(wepSelected == 5 && wepLevels[5] > 0 && irandom_range(1, 100) < 60){
 				instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerIceShotSmall);
 			}
@@ -220,6 +226,22 @@ function playerStepPlay(){
 				xIceTar = a; yIceTar = b;
 				iceFace = image_xscale > 0 ? 1 : -1;
 				instance_create_depth(x, y, ww.layerE, objPlayerColdBlast);
+				
+		}
+			//hole
+		if(wepSelected == 7 && wepLevels[7] > 0 && shootCD < 1 && mp >= wepCost[wepSelected]){
+				shootCD = wepCDMax[wepSelected];
+				mp -= wepCost[wepSelected];
+				instance_create_depth(x, y, ww.layerE, objEffPlayerHole);
+				
+				var angle = arctan2(y - mouse_y, x - mouse_x);
+				var aa = cos(angle) * 10;
+				var bb = sin(angle) * 10;
+				
+				pc.x = mouse_x; pc.y = mouse_y;
+				while(!creatureCanBeHere(pc)){
+					x += aa; y += bb;
+				}
 				
 		}
 		playerUseWand();

@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgMobCrab",
-    "path": "sprites/imgMobCrab/imgMobCrab.yy",
+    "name": "imgMobCrabGreen",
+    "path": "sprites/imgMobCrabGreen/imgMobCrabGreen.yy",
   },
   "spriteMaskId": null,
   "visible": true,

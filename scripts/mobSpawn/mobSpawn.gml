@@ -44,7 +44,7 @@ function mobSpawn(){
 	
 	
 	if(n > 0 && ww.canLion){
-		pc.lionCD --;
+		pc.lionCD -= choose(1, 1, 0);
 		if(pc.lionCD  < 1){
 			pc.lionCD = pc.lionCDMax - irandom_range(0, 2);
 			instance_create_depth(ww.roomWidth / 2, room_height / 2, ww.layerE, objLionEvent);
@@ -75,7 +75,7 @@ function mobSpawn(){
 		}
 		
 		if(ww.inBiome == Zone.beach){
-			t = choose(objMobCrab);
+			t = choose(objMobCrab, objMobBlueSlime);
 		}
 		
 		if(ww.inBiome == Zone.jungle){

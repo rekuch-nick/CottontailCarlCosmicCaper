@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "imgNPCLizard",
   "bbox_bottom": 15,
-  "bbox_left": 0,
-  "bbox_right": 30,
+  "bbox_left": 8,
+  "bbox_right": 38,
   "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 32,
+  "width": 48,
 }

@@ -21,6 +21,7 @@ yLast = yTile;
 canBackupChance = 20;
 canStandStillChance = 50;
 huntChance = 60;
+driftMove = noone;
 
 xTarTile = xTile;
 yTarTile = yTile;
@@ -75,3 +76,5 @@ wob = false;
 weakToFire = noone;
 weakToRang = false;
 goldFrame = noone;
+
+jumpPow = 0; jumpSpeed = 0; yGround = y;

@@ -55,8 +55,8 @@ rangsMax = 1;
 
 wepSelected = 0;
 wepLevels = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
-wepCost = [10, 2, 10, 0, .5, 2, 2, 2, 20, 2 , 2];
-wepCDMax = [20, 12, 25, 30, 1, 30, 30, 30, 45, 30, 30];
+wepCost = [10, 2, 10, 0, .5, 2, 2, 20, 20, 0 , 0];
+wepCDMax = [20, 12, 25, 30, 1, 30, 30, 30, 45, 30, 1];
 
 
 lionCD = irandom_range(5, 7);
@@ -72,7 +72,10 @@ warpSpots = [
 ];
 holdWandTime = 0;
 drainLakeSpots = [
+	{a: 6, b: 2},
 	{a: 11, b: 6},
+	{a: 14, b: 1},
+	{a: 18, b: 4},
 ];
 
 
@@ -92,8 +95,10 @@ eventTrigger[Event.gotRang] = true;
 //wepLevels[1] = 1; eventTrigger[Event.gotStars] = true; // ninja stars
 //wepLevels[2] = 1; eventTrigger[Event.gotTorch] = true; // torch
 //wepLevels[4] = 1; eventTrigger[Event.gotWindStone] = true; // wind stone
-wepLevels[5] = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
-wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
+//wepLevels[5] = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
+//wepLevels[7] = 1; eventTrigger[Event.gotHole] = true; // portable hole
+//wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
+//wepLevels[10] = 1; eventTrigger[Event.gotPhiloStone] = true; // philostone
 
 //eventTrigger[Event.palace1Clear] = true; ///
 //eventTrigger[Event.palace2Clear] = true; ///
@@ -162,6 +167,8 @@ enum Event {
 	gotCauldren2,
 	gotCauldren3,
 	gotHoneycomb,
+	gotPhiloStone,
+	gotHole,
 	
 	haveBombs,
 	

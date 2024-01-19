@@ -109,8 +109,8 @@ function worldGetRoomCave(xxx, yyy){
 	if( (xxx == 9 && yyy == 7)
 		|| (xxx == 6 && yyy == 4)
 			){ // lizard shop
-		ww.bmap[7, 5] = imgNPCLizard;
-		ww.bmap[8, 5] = imgBlank;
+		ww.bmap[6, 5] = imgNPCLizard;
+		ww.bmap[7, 5] = imgBlank; ww.bmap[8, 5] = imgBlank;
 		ww.txt = "In dangerous times like these, Lizard Brothers Retail is the only store you can trust.";
 		ww.bmap[3, 6] = noone; ww.bmap[11, 6] = noone;
 		worldPopulateShop(2);
@@ -159,7 +159,7 @@ function worldGetRoomCave(xxx, yyy){
 		if(!pc.eventTrigger[Event.gotHoneycomb]){
 			ww.txt = "Carry this into space, and we will fight by your side.";
 			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupHoneycomb);
-			s.coinPrice = 230;
+			s.coinPrice = 155;
 			s.desc = "";
 		}
 	}

@@ -92,6 +92,7 @@ function worldGetRoomDesert(xxx, yyy){
 	
 	if(xxx == 6 && yyy == 2){
 		biome(Zone.desert);
+		ww.secX = 7; ww.secY = 6;
 		wmap("//...........//");
 		wmap("/..p......p.../");
 		wmap("...............");

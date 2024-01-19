@@ -51,6 +51,11 @@ if(irandom_range(1, 100) < driftChance){
 	y += choose(-1, 0, 1);
 }
 
+if(irandom_range(1, 100) < changeChance){
+	xSpeed += choose(-1, 0, 1);
+	ySpeed += choose(-1, 0, 1);
+}
+
 xTile = floor(x / 64);
 yTile = floor(y / 64);
 if(!passWall && passWallTime < 1){

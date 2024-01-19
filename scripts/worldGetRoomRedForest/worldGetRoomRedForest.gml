@@ -50,6 +50,7 @@ function worldGetRoomRedForest(xxx, yyy){
 	
 	if(xxx == 3 && yyy == 9){
 		biome(Zone.redForest);
+		ww.noMobs = true; ww.canLion = false;
 		wmap("dd%d%d...dd%dd%");
 		wmap("d.............d");
 		wmap("%.............d");

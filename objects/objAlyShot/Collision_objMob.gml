@@ -14,6 +14,10 @@ if(!arrayContains(hitList, other)){
 			other.stunTime = max(other.stunTime, stunPow);
 		}
 		
+		if((object_index == objPlayerBeamsPhilo) && pc.shotPower == Shot.burst){
+			var s = instance_create_depth(x, y, depth, objPlayerBlastSmall);
+			s.pow = pow;
+		}
 		
 		hurtMonster(other, id);
 	}

@@ -73,7 +73,9 @@ if(gotIt){
 	if(sprite_index == imgPupWindStone){ pc.wepLevels[4] = max(pc.wepLevels[4], 1); pc.eventTrigger[Event.gotWindStone] = true; }
 	if(sprite_index == imgPupIceStone){ pc.wepLevels[5] = max(pc.wepLevels[5], 1); pc.eventTrigger[Event.gotIceStone] = true; }
 	
+	if(sprite_index == imgPupHole){ pc.wepLevels[7] = max(pc.wepLevels[7], 1); pc.eventTrigger[Event.gotHole] = true; }
 	if(sprite_index == imgPupWand){ pc.wepLevels[8] = max(pc.wepLevels[8], 1); pc.eventTrigger[Event.gotWand] = true; }
+	if(sprite_index == imgPupPhiloStone){ pc.wepLevels[10] = max(pc.wepLevels[10], 1); pc.eventTrigger[Event.gotPhiloStone] = true; }
 	
 	if(sprite_index == imgPlayerShield){ pc.eventTrigger[Event.gotShield] = true; pc.sp = pc.spMax; }
 	

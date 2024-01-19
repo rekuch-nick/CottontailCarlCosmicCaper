@@ -80,6 +80,7 @@ enum Move {
 	huntOff,
 	stayTop,
 	avoid,
+	bull,
 }
 
 enum Sec {

@@ -37,6 +37,18 @@ function playerStepScroll(){
 		}
 		
 		
+		if(pc.xMap == 3 && pc.yMap == 9){ if(!eventTrigger[Event.gotPhiloStone]){
+			var aa = 5; var bb = 7;
+			ww.bmap[aa, bb] = instance_create_depth(aa * 64, bb * 64, ww.layerB, objBlock);
+			ww.bmap[aa, bb].sprite_index = imgMobDragonSleeping;
+			for(var a=aa; a<aa+4; a++){ for(var b=bb; b<bb+3; b++){
+				if(a==aa && b==bb){ continue; }
+				ww.bmap[a, b] = instance_create_depth(a * 64, b * 64, ww.layerB, objBlock);
+				ww.bmap[a, b].sprite_index = imgBlank;
+			}}
+		}}
+		
+		
 		///star bombs
 		
 		if(
