@@ -26,6 +26,7 @@ caveCoins[7, 4] = 20;
 caveCoins[10, 8] = 20;
 caveCoins[5, 3] = 10;
 caveCoins[6, 3] = 10;
+caveCoins[13, 7] = 20;
 
 
 for(var a=0; a<ww.W; a++){ for(var b=0; b<ww.H; b++){
@@ -39,6 +40,8 @@ stairAlpha = 0;
 canLion = true;
 noMobs = false;
 noFall = false;
+noWet = false;
+overrideWet = noone;
 
 
 
@@ -81,6 +84,8 @@ enum Move {
 	stayTop,
 	avoid,
 	bull,
+	huntHalf,
+	huntLine,
 }
 
 enum Sec {

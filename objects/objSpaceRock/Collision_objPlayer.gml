@@ -11,3 +11,7 @@ if(blockPlayer){
 	}
 	
 }
+
+if(slowPlayer){
+	pc.slowDown = true;
+}

@@ -46,6 +46,7 @@ shatterAtHalf = false;
 inert = noone;
 
 bumpPow = 20;
+bumpPoison = 0;
 
 dropChance = 50;
 dropsBombs = false;
@@ -74,7 +75,19 @@ showHPTop = false;
 regen = 0;
 wob = false;
 weakToFire = noone;
+dieToFire = false;
 weakToRang = false;
 goldFrame = noone;
 
+increaseShootSpeed = false;
+increaseShootSpeedMin = 30;
+cubeSplitOnDeath = false;
+
 jumpPow = 0; jumpSpeed = 0; yGround = y;
+
+incincTime = 0;
+
+fluxScale = false;
+
+spawnOnShoot = noone;
+spawnOnShootChance = 0;

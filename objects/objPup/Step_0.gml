@@ -97,14 +97,18 @@ if(gotIt){
 	if(sprite_index == imgMap){ pc.eventTrigger[Event.gotMap] = true; }
 	
 	if(sprite_index == imgPupChargeCharm){ pc.eventTrigger[Event.gotChargeShot] = true; }
-	if(sprite_index == imgPupChargeCharm2){ pc.eventTrigger[Event.gotChargeShot2] = true; }
+	if(sprite_index == imgPupChargeCharm2){ pc.eventTrigger[Event.gotChargeShot2] = true; pc.eventTrigger[Event.gotChargeShot] = true; }
 	if(sprite_index == imgPupMightCharm){ pc.eventTrigger[Event.gotMightShot] = true; }
-	if(sprite_index == imgPupMightCharm2){ pc.eventTrigger[Event.gotMightShot2] = true; }
+	if(sprite_index == imgPupMightCharm2){ pc.eventTrigger[Event.gotMightShot2] = true; pc.eventTrigger[Event.gotMightShot] = true; }
 	if(sprite_index == imgPupSpeedCharm){ pc.eventTrigger[Event.gotSpeedShot] = true; }
-	if(sprite_index == imgPupSpeedCharm2){ pc.eventTrigger[Event.gotSpeedShot2] = true; }
+	if(sprite_index == imgPupSpeedCharm2){ pc.eventTrigger[Event.gotSpeedShot2] = true; pc.eventTrigger[Event.gotSpeedShot] = true; }
+	if(sprite_index == imgPupMoreCharm){ pc.eventTrigger[Event.gotMoreShot] = true; }
+	if(sprite_index == imgPupMoreCharm2){ pc.eventTrigger[Event.gotMoreShot2] = true; pc.eventTrigger[Event.gotMoreShot] = true; }
 	
 	if(sprite_index == imgPupMPShell){ pc.eventTrigger[Event.gotMPShell] = true; }
 	if(sprite_index == imgPupMagnet){ pc.eventTrigger[Event.gotMagnet] = true; }
+	if(sprite_index == imgPupRubberBand){ pc.eventTrigger[Event.gotRubberBand] = true; }
+	if(sprite_index == imgPlayerRang2){ pc.eventTrigger[Event.gotRang2] = true; }
 	
 	if(sprite_index == imgPupHoneycomb){ pc.eventTrigger[Event.gotHoneycomb] = true; }
 	if(sprite_index == imgPupCauldren1){ pc.eventTrigger[Event.gotCauldren1] = true; }

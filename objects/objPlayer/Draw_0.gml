@@ -44,6 +44,7 @@ draw_self();
 if(inSpace){
 	draw_sprite_stretched(imgPupStar, 0, x-(8 * image_yscale), y, 16 * image_yscale, 16 * image_yscale);
 }
+
 if(sp >= spMax && ww.state == State.play){
 	var s = imgPlayerShield;
 	var xo = getDirection(pc.image_xscale) == 1 ? -16 : -48;
@@ -51,6 +52,9 @@ if(sp >= spMax && ww.state == State.play){
 	if(pc.image_index == 1){ yo += 4; }
 	draw_sprite_stretched(s, 0, x+xo, y+yo, 64, 64);
 }
+
+creatureDrawBuffs();
+
 if(windUP){
 	draw_sprite_ext(imgWindShield, 0, x, y, 4, 4, windAngle, c_white, random_range(.5, .8));
 }

@@ -6,6 +6,6 @@ if(harmlessWhileBlocking && blockTime > 0){ return; }
 
 inert = noone;
 hurtPlayer(bumpPow, false);
-
+pc.poisonTime = max(pc.poisonTime, bumpPoison);
 
 

@@ -11,3 +11,4 @@ ySpeed = choose(1, 2, 3);
 blockShots = true;
 blockPlayer = true;
 bounceOnSide = true;
+slowPlayer = false;

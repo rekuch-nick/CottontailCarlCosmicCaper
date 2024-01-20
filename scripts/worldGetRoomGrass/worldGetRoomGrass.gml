@@ -167,11 +167,12 @@ function worldGetRoomGrass(xxx, yyy){
 	
 	if(xxx == 12 && yyy == 6){ 
 		biome(Zone.grass);
+		ww.secBlock = imgBushGrass; ww.secX = 10; ww.secY = 4; ww.secType = Sec.burn;
 		wmap("#########...###");
 		wmap("#.......#.....#");
 		wmap("........##.....");
 		wmap(".........###...");
-		wmap("..........%####");
+		wmap("..........=####");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
@@ -221,8 +222,8 @@ function worldGetRoomGrass(xxx, yyy){
 	if(xxx == 13 && yyy == 6){ 
 		biome(Zone.grass);
 		wmap("###############");
-		wmap("#.............#");
-		wmap("..............#");
+		wmap("#.........////#");
+		wmap("........../=//#");
 		wmap("..............#");
 		wmap("##............#");
 		wmap(".............##");

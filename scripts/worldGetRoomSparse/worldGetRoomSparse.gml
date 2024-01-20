@@ -50,6 +50,8 @@ function worldGetRoomSparse(xxx, yyy){
 	
 	if(xxx == 6 && yyy == 8){
 		biome(Zone.sparse);
+		ww.mobList = [1, objMobWormBoss];
+		ww.canLion = false;
 		wmap("~~~~~~~.~~~~~~~");
 		wmap("~~~~~...~~~~~~~");
 		wmap("~.............~");
@@ -105,7 +107,7 @@ function worldGetRoomSparse(xxx, yyy){
 		wmap("..............#");
 		wmap(".............##");
 		wmap(".....////....%#");
-		wmap(".....////.....#");
+		wmap("...../=//.....#");
 		wmap("..............#");
 		wmap("..............#");
 		wmap(".............%#");

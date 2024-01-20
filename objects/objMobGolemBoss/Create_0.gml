@@ -17,7 +17,7 @@ bumpPow = 20;
 
 drop = objPupCoin;
 if(!pc.eventTrigger[Event.gotPinwheel]){
-	drop = objPupCarrot;
+	drop = Event.gotPinwheel;
 	dropEventNumber = Event.gotPinwheel;
 }
 dropChance = 100;

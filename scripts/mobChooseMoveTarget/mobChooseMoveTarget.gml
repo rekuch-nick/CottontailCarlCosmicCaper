@@ -5,6 +5,22 @@ function mobChooseMoveTarget(){
 		yTar = irandom_range(32, room_height - 32);
 	}
 	
+	if(driftMove == Move.avoid){
+		do {
+			xTar = irandom_range(32, ww.roomWidth - 32);
+			yTar = irandom_range(32, room_height - 32);
+		} until (
+			(point_distance(xTar, yTar, pc.x, pc.y) > room_width / 2 &&
+			(
+				(pc.x < x && pc.x < xTar) ||
+				(pc.x > x && pc.x > xTar) ||
+				(pc.y < y && pc.y < yTar) ||
+				(pc.y > y && pc.y > yTar)
+				
+			)) || (irandom_range(1, 100) == 1)
+		);
+	}
+	
 	if(driftMove == Move.stayTop){
 		xTar = irandom_range(32, ww.roomWidth - 32);
 		yTar = irandom_range(32, 178);
@@ -13,6 +29,24 @@ function mobChooseMoveTarget(){
 	if(driftMove == Move.hunt){
 		xTar = pc.x;
 		yTar = pc.y;
+	}
+	
+	if(driftMove == Move.huntLine){
+		xTar = pc.x; yTar = pc.y;
+		if(choose(true, false)){
+			xTar = x;
+		} else {
+			yTar = y;
+		}
+	}
+	
+	if(driftMove == Move.huntHalf){
+		if(choose(true, false)){
+			xTar = pc.x; yTar = pc.y;
+		} else {
+			xTar = irandom_range(32, ww.roomWidth - 32);
+			yTar = irandom_range(32, room_height - 32);	
+		}
 	}
 	
 	if(driftMove == Move.huntOff){

@@ -14,7 +14,7 @@ mutter = "";
 pushingTime = 0;
 
 xMap = 10; yMap = 7;
-	//xMap = 12; yMap = 6;
+	//xMap = 4; yMap = 7;
 
 xWarpPoint = x;
 yWarpPoint = y;
@@ -56,7 +56,7 @@ rangsMax = 1;
 wepSelected = 0;
 wepLevels = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
 wepCost = [10, 2, 10, 0, .5, 2, 2, 20, 20, 0 , 0];
-wepCDMax = [20, 12, 25, 30, 1, 30, 30, 30, 45, 30, 1];
+wepCDMax = [10, 12, 25, 30, 1, 30, 30, 30, 45, 30, 1];
 
 
 lionCD = irandom_range(5, 7);
@@ -83,12 +83,14 @@ for(var i=0; i<200; i++){
 	eventTrigger[i] = false;
 }
 eventTrigger[Event.gotRang] = true;
+//eventTrigger[Event.gotRang2] = true;
 //eventTrigger[Event.gotStar] = true; ///
 //eventTrigger[Event.gotMap] = true; ///
 //eventTrigger[Event.gotChargeShot] = true; ///
 //eventTrigger[Event.gotMagnet] = true; ///
 //eventTrigger[Event.gotPinwheel] = true; ///
 //eventTrigger[Event.gotHoneycomb] = true; ///
+//eventTrigger[Event.gotRubberBand] = true; ///
 //eventTrigger[Event.gotCauldren3] = true; ///
 //eventTrigger[Event.gotMPShell] = true; ///
 //eventTrigger[Event.gotRangPack] = true;
@@ -125,7 +127,7 @@ killMemory = [
 
 
 
-
+slowDown = false;
 
 
 
@@ -154,9 +156,11 @@ enum Event {
 	gotChargeShot,
 	gotMightShot,
 	gotSpeedShot,
+	gotMoreShot,
 	gotChargeShot2,
 	gotMightShot2,
 	gotSpeedShot2,
+	gotMoreShot2,
 	gotMPShell,
 	gotWindStone,
 	gotIceStone,
@@ -169,6 +173,8 @@ enum Event {
 	gotHoneycomb,
 	gotPhiloStone,
 	gotHole,
+	gotRubberBand,
+	gotRang2,
 	
 	haveBombs,
 	
@@ -210,6 +216,7 @@ enum Event {
 	gotCarrotDragonGreen,
 	gotCarrotDragonBlue,
 	gotCarrotDragonYellow,
+	gotCarrotDragonYellowSpike,
 }
 
 shotPower = noone;

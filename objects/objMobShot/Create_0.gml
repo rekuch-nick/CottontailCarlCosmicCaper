@@ -38,4 +38,8 @@ speedUpOnSeek = false;
 
 isFall = false;
 driftChance = 0;
-changeChance = 10;
+changeChance = 0;
+
+lineHunt = false;
+
+speedupRate = 1;

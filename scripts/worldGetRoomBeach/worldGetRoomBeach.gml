@@ -34,6 +34,7 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 12 && yyy == 9){
 		biome(Zone.beach);
+		ww.mobList = [5, objMobBeachTroll, objMobBeachTroll, objMobBeachTroll, objMobBeachTroll, objMobBeachTroll];
 		wmap("ppppppppppppppp");
 		wmap("pp.............");
 		wmap("...............");
@@ -50,6 +51,7 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 13 && yyy == 9){
 		biome(Zone.beach);
+		ww.mobList = [5, objMobBeachTroll, objMobBeachTroll, objMobBeachTroll, objMobBeachTroll, objMobBeachTroll];
 		wmap("ppppppppppppppp");
 		wmap("..............p");
 		wmap("..............p");
@@ -99,9 +101,11 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 16 && yyy == 9){
 		biome(Zone.beach);
-		wmap("ppppppppppppppp");
-		wmap("ppppppppppppppp");
-		wmap("ppppppppppppppp");
+		ww.mobList = [12, objMobPuffball, objMobPuffball, objMobPuffball, objMobPuffball, objMobPuffball, objMobPuffball, objMobPuffball, objMobPuffball, objMobPuffball, objMobPuffball, objMobPuffball, objMobPuffball];
+		ww.canLion = false; ww.noWet = true;
+		wmap("pppppp/////pppp");
+		wmap("pppppp/=///pppp");
+		wmap("ppp......pppppp");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
@@ -133,6 +137,8 @@ function worldGetRoomBeach(xxx, yyy){
 	if(xxx == 18 && yyy == 9){
 		biome(Zone.beach);
 		ww.secBlock = imgRockWall; ww.secX = 12; ww.secY = 9; ww.secType = Sec.bomb;
+		ww.overrideWet = objMobJellyRed; ww.canLion = false;
+		ww.mobList = [0];
 		wmap("ppppppppp....~~");
 		wmap("pppp........~~~");
 		wmap("pp..........~~~");
@@ -151,12 +157,12 @@ function worldGetRoomBeach(xxx, yyy){
 		biome(Zone.beach);
 		wmap("pp..........~~~");
 		wmap("pp..........~~~");
+		wmap("pp....p.....~~~");
 		wmap("pp..........~~~");
 		wmap("pp..........~~~");
-		wmap("pp..........~~~");
-		wmap("pp..........~~~");
-		wmap("pp..........~~~");
-		wmap("pp..........~~~");
+		wmap("p///........~~~");
+		wmap("p/=/........~~~");
+		wmap("pp....p.....~~~");
 		wmap("pp..........~~~");
 		wmap("ppp.........~~~");
 		wmap("pppppp.......~~");
@@ -216,7 +222,7 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 8 && yyy == 9){
 		biome(Zone.beach);
-		ww.mobList = [5, objMobCrab, objMobCrab, objMobCrab, objMobCrab, objMobCrab];
+		ww.mobList = [4, objMobCrab, objMobCrab, objMobCrab, objMobCrab];
 		wmap("/..........pppp");
 		wmap("/..........pppp");
 		wmap("/........pppppp");
@@ -226,14 +232,14 @@ function worldGetRoomBeach(xxx, yyy){
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
-		wmap("..............~");
-		wmap("..............~");
+		wmap("............~~~");
+		wmap("............~~~");
 		wmap("~~~~~~~~~~~~~~~");
 	}
 	
 	if(xxx == 7 && yyy == 9){
 		biome(Zone.beach);
-		ww.mobList = [5, objMobCrab, objMobCrab, objMobCrab, objMobCrab, objMobCrab];
+		ww.mobList = [4, objMobCrab, objMobCrab, objMobCrab, objMobCrab];
 		wmap("pppppp...ppp///");
 		wmap("pppppp...pppp//");
 		wmap("pppppp...pppp//");
@@ -243,8 +249,8 @@ function worldGetRoomBeach(xxx, yyy){
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
-		wmap("~..............");
-		wmap("~..............");
+		wmap("~~~............");
+		wmap("~~~............");
 		wmap("~~~~~~~~~~~~~~~");
 	}
 	

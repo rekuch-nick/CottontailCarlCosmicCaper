@@ -36,7 +36,9 @@ var x1 = x + 8;
 var w = max((pc.hp / pc.hpMax) * 304, 0);
 var y1 = y + (44 * 4);
 var y2 = y1 + 32;
-draw_rectangle_color(x1, y1, x1 + w, y2, c_maroon, c_maroon, c_red, c_red, false);
+var c1 = c_red; var c2 = c_maroon;
+if(pc.poisonTime > 0){ c1 = c_lime; c2 = c_green; }
+draw_rectangle_color(x1, y1, x1 + w, y2, c2, c2, c1, c1, false);
 draw_text(x1+4, y1+8, string(floor(pc.hp)));
 
 if(pc.spMax > 0){

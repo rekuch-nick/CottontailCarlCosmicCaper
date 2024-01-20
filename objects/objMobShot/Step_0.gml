@@ -7,6 +7,16 @@ if(firstFrame){
 		xTar = pc.x >= x ? 1000 : - 10;
 	}
 	
+	if(lineHunt){
+		if(abs(x - pc.x) >= abs(y - pc.y)){
+			yTar = y;
+			xTar = pc.x < x ? -100 : 1000;
+		} else {
+			xTar = x;
+			yTar = pc.y < y ? -100 : 1000;
+		}
+	}
+	
 	var angle = arctan2(yTar - y, xTar - x);
 	xSpeed = cos(angle) * moveSpeed;
 	ySpeed = sin(angle) * moveSpeed;
@@ -45,6 +55,10 @@ if(seek > 0){
 x += xSpeed;
 y += ySpeed;
 ySpeed += grav;
+if(speedupRate != 1){
+	xSpeed *= speedupRate;
+	ySpeed *= speedupRate;
+}
 
 if(irandom_range(1, 100) < driftChance){
 	x += choose(-1, 0, 1);

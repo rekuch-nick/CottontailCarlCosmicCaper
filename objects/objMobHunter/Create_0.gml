@@ -13,3 +13,4 @@ bumpPow = 20;
 moveSpeed = 32;
 thinkCDMax = 10;
 
+dropsBombs = true;

@@ -8,6 +8,7 @@ function playerStepPlay(){
 	}
 	windUP = false;
 	
+	creatureBuffDecay();
 	
 	if(inSpace){ playerStepPlaySpace(); }
 	
@@ -23,6 +24,8 @@ function playerStepPlay(){
 	
 	
 	var spd = moveSpeed;
+	if(slowDown){ spd *= .3; }
+	if(hurtTime > 0 && eventTrigger[Event.gotRubberBand]){ spd += 8; }
 	if(debug){ spd *= 4; }
 	if(xIn != 0 && yIn != 0){
 		spd /= 1.4;
@@ -136,6 +139,8 @@ function playerStepPlay(){
 			if(eventTrigger[Event.gotSpeedShot]){ shootCD -= 5; }
 			if(eventTrigger[Event.gotSpeedShot2]){ shootCD -= 5; }
 			var n = pc.shotAmount;
+			if(eventTrigger[Event.gotMoreShot]){ n ++; }
+			if(eventTrigger[Event.gotMoreShot2]){ n ++; }
 			if(pc.shotPower == Shot.wide){ n += 2; }
 			var xo = image_xscale > 0 ? 20 : -20;
 			for(var i=0; i<n; i++){
@@ -144,6 +149,8 @@ function playerStepPlay(){
 				if(i % 2 == 1){ nn *= -1; }
 				s.offSet = nn;
 				if(bp >= bpThresh){ s.sprite_index = imgPlayerBeamsCharged; }
+				if(eventTrigger[Event.gotMightShot]){ s.pow += 5; }
+				if(eventTrigger[Event.gotMightShot2]){ s.pow += 5; }
 			}
 			if(wepSelected == 5 && wepLevels[5] > 0 && irandom_range(1, 100) < 60){
 				instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerIceShotSmall);
@@ -162,7 +169,9 @@ function playerStepPlay(){
 			){
 				shootCD = wepCDMax[wepSelected];
 				mp -= wepCost[wepSelected];
-				instance_create_depth(x, y, ww.layerE, objPlayerRang);
+				var t = objPlayerRang;
+				if(eventTrigger[Event.gotRang2]){ t = objPlayerRang2; }
+				instance_create_depth(x, y, ww.layerE, t);
 			
 		}
 		
@@ -264,7 +273,7 @@ function playerStepPlay(){
 	
 	if(hurtTime > 0){ hurtTime --; }
 	if(stunTime > 0){ stunTime --; }
-	
+	slowDown = false;
 	
 	playerFreezeWater();
 	
@@ -310,9 +319,9 @@ function playerStepPlay(){
 		}
 	}
 	
-	
-	
-	if(eventTrigger[Event.gotHealingHeart]){
+	if(poisonTime > 0){
+		hp -= .1;
+	} else if(eventTrigger[Event.gotHealingHeart]){
 		hp = clamp(hp + .01, 0, hpMax);
 	}
 	

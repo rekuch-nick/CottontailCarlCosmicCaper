@@ -127,6 +127,7 @@ function worldGetRoomCave(xxx, yyy){
 		|| (xxx == 10 && yyy == 8) 
 		|| (xxx == 5 && yyy == 3) 
 		|| (xxx == 6 && yyy == 3) 
+		|| (xxx == 13 && yyy == 7) 
 		){ // dog gifts
 		ww.bmap[7, 5] = imgNPCDog;
 		if(ww.caveCoins[pc.xMap, pc.yMap] > 0){
@@ -164,7 +165,23 @@ function worldGetRoomCave(xxx, yyy){
 		}
 	}
 	
+	if( xxx == 7 && yyy = 7 ){ //horse shop
+		ww.bmap[7, 5] = imgHorse; ww.bmap[6, 5] = imgNPCHorseTiny; ww.bmap[8, 5] = imgNPCHorseTiny;
+		if(!pc.eventTrigger[Event.gotRubberBand]){
+			ww.txt = "You can't always avoid a hit, which is why snapping back into place after is so important.";
+			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupRubberBand);
+			s.coinPrice = 55;
+			s.desc = "";
+		}
+	}
 	
+	///healing mouse
+	if( (xxx == 7 && yyy = 2) ||
+		(xxx == 16 && yyy = 9) ){ 
+		ww.bmap[7, 5] = imgNPCMouse;
+		ww.txt = "Come by any time you're feeling tired, and I will help.";
+		pc.fullHealing = true;
+	}
 	
 	
 	

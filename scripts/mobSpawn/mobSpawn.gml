@@ -13,15 +13,21 @@ function mobSpawn(){
 	
 	
 	
-	
+	var wetmob = objMobJelly;
 	
 	
 	var n = choose(3, 4);
 	if(ww.mobList != noone){ n = ww.mobList[0]; }
 	var nWater = 0;
 	
-	if(ww.inBiome == Zone.beach && ww.mobList == noone){
-		nWater = 1;
+	if(!ww.noWet){
+		if(ww.inBiome == Zone.beach){
+		//if(ww.inBiome == Zone.beach && ww.mobList == noone){
+			nWater = 1;
+		}
+		
+		
+		if(ww.overrideWet != noone){ nWater ++; }
 	}
 	
 	
@@ -75,6 +81,7 @@ function mobSpawn(){
 		}
 		
 		if(ww.inBiome == Zone.beach){
+			wetmob = objMobJelly;
 			t = choose(objMobCrab, objMobBlueSlime);
 		}
 		
@@ -116,7 +123,11 @@ function mobSpawn(){
 		if(nWater > 0){
 			if(!ww.fmap[a, b].isWater){ continue; }
 			nWater --;
-			t = objMobJelly;
+			
+			t = wetmob;
+			if(ww.overrideWet != noone){ t = ww.overrideWet; }
+			
+			
 		} else {
 			if(ww.fmap[a, b].isWater){ continue; }
 		}

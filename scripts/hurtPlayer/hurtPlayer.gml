@@ -11,5 +11,6 @@ function hurtPlayer(dmg, isBlockableShot){
 	
 	pc.hp -= dmg; ///
 	pc.hurtTime = 30; ///
+	if(pc.eventTrigger[Event.gotRubberBand]){ pc.hurtTime += 10; }
 
 }

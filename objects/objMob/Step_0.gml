@@ -24,6 +24,9 @@ if(burnTime > 0){
 		moveSpeed --;
 		weakToFire = noone;
 	}
+	if(dieToFire){
+		hp = 0;
+	}
 }
 if(poisonTime > 0){ hp -= .15; }
 if(inert != noone){ thinkCD ++; shootCD ++; }
@@ -73,7 +76,10 @@ if(driftMove == Move.bull){
 	if(y >= yGround){ jumpSpeed = jumpPow; }
 }
 
-
+if(fluxScale && irandom_range(1, 4) == 1){
+	image_xscale = clamp(image_xscale + choose(-.1, 0, .1), -5, 5);
+	image_yscale = clamp(image_yscale + choose(-.1, 0, .1), 2, 5);
+}
 
 if(xSpeed > 0 && x > xTar){ x = xTar; xSpeed = 0; }
 if(xSpeed < 0 && x < xTar){ x = xTar; xSpeed = 0; }
@@ -105,6 +111,9 @@ if(shotKind != noone && frozenTime < 1 && stunTime < 1){
 	
 	if(shootCD < 1){
 		shootCD = shootCDMax;
+		if(increaseShootSpeed){
+			shootCDMax = clamp(shootCDMax - 4, increaseShootSpeedMin, shootCD);
+		}
 		
 		if(shotClusterMax > 0){
 			if(shotCuster > 0){
@@ -122,6 +131,10 @@ if(shotKind != noone && frozenTime < 1 && stunTime < 1){
 		
 		if(shotSwap != noone){
 			shotKind = shotSwap[irandom_range(0, array_length(shotSwap) - 1)];
+		}
+		
+		if(spawnOnShoot != noone && irandom_range(1, 100) < spawnOnShootChance){
+			instance_create_depth(x, y, depth - 1, spawnOnShoot);
 		}
 	}
 }
@@ -184,13 +197,36 @@ if(shatterAtHalf && hp / hpMax <= .5){
 
 
 hurtTime = clamp(hurtTime - 1, 0, 60);
+if(incincTime > 0){ incincTime --; }
 
 
 if(hp < 1){
+	
+	
+	if(cubeSplitOnDeath){
+		repeat(2){
+			var o = object_index;
+			var s = image_yscale - 2;
+			
+			if(s < 2 && o == objMobCube){ o = objMobCubeSmall; s = 6; }
+			if(s < 2){ break; }
+			
+			dropChance = 0;
+			var spt = instance_create_depth(x, y, depth, o);
+			spt.image_xscale = s;
+			spt.image_yscale = s;
+			spt.incincTime = 7;
+		}
+	}
+	
+	
 	if(irandom_range(0, 99) < dropChance){
 		var d = instance_create_depth(x, y, ww.layerP, mobRollDrop());
 		if(dropEventNumber != noone){ d.eventNumber = dropEventNumber; }
 	}
+	
+	
+	
 	instance_destroy();
 }
 
