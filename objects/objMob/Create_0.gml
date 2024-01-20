@@ -91,3 +91,4 @@ fluxScale = false;
 
 spawnOnShoot = noone;
 spawnOnShootChance = 0;
+speedUpOnKill = false;

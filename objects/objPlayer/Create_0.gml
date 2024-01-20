@@ -13,7 +13,7 @@ mutter = "";
 
 pushingTime = 0;
 
-xMap = 10; yMap = 7;
+//xMap = 10; yMap = 7;
 	//xMap = 4; yMap = 7;
 
 xWarpPoint = x;
@@ -135,7 +135,7 @@ slowDown = false;
 
 
 
-
+playerReset();
 
 
 

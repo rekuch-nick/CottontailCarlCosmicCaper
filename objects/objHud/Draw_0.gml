@@ -1,3 +1,18 @@
+if(ww.state == State.dying){
+	if(ww.deadTime < 1){
+		draw_set_alpha(ww.deadTime);
+		draw_rectangle_color(0, 0, room_width, room_height, c_maroon, c_maroon, c_maroon, c_maroon, false);
+		draw_set_alpha(1);
+	} else {
+		draw_rectangle_color(0, 0, room_width, room_height, c_black, c_black, c_black, c_black, false);
+		draw_set_halign(fa_center);
+		draw_text_transformed(room_width/2, room_height/2, "You only lose if you quit", 2, 2, 0);
+		draw_text(room_width/2, (room_height/3) * 2, "Press [ENTER] to continue");
+		draw_set_halign(fa_left);
+	}
+	return;
+}
+
 draw_self();
 frameCount ++;
 if(frameCount >= 30){ frameCount = 0; }
@@ -78,6 +93,7 @@ draw_sprite_stretched(im, 0, x + (8), y + (68 * 4), 64, 64);
 
 im = imgBlank;
 if(pc.wepSelected == 0){ im = imgPlayerRang; }
+if(pc.wepSelected == 0 && pc.eventTrigger[Event.gotRang2]){ im = imgPlayerRang2; }
 if(pc.wepSelected == 1){ im = imgPlayerStar; }
 if(pc.wepSelected == 2){ im = imgPupTorch; }
 if(pc.wepSelected == 3){ im = imgPupBomb; }

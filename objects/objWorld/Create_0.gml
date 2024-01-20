@@ -43,7 +43,7 @@ noFall = false;
 noWet = false;
 overrideWet = noone;
 
-
+deadTime = 0;
 
 enum State {
 	play,
@@ -56,6 +56,7 @@ enum State {
 	leaveSpace,
 	pause,
 	inventory,
+	dying,
 }
 
 enum Zone {

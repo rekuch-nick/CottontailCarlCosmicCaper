@@ -2,6 +2,7 @@ function worldLoadRoom(dir){
 	
 	with(objEffect){ instance_destroy(); }
 	with(objMob){ instance_destroy(); }
+	with(objPup){ instance_destroy(); }
 	ww.txt = "";
 	ww.txtTime = 0;
 	

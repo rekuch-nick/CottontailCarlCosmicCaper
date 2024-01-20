@@ -25,7 +25,7 @@ function playerStepPlay(){
 	
 	var spd = moveSpeed;
 	if(slowDown){ spd *= .3; }
-	if(hurtTime > 0 && eventTrigger[Event.gotRubberBand]){ spd += 8; }
+	if(hurtTime > 0 && eventTrigger[Event.gotRubberBand]){ spd += 4; }
 	if(debug){ spd *= 4; }
 	if(xIn != 0 && yIn != 0){
 		spd /= 1.4;
@@ -360,4 +360,5 @@ function playerStepPlay(){
 	
 	image_index = f;
 	
+	if(hp < 1){ ww.state = State.dying; }
 }

@@ -201,7 +201,7 @@ function worldGetRoomGrass(xxx, yyy){
 	
 	if(xxx == 12 && yyy == 8){ 
 		biome(Zone.grass);
-		ww.secBlock = imgBushGrass; ww.secX = 9; ww.secY = 5; ww.secType = Sec.burn;
+		ww.secBlock = imgBushRedGrass; ww.secX = 9; ww.secY = 5; ww.secType = Sec.burn;
 		wmap("##...........%%");
 		wmap("#............%%");
 		wmap(".........%....#");

@@ -110,6 +110,8 @@ if(gotIt){
 	if(sprite_index == imgPupRubberBand){ pc.eventTrigger[Event.gotRubberBand] = true; }
 	if(sprite_index == imgPlayerRang2){ pc.eventTrigger[Event.gotRang2] = true; }
 	
+	if(sprite_index == imgPupPinwheel){ pc.eventTrigger[Event.gotPinwheel] = true; }
+	
 	if(sprite_index == imgPupHoneycomb){ pc.eventTrigger[Event.gotHoneycomb] = true; }
 	if(sprite_index == imgPupCauldren1){ pc.eventTrigger[Event.gotCauldren1] = true; }
 	if(sprite_index == imgPupCauldren2){ 

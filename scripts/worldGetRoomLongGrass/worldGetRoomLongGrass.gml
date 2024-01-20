@@ -70,6 +70,9 @@ function worldGetRoomLongGrass(xxx, yyy){
 	
 	if(xxx == 14 && yyy == 6){
 		biome(Zone.longGrass);
+		ww.canLion = false;
+		ww.mobList = [8, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat];
+		ww.secBlock = imgBushSand; ww.secX = 10; ww.secY = 8; ww.secType = Sec.burn;
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("#.............#");
@@ -77,9 +80,9 @@ function worldGetRoomLongGrass(xxx, yyy){
 		wmap("#.............#");
 		wmap("#.............#");
 		wmap("#.............#");
-		wmap("..............#");
-		wmap("..............#");
-		wmap("..............#");
+		wmap("..........s...#");
+		wmap(".........s=s..#");
+		wmap("..........ss..#");
 		wmap("##...........##");
 		wmap("###############");
 	}

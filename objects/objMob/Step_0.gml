@@ -69,6 +69,7 @@ if(stopAtDis){
 	}
 }
 
+
 if(driftMove == Move.bull){
 	y += jumpSpeed;
 	if(y < yGround){ jumpSpeed += 2; } else { jumpSpeed = 0; }
@@ -202,6 +203,7 @@ if(incincTime > 0){ incincTime --; }
 
 if(hp < 1){
 	
+	if(speedUpOnKill){ with(objMob){ if(speedUpOnKill){ moveSpeed ++; thinkCD = 0; } } }
 	
 	if(cubeSplitOnDeath){
 		repeat(2){

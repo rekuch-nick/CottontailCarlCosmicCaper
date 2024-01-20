@@ -93,14 +93,14 @@ function worldGetRoomCave(xxx, yyy){
 		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
 		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
 		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
-		ww.txt = "Use numbers or mouse wheel to swap items.\n\nPress [Enter] to look at your inventory.\n\nPress [Q] to use a potion.\n\nItem managment is key to success!";
+		ww.txt = "Since the attacks started, many animals went into hiding.\n\nTo find them you'll have to burn plants, bomb rocks, and try all kinds of things.";
 	}
 	if(xxx == 15 && yyy == 5){
 		ww.bmap[7, 6] = imgNPCDuck;
 		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
 		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
 		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
-		ww.txt = "Your eye lazers are powerful, but don't neglect you secondary weapons.\n\nMost of them do extra damage to particular monster types.";
+		ww.txt = "Your eye lazers are powerful, but don't forget your other weapons.\n\nMost of them do extra damage to particular monster types like boomarangs to bats or fire to trolls.";
 	}
 	
 	
@@ -172,6 +172,18 @@ function worldGetRoomCave(xxx, yyy){
 			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupRubberBand);
 			s.coinPrice = 55;
 			s.desc = "";
+		}
+	}
+	
+	if( xxx == 14 && yyy = 6 ){ //rang shop
+		ww.bmap[7, 5] = imgNPCCat;
+		if(!pc.eventTrigger[Event.gotRang2]){
+			ww.txt = "Still using wooden boomarangs? Kind of silly not to upgrade if you can afford it.";
+			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupRang2);
+			s.coinPrice = 30;
+			s.desc = "";
+		} else if(pc.hpMax < 150) {
+			ww.txt = "Come back once you get stronger and I'll sell you something even better.";
 		}
 	}
 	
