@@ -89,6 +89,10 @@ function mobSpawn(){
 			t = choose(objMobGoon);
 		}
 		
+		if(ww.inBiome == Zone.snow){
+			t = choose(objMobIceSlime);
+		}
+		
 		if(ww.inBiome == Zone.deepForest){
 			t = choose(objMobEnt);
 		}

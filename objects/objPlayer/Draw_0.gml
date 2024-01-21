@@ -12,7 +12,17 @@ if(ww.state == State.useStairs){
 }
 if(ww.state == State.scroll){ return; }
 if(ww.state == State.inventory){ return; }
-
+if(ww.state == State.rocketing){
+	draw_sprite_stretched(imgRocketOn, choose(0, 1, 2), x, y, 32 * 4, 32 * 4);
+	
+	if(ww.starYMod >= 60){
+		draw_set_alpha( (ww.starYMod - 60) / 10);
+		draw_rectangle_color(0, 0, room_width, room_height, c_black, c_black, c_black, c_black, false);
+		draw_set_alpha(1);
+	}
+	
+	return;
+}
 
 
 if(ww.txt != "" && ww.txtTime > 0){
@@ -59,4 +69,9 @@ if(windUP){
 	draw_sprite_ext(imgWindShield, 0, x, y, 4, 4, windAngle, c_white, random_range(.5, .8));
 }
 
+if(eventTrigger[Event.gotGlasses] && !ww.secExposed[pc.xMap, pc.yMap] && ww.secX != -1 && inOverworld && !ww.lakeDrained){
+	draw_set_alpha(random_range(.2, .4));
+	draw_rectangle(ww.secX * 64, ww.secY * 64, ww.secX * 64 + 64, ww.secY * 64 + 64, false);
+	draw_set_alpha(1);
+}
 

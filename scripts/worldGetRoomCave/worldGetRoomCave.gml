@@ -105,6 +105,25 @@ function worldGetRoomCave(xxx, yyy){
 	
 	
 	
+	//snow story
+	if(xxx == 2 && yyy == 6){
+		ww.bmap[7, 6] = imgNPCDuck;
+		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
+		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
+		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
+		ww.txt = "This area used to be a warm green valley.\n\nThe dragons have done something to curse us with endless snow.";
+	}
+	if(xxx == 0 && yyy == 6){
+		ww.bmap[7, 6] = imgNPCFox;
+		ww.txt = "The Ice Dragon here keeps a magic stone that it uses to freeze our lands.\n\nI'm so cold!";
+	}
+	if(xxx == 2 && yyy == 8){
+		ww.bmap[7, 6] = imgNPCSmallLizard;
+		ww.txt = "To ... cold ... to ... talk ...";
+	}
+	
+	
+	
 	
 	if( (xxx == 9 && yyy == 7)
 		|| (xxx == 6 && yyy == 4)
@@ -189,6 +208,7 @@ function worldGetRoomCave(xxx, yyy){
 	
 	///healing mouse
 	if( (xxx == 7 && yyy = 2) ||
+		(xxx == 0 && yyy = 8) ||
 		(xxx == 16 && yyy = 9) ){ 
 		ww.bmap[7, 5] = imgNPCMouse;
 		ww.txt = "Come by any time you're feeling tired, and I will help.";

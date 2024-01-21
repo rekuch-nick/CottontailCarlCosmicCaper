@@ -20,6 +20,8 @@ function biome(z){
 		if(ww.inBiome == Zone.volcano){ t = imgDirtLight; }
 		if(ww.inBiome == Zone.darkHills){ t = imgDirtDark; }
 		
+		if(ww.inBiome == Zone.moon){ t = imgCheeseFloor; }
+		
 		
 		ww.fmap[a, b] = t;
 		ww.bmap[a, b] = noone;

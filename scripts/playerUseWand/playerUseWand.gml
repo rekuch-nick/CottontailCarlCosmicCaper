@@ -42,6 +42,7 @@ function playerUseWand(){
 					var t = instance_create_depth(x, y, depth-1, objDrainTile);
 					t.sprite_index = sprite_index;
 					instance_destroy();
+					ww.lakeDrained = true;
 				}
 			}
 		} else if (pc.xMap == 10 && pc.yMap == 5 && !pc.eventTrigger[Event.gotCarrot06]) {

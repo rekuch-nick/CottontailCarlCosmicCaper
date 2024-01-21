@@ -21,7 +21,7 @@ function worldGetRoom(xxx, yyy){ //26 x 14
 		return;
 	}
 	
-	ww.secBlock = noone; ww.secX = 5; ww.secY = 5; ww.secType = noone;
+	ww.secBlock = noone; ww.secX = -1; ww.secY = -1; ww.secType = noone;
 	
 	worldGetRoomGrass(xxx, yyy);
 	worldGetRoomBeach(xxx, yyy);
@@ -40,24 +40,9 @@ function worldGetRoom(xxx, yyy){ //26 x 14
 	worldGetRoomGrave(xxx, yyy);
 	
 	
+	worldGetRoomStarlands(xxx, yyy);
 	
 	
-	if(pc.xMap == 20 && pc.yMap == 0){
-		ww.txt = "The STAR pulses in your hand.\n\nThe universe wants you to defeat the dragon invasion, but cannot interfere directly.\n\nChoose a boon, to help you on your way:";
-		wmap("CCCCCCCCCCCCCCC");
-		wmap("CCCCCCCCCCCCCCC");
-		wmap("CCCCCCCCCCCCCCC");
-		wmap("CCCCCCCCCCCCCCC");
-		wmap("CCCCCCCCCCCCCCC");
-		wmap("CcccccccccccccC");
-		wmap("CcccccccccccccC");
-		wmap("CcccccccccccccC");
-		wmap("CcccccccccccccC");
-		wmap("CcccccccccccccC");
-		wmap("CcccccccccccccC");
-		wmap("CCCCCCCCCCCCCCC");
-		
-	}
 	
 	
 	

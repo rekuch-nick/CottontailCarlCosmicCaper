@@ -5,7 +5,7 @@ function worldLoadRoom(dir){
 	with(objPup){ instance_destroy(); }
 	ww.txt = "";
 	ww.txtTime = 0;
-	
+	ww.lakeDrained = false;
 	
 	var xo = 0;
 	var yo = 0;

@@ -2,7 +2,7 @@
 
 playerInput();
 
-if(fullHealing){
+if(fullHealing || pc.debug){
 	hp = clamp(hp + 1, 0, hpMax);
 	mp = clamp(mp + 1, 0, mpMax);
 	if(hp == hpMax && mp == mpMax){ fullHealing = false; }
@@ -18,6 +18,7 @@ if(healingC2){
 }
 
 
+if(ww.state == State.rocketing){ playerStepRocket(); }
 if(ww.state == State.scroll){ playerStepScroll(); }
 if(ww.state == State.useStairs){ playerStepUseStairs(); }
 if(ww.state == State.play || ww.state == State.pause || ww.state == State.scroll || ww.state == State.enteringSpace || ww.state == State.leaveSpace || ww.state == State.useStairs || ww.state == State.warpWind || ww.state == State.inventory){ playerStepPlayOrPause(); }

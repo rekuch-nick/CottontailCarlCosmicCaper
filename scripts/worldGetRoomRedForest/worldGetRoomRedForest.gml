@@ -35,6 +35,8 @@ function worldGetRoomRedForest(xxx, yyy){
 	
 	if(xxx == 3 && yyy == 8){
 		biome(Zone.redForest);
+		ww.mobList = [1, objMobWitchBoss];
+		ww.canLion = false;
 		wmap("%%%%%%...%%%%%%");
 		wmap("%%...........%%");
 		wmap("%.............%");

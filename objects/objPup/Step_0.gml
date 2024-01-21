@@ -53,7 +53,7 @@ if(gotIt){
 		pc.yWarpPoint = (10 * 64 + 32);
 		pc.blockMobSpawn = true;
 		pc.fullHealing = true;
-	} else if(pc.xMap == 20 && pc.yMap == 0){
+	} else if(pc.xMap == 20){
 		instance_create_depth(0, 0, ww.layerE, objTornado);
 		ww.state = State.warpWind;
 		pc.xMap = 10; pc.yMap = 7;
@@ -96,6 +96,14 @@ if(gotIt){
 	
 	if(sprite_index == imgMap){ pc.eventTrigger[Event.gotMap] = true; }
 	
+	if(sprite_index == imgRocket){ 
+		with(objMob){ instance_destroy(); }
+		with(objPup){ instance_destroy(); }
+		with(objEffect){ instance_destroy(); }
+		with(objStar){ ySpeed *= 3; }
+		ww.state = State.rocketing; 
+	}
+	
 	if(sprite_index == imgPupChargeCharm){ pc.eventTrigger[Event.gotChargeShot] = true; }
 	if(sprite_index == imgPupChargeCharm2){ pc.eventTrigger[Event.gotChargeShot2] = true; pc.eventTrigger[Event.gotChargeShot] = true; }
 	if(sprite_index == imgPupMightCharm){ pc.eventTrigger[Event.gotMightShot] = true; }
@@ -111,6 +119,8 @@ if(gotIt){
 	if(sprite_index == imgPlayerRang2){ pc.eventTrigger[Event.gotRang2] = true; }
 	
 	if(sprite_index == imgPupPinwheel){ pc.eventTrigger[Event.gotPinwheel] = true; }
+	if(sprite_index == imgPupGlasses){ pc.eventTrigger[Event.gotGlasses] = true; }
+	if(sprite_index == imgPupPoisonVial){ pc.eventTrigger[Event.gotPoisonVial] = true; }
 	
 	if(sprite_index == imgPupHoneycomb){ pc.eventTrigger[Event.gotHoneycomb] = true; }
 	if(sprite_index == imgPupCauldren1){ pc.eventTrigger[Event.gotCauldren1] = true; }

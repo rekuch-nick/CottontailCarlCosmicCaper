@@ -1,0 +1,46 @@
+boomarang; ninja stars
+torch
+bombs
+wind shield
+ice
+
+teleport
+wand
+sword
+philo stone
+
+
+
+//////////
+palace 1 - sparce ; map
+palace 2 - desert ; charge charm
+palace 3 - long grass ; wind stone
+palace 4 - red forest ; magnet
+palace 5 - snow ; ice stone & poison vial
+palace 6 - beach (ice locked) ; wand
+palace 7 - grave (wand locked)
+palace 8 - hills
+palace 9 - deep forest
+palace 10 - volcano
+palace 11 - dark (wand locked)
+
+
+
+__
+gotRang,
+	
+	
+	
+	
+	gotMPShell,
+	
+	gotShield,
+	gotMap,
+	gotMagnet,
+	
+	gotCauldren1,gotCauldren2,gotCauldren3,
+	gotHoneycomb,
+	gotRubberBand,
+	gotHealingHeart,
+	gotMonocule,
+	gotGlasses,

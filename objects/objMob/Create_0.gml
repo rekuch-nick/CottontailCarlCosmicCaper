@@ -68,6 +68,7 @@ spec = noone;
 specCD = 0;
 specCDMax = 0;
 specLimit = -1;
+specNum = 0;
 
 showHP = false;
 showHPTop = false;
@@ -92,3 +93,11 @@ fluxScale = false;
 spawnOnShoot = noone;
 spawnOnShootChance = 0;
 speedUpOnKill = false;
+
+rejectBeam = false;
+rejectBeamRange = 128;
+rejectBeamCDMax = 45;
+rejectBeamCD = rejectBeamCDMax;
+
+becomeRocket = false;
+becomeRocketCD = 30 * 3;

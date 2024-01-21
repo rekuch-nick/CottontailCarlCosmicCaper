@@ -17,6 +17,10 @@ if(firstFrame){
 		}
 	}
 	
+	if(dontMove){
+		xTar = x; yTar = y; moveSpeed = 0;
+	}
+	
 	var angle = arctan2(yTar - y, xTar - x);
 	xSpeed = cos(angle) * moveSpeed;
 	ySpeed = sin(angle) * moveSpeed;
@@ -24,6 +28,7 @@ if(firstFrame){
 	if(isFall){
 		xSpeed = 0;
 		ySpeed = moveSpeed;
+		if(sprite_index == imgFrozenEffect){ ySpeed = irandom_range(-6, -4); }
 	}
 	
 	if(pointAtTarget){
@@ -31,6 +36,11 @@ if(firstFrame){
 	}
 }
 
+
+if(inertTime > 0){
+	inertTime --;
+	return;
+}
 
 if(seek > 0){
 	seekCD --;

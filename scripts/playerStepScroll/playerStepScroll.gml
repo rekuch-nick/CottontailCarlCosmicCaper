@@ -31,10 +31,35 @@ function playerStepScroll(){
 			s.txt = "Hard\n(200 Coins)"; s.txtColor = c_red; s.yTxtOffset = -96;
 		}
 		
+		///find here
+		if(pc.xMap == 21 && pc.yMap == 3){
+			ww.bmap[8][6].sprite_index = imgNPCMouse;
+		}
+		if(pc.xMap == 20 && pc.yMap == 1){
+			ww.bmap[5, 7].sprite_index = imgPupStar;
+			ww.bmap[6, 7].sprite_index = imgNPCMouse;
+			ww.bmap[8, 7].sprite_index = imgNPCMouse;
+			ww.bmap[10, 7].sprite_index = imgNPCMouse;
+			
+			if(!pc.eventTrigger[Event.gotHealingHeart]){
+				instance_create_depth((ww.roomWidth / 4) * 2, 64 * 9, ww.layerP, objPupHealingHeart);
+			} else if (!pc.eventTrigger[Event.gotMonocule]) {
+				instance_create_depth((ww.roomWidth / 4) * 2, 64 * 9, ww.layerP, objPupShotDrop);
+			} else {
+				instance_create_depth((ww.roomWidth / 4) * 2, 64 * 9, ww.layerP, objPupCoinBag);
+			}
+			
+			
+		}
+		
 		if(pc.xMap == 10 && pc.yMap == 5 && !pc.eventTrigger[Event.gotCarrot06]){
 			var s = instance_create_depth(5 * 64, 64 * 2, ww.layerP, objPupCarrot);
 			s.eventNumber = Event.gotCarrot06;
 		}
+		
+		
+		
+		
 		
 		
 		if(pc.xMap == 3 && pc.yMap == 9){ if(!eventTrigger[Event.gotPhiloStone]){

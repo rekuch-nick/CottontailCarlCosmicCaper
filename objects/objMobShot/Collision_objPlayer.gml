@@ -1,4 +1,5 @@
 if(pc.hurtTime > 0){ return; }
+if(inertTime > 0){ return; }
 
 
 

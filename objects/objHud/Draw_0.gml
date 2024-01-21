@@ -120,5 +120,10 @@ for(var i=0; i<11; i++){
 draw_sprite_stretched(imgWepSelected, 0, x + 8 + (pc.wepSelected * 28), y + (68 * 5), 24, 24);
 
 
+var s = "Move: WSAD\nShot: LClick\nItem: RClick\nSelect: #s or Mousewheel\nPotion: Q\nInventory: Enter";
+draw_text_ext_transformed(x + 4, 600, s, 32, 600, .5, .5, 0);
+
+
+
 
 if(ww.state == State.inventory){ hudDrawInventory(); }

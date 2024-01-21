@@ -141,7 +141,7 @@ function worldGetRoomSparse(xxx, yyy){
 		wmap("..............#");
 		wmap(".........TTTTT#");
 		wmap(".........PPPPP#");
-		wmap(".........PP=PP/");
+		wmap(".........MM=MM/");
 		wmap("............../");
 		wmap("............../");
 		wmap("............../");

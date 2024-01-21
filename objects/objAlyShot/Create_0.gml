@@ -13,10 +13,11 @@ freezePow = 0;
 freezeChance = 0;
 stunPow = 0;
 stunChance = 0;
+poisonPow = 0;
 
 passWall = false;
 passWallTime = 0;
-
+fade = 0;
 
 timeCD = 30 * 30;
 

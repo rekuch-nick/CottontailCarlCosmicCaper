@@ -70,7 +70,7 @@ if(stopAtDis){
 }
 
 
-if(driftMove == Move.bull){
+if(driftMove == Move.bull || driftMove == Move.bullTop ){
 	y += jumpSpeed;
 	if(y < yGround){ jumpSpeed += 2; } else { jumpSpeed = 0; }
 	
@@ -155,6 +155,17 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 			pc.stunTime = max(pc.stunTime, 20);
 		}
 		
+		if(spec == objMobShotFire){ repeat(specNum){
+			var a = irandom_range(0, 14);
+			var b = irandom_range(0, 12);
+			instance_create_depth(a*64+32, b*64+32, ww.layerE, spec);
+		}}
+		
+		if(spec == objMobShotFallIce){ 
+			var a = irandom_range(0, 14);
+			instance_create_depth(a*64+32, 32, ww.layerE, spec);
+		}
+		
 		if(specLimit != -1){
 			specLimit --;
 			if(specLimit == 0){
@@ -196,11 +207,37 @@ if(shatterAtHalf && hp / hpMax <= .5){
 	}
 }
 
+if(rejectBeam){
+	rejectBeamCD --;
+	if(rejectBeamCD < 1){
+		rejectBeamCD = rejectBeamCDMax;
+		with(objAlyShot){
+			if(sprite_index == imgPlayerBeams ||
+				sprite_index == imgPlayerBeamsCharged ||
+				sprite_index == imgPlayerBeamsPhilo ||
+				sprite_index == imgBeeBeams ){
+			
+				if(point_distance(x, y, other.x, other.y) <= other.rejectBeamRange){
+					xSpeed *= -1; ySpeed *= -1;
+					fade = .04;
+					timeCD = 30;
+				}
+			}
+		}
+	}
+}
 
 hurtTime = clamp(hurtTime - 1, 0, 60);
 if(incincTime > 0){ incincTime --; }
 
-
+if(becomeRocket){
+	becomeRocketCD --;
+	if(becomeRocketCD < 1){
+		drop = objPupRocket;
+		dropChance = 100;
+		hp = 0;
+	}
+}
 if(hp < 1){
 	
 	if(speedUpOnKill){ with(objMob){ if(speedUpOnKill){ moveSpeed ++; thinkCD = 0; } } }

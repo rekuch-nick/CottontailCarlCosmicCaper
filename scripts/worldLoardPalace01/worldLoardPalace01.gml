@@ -57,7 +57,7 @@ function worldLoardPalace01(){
 			initMobs: [objMobDragonGreen],
 			laterMobs: [],
 			waitBetweenMobs: 150,
-			waitForPups: false,
+			waitForPups: true,
 			floorItem: noone,
 			rockKind: noone, rockChance: 100, rockWait: 90,
 		},

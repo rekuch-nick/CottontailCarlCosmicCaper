@@ -26,6 +26,9 @@ if(firstFrame){
 }
 
 
+
+image_alpha -= fade;
+
 x += xSpeed;
 y += ySpeed;
 

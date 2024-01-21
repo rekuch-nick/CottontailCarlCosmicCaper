@@ -146,6 +146,7 @@ enum Event {
 	
 	gotHealingHeart,
 	gotMonocule,
+	gotGlasses,
 	
 	gotRang,
 	gotRangPack,
@@ -175,6 +176,7 @@ enum Event {
 	gotHole,
 	gotRubberBand,
 	gotRang2,
+	gotPoisonVial,
 	
 	haveBombs,
 	
@@ -217,6 +219,7 @@ enum Event {
 	gotCarrotDragonBlue,
 	gotCarrotDragonYellow,
 	gotCarrotDragonYellowSpike,
+	gotCarrotDragonRed,
 }
 
 shotPower = noone;

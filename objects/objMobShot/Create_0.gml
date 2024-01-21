@@ -43,3 +43,7 @@ changeChance = 0;
 lineHunt = false;
 
 speedupRate = 1;
+
+inertTime = 0;
+inertSprite = noone;
+dontMove = false;

@@ -42,8 +42,10 @@ noMobs = false;
 noFall = false;
 noWet = false;
 overrideWet = noone;
+lakeDrained = false;
 
 deadTime = 0;
+starYMod = 0;
 
 enum State {
 	play,
@@ -57,6 +59,7 @@ enum State {
 	pause,
 	inventory,
 	dying,
+	rocketing,
 }
 
 enum Zone {
@@ -76,6 +79,7 @@ enum Zone {
 	darkHills,
 	waste,
 	sparse,
+	moon,
 }
 
 enum Move {
@@ -87,6 +91,7 @@ enum Move {
 	bull,
 	huntHalf,
 	huntLine,
+	bullTop,
 }
 
 enum Sec {
