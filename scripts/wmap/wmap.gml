@@ -78,6 +78,8 @@ function wmap(s){
 		if(c == "%"){ ww.bmap[a, b] = ww.bush1; }
 		if(c == "b"){ ww.bmap[a, b] = ww.bush2; }
 		if(c == "B"){ ww.bmap[a, b] = imgBushLarge; }
+		if(c == "["){ ww.bmap[a, b] = imgPushBlock; }
+		if(c == "]"){ ww.bmap[a, b] = imgMobArmorStillGrass; }
 		if(c == "/"){ ww.bmap[a, b] = ww.rockWall; }
 		
 		if(c == "L"){ ww.bmap[a, b] = imgRockWallGreyLava; }

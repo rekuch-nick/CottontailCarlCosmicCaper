@@ -1,6 +1,8 @@
 if(ww.state != State.play){ return; }
 
 if(pc.inSpace){
+	if(isMajor && y > room_height - 128){ y --; }
+	
 	if(!isMajor || y < room_height / 2){
 		y ++;
 		if(y > room_height + 20){ instance_destroy(); }
@@ -38,8 +40,8 @@ if(gotIt){
 	pc.hp = clamp(pc.hp + hpGain, 0, pc.hpMax);
 	pc.mp = clamp(pc.mp + mpGain, 0, pc.mpMax);
 	pc.bp = clamp(pc.bp + bpGain, 0, pc.bpMax);
-	pc.coins = clamp(pc.coins + coinValue, 0, pc.coinsMax);
-	pc.bombs = clamp(pc.bombs + bombValue, 0, pc.bombsMax);
+	pc.coins = clamp(pc.coins + coinValue, 0, coinsMax());
+	pc.bombs = clamp(pc.bombs + bombValue, 0, bombsMax());
 	
 	if(sprite_index == imgHealingHeart){ pc.eventTrigger[Event.gotHealingHeart] = true; }
 	if(sprite_index == imgPupFindShotUpMore){ pc.eventTrigger[Event.gotMonocule] = true; }
@@ -121,6 +123,10 @@ if(gotIt){
 	if(sprite_index == imgPupPinwheel){ pc.eventTrigger[Event.gotPinwheel] = true; }
 	if(sprite_index == imgPupGlasses){ pc.eventTrigger[Event.gotGlasses] = true; }
 	if(sprite_index == imgPupPoisonVial){ pc.eventTrigger[Event.gotPoisonVial] = true; }
+	if(sprite_index == imgBombBag){ pc.eventTrigger[Event.gotBombBag] = true; }
+	if(sprite_index == imgPupOil){ pc.eventTrigger[Event.gotOil] = true; }
+	if(sprite_index == imgCoinBag){ pc.eventTrigger[Event.gotCoinBag] = true; }
+	if(sprite_index == imgPupCross){ pc.eventTrigger[Event.gotCross] = true; }
 	
 	if(sprite_index == imgPupHoneycomb){ pc.eventTrigger[Event.gotHoneycomb] = true; }
 	if(sprite_index == imgPupCauldren1){ pc.eventTrigger[Event.gotCauldren1] = true; }
@@ -132,6 +138,14 @@ if(gotIt){
 		pc.eventTrigger[Event.gotCauldren1] = true; 
 		pc.eventTrigger[Event.gotCauldren2] = true; 
 		pc.eventTrigger[Event.gotCauldren3] = true; 
+	}
+	
+	if(sprite_index == imgPupRing){ pc.eventTrigger[Event.gotRing1] = true; }
+	if(sprite_index == imgPupRing2){ 
+		pc.eventTrigger[Event.gotRing1] = true; pc.eventTrigger[Event.gotRing2] = true; 
+	}
+	if(sprite_index == imgPupRing3){ 
+		pc.eventTrigger[Event.gotRing1] = true; pc.eventTrigger[Event.gotRing2] = true; pc.eventTrigger[Event.gotRing3] = true; 
 	}
 	
 	if(sprite_index == imgPlayerRangPack){ pc.eventTrigger[Event.gotRangPack] = true; pc.rangsMax = 3; }

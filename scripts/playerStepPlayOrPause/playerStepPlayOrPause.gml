@@ -5,18 +5,23 @@ function playerStepPlayOrPause(){
 		if(debug){
 			hp = hpMax;
 			mp = mpMax;
-			coins = coinsMax;
-			bombs = bombsMax;
+			coins = coinsMax();
+			bombs = bombsMax();
 			eventTrigger[Event.gotStar] = true;
 			eventTrigger[Event.gotMap] = true;
 			//eventTrigger[Event.gotGlasses] = true;
 			wepLevels[2]  = 1; eventTrigger[Event.gotTorch] = true; // torch
 			//wepLevels[5] = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
-			wepLevels[7] = 1; eventTrigger[Event.gotHole] = true; // portable hole
-			wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
+			//wepLevels[7] = 1; eventTrigger[Event.gotHole] = true; // portable hole
+			//wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
 			with(objMob){ hp = 0; }
 			
 		}
+	}
+	
+	if(debug && keyboard_check_pressed(vk_insert)){
+		for(var i=0; i<300; i++){ eventTrigger[i] = true; }
+		for(var i=0; i<11; i++){ wepLevels[i] = max(wepLevels[i], 1); }
 	}
 	
 	if(charPressed == "1" && wepLevels[0] > 0){ wepSelected = 0; }

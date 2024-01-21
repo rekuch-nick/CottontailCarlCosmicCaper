@@ -33,6 +33,15 @@ function playerLoadInventory(){
 	s.eve[1] = Event.gotMoreShot2; s.img[1] = imgPupMoreCharm2;
 	s.desc[1] = "This charm will increase the number of beams from your lazer eyes.";
 	
+	
+	var s = instance_create_depth(9 * 64, 2 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotCoinBag; s.img[0] = imgCoinBag;
+	s.desc[0] = "With this, you can hold up to 999 coins instead of just 255.";
+	
+	var s = instance_create_depth(10 * 64, 2 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotGlasses; s.img[0] = imgPupGlasses;
+	s.desc[0] = "With improved eyesight, you'll see the location of all secret doors.";
+	
 	var s = instance_create_depth(11 * 64, 2 * 63, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotMonocule; s.img[0] = imgPupFindShotUpMore;
 	s.desc[0] = "Find ShotUP power-ups more often.";
@@ -72,7 +81,7 @@ function playerLoadInventory(){
 	s.desc[0] = "Call swirling winds to deflect most kinds of enemy shots.";
 	
 	var s = instance_create_depth(7 * 64, 3 * 63, hud.depth - 1, objItemTooltip);
-	s.eve[0] = Event.gotWindStone; s.img[0] = imgPupWindStone;
+	s.eve[0] = Event.gotIceStone; s.img[0] = imgPupIceStone;
 	s.desc[0] = "Call blistering cold to freeze monsters and water.";
 	
 	var s = instance_create_depth(9 * 64, 3 * 63, hud.depth - 1, objItemTooltip);
@@ -105,13 +114,31 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotPoisonVial; s.img[0] = imgPupPoisonVial;
 	s.desc[0] = "Your throwing stars will poison monsters.";
 	
+	var s = instance_create_depth(4 * 64, 4 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotOil; s.img[0] = imgPupOil;
+	s.desc[0] = "Your fires burn hotter and larger.";
+	
+	var s = instance_create_depth(5 * 64, 4 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotBombBag; s.img[0] = imgBombBag;
+	s.desc[0] = "You can carry up to 16 bombs instead of just 8.";
+	
 	var s = instance_create_depth(6 * 64, 4 * 63, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotPinwheel; s.img[0] = imgPupPinwheel;
 	s.desc[0] = "Using the Wind Stone will draw in HP and MP orbs.";
 	
 	
 	
+	var s = instance_create_depth(2 * 64, 5 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotMap; s.img[0] = imgMap;
+	s.desc[0] = "It should be a little easier to get around with this in hand.";
 	
+	var s = instance_create_depth(3 * 64, 5 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotMagnet; s.img[0] = imgPupMagnet;
+	s.desc[0] = "Coins will be pulled towards you.";
+	
+	var s = instance_create_depth(4 * 64, 5 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotRubberBand; s.img[0] = imgPupRubberBand;
+	s.desc[0] = "Blink longer and move faster after being hurt.";
 	
 	
 	
@@ -120,7 +147,32 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotMPShell; s.img[0] = imgPupMPShell;
 	s.desc[0] = "Just holding this seashell causes your MP to recover a little faster.";
 	
+	var s = instance_create_depth(3 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotRing1; s.img[0] = imgPupRing; s.desc[0] = "Reduces damage taken by 25%.";
+	s.eve[1] = Event.gotRing2; s.img[1] = imgPupRing2; s.desc[1] = "Reduces damage taken by 50%.";
+	s.eve[2] = Event.gotRing3; s.img[2] = imgPupRing3; s.desc[2] = "Reduces damage taken by 75%.";
 	
+	var s = instance_create_depth(4 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotShield; s.img[0] = imgPlayerShield; 
+	s.desc[0] = "Blocks minor enemy shots once every 30 seconds.";
+	
+	var s = instance_create_depth(5 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotCauldren1; s.img[0] = imgPupCauldren1; s.desc[0] = "Using any potion while under half HP will also heal you some.";
+	s.eve[1] = Event.gotCauldren2; s.img[1] = imgPupCauldren2; s.desc[1] = "Using any potion will restore MP and HP up to half.";
+	s.eve[2] = Event.gotCauldren3; s.img[2] = imgPupCauldren3; s.desc[2] = "Using any potion will heal your HP and MP.";
+	
+	var s = instance_create_depth(6 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotHoneycomb; s.img[0] = imgPupHoneycomb; 
+	s.desc[0] = "Bees will fight by your side in space.";
+	
+	var s = instance_create_depth(7 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotCross; s.img[0] = imgPupCross; 
+	s.desc[0] = "Stops monsters from resurrecting.";
+	
+	
+	var s = instance_create_depth(12 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotRang; s.img[0] = imgCarrot; 
+	s.desc[0] = "Your max HP goes up by 5 for each carrot you eat.";
 	
 	
 	

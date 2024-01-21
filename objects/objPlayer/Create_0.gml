@@ -45,10 +45,10 @@ xIceTar = 0; yIceTar = 0; iceFace = 1;
 
 hp = 100; hpMax = 100;
 mp = 100; mpMax = 100;
-coins = 0; coinsMax = 255;
+coins = 0;
 sp = 0; spMax = 900;
 bp = 0; bpMax = 600; bpThresh = 400;
-bombs = 0; bombsMax = 8;
+bombs = 0;
 potion = noone;
 
 rangsMax = 1;
@@ -79,34 +79,14 @@ drainLakeSpots = [
 ];
 
 
-for(var i=0; i<200; i++){
+for(var i=0; i<300; i++){
 	eventTrigger[i] = false;
 }
 eventTrigger[Event.gotRang] = true;
-//eventTrigger[Event.gotRang2] = true;
-//eventTrigger[Event.gotStar] = true; ///
-//eventTrigger[Event.gotMap] = true; ///
-//eventTrigger[Event.gotChargeShot] = true; ///
-//eventTrigger[Event.gotMagnet] = true; ///
-//eventTrigger[Event.gotPinwheel] = true; ///
-//eventTrigger[Event.gotHoneycomb] = true; ///
-//eventTrigger[Event.gotRubberBand] = true; ///
-//eventTrigger[Event.gotCauldren3] = true; ///
-//eventTrigger[Event.gotMPShell] = true; ///
-//eventTrigger[Event.gotRangPack] = true;
-//wepLevels[1] = 1; eventTrigger[Event.gotStars] = true; // ninja stars
-//wepLevels[2] = 1; eventTrigger[Event.gotTorch] = true; // torch
-//wepLevels[4] = 1; eventTrigger[Event.gotWindStone] = true; // wind stone
-//wepLevels[5] = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
-//wepLevels[7] = 1; eventTrigger[Event.gotHole] = true; // portable hole
-//wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
-//wepLevels[10] = 1; eventTrigger[Event.gotPhiloStone] = true; // philostone
-
-//eventTrigger[Event.palace1Clear] = true; ///
-//eventTrigger[Event.palace2Clear] = true; ///
 
 
 
+bombCounter = 0;
 fullHealing = false;
 healingC1 = false;
 healingC2 = false;
@@ -130,7 +110,9 @@ killMemory = [
 slowDown = false;
 
 
-
+pushingBlockTime = 0;
+xPushBlock = 0; yPushBlock = 0;
+pushBlockDir = 0;
 
 
 
@@ -177,6 +159,13 @@ enum Event {
 	gotRubberBand,
 	gotRang2,
 	gotPoisonVial,
+	gotBombBag,
+	gotRing1,
+	gotRing2,
+	gotRing3,
+	gotOil,
+	gotCoinBag,
+	gotCross,
 	
 	haveBombs,
 	

@@ -2,8 +2,9 @@ function worldGetRoomHills(xxx, yyy){
 	
 	if(xxx == 8 && yyy == 0){
 		biome(Zone.hills);
+		ww.secBlock = imgRockWallDirt; ww.secX = 4; ww.secY = 1; ww.secType = Sec.bomb;
 		wmap("///////////////");
-		wmap("///////////////");
+		wmap("////=//////////");
 		wmap("/........//....");
 		wmap("/......../.....");
 		wmap("........./.....");
@@ -19,6 +20,7 @@ function worldGetRoomHills(xxx, yyy){
 	
 	if(xxx == 8 && yyy == 1){
 		biome(Zone.hills);
+		ww.secBlock = imgRockWallDirt; ww.secX = 5; ww.secY = 7; ww.secType = Sec.bomb;
 		wmap("//...........//");
 		wmap("//...........//");
 		wmap("//.............");
@@ -26,7 +28,7 @@ function worldGetRoomHills(xxx, yyy){
 		wmap("//......//.....");
 		wmap("//......///....");
 		wmap("//////////.....");
-		wmap("//.../.........");
+		wmap("//../=//.......");
 		wmap("//.............");
 		wmap("//.............");
 		wmap("//...........//");
@@ -36,9 +38,10 @@ function worldGetRoomHills(xxx, yyy){
 	
 	if(xxx == 8 && yyy == 2){
 		biome(Zone.hills);
+		ww.secBlock = imgRockBrown; ww.secX = 12; ww.secY = 2; ww.secType = Sec.bomb;
 		wmap("//...........//");
 		wmap("//...........//");
-		wmap("//......///rr//");
+		wmap("//......///r.//");
 		wmap("//+///////...//");
 		wmap("//+//........//");
 		wmap("//+//..///+////");
@@ -79,7 +82,7 @@ function worldGetRoomHills(xxx, yyy){
 	if(xxx == 9 && yyy == 0){
 		biome(Zone.hills);
 		wmap("///////////////");
-		wmap("///////////////");
+		wmap("/////=/////////");
 		wmap("...............");
 		wmap("...............");
 		wmap(".....r.rr......");

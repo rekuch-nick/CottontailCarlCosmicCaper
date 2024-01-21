@@ -9,6 +9,16 @@ function hurtPlayer(dmg, isBlockableShot){
 	pc.shotPower = noone;
 	
 	
+	if(pc.eventTrigger[Event.gotRing3]){
+		dmg = dmg * .25;
+	} else if(pc.eventTrigger[Event.gotRing2]){
+		dmg = dmg * .5;
+	} else if(pc.eventTrigger[Event.gotRing1]){
+		dmg = dmg * .75;
+	}
+	
+	
+	pc.bombCounter = 0;
 	pc.hp -= dmg; ///
 	pc.hurtTime = 30; ///
 	if(pc.eventTrigger[Event.gotRubberBand]){ pc.hurtTime += 10; }

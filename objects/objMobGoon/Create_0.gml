@@ -11,7 +11,7 @@ bumpPow = 20;
 
 
 
-
+dropsBombs = true;
 
 
 

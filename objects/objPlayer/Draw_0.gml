@@ -75,3 +75,4 @@ if(eventTrigger[Event.gotGlasses] && !ww.secExposed[pc.xMap, pc.yMap] && ww.secX
 	draw_set_alpha(1);
 }
 
+//draw_text(x, y, string(bombCounter));

@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "mobShots",
+    "path": "folders/Objects/mobShots.yy",
   },
   "parentObjectId": {
     "name": "objEffect",

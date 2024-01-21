@@ -138,10 +138,10 @@ function worldGetRoomSparse(xxx, yyy){
 		biome(Zone.sparse);
 		wmap("##////////#####");
 		wmap("##...........##");
-		wmap("..............#");
-		wmap(".........TTTTT#");
-		wmap(".........PPPPP#");
-		wmap(".........MM=MM/");
+		wmap("............../");
+		wmap("......TTTTT.../");
+		wmap("......PPPPP.../");
+		wmap("......MM=MM.../");
 		wmap("............../");
 		wmap("............../");
 		wmap("............../");

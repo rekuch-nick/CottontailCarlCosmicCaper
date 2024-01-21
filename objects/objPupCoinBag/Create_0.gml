@@ -1,3 +1,3 @@
 event_inherited();
 
-coinValue = 200;
+isMajor = true;

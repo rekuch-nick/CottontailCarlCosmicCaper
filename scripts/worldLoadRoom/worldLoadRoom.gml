@@ -6,6 +6,7 @@ function worldLoadRoom(dir){
 	ww.txt = "";
 	ww.txtTime = 0;
 	ww.lakeDrained = false;
+	ww.pushableList = noone;
 	
 	var xo = 0;
 	var yo = 0;
@@ -39,6 +40,8 @@ function worldLoadRoom(dir){
 		if(ww.bmap[a, b] != noone){
 			var s = instance_create_depth(a * 64 + xo, b * 64 + yo, ww.layerB - b, objBlock);
 			s.sprite_index = ww.bmap[a, b];
+			if(s.sprite_index == imgPushBlock){ s.canPush = true; }
+			if(s.sprite_index == imgMobArmorStillGrass){ s.canPush = true; }
 			ww.bmap[a, b] = s;
 			
 			if(!ww.secExposed[pc.xMap, pc.yMap]){
@@ -52,7 +55,12 @@ function worldLoadRoom(dir){
 	}}
 	
 	
-	
+	if(ww.pushableList != noone){ for(var i=0; i<array_length(ww.pushableList); i++){
+		var co = ww.pushableList[i];
+		if(ww.bmap[co.a, co.b] != noone){
+			ww.bmap[co.a, co.b].canPush = true;
+		}
+	}}
 	
 	
 }

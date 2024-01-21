@@ -6,6 +6,10 @@ function playerStepScroll(){
 	if(scrollDir == 2){ with(objTile){ x -= ss; } }
 	if(scrollDir == 3){ with(objTile){ y -= ss; } }
 	if(scrollDir == 4){ with(objTile){ x += ss; } }
+	with(objTile){
+		xSpot = floor(x/64);
+		ySpot = floor(y/64);
+	}
 	if(scrollTime < 1){
 		with(objTile){
 			if(x < 0 || y < 0 || x >= ww.roomWidth || y >= room_height){
@@ -27,11 +31,10 @@ function playerStepScroll(){
 			s = instance_create_depth((ww.roomWidth / 4) * 2, 64 * 7, ww.layerP, objPupShotDrop);
 			s.txt = "Normal\n(Find More\nTemp ShotUps)"; s.txtColor = c_aqua; s.yTxtOffset = -120;
 		
-			s = instance_create_depth(12 * 64 + 32, 64 * 7, ww.layerP, objPupCoinBag);
+			s = instance_create_depth(12 * 64 + 32, 64 * 7, ww.layerP, objPupCoinStack);
 			s.txt = "Hard\n(200 Coins)"; s.txtColor = c_red; s.yTxtOffset = -96;
 		}
 		
-		///find here
 		if(pc.xMap == 21 && pc.yMap == 3){
 			ww.bmap[8][6].sprite_index = imgNPCMouse;
 		}
@@ -46,7 +49,7 @@ function playerStepScroll(){
 			} else if (!pc.eventTrigger[Event.gotMonocule]) {
 				instance_create_depth((ww.roomWidth / 4) * 2, 64 * 9, ww.layerP, objPupShotDrop);
 			} else {
-				instance_create_depth((ww.roomWidth / 4) * 2, 64 * 9, ww.layerP, objPupCoinBag);
+				instance_create_depth((ww.roomWidth / 4) * 2, 64 * 9, ww.layerP, objPupCoinStack);
 			}
 			
 			

@@ -18,10 +18,11 @@ if(falling){
 creatureBuffDecay();
 if(burnTime > 0){ 
 	hp -= .15; 
+	if(pc.eventTrigger[Event.gotOil]){ hp -= .05; }
 	if(weakToFire != noone){
 		sprite_index = weakToFire;
 		regen = 0;
-		moveSpeed --;
+		moveSpeed -= 2;
 		weakToFire = noone;
 	}
 	if(dieToFire){
@@ -258,7 +259,7 @@ if(hp < 1){
 		}
 	}
 	
-	
+	if(dropsBombs){ pc.bombCounter ++; }
 	if(irandom_range(0, 99) < dropChance){
 		var d = instance_create_depth(x, y, ww.layerP, mobRollDrop());
 		if(dropEventNumber != noone){ d.eventNumber = dropEventNumber; }

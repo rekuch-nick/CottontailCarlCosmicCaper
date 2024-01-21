@@ -26,19 +26,8 @@ palace 11 - dark (wand locked)
 
 
 
-__
-gotRang,
+
+	
+
 	
 	
-	
-	
-	gotMPShell,
-	
-	gotShield,
-	gotMap,
-	gotMagnet,
-	
-	gotCauldren1,gotCauldren2,gotCauldren3,
-	gotHoneycomb,
-	gotRubberBand,
-	gotGlasses,

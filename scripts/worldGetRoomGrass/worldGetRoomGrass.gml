@@ -36,7 +36,7 @@ function worldGetRoomGrass(xxx, yyy){
 		wmap("#ssssssssss#pp#");
 	}
 	
-	if(xxx == 9 && yyy == 7){ // shop left of start
+	if(xxx == 9 && yyy == 7){ // first shop 
 		biome(Zone.grass);
 		wmap("##%%###########");
 		wmap("#........%////#");
@@ -113,7 +113,7 @@ function worldGetRoomGrass(xxx, yyy){
 	if(xxx == 11 && yyy == 6){  // pond
 		biome(Zone.grass);
 		ww.canLion = false;
-		ww.mobList = [4, objMobBear, objMobBear, objMobBear, objMobBear];
+		ww.mobList = [4, objMobBearBoss, objMobBear, objMobBear, objMobBear];
 		ww.secX = 8; ww.secY = 6;
 		wmap("##%%%%...%%%%##");
 		wmap("#..%%....%%..%#");

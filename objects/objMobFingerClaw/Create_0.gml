@@ -13,4 +13,6 @@ bumpPow = 20;
 moveSpeed = 16;
 thinkCD = 60;
 
+dropsBombs = true;
+
 goldFrame = objEffGoldFingerClaw;

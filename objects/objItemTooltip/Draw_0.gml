@@ -1,5 +1,6 @@
 draw_self();
 
+
 for(var ii=9; ii>=0; ii--){
 	if(img[ii] != noone){
 		if(pc.eventTrigger[eve[ii]]){
@@ -20,4 +21,8 @@ if(img[i] != noone){
 			}
 		}
 	}
+}
+
+if(img[0] == imgCarrot){
+	draw_text(x+10, y+36, string( (pc.hpMax - 100) / 5));
 }

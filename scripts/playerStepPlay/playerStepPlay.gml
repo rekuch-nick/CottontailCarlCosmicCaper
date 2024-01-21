@@ -78,8 +78,21 @@ function playerStepPlay(){
 	
 	if(bumped){
 		pushingTime ++;
+		if(xIn == 0 || yIn == 0){
+			var xx = floor(x / 64) + xIn;
+			var yy = floor(y / 64) + yIn;
+			if(inBoundsTile(xx, yy)){
+				xPushBlock = xx;
+				yPushBlock = yy;
+				pushingBlockTime ++;
+				pushBlockDir = xIn == 1 ? 2 : 4;
+				if(yIn == 1){ pushBlockDir = 3; }
+				if(yIn == -1){ pushBlockDir = 1; }
+			} else { pushingBlockTime = 0; }
+		}
 	} else {
 		pushingTime = 0;
+		pushingBlockTime = 0;
 	}
 	
 	
@@ -88,9 +101,9 @@ function playerStepPlay(){
 	if(pushingTime > 3 && !inSpace){
 		
 		var d = 0;
-		if(x <= 0 + xFat){ d = 4; x = ww.roomWidth - 28; }
+		if(x <= 1 + xFat){ d = 4; x = ww.roomWidth - 28; }
 		else if(x >= ww.roomWidth - xFat - 1){ d = 2; x = 28; }
-		else if(y <= 0 + yFat){ d = 1; y = room_height - 28; }
+		else if(y <= 1 + yFat){ d = 1; y = room_height - 28; }
 		else if(y >= room_height - yFat - 1){ d = 3; y = 28; }
 		
 		if(d == 3 && !inOverworld){
@@ -196,7 +209,13 @@ function playerStepPlay(){
 			){
 				shootCD = wepCDMax[wepSelected];
 				mp -= wepCost[wepSelected];
-				instance_create_depth(x, y, ww.layerE, objPlayerFire);
+				if(eventTrigger[Event.gotOil]){
+					instance_create_depth(x, y, ww.layerE, objPlayerFire2);
+					repeat(3){ instance_create_depth(x, y, ww.layerE, objPlayerFire); }
+				} else {
+					instance_create_depth(x, y, ww.layerE, objPlayerFire);
+				}
+				
 			
 		}
 		

@@ -10,5 +10,5 @@ shotCuster = 1; shotClusterMax = 1; shotClusterCDMas = 10;
 
 bumpPow = 20;
 
-
+dropsBombs = true;
 
