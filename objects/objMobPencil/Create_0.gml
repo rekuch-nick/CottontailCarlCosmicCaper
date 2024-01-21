@@ -22,4 +22,4 @@ avoidEdges = 1;
 thinkCDMax = 90;
 
 becomeRocket = true;
-becomeRocketCD = 90;
+becomeRocketCD = 30 * 60;

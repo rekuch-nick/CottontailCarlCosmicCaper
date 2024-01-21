@@ -102,6 +102,10 @@ function worldGetRoomCave(xxx, yyy){
 		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
 		ww.txt = "Your eye lazers are powerful, but don't forget your other weapons.\n\nMost of them do extra damage to particular monster types like boomarangs to bats or fire to trolls.";
 	}
+	if(xxx == 14 && yyy == 1){
+		ww.bmap[7, 6] = imgNPCMouse;
+		ww.txt = "The SPACE DOOR on the beach holds an incredible secret. Don't kill the pencil monster and something will happen.\n\nDon't tell them I told you.";
+	}
 	
 	
 	

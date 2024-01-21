@@ -15,8 +15,8 @@ function worldLoardPalace06(){
 		},
 		{
 			initMobs: [objMobPencil],
-			laterMobs: [objMobBat, objMobBat, objMobBat, objMobBat],
-			waitBetweenMobs: 22,
+			laterMobs: [objMobBat, objMobBat, objMobBat, objMobBat, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobSpaceSnake, objMobSpaceSnake, objMobSpaceSnakePurple, objMobSpaceSnakePurple, objMobSpaceSnakePurple, objMobSpaceSnakePurple, objMobDesertFace, objMobCubeSmall],
+			waitBetweenMobs: 45,
 			waitForPups: false,
 			floorItem: noone,
 			rockKind: noone, rockChance: 40, rockWait: 30,

@@ -33,6 +33,14 @@ function playerLoadInventory(){
 	s.eve[1] = Event.gotMoreShot2; s.img[1] = imgPupMoreCharm2;
 	s.desc[1] = "This charm will increase the number of beams from your lazer eyes.";
 	
+	var s = instance_create_depth(11 * 64, 2 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotMonocule; s.img[0] = imgPupFindShotUpMore;
+	s.desc[0] = "Find ShotUP power-ups more often.";
+	
+	var s = instance_create_depth(12 * 64, 2 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotHealingHeart; s.img[0] = imgHealingHeart;
+	s.desc[0] = "Recover your HP over time.";
+	
 	
 	
 	

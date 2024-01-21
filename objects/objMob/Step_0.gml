@@ -232,7 +232,7 @@ if(incincTime > 0){ incincTime --; }
 
 if(becomeRocket){
 	becomeRocketCD --;
-	if(becomeRocketCD < 1){
+	if(becomeRocketCD < 1 && instance_number(objMob) < 5){
 		drop = objPupRocket;
 		dropChance = 100;
 		hp = 0;
