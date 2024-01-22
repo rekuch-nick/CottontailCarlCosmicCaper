@@ -62,8 +62,8 @@ function worldGetRoomSnow(xxx, yyy){
 		wmap("//PP=PP...#...#");
 		wmap("//............#");
 		wmap("SS............#");
-		wmap("//SSSSSSSSSSSSS");
-		wmap("///////////////");
+		wmap("//SSSSSSbbbbSSS");
+		wmap("////////bbbb///");
 	}
 	
 	

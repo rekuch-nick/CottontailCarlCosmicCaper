@@ -47,10 +47,13 @@ if(mutter != ""){
 	draw_set_halign(fa_left);
 	mutter = "";
 }
-
-
-
-draw_self();
+if(eventTrigger[Event.gotCape2]){
+	draw_sprite_ext(imgPlayerKnight2, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
+} else if(eventTrigger[Event.gotCape]){
+	draw_sprite_ext(imgPlayerKnight, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
+} else {
+	draw_self();
+}
 if(inSpace){
 	draw_sprite_stretched(imgPupStar, 0, x-(8 * image_yscale), y, 16 * image_yscale, 16 * image_yscale);
 }

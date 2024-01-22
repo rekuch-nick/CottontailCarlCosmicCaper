@@ -114,6 +114,14 @@ function mobSpawn(){
 			t = choose(objMobMushMan);
 		}
 		
+		if(ww.inBiome == Zone.hills){
+			t = choose(objMobCrasher);
+		}
+		
+		if(ww.inBiome == Zone.volcano){
+			t = choose(objMobWindMan);
+		}
+		
 		
 		if(ww.mobList != noone){
 			if(n < array_length(ww.mobList)){

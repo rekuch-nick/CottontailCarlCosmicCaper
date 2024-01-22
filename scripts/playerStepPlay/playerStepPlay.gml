@@ -85,6 +85,7 @@ function playerStepPlay(){
 				xPushBlock = xx;
 				yPushBlock = yy;
 				pushingBlockTime ++;
+				if(eventTrigger[Event.gotCrowbar]){ pushingBlockTime += 3; }
 				pushBlockDir = xIn == 1 ? 2 : 4;
 				if(yIn == 1){ pushBlockDir = 3; }
 				if(yIn == -1){ pushBlockDir = 1; }
@@ -161,7 +162,7 @@ function playerStepPlay(){
 				var nn = ceil(i / 2) * 2;
 				if(i % 2 == 1){ nn *= -1; }
 				s.offSet = nn;
-				if(bp >= bpThresh){ s.sprite_index = imgPlayerBeamsCharged; }
+				if(bp >= bpThresh && beamType == objPlayerBeams){ s.sprite_index = imgPlayerBeamsCharged; }
 				if(eventTrigger[Event.gotMightShot]){ s.pow += 5; }
 				if(eventTrigger[Event.gotMightShot2]){ s.pow += 5; }
 			}
@@ -349,7 +350,14 @@ function playerStepPlay(){
 	mp = clamp(mp + mpGain, 0, mpMax);
 	
 	if(eventTrigger[Event.gotShield]){
-		sp = clamp(sp + 1, -900, spMax);
+		var canSlash = false;
+		if(sp < spMax && eventTrigger[Event.gotCape]){ canSlash = true; }
+		var val = 1;
+		if(eventTrigger[Event.gotCape2]){ val += 3; }
+		sp = clamp(sp + val, -900, spMax);
+		if(sp >= spMax && canSlash){
+			playerKnightSlash();
+		}
 	}
 	
 	if(eventTrigger[Event.gotChargeShot]){
@@ -358,7 +366,7 @@ function playerStepPlay(){
 		}
 	}
 	
-	
+	playerEventCheck();
 	
 	
 	//animate

@@ -169,6 +169,20 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotCross; s.img[0] = imgPupCross; 
 	s.desc[0] = "Stops monsters from resurrecting.";
 	
+	var s = instance_create_depth(8 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotDiscountCard; s.img[0] = imgPupDiscountCard; 
+	s.desc[0] = "Good for 15% off at all Lizard Brother's Retail. Non-transferable.";
+	
+	var s = instance_create_depth(9 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotCrowbar; s.img[0] = imgPupCrowbar; 
+	s.desc[0] = "When pushing movable blocks, they move fast enough to hurt monsters.";
+	
+	
+	var s = instance_create_depth(11 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotCape; s.img[0] = imgPupCape; 
+	s.desc[0] = "Marks your status as a Knight.\nMake an attack when you restore your shield.";
+	s.eve[1] = Event.gotCape2; s.img[1] = imgPupCape2; 
+	s.desc[1] = "Marks your status as a Paladin.\nMake an attack when you restore your shield, which happens quickly.";
 	
 	var s = instance_create_depth(12 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotRang; s.img[0] = imgCarrot; 

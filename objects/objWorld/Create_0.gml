@@ -95,5 +95,5 @@ enum Move {
 }
 
 enum Sec {
-	push, burn, bomb
+	push, burn, bomb, state
 }

@@ -3,7 +3,7 @@ event_inherited();
 hp = 30;
 hpMax = 30;
 
-shotKind = objMobShotShort;
+shotKind = objMobShotSeek;
 shootCDMax = 25 * 3;
 shootCD = shootCDMax - choose(0, 10, 20);
 

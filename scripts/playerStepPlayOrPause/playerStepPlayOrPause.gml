@@ -24,6 +24,13 @@ function playerStepPlayOrPause(){
 		for(var i=0; i<11; i++){ wepLevels[i] = max(wepLevels[i], 1); }
 	}
 	
+	if(debugPossible && keyboard_check_pressed(vk_home)){
+		pc.eventTrigger[Event.gotCoinBag] = true;
+		pc.eventTrigger[Event.gotCape] = false;
+		pc.eventTrigger[Event.gotCape2] = false;
+		coins = coinsMax();
+	}
+	
 	if(charPressed == "1" && wepLevels[0] > 0){ wepSelected = 0; }
 	if(charPressed == "2" && wepLevels[1] > 0){ wepSelected = 1; }
 	if(charPressed == "3" && wepLevels[2] > 0){ wepSelected = 2; }

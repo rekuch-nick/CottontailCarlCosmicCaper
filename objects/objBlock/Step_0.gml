@@ -21,9 +21,10 @@ if(canPush && pc.xPushBlock == xSpot && pc.yPushBlock == ySpot && pc.pushingBloc
 	}
 }
 
-if(x < xSpot * 64){ x += 2; }
-if(x > xSpot * 64){ x -= 2; }
-if(y < ySpot * 64){ y += 2; }
-if(y > ySpot * 64){ y -= 2; }
+var ms = pc.eventTrigger[Event.gotCrowbar] ? 16 : 2;
+if(x < xSpot * 64){ x += ms; }
+if(x > xSpot * 64){ x -= ms; }
+if(y < ySpot * 64){ y += ms; }
+if(y > ySpot * 64){ y -= ms; }
 
 

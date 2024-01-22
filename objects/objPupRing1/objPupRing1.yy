@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgHealingHeart",
-    "path": "sprites/imgHealingHeart/imgHealingHeart.yy",
+    "name": "imgPupRing",
+    "path": "sprites/imgPupRing/imgPupRing.yy",
   },
   "spriteMaskId": null,
   "visible": true,

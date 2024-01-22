@@ -116,6 +116,16 @@ function worldGetRoomCave(xxx, yyy){
 	
 	
 	
+	///lake treasures
+	if(xxx == 6 && yyy == 2){
+		ww.bmap[7, 6] = imgNPCFox;
+		if(!pc.eventTrigger[Event.gotBombBag]){
+			ww.txt = "I bet you'd like to have more bombs.";
+			var s = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupBombBag);
+		}
+	}
+	
+	
 	//snow story
 	if(xxx == 2 && yyy == 6){
 		ww.bmap[7, 6] = imgNPCDuck;
@@ -123,14 +133,32 @@ function worldGetRoomCave(xxx, yyy){
 		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
 		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
 		ww.txt = "This area used to be a warm green valley.\n\nThe dragons have done something to curse us with endless snow.";
+		if(pc.eventTrigger[Event.gotIceStone]){
+			ww.txt = "I can't believe it, you saved us! Thanks so much!";
+			if(!pc.eventTrigger[Event.gotCarrot07]){
+				var s = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupCarrot);
+				s.eventNumber = Event.gotCarrot07;
+			}
+			
+			
+		}
 	}
 	if(xxx == 0 && yyy == 6){
 		ww.bmap[7, 6] = imgNPCFox;
 		ww.txt = "The Ice Dragon here keeps a magic stone that it uses to freeze our lands.\n\nI'm so cold!";
+		if(pc.eventTrigger[Event.gotIceStone]){
+			ww.txt = "Hey, you got the stone!\n\nYou could reach King Lion's palace to the north with that!";
+		}
 	}
 	if(xxx == 2 && yyy == 8){
 		ww.bmap[7, 6] = imgNPCSmallLizard;
 		ww.txt = "To ... cold ... to ... talk ...";
+		if(pc.eventTrigger[Event.gotIceStone]){
+			ww.txt = "It is finally warm!\n\nI'll ask my big brothers to give you a discount from now on.";
+			if(!pc.eventTrigger[Event.gotDiscountCard]){
+				instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupDiscountCard);
+			}
+		}
 	}
 	
 	
@@ -138,6 +166,11 @@ function worldGetRoomCave(xxx, yyy){
 	
 	if( (xxx == 9 && yyy == 7)
 		|| (xxx == 6 && yyy == 4)
+		|| (xxx == 13 && yyy == 5)
+		|| (xxx == 5 && yyy == 9)
+		|| (xxx == 3 && yyy == 3)
+		|| (xxx == 18 && yyy == 8)
+		|| (xxx == 12 && yyy == 2)
 			){ // lizard shop
 		ww.bmap[6, 5] = imgNPCLizard;
 		ww.bmap[7, 5] = imgBlank; ww.bmap[8, 5] = imgBlank;
@@ -226,7 +259,42 @@ function worldGetRoomCave(xxx, yyy){
 		pc.fullHealing = true;
 	}
 	
-	
+	ww.mapRow = 0;
+	if( xxx == 0 && yyy == 0){
+		wmap("PPPPPPPPPPPPPPP");
+		wmap("PPPPPPPPPPPPPPP");
+		wmap("PPPPPPPPPPPPPPP");
+		wmap("PPPPPPPPPPPPPPP");
+		wmap("PPPPPPPPPPPPPPP");
+		wmap("PP...........PP");
+		wmap("PP.F.......F.PP");
+		wmap("PP...........PP");
+		wmap("PP...........PP");
+		wmap("PP...........PP");
+		wmap("PP...........PP");
+		wmap("PPPPPP...PPPPPP");
+		ww.bmap[6, 5] = imgLion;
+		ww.bmap[7, 5] = imgBlank; ww.bmap[6, 6] = imgBlank; ww.bmap[7, 6] = imgBlank;
+		worldPutRug(6, 5)
+		if(playerEggCount() < 6){
+			ww.txt = "My place is here; I cannot go galavanting through space while the kingdom burns.\n\nSlay the dragons in my name.";
+			ww.txt += "\n\nCome back with six eggs and I will make you my knight.";
+		} else if(!pc.eventTrigger[Event.gotCape]){
+			ww.txt = "Kneel.\n\nNow Rise; Sir Carl Knight of the relm.\n\nLet your courage fuel our people to victory!";
+			instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupCape);
+		} else if(playerEggCount() < 10){
+			ww.txt = "My place is here; I cannot go galavanting through space while the kingdom burns.\n\nSlay the dragons in my name.";
+			ww.txt += "\n\nCome back with ten eggs and I will make you a lord.";
+		} else if(!pc.eventTrigger[Event.gotCape2]){
+			ww.txt = "With this oil I anoint you, great defender of the meek.\n\nMay your spirit remain as pure as your nobel deeds.";
+			instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupCape2);
+		} else {
+			ww.txt = "Ho loyal paladin, how goes the war?";
+		}
+		
+		
+		
+	}
 	
 	ww.mapRow = 0;
 	if(	(xxx == 8 && yyy == 6)

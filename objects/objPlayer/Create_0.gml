@@ -166,6 +166,10 @@ enum Event {
 	gotOil,
 	gotCoinBag,
 	gotCross,
+	gotDiscountCard,
+	gotCape,
+	gotCape2,
+	gotCrowbar,
 	
 	haveBombs,
 	
@@ -203,6 +207,16 @@ enum Event {
 	gotCarrot18,
 	gotCarrot19,
 	gotCarrot20,
+	
+	gotShopCarrot01,
+	gotShopCarrot02,
+	gotShopCarrot03,
+	gotShopCarrot04,
+	gotShopCarrot05,
+	gotShopCarrot06,
+	gotShopCarrot07,
+	gotShopCarrot08,
+	gotShopCarrot09,
 	
 	gotCarrotDragonGreen,
 	gotCarrotDragonBlue,

@@ -25,9 +25,9 @@ function worldGetRoomLongGrass(xxx, yyy){
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
+		wmap(".....////......");
+		wmap("....%/=//......");
+		wmap(".......%.......");
 		wmap("...............");
 		wmap("...............");
 		wmap("##...........##");
@@ -89,6 +89,9 @@ function worldGetRoomLongGrass(xxx, yyy){
 	
 	if(xxx == 12 && yyy == 4){
 		biome(Zone.longGrass);
+		ww.overrideWet = objMobJellyRed;
+		ww.mobList = [4, objMobHeart, objMobHeart, objMobHeart, objMobHeart];
+		ww.canLion = false;
 		wmap("~~~~~~~~~~~~~~~");
 		wmap("~~~~~~~~~~~~~~~");
 		wmap("~~~~~~~~~~~....");

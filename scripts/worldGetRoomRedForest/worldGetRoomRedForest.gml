@@ -124,9 +124,10 @@ function worldGetRoomRedForest(xxx, yyy){
 	
 	if(xxx == 4 && yyy == 9){
 		biome(Zone.redForest);
+		ww.secBlock = imgBushRedGrass; ww.secX = 2; ww.secY = 1; ww.secType = Sec.state;
 		ww.pushableList = [{a:3, b:3},{a:7, b:3}];
 		wmap("%%%%%%...%%%%%%");
-		wmap("%%%%%%...%%%%%%");
+		wmap("%%=%%%...%%%%%%");
 		wmap("%.............%");
 		wmap("%..]...]...]..%");
 		wmap("%..............");

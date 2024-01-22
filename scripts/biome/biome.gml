@@ -16,7 +16,12 @@ function biome(z){
 		if(ww.inBiome == Zone.desert){ t = imgSand; }
 		if(ww.inBiome == Zone.waste){ t = imgGrassWaste; }
 		if(ww.inBiome == Zone.grave){ t = imgDirtGrave; }
-		if(ww.inBiome == Zone.snow){ t = imgSnow; }
+		if(ww.inBiome == Zone.snow){ 
+			t = imgSnow; 
+			if(pc.eventTrigger[Event.gotIceStone]){
+				t = imgSnowMelting;
+			}
+		}
 		if(ww.inBiome == Zone.volcano){ t = imgDirtLight; }
 		if(ww.inBiome == Zone.darkHills){ t = imgDirtDark; }
 		

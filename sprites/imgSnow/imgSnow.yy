@@ -14,6 +14,8 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6af47047-cd59-4d77-8f63-b0fa4fbdb4d0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1a78ebf5-fc29-4f2b-b6b6-e471b4ea7563",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1092dee5-ac0d-460f-831e-e2f681dfb80e",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -43,7 +45,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 3.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -55,6 +57,8 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6af47047-cd59-4d77-8f63-b0fa4fbdb4d0","path":"sprites/imgSnow/imgSnow.yy",},},},"Disabled":false,"id":"0a2ee04c-94c0-4b52-b405-d9c5d17f4e2c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1a78ebf5-fc29-4f2b-b6b6-e471b4ea7563","path":"sprites/imgSnow/imgSnow.yy",},},},"Disabled":false,"id":"cfba37f1-d8db-492e-9f85-bd5baa816b90","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1092dee5-ac0d-460f-831e-e2f681dfb80e","path":"sprites/imgSnow/imgSnow.yy",},},},"Disabled":false,"id":"cf23e245-d29a-4d4e-b794-202de40a4cf3","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

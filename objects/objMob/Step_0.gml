@@ -259,8 +259,8 @@ if(hp < 1){
 		}
 	}
 	
-	if(dropsBombs){ pc.bombCounter ++; }
-	if(irandom_range(0, 99) < dropChance){
+	if(dropsBombs && dropChance > 0){ pc.bombCounter ++; }
+	if(irandom_range(0, 99) < dropChance || (dropsBombs && pc.bombCounter >= 8 && dropChance > 0) ){
 		var d = instance_create_depth(x, y, ww.layerP, mobRollDrop());
 		if(dropEventNumber != noone){ d.eventNumber = dropEventNumber; }
 	}

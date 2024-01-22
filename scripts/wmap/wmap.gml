@@ -31,7 +31,7 @@ function wmap(s){
 	}
 	
 	if(ww.inBiome == Zone.longGrass){
-		ww.bush1 = imgBushRed;
+		ww.bush2 = imgBushRed;
 		ww.rockWall = imgRockWallGrey;
 	}
 	
@@ -56,8 +56,8 @@ function wmap(s){
 	
 	if(ww.inBiome == Zone.snow){
 		ww.rockWall = imgRockWallGrey;
-		ww.bush1 = imgBushDeadIce;
-		ww.bush2 = imgBushIce;
+		ww.bush1 = pc.eventTrigger[Event.gotIceStone] ? imgBushDeadIceMelting : imgBushDeadIce;
+		ww.bush2 = pc.eventTrigger[Event.gotIceStone] ? imgBushIceMelting : imgBushIce;
 		ww.rock1 = imgRockSnow;
 	}
 	
