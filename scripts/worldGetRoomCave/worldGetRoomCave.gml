@@ -82,32 +82,24 @@ function worldGetRoomCave(xxx, yyy){
 	
 	//advice mallards
 	if(xxx == 8 && yyy == 8){
-		ww.bmap[7, 6] = imgNPCDuck;
-		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
-		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
-		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
+		worldGetCaveDuck();
 		ww.txt = "The Purple Crab Monsters shoot while you're shooting.\n\nTry just tapping the shoot button while fighting them.";
 	}
 	if(xxx == 11 && yyy == 7){
-		ww.bmap[7, 6] = imgNPCDuck;
-		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
-		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
-		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
+		worldGetCaveDuck();
 		ww.txt = "Since the attacks started, many animals went into hiding.\n\nTo find them you'll have to burn plants, bomb rocks, and try all kinds of things.";
 	}
 	if(xxx == 15 && yyy == 5){
-		ww.bmap[7, 6] = imgNPCDuck;
-		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
-		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
-		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
+		worldGetCaveDuck();
 		ww.txt = "Your eye lazers are powerful, but don't forget your other weapons.\n\nMost of them do extra damage to particular monster types like boomarangs to bats or fire to trolls.";
 	}
 	if(xxx == 11 && yyy == 5){
-		ww.bmap[7, 6] = imgNPCDuck;
-		ww.fmap[6, 6] = imgWater; ww.fmap[7, 6] = imgWater; ww.fmap[8, 6] = imgWater;
-		ww.fmap[6, 7] = imgWater; ww.fmap[7, 7] = imgWater; ww.fmap[8, 7] = imgWater;
-		ww.fmap[6, 8] = imgWater; ww.fmap[7, 8] = imgWater; ww.fmap[8, 8] = imgWater;
+		worldGetCaveDuck();
 		ww.txt = "Bombs are very powerful, but expensive to keep buying. Thankfully, there's a trick:\n\nIf you beat 8 monsters who can drop bombs without getting hit, the bomb drop is guaranteed!";
+	}
+	if(xxx == 10 && yyy == 4){
+		worldGetCaveDuck();
+		ww.txt = "Don't worry too much when pushing the sliding blocks around.\n\nIt may look like you can trap yourself, but that's actually impossible.";
 	}
 	if(xxx == 14 && yyy == 1){
 		ww.bmap[7, 6] = imgNPCMouse;

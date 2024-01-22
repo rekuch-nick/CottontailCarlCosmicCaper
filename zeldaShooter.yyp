@@ -275,6 +275,7 @@
     {"id":{"name":"objPupSpeedCharm","path":"objects/objPupSpeedCharm/objPupSpeedCharm.yy",},},
     {"id":{"name":"imgCactus","path":"sprites/imgCactus/imgCactus.yy",},},
     {"id":{"name":"imgPupTorch","path":"sprites/imgPupTorch/imgPupTorch.yy",},},
+    {"id":{"name":"worldGetCaveDuck","path":"scripts/worldGetCaveDuck/worldGetCaveDuck.yy",},},
     {"id":{"name":"imgPupShotUpNormal","path":"sprites/imgPupShotUpNormal/imgPupShotUpNormal.yy",},},
     {"id":{"name":"imgGraveBig","path":"sprites/imgGraveBig/imgGraveBig.yy",},},
     {"id":{"name":"objPupGlasses","path":"objects/objPupGlasses/objPupGlasses.yy",},},

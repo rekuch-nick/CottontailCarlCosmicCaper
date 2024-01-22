@@ -250,6 +250,7 @@
     {"name":"objPupSpeedCharm","order":26,"path":"objects/objPupSpeedCharm/objPupSpeedCharm.yy",},
     {"name":"imgCactus","order":7,"path":"sprites/imgCactus/imgCactus.yy",},
     {"name":"imgPupTorch","order":16,"path":"sprites/imgPupTorch/imgPupTorch.yy",},
+    {"name":"worldGetCaveDuck","order":75,"path":"scripts/worldGetCaveDuck/worldGetCaveDuck.yy",},
     {"name":"imgPupShotUpNormal","order":13,"path":"sprites/imgPupShotUpNormal/imgPupShotUpNormal.yy",},
     {"name":"imgGraveBig","order":52,"path":"sprites/imgGraveBig/imgGraveBig.yy",},
     {"name":"objPupGlasses","order":45,"path":"objects/objPupGlasses/objPupGlasses.yy",},
