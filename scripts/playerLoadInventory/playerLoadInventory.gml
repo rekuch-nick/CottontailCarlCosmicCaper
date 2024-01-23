@@ -77,8 +77,10 @@ function playerLoadInventory(){
 	s.desc[0] = "Bombs are a superior combat item, and can also open some secret doors.";
 	
 	var s = instance_create_depth(6 * 64, 3 * 63, hud.depth - 1, objItemTooltip);
-	s.eve[0] = Event.gotWindStone; s.img[0] = imgPupWindStone;
-	s.desc[0] = "Call swirling winds to deflect most kinds of enemy shots.";
+	s.eve[0] = Event.gotWindStone; s.img[0] = imgPupWindStoneCrack;
+	s.desc[0] = "Call swirling winds to deflect most kinds of enemy shots. A crack limits the Wind Stone's power.";
+	s.eve[1] = Event.gotWindStone; s.img[1] = imgPupWindStoneCrack;
+	s.desc[1] = "Call swirling winds to deflect most kinds of enemy shots and slice foes.";
 	
 	var s = instance_create_depth(7 * 64, 3 * 63, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotIceStone; s.img[0] = imgPupIceStone;
@@ -177,6 +179,13 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotCrowbar; s.img[0] = imgPupCrowbar; 
 	s.desc[0] = "When pushing movable blocks, they move fast enough to hurt monsters.";
 	
+	var s = instance_create_depth(10 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotFeather; s.img[0] = imgPupFeather; 
+	s.desc[0] = "In your darkest hour, the Eagle will come.";
+	if(pc.featherCD > 0){
+		s.desc[0] += " Recharging.";
+		s.img[0] = imgPupFeatherDim; 
+	}
 	
 	var s = instance_create_depth(11 * 64, 6 * 63, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotCape; s.img[0] = imgPupCape; 

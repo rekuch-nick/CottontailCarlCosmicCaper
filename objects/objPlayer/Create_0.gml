@@ -106,15 +106,15 @@ killMemory = [
 
 
 
-
+featherCD = 0;
 slowDown = false;
 
 
 pushingBlockTime = 0;
 xPushBlock = 0; yPushBlock = 0;
 pushBlockDir = 0;
-
-
+timeOnScreen = 0;
+invulnTime = 0;
 
 
 playerReset();
@@ -170,6 +170,8 @@ enum Event {
 	gotCape,
 	gotCape2,
 	gotCrowbar,
+	gotWindStone2,
+	gotFeather,
 	
 	haveBombs,
 	

@@ -26,8 +26,10 @@ palace 11 - dark (wand locked)
 
 
 
+L.B.R.
 
-	
-
-	
+ring 1 > carrots > ring 2 > carrots > glasses > 
+bombs > throwing stars > poison > 
+torch >	oil >
+shield > ... > potion
 	

@@ -3,6 +3,7 @@ function playerStepPlayOrPause(){
 	if(debugPossible && keyboard_check_pressed(vk_backspace)){
 		debug = !debug;
 		if(debug){
+			hpMax = 300;
 			hp = hpMax;
 			mp = mpMax;
 			coins = coinsMax();

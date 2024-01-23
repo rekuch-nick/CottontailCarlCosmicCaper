@@ -6,3 +6,4 @@ isLava = false;
 isPoison = false;
 isLand = true;
 isSec = false;
+isUnwalkable = false;

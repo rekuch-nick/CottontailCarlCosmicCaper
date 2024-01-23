@@ -20,6 +20,8 @@ if(firstFrame){
 	if(dontMove){
 		xTar = x; yTar = y; moveSpeed = 0;
 	}
+	if(rightOnly){ xTar = ww.roomWidth + 1; yTar = y; }
+	if(leftOnly){ xTar = -1; yTar = y; }
 	
 	var angle = arctan2(yTar - y, xTar - x);
 	xSpeed = cos(angle) * moveSpeed;

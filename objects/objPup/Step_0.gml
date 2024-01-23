@@ -14,7 +14,14 @@ if(sprite_index == imgCoin && (pc.inOverworld || pc.inSpace) && pc.eventTrigger[
 	if(x < pc.x){ x ++; }
 	if(y > pc.y){ y --; }
 	if(y < pc.y){ y ++; }
+} else if (moveToPlayer){
+	if(x > pc.x){ x --; }
+	if(x < pc.x){ x ++; }
+	if(y > pc.y){ y --; }
+	if(y < pc.y){ y ++; }
 }
+
+
 
 if((sprite_index == imgPupHPOrb || sprite_index == imgPupMPOrb || sprite_index == imgPupBPOrb) && pc.eventTrigger[Event.gotPinwheel] && pc.windUP){
 	if(x > pc.x){ x -= 17; }
@@ -72,7 +79,8 @@ if(gotIt){
 	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); pc.eventTrigger[Event.gotStars] = true; }
 	if(sprite_index == imgPupTorch){ pc.wepLevels[2] = max(pc.wepLevels[2], 1); pc.eventTrigger[Event.gotTorch] = true; }
 	
-	if(sprite_index == imgPupWindStone){ pc.wepLevels[4] = max(pc.wepLevels[4], 1); pc.eventTrigger[Event.gotWindStone] = true; }
+	if(sprite_index == imgPupWindStoneCrack){ pc.wepLevels[4] = max(pc.wepLevels[4], 1); pc.eventTrigger[Event.gotWindStone] = true; }
+	if(sprite_index == imgPupWindStone){ pc.wepLevels[4] = max(pc.wepLevels[4], 1); pc.eventTrigger[Event.gotWindStone] = true; pc.eventTrigger[Event.gotWindStone2] = true; }
 	if(sprite_index == imgPupIceStone){ pc.wepLevels[5] = max(pc.wepLevels[5], 1); pc.eventTrigger[Event.gotIceStone] = true; }
 	
 	if(sprite_index == imgPupHole){ pc.wepLevels[7] = max(pc.wepLevels[7], 1); pc.eventTrigger[Event.gotHole] = true; }
@@ -120,6 +128,7 @@ if(gotIt){
 	if(sprite_index == imgPupRubberBand){ pc.eventTrigger[Event.gotRubberBand] = true; }
 	if(sprite_index == imgPlayerRang2){ pc.eventTrigger[Event.gotRang2] = true; }
 	
+	if(sprite_index == imgPupFeather){ pc.eventTrigger[Event.gotFeather] = true; }
 	if(sprite_index == imgPupPinwheel){ pc.eventTrigger[Event.gotPinwheel] = true; }
 	if(sprite_index == imgPupGlasses){ pc.eventTrigger[Event.gotGlasses] = true; }
 	if(sprite_index == imgPupPoisonVial){ pc.eventTrigger[Event.gotPoisonVial] = true; }

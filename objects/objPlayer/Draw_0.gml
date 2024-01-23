@@ -79,3 +79,5 @@ if(eventTrigger[Event.gotGlasses] && !ww.secExposed[pc.xMap, pc.yMap] && ww.secX
 }
 
 //draw_text(x, y, string(bombCounter));
+
+depth = ww.layerB - floor(y / 64);

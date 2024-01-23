@@ -115,6 +115,9 @@ function wmap(s){
 		if(c == "s"){ ww.fmap[a, b] = imgSand; }
 		if(c == "f"){ ww.fmap[a, b] = imgGrassFlowers; }
 		
+		if(c == "e"){ ww.fmap[a, b] = imgSkyBlock; }
+		if(c == "E"){ ww.fmap[a, b] = imgDirtLightCliff; }
+		
 		if(c == "c"){ ww.fmap[a, b] = imgSpaceCloud; }
 		if(c == "h"){ ww.fmap[a, b] = imgGrassSparse; }
 		if(c == "w"){ ww.fmap[a, b] = imgGrassWaste; }

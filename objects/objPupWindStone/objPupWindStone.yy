@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgPupWindStone",
-    "path": "sprites/imgPupWindStone/imgPupWindStone.yy",
+    "name": "imgPupWindStoneCrack",
+    "path": "sprites/imgPupWindStoneCrack/imgPupWindStoneCrack.yy",
   },
   "spriteMaskId": null,
   "visible": true,

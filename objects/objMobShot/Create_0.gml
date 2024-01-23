@@ -4,7 +4,9 @@ xSpeed = 0;
 ySpeed = 0;
 grav = 0;
 
-
+flicker = false;
+rightOnly = false;
+leftOnly = false;
 isBlockable = true;
 isWindDeflectable = true;
 

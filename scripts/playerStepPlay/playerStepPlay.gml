@@ -13,7 +13,8 @@ function playerStepPlay(){
 	if(inSpace){ playerStepPlaySpace(); }
 	
 	
-	
+	if(invulnTime > 0){ invulnTime --; }
+	if(featherCD > 0){ featherCD --; }
 	
 	
 	
@@ -114,11 +115,30 @@ function playerStepPlay(){
 		
 		
 		if(d != 0){
+			var inLostHills = pc.xMap == 11 && pc.yMap == 0;
+			
 			playerKillMemoryUpdate();
 			if(d == 1){ yMap --; }
 			if(d == 2){ xMap ++; }
 			if(d == 3){ yMap ++; }
 			if(d == 4){ xMap --; }
+			
+			
+			
+			
+			//unseen warp conditions
+			if(inLostHills && pc.xMap == 12){ pc.xMap = 11; }
+			else if(inLostHills && pc.xMap == 10){ pc.xMap = 11; }
+			else if(inLostHills && pc.yLostHills > -3 && pc.xMap == 11 && pc.yMap == -1){ pc.yMap = 0; pc.yLostHills --; }
+			else if(pc.xMap == 11 && pc.yMap == -1){ pc.yMap = 11; }
+			else if(pc.xMap == 11 && pc.yMap == 12){ pc.yMap = 0; }
+			
+			
+			if(	(pc.xMap == 11 && pc.yMap == 1) ||
+					(pc.xMap == 10 && pc.yMap == 0) ||
+					(pc.xMap == 12 && pc.yMap == 0) ){ pc.xLostHills = 0; pc.yLostHills = 0; }
+			
+			
 			worldLoadRoom(d);
 			scrollTime = room_height;
 			scrollDir = d;
@@ -228,19 +248,8 @@ function playerStepPlay(){
 		}
 		
 			//windstone
-		if(wepSelected == 4 && wepLevels[4] > 0 && shootCD < 1 && mp >= wepCost[wepSelected]){
-				shootCD = wepCDMax[wepSelected];
-				mp -= wepCost[wepSelected];
-				windAngle += 10;
-				if(windAngle > 360){ windAngle -= 360; }
-				windUP = true;
-				with(objMobShot){ if(isWindDeflectable){
-					if(point_distance(x, y, pc.x, pc.y) < 128){
-						instance_create_depth(x, y, ww.layerE, objShotDeflected);
-						instance_destroy();
-					}
-				}}
-		}
+		playerUseWindStone();
+		
 		
 			//icestone
 		if(wepSelected == 5 && wepLevels[5] > 0 && shootCD < 1 && mp >= wepCost[wepSelected]){
@@ -387,5 +396,11 @@ function playerStepPlay(){
 	
 	image_index = f;
 	
-	if(hp < 1){ ww.state = State.dying; }
+	if(hp < 1){ 
+		if(eventTrigger[Event.gotFeather] && featherCD == 0){
+			ww.state = State.birdRez;
+		} else {
+			ww.state = State.dying; 
+		}
+	}
 }

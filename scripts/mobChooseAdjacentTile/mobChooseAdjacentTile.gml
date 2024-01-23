@@ -20,6 +20,7 @@ function mobChooseAdjacentTile(){
 			if(ww.fmap[a, b].isWater && !canWalkWater){ continue; }
 			if(ww.fmap[a, b].isLava && !canWalkLava){ continue; }
 			if(ww.fmap[a, b].isLand && !canWalkLand){ continue; }
+			if(ww.fmap[a, b].isUnwalkable){ continue; }
 		}
 		
 		if(!irandom_range(0, 99) < canBackupChance){

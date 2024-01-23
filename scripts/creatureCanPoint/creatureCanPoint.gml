@@ -22,6 +22,7 @@ function creatureCanPoint(a, b, o){
 	if(f != noone){
 		if(f.isWater && !o.canWalkWater){ return false; }
 		if(f.isLava && !o.canWalkLava){ return false; }
+		if(f.isUnwalkable){ return false; }
 	}
 	
 	return true;

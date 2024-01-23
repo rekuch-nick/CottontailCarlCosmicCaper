@@ -37,9 +37,9 @@ pc.hp = pc.hpMax;
 pc.mp = pc.mpMax;
 
 
+//pc.hp = 1; pc.eventTrigger[Event.gotFeather] = true; //////
 
-
-
+pc.featherCD = 0;
 
 
 pc.holdWandTime = 0;

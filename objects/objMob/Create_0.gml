@@ -22,7 +22,8 @@ canBackupChance = 20;
 canStandStillChance = 50;
 huntChance = 60;
 driftMove = noone;
-
+grav = 0;
+overMove = false;
 xTarTile = xTile;
 yTarTile = yTile;
 

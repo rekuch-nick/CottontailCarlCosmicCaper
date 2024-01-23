@@ -63,6 +63,7 @@ if(thinkCD < 1){
 if(frozenTime > 0 || stunTime > 0){ xSpeed = 0; ySpeed = 0; }
 x += xSpeed;
 y += ySpeed;
+ySpeed += grav;
 if(stopAtDis){
 	disToTarget -= moveSpeed;
 	if(disToTarget < 1){
@@ -83,10 +84,17 @@ if(fluxScale && irandom_range(1, 4) == 1){
 	image_yscale = clamp(image_yscale + choose(-.1, 0, .1), 2, 5);
 }
 
-if(xSpeed > 0 && x > xTar){ x = xTar; xSpeed = 0; }
-if(xSpeed < 0 && x < xTar){ x = xTar; xSpeed = 0; }
-if(ySpeed > 0 && y > yTar){ y = yTar; ySpeed = 0; }
-if(ySpeed < 0 && y < yTar){ y = yTar; ySpeed = 0; }
+if(!overMove){
+	if(xSpeed > 0 && x > xTar){ x = xTar; xSpeed = 0; }
+	if(xSpeed < 0 && x < xTar){ x = xTar; xSpeed = 0; }
+	if(ySpeed > 0 && y > yTar){ y = yTar; ySpeed = 0; }
+	if(ySpeed < 0 && y < yTar){ y = yTar; ySpeed = 0; }
+} else {
+	while(x > ww.roomWidth){ x--; }
+	while(x < 0){ x++; }
+	while(y > room_height){ y--; }
+	while(y < 0){ y++; }
+}
 	
 
 
@@ -167,6 +175,15 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 			instance_create_depth(a*64+32, 32, ww.layerE, spec);
 		}
 		
+		if(spec == objMobShotWind){ 
+			var b = irandom_range(6, 9);
+			instance_create_depth(32, b*64+32, ww.layerE, spec);
+			if(hp / hpMax <= .5){
+				b = irandom_range(6, 9);
+				instance_create_depth(14*64+32, b*64+32, ww.layerE, objMobShotWindLeft);
+			}
+		}
+		
 		if(specLimit != -1){
 			specLimit --;
 			if(specLimit == 0){
@@ -239,36 +256,8 @@ if(becomeRocket){
 		hp = 0;
 	}
 }
-if(hp < 1){
-	
-	if(speedUpOnKill){ with(objMob){ if(speedUpOnKill){ moveSpeed ++; thinkCD = 0; } } }
-	
-	if(cubeSplitOnDeath){
-		repeat(2){
-			var o = object_index;
-			var s = image_yscale - 2;
-			
-			if(s < 2 && o == objMobCube){ o = objMobCubeSmall; s = 6; }
-			if(s < 2){ break; }
-			
-			dropChance = 0;
-			var spt = instance_create_depth(x, y, depth, o);
-			spt.image_xscale = s;
-			spt.image_yscale = s;
-			spt.incincTime = 7;
-		}
-	}
-	
-	if(dropsBombs && dropChance > 0){ pc.bombCounter ++; }
-	if(irandom_range(0, 99) < dropChance || (dropsBombs && pc.bombCounter >= 8 && dropChance > 0) ){
-		var d = instance_create_depth(x, y, ww.layerP, mobRollDrop());
-		if(dropEventNumber != noone){ d.eventNumber = dropEventNumber; }
-	}
-	
-	
-	
-	instance_destroy();
-}
+
+mobStepDamage();
 
 if(hp < hpMax){ hp += regen; }
 

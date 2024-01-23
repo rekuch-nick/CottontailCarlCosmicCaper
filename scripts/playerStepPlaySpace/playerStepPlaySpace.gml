@@ -46,6 +46,7 @@ function playerStepPlaySpace(){
 	
 	if(array_length(wave.laterMobs) > 0){
 		spawnCD --;
+		if(pc.debug){ spawnCD = 0; }
 		if(spawnCD < 1){
 			spawnCD = wave.waitBetweenMobs;
 			instance_create_depth(irandom_range(1, 13) * 64 + 32, 0, ww.layerM, wave.laterMobs[0]);

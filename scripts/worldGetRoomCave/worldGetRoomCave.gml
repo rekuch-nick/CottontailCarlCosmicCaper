@@ -215,8 +215,7 @@ function worldGetRoomCave(xxx, yyy){
 		if(!pc.eventTrigger[Event.gotHoneycomb]){
 			ww.txt = "Carry this into space, and we will fight by your side.";
 			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupHoneycomb);
-			s.coinPrice = 155;
-			s.desc = "";
+			s.coinPrice = 155; s.desc = "";
 		}
 	}
 	

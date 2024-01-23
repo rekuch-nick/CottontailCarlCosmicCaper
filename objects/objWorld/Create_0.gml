@@ -60,6 +60,7 @@ enum State {
 	inventory,
 	dying,
 	rocketing,
+	birdRez,
 }
 
 enum Zone {

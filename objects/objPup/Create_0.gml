@@ -21,3 +21,4 @@ desc = "";
 
 coinPrice = 0;
 slowFall = noone;
+moveToPlayer = false;

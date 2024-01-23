@@ -1,5 +1,7 @@
 function worldLoadRoom(dir){
 	
+	pc.timeOnScreen = 0;
+	
 	with(objEffect){ instance_destroy(); }
 	with(objMob){ instance_destroy(); }
 	with(objPup){ instance_destroy(); }
@@ -29,6 +31,15 @@ function worldLoadRoom(dir){
 			if(s.sprite_index == imgWaterDark){ s.isWater = true; s.isLand = false; }
 			
 			if(s.sprite_index == imgLava){ s.isWater = true; s.isLand = false; }
+			
+			
+			if(s.sprite_index == imgSkyBlock){ 
+				s.image_alpha = b * .1;
+				s.image_index = 0;
+				if(b == 10){ s.image_index = 1; }
+				if(b == 11){ s.image_index = 2; }
+				s.isUnwalkable = true
+			}
 			
 			
 			

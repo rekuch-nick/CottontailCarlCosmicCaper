@@ -26,3 +26,6 @@ if(blockFrame != noone && blockTime > 0){
 	draw_self();
 }
 creatureDrawBuffs();
+
+
+
