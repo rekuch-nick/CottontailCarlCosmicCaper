@@ -18,12 +18,18 @@ passWallTime = 10;
 
 
 timeCD = 30 * 30;
-
+fade = 0;
 
 pointAtTarget = false;
 xTar = pc.x;
 yTar = pc.y;
 
+
+spawnCDMax = 10;
+spawnCD = spawnCDMax;
+spawn = noone;
+
+bounce = false;
 
 
 firstFrame = true;

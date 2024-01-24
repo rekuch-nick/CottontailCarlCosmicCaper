@@ -63,6 +63,7 @@ function wmap(s){
 	
 	if(ww.inBiome == Zone.grave){
 		ww.rockWall = imgRockWallGrey;
+		ww.bush2 = imgBushRed;
 	}
 	
 	

@@ -312,7 +312,7 @@ function worldGetRoomHills(xxx, yyy){
 		//ww.txt = "Your Wind Stone is cracked. Come back to me when you're stronger and I might fix it.";
 		ww.txt = "The cowardly dragons drop monsters onto the world from space, thinking that none will dare to chase them there.\n\nCome back to me once you're stronger and I'll have a proposal for you.";
 		if(!pc.eventTrigger[Event.gotFeather] && pc.hpMax >= 200){
-			ww.txt = "I could see fighting by your side, but I need to know that you're worthy.\n\nMy offer is this: Wait around for a minute and then I'll attack. If you win we will be alies.";
+			ww.txt = "I could see fighting by your side, but I need to know that you're worthy.\n\nMy offer is this: Wait around for a minute and then I'll attack. If you survive we will be alies.";
 		} else if (pc.eventTrigger[Event.gotFeather] && !pc.eventTrigger[Event.gotWindStone]){
 			ww.txt = "I see much from this moutian.";
 		} else if (pc.eventTrigger[Event.gotFeather] && !pc.eventTrigger[Event.gotWindStone2]){

@@ -102,3 +102,6 @@ rejectBeamCD = rejectBeamCDMax;
 
 becomeRocket = false;
 becomeRocketCD = 30 * 3;
+
+fadePulseDir = 0;
+fadePulseSpawn = noone;

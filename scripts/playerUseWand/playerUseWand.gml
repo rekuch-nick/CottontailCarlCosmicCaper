@@ -88,8 +88,17 @@ function playerUseWand(){
 					instance_destroy();
 				}
 			}
-			
 			if(golded){ return; }
+			
+			var wormToSlime = false;
+			with(objMob){
+				if(object_index == objMobWormMan){
+					wormToSlime = true;
+					instance_create_depth(x, y, ww.layerE, objMob);
+					instance_destroy();
+				}
+			}
+			if(wormToSlime){ return; }
 			
 			var m = instance_find(objMob, irandom_range(0, instance_number(objMob) - 1));
 			var r = irandom_range(1, 3);

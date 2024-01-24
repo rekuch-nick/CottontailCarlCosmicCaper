@@ -5,6 +5,7 @@ if(debug){
 }
 
 if(ww.state == State.useStairs){
+	depth = -8000;
 	draw_set_alpha(ww.stairAlpha);
 	draw_rectangle_color(0, 0, ww.roomWidth, room_height, c_black, c_black, c_black, c_black, false);
 	draw_set_alpha(1);
@@ -47,6 +48,9 @@ if(mutter != ""){
 	draw_set_halign(fa_left);
 	mutter = "";
 }
+
+
+
 if(eventTrigger[Event.gotCape2]){
 	draw_sprite_ext(imgPlayerKnight2, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
 } else if(eventTrigger[Event.gotCape]){
@@ -57,6 +61,8 @@ if(eventTrigger[Event.gotCape2]){
 if(inSpace){
 	draw_sprite_stretched(imgPupStar, 0, x-(8 * image_yscale), y, 16 * image_yscale, 16 * image_yscale);
 }
+
+
 
 if(sp >= spMax && ww.state == State.play){
 	var s = imgPlayerShield;

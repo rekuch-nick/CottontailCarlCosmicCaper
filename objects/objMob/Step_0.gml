@@ -191,6 +191,16 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 			}
 		}
 	}
+} // end of spec
+
+if(fadePulseDir != 0){
+	image_alpha += fadePulseDir * .02;
+	if(image_alpha < 0 && fadePulseSpawn != noone){
+		var m = instance_create_depth(x, y, ww.layerM, fadePulseSpawn);
+		m.dropChance = 0;
+	}
+	if(image_alpha > 1 && fadePulseDir > 0){ fadePulseDir *= -1; }
+	if(image_alpha < 0 && fadePulseDir < 0){ fadePulseDir *= -1; }
 }
 
 //blockFrames

@@ -9,6 +9,7 @@ function worldLoadRoom(dir){
 	ww.txtTime = 0;
 	ww.lakeDrained = false;
 	ww.pushableList = noone;
+	ww.secX = 0; ww.secY = 0;
 	
 	var xo = 0;
 	var yo = 0;

@@ -10,7 +10,7 @@ blockInput = true;
 playerInput();
 mutter = "";
 
-
+cantStair = 0;
 pushingTime = 0;
 
 //xMap = 10; yMap = 7;
@@ -225,6 +225,7 @@ enum Event {
 	gotCarrotDragonYellow,
 	gotCarrotDragonYellowSpike,
 	gotCarrotDragonRed,
+	gotCarrotDragonDoubleGreen,
 }
 
 shotPower = noone;

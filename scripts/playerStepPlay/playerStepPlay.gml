@@ -17,6 +17,7 @@ function playerStepPlay(){
 	if(featherCD > 0){ featherCD --; }
 	
 	
+	playerEventCheck();
 	
 	
 	if(xIn < 0 && image_xscale > 0){ image_xscale *= -1; }
@@ -118,10 +119,12 @@ function playerStepPlay(){
 			var inLostHills = pc.xMap == 11 && pc.yMap == 0;
 			
 			playerKillMemoryUpdate();
-			if(d == 1){ yMap --; }
-			if(d == 2){ xMap ++; }
-			if(d == 3){ yMap ++; }
-			if(d == 4){ xMap --; }
+			var n = 1;
+			if(debug && keyboard_check(vk_shift)){ n = 3; }
+			if(d == 1){ yMap -= n; }
+			if(d == 2){ xMap += n; }
+			if(d == 3){ yMap += n; }
+			if(d == 4){ xMap -= n; }
 			
 			
 			
@@ -311,7 +314,7 @@ function playerStepPlay(){
 	//check for stairs
 	xTile = floor(x / 64);
 	yTile = floor(y / 64);
-	if(inOverworld && !debug){
+	if(inOverworld && !debug && cantStair < 1){
 		if(xTile >= 0 && yTile >= 0 && xTile < 15 && yTile < 12){
 			if(ww.fmap[xTile, yTile] != noone && ww.fmap[xTile, yTile].sprite_index == imgDoorway){
 				playerKillMemoryUpdate();
@@ -375,7 +378,8 @@ function playerStepPlay(){
 		}
 	}
 	
-	playerEventCheck();
+	if(cantStair > 0){ cantStair --; }
+	
 	
 	
 	//animate

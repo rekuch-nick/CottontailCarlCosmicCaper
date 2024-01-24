@@ -1,6 +1,6 @@
 function playerEventCheck(){
 	
-	timeOnScreen = clamp(timeOnScreen + 1, 0, 18000);
+	timeOnScreen = clamp(timeOnScreen + 1, 0, 18001);
 	
 	if(pc.xMap == 14 && pc.yMap == 8 && inOverworld){
 		if(ww.bmap[0, 8] != noone &&
@@ -28,7 +28,7 @@ function playerEventCheck(){
 	
 	if(pc.xMap == 11 && pc.yMap == 11 && inOverworld && ww.txt != ""){
 		if(!pc.eventTrigger[Event.gotFeather] && pc.hpMax >= 200){
-			if(timeOnScreen >= 150){//900){
+			if(timeOnScreen >= 900){//900){
 				ww.txt = "";
 				with(objBlock){
 					if(sprite_index == imgNPCEagle || sprite_index == imgBlank){
@@ -41,5 +41,17 @@ function playerEventCheck(){
 				}
 			}
 		}
+	}
+	
+	if(		ww.inBiome == Zone.waste && 
+			timeOnScreen % 60 == 0 &&
+			( ( instance_number(objMob) < 10 && instance_number(objMob) > 0 ) || irandom_range(1, 10) == 1 )
+			){
+			
+		//mobSpawn()
+		var a = irandom_range(1, 13);
+		var b = irandom_range(1, 10);
+		var s = instance_create_depth(a * 64 + 32, b * 64 + 32, ww.layerM - 1, objShadow);
+		s.mobKind = objMobWormWaste;
 	}
 }

@@ -29,6 +29,7 @@ function playerStepPlayOrPause(){
 		pc.eventTrigger[Event.gotCoinBag] = true;
 		pc.eventTrigger[Event.gotCape] = false;
 		pc.eventTrigger[Event.gotCape2] = false;
+		pc.eventTrigger[Event.gotCross] = false;
 		coins = coinsMax();
 	}
 	

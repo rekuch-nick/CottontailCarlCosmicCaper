@@ -8,3 +8,5 @@ gro = 0;
 fade = 0;
 flicker = false;
 timeCD = 40;
+mobSpawnKind = noone;
+wob = false;

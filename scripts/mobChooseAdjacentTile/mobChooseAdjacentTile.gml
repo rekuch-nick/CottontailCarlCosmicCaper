@@ -13,6 +13,11 @@ function mobChooseAdjacentTile(){
 		var a = choose(xTile - 1, xTile, xTile + 1);
 		var b = choose(yTile - 1, yTile, yTile + 1);
 		
+		if(ww.bmap[xTile, yTile] != noone && ww.bmap[xTile, yTile].sprite_index == imgGrave){
+			a = xTile;
+			b = yTile - 1;
+		}
+		
 		if(a != xTile && b != yTile){ continue; }
 		if(!inBoundsTile(a, b)){ continue; }
 		if(ww.bmap[a, b] != noone){ continue; }

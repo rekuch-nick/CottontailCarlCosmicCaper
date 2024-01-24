@@ -79,7 +79,7 @@ function playerLoadInventory(){
 	var s = instance_create_depth(6 * 64, 3 * 63, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotWindStone; s.img[0] = imgPupWindStoneCrack;
 	s.desc[0] = "Call swirling winds to deflect most kinds of enemy shots. A crack limits the Wind Stone's power.";
-	s.eve[1] = Event.gotWindStone; s.img[1] = imgPupWindStoneCrack;
+	s.eve[1] = Event.gotWindStone2; s.img[1] = imgPupWindStone;
 	s.desc[1] = "Call swirling winds to deflect most kinds of enemy shots and slice foes.";
 	
 	var s = instance_create_depth(7 * 64, 3 * 63, hud.depth - 1, objItemTooltip);

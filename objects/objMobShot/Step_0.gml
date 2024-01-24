@@ -67,6 +67,17 @@ if(seek > 0){
 x += xSpeed;
 y += ySpeed;
 ySpeed += grav;
+
+if(bounce){
+	while(x < 0 || y < 0 || x >= ww.roomWidth || y >= room_height){
+		x -= xSpeed;
+		y -= ySpeed;
+		
+		xSpeed *= random_range(-1.2, -.8);
+		ySpeed *= random_range(-1.2, -.8);
+	}
+}
+
 if(speedupRate != 1){
 	xSpeed *= speedupRate;
 	ySpeed *= speedupRate;
@@ -101,7 +112,18 @@ if(!passWall && passWallTime < 1){
 	
 }
 
+if(spawn != noone){
+	spawnCD --; if(spawnCD < 1){
+		spawnCD = spawnCDMax;
+		instance_create_depth(x, y, depth, spawn);
+	}
+}
 
+
+if(fade != 0){
+	image_alpha -= fade;
+	if(image_alpha < 0){ timeCD = 0; }
+}
 
 passWallTime = clamp(passWallTime - 1, 0, passWallTime);
 timeCD --;

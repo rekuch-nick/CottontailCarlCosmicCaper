@@ -110,6 +110,14 @@ function mobSpawn(){
 			t = choose(objMobLobber);
 		}
 		
+		if(ww.inBiome == Zone.waste){
+			t = choose(objMobWormMan);
+		}
+		
+		if(ww.inBiome == Zone.grave){
+			t = choose(objMobFrank);
+		}
+		
 		if(ww.inBiome == Zone.darkHills){
 			t = choose(objMobMushMan);
 		}

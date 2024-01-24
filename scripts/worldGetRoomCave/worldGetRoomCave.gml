@@ -21,6 +21,7 @@ function worldGetRoomCave(xxx, yyy){
 		
 		
 	if(xxx == 10 && yyy == 7){ // start screen
+		var p = highestPalaceCleared();
 		ww.bmap[7, 5] = imgNPCTurtle;
 		ww.txt = "The Dragons are attacking from SPACE, I can't believe it! \n\nOwl lives at the beach to the south, he will know what to do.";
 		if(pc.eventTrigger[Event.gotStar]){
@@ -32,10 +33,10 @@ function worldGetRoomCave(xxx, yyy){
 		if(pc.eventTrigger[Event.palace1Clear] && pc.eventTrigger[Event.gotTorch]){
 			ww.txt = "North of the last PALACE is a desert. The SPACE DOOR is hidden under a cactus there.";
 		}
-		if(pc.eventTrigger[Event.palace2Clear]){
+		if(pc.eventTrigger[Event.palace1Clear] && pc.eventTrigger[Event.palace2Clear]){
 			ww.txt = "Travel east, to where the grass grows tall. There you'll find another PALACE, with the 3rd SPACE DOOR.";
 		}
-		if(pc.eventTrigger[Event.palace3Clear]){
+		if(pc.eventTrigger[Event.palace1Clear] && pc.eventTrigger[Event.palace2Clear] && pc.eventTrigger[Event.palace3Clear]){
 			ww.txt = "To the west is the red forest. It holds the next PALACE, and the 4th SPACE DOOR.";
 		}
 		if(pc.eventTrigger[Event.palace4Clear]){
@@ -87,7 +88,7 @@ function worldGetRoomCave(xxx, yyy){
 	}
 	if(xxx == 11 && yyy == 7){
 		worldGetCaveDuck();
-		ww.txt = "Since the attacks started, many animals went into hiding.\n\nTo find them you'll have to burn plants, bomb rocks, and try all kinds of things.";
+		ww.txt = "Since the dragon attacks started, many animals went into hiding.\n\nTo find them you'll have to burn plants, bomb rocks, and try all kinds of things.";
 	}
 	if(xxx == 15 && yyy == 5){
 		worldGetCaveDuck();
@@ -244,6 +245,7 @@ function worldGetRoomCave(xxx, yyy){
 	///healing mouse
 	if( (xxx == 7 && yyy = 2) ||
 		(xxx == 0 && yyy = 8) ||
+		(xxx == 2 && yyy = 0) ||
 		(xxx == 16 && yyy = 9) ){ 
 		ww.bmap[7, 5] = imgNPCMouse;
 		ww.txt = "Come by any time you're feeling tired, and I will help.";

@@ -46,6 +46,7 @@ function playerStepPlaySpace(){
 	
 	if(array_length(wave.laterMobs) > 0){
 		spawnCD --;
+		if(spawnCD < 1 && instance_number(objFrankToSkellyFace) > 0){ spawnCD = 1; }
 		if(pc.debug){ spawnCD = 0; }
 		if(spawnCD < 1){
 			spawnCD = wave.waitBetweenMobs;
