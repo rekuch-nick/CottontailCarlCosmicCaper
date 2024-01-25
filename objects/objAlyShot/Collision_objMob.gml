@@ -28,8 +28,13 @@ if(!arrayContains(hitList, other)){
 	
 	if(isRang){ ///
 		if(bounces > 0){
-			xTar = pc.x; yTar = pc.y;
-			// find nearby mob and target it
+			var m = getChainMob(other, chainRange, true);
+			if(m != noone){
+				xTar = m.x;
+				yTar = m.y;
+				//angleSpeed();
+			}
+			
 			bounces --;
 		} else {
 			xTar = pc.x; yTar = pc.y;

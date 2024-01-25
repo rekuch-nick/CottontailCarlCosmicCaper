@@ -94,6 +94,7 @@ draw_sprite_stretched(im, 0, x + (8), y + (68 * 4), 64, 64);
 im = imgBlank;
 if(pc.wepSelected == 0){ im = imgPlayerRang; }
 if(pc.wepSelected == 0 && pc.eventTrigger[Event.gotRang2]){ im = imgPlayerRang2; }
+if(pc.wepSelected == 0 && pc.eventTrigger[Event.gotRang3]){ im = imgPlayerRang3; }
 if(pc.wepSelected == 1){ im = imgPlayerStar; }
 if(pc.wepSelected == 2){ im = imgPupTorch; }
 if(pc.wepSelected == 3){ im = imgPupBomb; }
@@ -127,3 +128,36 @@ draw_text_ext_transformed(x + 4, 600, s, 32, 600, .5, .5, 0);
 
 
 if(ww.state == State.inventory){ hudDrawInventory(); }
+
+
+if(ww.state == State.play){
+	if(ww.txt != "" && ww.txtTime > 0){
+		draw_rectangle_color(32, 32, ww.roomWidth - 32, 320 - 32, c_white, c_white, c_white, c_white, false);
+		draw_rectangle_color(40, 40, ww.roomWidth - 40, 320 - 40, c_black, c_black, c_black, c_black, false);
+	
+		var s = ww.txt;
+		var sl = string_length(s);
+		var slMax = ceil(ww.txtTime / 1.5);
+		if(sl > slMax){
+			s = string_delete(s, slMax, string_length(s) );
+		}
+	
+		draw_text_ext_transformed(48, 48, s, 32, (ww.roomWidth - (48 * 2)), 1, 1, 0);
+	}
+
+	if(pc.mutter != ""){
+		draw_rectangle_color(x - 240, y - 130, x + 240, y - 50, c_black, c_black, c_black, c_black, false);
+		draw_set_halign(fa_center);
+		var yo = 120;
+		draw_text_ext_transformed(x, y - yo, mutter, 40, 460, 1, 1, 0);
+		draw_set_halign(fa_left);
+		pc.mutter = "";
+	}
+	
+	if(pc.eventTrigger[Event.gotGlasses] && !ww.secExposed[pc.xMap, pc.yMap] && ww.secX != -1 && pc.inOverworld && !ww.lakeDrained){
+		draw_set_alpha(random_range(.2, .4));
+		draw_rectangle(ww.secX * 64, ww.secY * 64, ww.secX * 64 + 64, ww.secY * 64 + 64, false);
+		draw_set_alpha(1);
+	}
+}
+

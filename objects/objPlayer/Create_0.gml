@@ -158,6 +158,8 @@ enum Event {
 	gotHole,
 	gotRubberBand,
 	gotRang2,
+	gotRang3,
+	gotRang4,
 	gotPoisonVial,
 	gotBombBag,
 	gotRing1,

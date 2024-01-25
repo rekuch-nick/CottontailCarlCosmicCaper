@@ -208,6 +208,7 @@ function playerStepPlay(){
 				mp -= wepCost[wepSelected];
 				var t = objPlayerRang;
 				if(eventTrigger[Event.gotRang2]){ t = objPlayerRang2; }
+				if(eventTrigger[Event.gotRang3]){ t = objPlayerRang3; }
 				instance_create_depth(x, y, ww.layerE, t);
 			
 		}

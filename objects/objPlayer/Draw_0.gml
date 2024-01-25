@@ -25,7 +25,7 @@ if(ww.state == State.rocketing){
 	return;
 }
 
-
+/*
 if(ww.txt != "" && ww.txtTime > 0){
 	draw_rectangle_color(32, 32, ww.roomWidth - 32, 320 - 32, c_white, c_white, c_white, c_white, false);
 	draw_rectangle_color(40, 40, ww.roomWidth - 40, 320 - 40, c_black, c_black, c_black, c_black, false);
@@ -48,7 +48,7 @@ if(mutter != ""){
 	draw_set_halign(fa_left);
 	mutter = "";
 }
-
+*/
 
 
 if(eventTrigger[Event.gotCape2]){
@@ -78,11 +78,7 @@ if(windUP){
 	draw_sprite_ext(imgWindShield, 0, x, y, 4, 4, windAngle, c_white, random_range(.5, .8));
 }
 
-if(eventTrigger[Event.gotGlasses] && !ww.secExposed[pc.xMap, pc.yMap] && ww.secX != -1 && inOverworld && !ww.lakeDrained){
-	draw_set_alpha(random_range(.2, .4));
-	draw_rectangle(ww.secX * 64, ww.secY * 64, ww.secX * 64 + 64, ww.secY * 64 + 64, false);
-	draw_set_alpha(1);
-}
+
 
 //draw_text(x, y, string(bombCounter));
 

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "highestPalaceCleared",
+  "name": "getChainMob",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

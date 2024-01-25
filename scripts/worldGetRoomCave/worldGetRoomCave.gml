@@ -21,43 +21,33 @@ function worldGetRoomCave(xxx, yyy){
 		
 		
 	if(xxx == 10 && yyy == 7){ // start screen
-		var p = highestPalaceCleared();
+		var p = lowestPalaceCleared();
 		ww.bmap[7, 5] = imgNPCTurtle;
+		if(lowestPalaceCleared() == 0 && !pc.eventTrigger[Event.gotStar]) {
 		ww.txt = "The Dragons are attacking from SPACE, I can't believe it! \n\nOwl lives at the beach to the south, he will know what to do.";
-		if(pc.eventTrigger[Event.gotStar]){
+		} else if(p == 0 && pc.eventTrigger[Event.gotStar]){
 			ww.txt = "You got the STAR!\n\nTake it to the PALACE just west of here.";
-		}
-		if(pc.eventTrigger[Event.palace1Clear]){
+		} else if(p == 1 && !pc.eventTrigger[Event.gotTorch]){
 			ww.txt = "You'll need a torch to find the next SPACE DOOR. The Lizard Brother's store near here sells one.";
-		}
-		if(pc.eventTrigger[Event.palace1Clear] && pc.eventTrigger[Event.gotTorch]){
+		} else if(p == 1 && pc.eventTrigger[Event.gotTorch]){
 			ww.txt = "North of the last PALACE is a desert. The SPACE DOOR is hidden under a cactus there.";
-		}
-		if(pc.eventTrigger[Event.palace1Clear] && pc.eventTrigger[Event.palace2Clear]){
+		} else if(p == 2 ){
 			ww.txt = "Travel east, to where the grass grows tall. There you'll find another PALACE, with the 3rd SPACE DOOR.";
-		}
-		if(pc.eventTrigger[Event.palace1Clear] && pc.eventTrigger[Event.palace2Clear] && pc.eventTrigger[Event.palace3Clear]){
+		} else if(p == 3 ){
 			ww.txt = "To the west is the red forest. It holds the next PALACE, and the 4th SPACE DOOR.";
-		}
-		if(pc.eventTrigger[Event.palace4Clear]){
+		} else if(p == 4 ){
 			ww.txt = "Far to the south-west is a land cursed with unnatural cold. Perhaps helping its residents will yeild the next egg.";
-		}
-		if(pc.eventTrigger[Event.palace5Clear]){
+		} else if(p == 5 ){
 			ww.txt = "Use your ICE STONE at the south beach to reach new places and you'll find the next SPACE DOOR.";
-		}
-		if(pc.eventTrigger[Event.palace6Clear]){
+		} else if(p == 6 ){
 			ww.txt = "The graveyard to the noth-west calls. You'll need to use you WAND at the right place.";
-		}
-		if(pc.eventTrigger[Event.palace7Clear]){
+		} else if(p == 7 ){
 			ww.txt = "It's time to go to the mountians in the north. Leave no stone unturned.";
-		}
-		if(pc.eventTrigger[Event.palace8Clear]){
+		} else if(p == 8 ){
 			ww.txt = "The deep forest in the east, near where you found the STAR. Be brave, something terrible is there.";
-		}
-		if(pc.eventTrigger[Event.palace9Clear]){
+		} else if(p == 9 ){
 			ww.txt = "In the north mountians, where the rock melts and fire flows like water. Can you feel the eggs start to pulse?";
-		}
-		if(pc.eventTrigger[Event.palace10Clear]){
+		} else if(p == 10 ){
 			ww.txt = "There is a cursed land in the north-east, blighted by darkness. The shore there holds a secret.";
 		}
 	}
@@ -239,7 +229,15 @@ function worldGetRoomCave(xxx, yyy){
 			s.desc = "";
 		} else if(pc.hpMax < 150) {
 			ww.txt = "Come back once you get stronger and I'll sell you something even better.";
+		} else if (!pc.eventTrigger[Event.gotRang3]) {
+			ww.txt = "The Side-Striker 3000 is an unparalleled design. Only something impossible like a magical boomerang taken from a dragon could possibly be better.";
+			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupRang3);
+			s.coinPrice = 210;
+			s.desc = "";
+		} else if (pc.eventTrigger[Event.gotRang4]) {
+			ww.txt = "Now way, how did you get a boomerang like THAT??";
 		}
+		
 	}
 	
 	///healing mouse

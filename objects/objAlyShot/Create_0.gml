@@ -41,4 +41,5 @@ secType = noone;
 
 cloneAwayFromPlayer = false;
 speedChange = 1;
-
+chain = 0;
+chainRange = 1000;
