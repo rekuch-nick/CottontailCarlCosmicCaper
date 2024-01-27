@@ -11,7 +11,7 @@ shootCD = 10;
 
 shootFasterAsDying = true;
 bumpPow = 20;
-
+weakToNinjaStars = true;
 
 drop = pc.eventTrigger[Event.gotMoreShot] ? objPupCoin : objPupMoreCharm;
 dropChance = 100;

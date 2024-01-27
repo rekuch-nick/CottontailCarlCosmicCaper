@@ -115,9 +115,9 @@ function worldGetRoomHills(xxx, yyy){
 	
 	if(xxx == 10 && yyy == 0){ // palace
 		biome(Zone.hills);
-		wmap("///////////////");
-		wmap("///////////////");
-		wmap("............../");
+		wmap("////////PPPPP//");
+		wmap("////////PPPPP//");
+		wmap("........PP=PP./");
 		wmap("............../");
 		wmap("............../");
 		wmap("............../");

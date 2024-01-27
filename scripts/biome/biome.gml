@@ -26,6 +26,7 @@ function biome(z){
 		if(ww.inBiome == Zone.darkHills){ t = imgDirtDark; }
 		
 		if(ww.inBiome == Zone.moon){ t = imgCheeseFloor; }
+		if(ww.inBiome == Zone.deepCave){ t = imgDirtDeep; }
 		
 		
 		ww.fmap[a, b] = t;

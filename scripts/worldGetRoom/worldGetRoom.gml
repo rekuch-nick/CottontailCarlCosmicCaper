@@ -41,6 +41,7 @@ function worldGetRoom(xxx, yyy){ //26 x 14
 	
 	
 	worldGetRoomStarlands(xxx, yyy);
+	worldGetRoomDeepCave(xxx, yyy);
 	
 	
 	

@@ -9,7 +9,7 @@ shootCDMax = 300;
 shootCD = shootCDMax - (30 * choose(0, 1, 2, 3));
 
 bumpPow = 20;
-
+weakToNinjaStars = true;
 dropChance = 60;
 dropsBombs = true;
 

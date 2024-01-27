@@ -15,6 +15,7 @@ if(showHPTop && inert == noone){
 	draw_rectangle_color(x1, y1, x1 + (w * percent), y2, c_maroon, c_maroon, c_red, c_red, false);
 }
 
+if(flickerBeforeThink && thinkCD < 30 && choose(true, false)){ return; }
 if(hurtTime > 0 && hurtTime % 2 == 1){ return; }
 if(frozenTime > 0 || stunTime > 0){ image_index = 0; }
 

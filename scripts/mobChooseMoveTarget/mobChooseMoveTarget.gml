@@ -1,5 +1,15 @@
 function mobChooseMoveTarget(){
 	
+	if(driftMove == Move.randomWarp){
+		do {
+			x = irandom_range(1, 13) * 64 + 32;
+			y = irandom_range(1, 10) * 64 + 32;
+		} until ( point_distance(x, y, pc.x, pc.y) > 128 );
+		xTar = x; yTar = y; xSpeed = 0; ySpeed = 0;
+		shootCD = 0;
+		return;
+	}
+	
 	if(driftMove == Move.randomPoint){
 		xTar = irandom_range(32, ww.roomWidth - 32);
 		yTar = irandom_range(32, room_height - 32);

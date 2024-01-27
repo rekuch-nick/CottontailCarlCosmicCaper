@@ -1,10 +1,11 @@
 event_inherited();
 
-hp = 95;
-hpMax = 95;
+hp = 75;
+hpMax = 75;
 
-shotKind = objMobShotBounce;
+shotKind = objMobShotBounceShort;
 
+shootCDMax = 70;
 shootCD = shootCDMax - choose(0, 10, 20);
 shotCuster = 2; shotClusterMax = 2; shotClusterCDMas = 4;
 

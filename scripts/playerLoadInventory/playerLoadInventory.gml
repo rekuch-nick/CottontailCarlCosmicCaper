@@ -144,14 +144,19 @@ function playerLoadInventory(){
 	
 	var s = instance_create_depth(5 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotPowderHorn; s.img[0] = imgPowderHorn; s.desc[0] = "Your bombs have larger explosions.";
-	s.eve[1] = Event.gotPowderHorn2; s.img[1] = imgPowderHorn2; s.desc[1] = "Your bombs have larger explosions.";
+	s.eve[1] = Event.gotPowderHorn2; s.img[1] = imgPowderHorn2; s.desc[1] = "Your bombs have larger explosions. Gain a bomb every 15 seconds.";
 	
+	var s = instance_create_depth(12 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotStrangePaw; s.img[0] = imgPupStrangePaw;
+	s.desc[0] = "Can store more MP.";
 	
 	
 	
 	var s = instance_create_depth(2 * 64, 6 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotMPShell; s.img[0] = imgPupMPShell;
 	s.desc[0] = "Just holding this seashell causes your MP to recover a little faster.";
+	s.eve[1] = Event.gotMPShell2; s.img[1] = imgPupMPShell2;
+	s.desc[1] = "Just holding this seashell causes your MP to recover faster.";
 	
 	var s = instance_create_depth(3 * 64, 6 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotRing1; s.img[0] = imgPupRing; s.desc[0] = "Reduces damage taken by 25%.";
@@ -159,8 +164,9 @@ function playerLoadInventory(){
 	s.eve[2] = Event.gotRing3; s.img[2] = imgPupRing3; s.desc[2] = "Reduces damage taken by 75%.";
 	
 	var s = instance_create_depth(4 * 64, 6 * 64, hud.depth - 1, objItemTooltip);
-	s.eve[0] = Event.gotShield; s.img[0] = imgPlayerShield; 
-	s.desc[0] = "Blocks minor enemy shots once every 30 seconds.";
+	s.eve[0] = Event.gotShield; s.img[0] = imgPlayerShield; s.desc[0] = "Blocks minor enemy shots once every 30 seconds.";
+	s.eve[1] = Event.gotShield2; s.img[1] = imgPlayerShield2; s.desc[1] = "Blocks minor enemy shots once every 30 seconds. 25% chance to stay up.";
+	s.eve[2] = Event.gotShield3; s.img[2] = imgPlayerShield3; s.desc[2] = "Blocks minor enemy shots once every 30 seconds. 50% chance to stay up. Heal while up.";
 	
 	var s = instance_create_depth(5 * 64, 6 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotCauldren1; s.img[0] = imgPupCauldren1; s.desc[0] = "Using any potion while under half HP will also heal you some.";
@@ -173,7 +179,7 @@ function playerLoadInventory(){
 	
 	var s = instance_create_depth(7 * 64, 6 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotCross; s.img[0] = imgPupCross; 
-	s.desc[0] = "Stops monsters from resurrecting.";
+	s.desc[0] = "Stops monsters from resurrecting as skeletons.";
 	
 	var s = instance_create_depth(8 * 64, 6 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotDiscountCard; s.img[0] = imgPupDiscountCard; 

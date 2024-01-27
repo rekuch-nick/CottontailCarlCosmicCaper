@@ -1,7 +1,17 @@
 function hurtPlayer(dmg, isBlockableShot){
 	
 	if(isBlockableShot && pc.sp >= pc.spMax){
-		pc.sp = 0;
+		
+		var keepShieldChance = 0;
+		if(pc.eventTrigger[Event.gotShield2]){ keepShieldChance = 25; }
+		if(pc.eventTrigger[Event.gotShield3]){ keepShieldChance = 50; }
+		
+		if(irandom_range(0, 99) < keepShieldChance){
+			
+		} else {
+			pc.sp = 0;
+		}
+		
 		return;
 	}
 	

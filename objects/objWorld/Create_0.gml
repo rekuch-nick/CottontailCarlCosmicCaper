@@ -27,6 +27,8 @@ caveCoins[10, 8] = 20;
 caveCoins[5, 3] = 10;
 caveCoins[6, 3] = 10;
 caveCoins[13, 7] = 20;
+caveCoins[1, 2] = 60;
+caveCoins[1, 3] = 20;
 
 
 for(var a=0; a<ww.W; a++){ for(var b=0; b<ww.H; b++){
@@ -81,6 +83,7 @@ enum Zone {
 	waste,
 	sparse,
 	moon,
+	deepCave,
 }
 
 enum Move {
@@ -93,6 +96,7 @@ enum Move {
 	huntHalf,
 	huntLine,
 	bullTop,
+	randomWarp,
 }
 
 enum Sec {

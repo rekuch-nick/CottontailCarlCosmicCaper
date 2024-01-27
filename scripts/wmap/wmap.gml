@@ -66,6 +66,9 @@ function wmap(s){
 		ww.bush2 = imgBushRed;
 	}
 	
+	if(ww.inBiome == Zone.deepCave){
+		ww.rockWall = imgRockWallDeep;
+	}
 	
 	
 	

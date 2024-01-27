@@ -20,7 +20,7 @@ passWallTime = 0;
 fade = 0;
 
 timeCD = 30 * 30;
-
+txt = "";
 
 pointAtTarget = false;
 xTar = x;
@@ -36,6 +36,7 @@ firstFrame = true;
 hitList = [];
 destroyOnHit = true;
 
+isNinjaStar = false;
 isBasicShot = true;
 secType = noone;
 

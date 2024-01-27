@@ -18,8 +18,8 @@ palace 3 - long grass ; wind stone
 palace 4 - red forest ; magnet
 palace 5 - snow ; ice stone 
 palace 6 - beach (ice locked) ; wand
-palace 7 - grave (wand locked)
-palace 8 - hills
+palace 7 - grave (wand locked) ; shield2
+palace 8 - hills ; cauldren 2
 palace 9 - deep forest
 palace 10 - volcano ; portal
 palace 11 - dark (wand locked, portal locked)
@@ -29,7 +29,9 @@ palace 11 - dark (wand locked, portal locked)
 
 
 ring 1 > carrots > ring 2 > carrots > glasses > 
-bombs > throwing stars > poison > 
+bombs > throwing stars > poison > powder horn
 torch >	oil >
 shield > ... > potion
 	
+sand color 7F7800
+mole shop: powder horn 2, cauldren 3, shell 2

@@ -10,7 +10,7 @@ shotCuster = 2; shotClusterMax = 2; shotClusterCDMas = 4;
 
 bumpPow = 20;
 
-
+weakToNinjaStars = true;
 moveSpeed = 2;
 
 gridMove = false;

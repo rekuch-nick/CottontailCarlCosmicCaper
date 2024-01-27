@@ -53,11 +53,13 @@ function worldGetRoomGrave(xxx, yyy){
 	
 	if(xxx == 0 && yyy == 3){
 		biome(Zone.grave);
+		ww.secBlock = imgGraveDirt; ww.secX = 9; ww.secY = 4; ww.secType = Sec.push;
+		ww.pushableList = [{a:9, b:4}];
 		wmap("//...........##");
 		wmap("//...........##");
 		wmap("//..g..........");
 		wmap("//.............");
-		wmap("//.......g.....");
+		wmap("//.......=.....");
 		wmap("//..g..........");
 		wmap("bb.............");
 		wmap("bb........g....");
@@ -127,11 +129,13 @@ function worldGetRoomGrave(xxx, yyy){
 	
 	if(xxx == 1 && yyy == 1){
 		biome(Zone.grave);
+		ww.secBlock = imgGraveDirt; ww.secX = 6; ww.secY = 4; ww.secType = Sec.push;
+		ww.pushableList = [{a:6, b:4}];
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...........g...");
 		wmap("..g............");
-		wmap("......ggg..g...");
+		wmap("......=gg..g...");
 		wmap("...............");
 		wmap("..g............");
 		wmap("......g....g...");
@@ -161,7 +165,7 @@ function worldGetRoomGrave(xxx, yyy){
 	
 	if(xxx == 1 && yyy == 3){
 		biome(Zone.grave);
-		ww.secBlock = imgBushRedGrave; ww.secX = 7; ww.secY = 10; ww.secType = Sec.burn;
+		ww.secBlock = imgBushRedGrave; ww.secX = 7; ww.secY = 9; ww.secType = Sec.burn;
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("..............#");
@@ -171,8 +175,8 @@ function worldGetRoomGrave(xxx, yyy){
 		wmap("..............#");
 		wmap("...........g..#");
 		wmap("..g....g......#");
-		wmap("..............#");
-		wmap("##.....=.....##");
+		wmap(".......=......#");
+		wmap("##...........##");
 		wmap("###############");
 	}
 	

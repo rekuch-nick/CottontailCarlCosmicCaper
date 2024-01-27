@@ -27,8 +27,10 @@ inSpace = false;
 spaceLevel = 0;
 xCave = x;
 yCave = y;
+inQuickSand = 0;
 
-
+xLostHills = 0; yLostHills = 0;
+xLostCaves = 0; yLostCaves = 0;
 
 
 shootCD = 0;
@@ -85,7 +87,8 @@ for(var i=0; i<300; i++){
 eventTrigger[Event.gotRang] = true;
 
 
-
+freeBombCDMax = 30 * 15;
+freeBombCD = freeBombCDMax;
 bombCounter = 0;
 fullHealing = false;
 healingC1 = false;
@@ -133,6 +136,8 @@ enum Event {
 	gotRang,
 	gotRangPack,
 	gotShield,
+	gotShield2,
+	gotShield3,
 	gotTorch,
 	gotStars,
 	gotMap,
@@ -145,6 +150,7 @@ enum Event {
 	gotSpeedShot2,
 	gotMoreShot2,
 	gotMPShell,
+	gotMPShell2,
 	gotWindStone,
 	gotIceStone,
 	gotWand,
@@ -176,6 +182,7 @@ enum Event {
 	gotFeather,
 	gotPowderHorn,
 	gotPowderHorn2,
+	gotStrangePaw,
 	
 	haveBombs,
 	

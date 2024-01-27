@@ -117,6 +117,8 @@ function playerStepPlay(){
 		
 		if(d != 0){
 			var inLostHills = pc.xMap == 11 && pc.yMap == 0;
+			var inLostCaves = pc.xMap == 1 && pc.yMap == 11;
+			var inLostCavesExit = pc.xMap == 0 && pc.yMap == 11;
 			
 			playerKillMemoryUpdate();
 			var n = 1;
@@ -140,6 +142,26 @@ function playerStepPlay(){
 			if(	(pc.xMap == 11 && pc.yMap == 1) ||
 					(pc.xMap == 10 && pc.yMap == 0) ||
 					(pc.xMap == 12 && pc.yMap == 0) ){ pc.xLostHills = 0; pc.yLostHills = 0; }
+			
+			if(inLostCaves && pc.yMap == 10){ pc.yMap = 11; }
+			else if (pc.xLostCaves > 3 && xMap == 2){}
+			else if(inLostCaves && pc.yMap == 12){ pc.yMap = 11; }
+			else if(inLostCaves && pc.xMap == 2){ pc.xMap = 1; pc.xLostCaves ++; }
+			
+			
+			if(	(pc.xMap == 9 && pc.yMap == 0) ||
+					(pc.xMap == 0 && pc.yMap == 11) ){ pc.xLostCaves = 0; pc.yLostCaves = 0; }
+			
+			
+			if(inLostCavesExit && pc.xMap == 0 && pc.yMap == 10){
+				pc.xMap = 9; pc.yMap = 0; d = 0;
+				pc.x = 32 + 5 * 64;
+				pc.y = 32 + 2 * 64;
+				with(objMob){ instance_destroy(); }
+				with(objPup){ instance_destroy(); }
+				with(objEffect){ instance_destroy(); }
+				with(objTile){ instance_destroy(); }
+			}
 			
 			
 			worldLoadRoom(d);
@@ -351,15 +373,34 @@ function playerStepPlay(){
 		}
 	}
 	
+	
+	//quicksand check
+	if(ww.fmap[xTile, yTile] != noone && ww.fmap[xTile, yTile].sprite_index == imgSandQuick){
+		inQuickSand ++;
+		if(inQuickSand >= 128){ playerEnterQuicksand(); }
+	} else {
+		inQuickSand = 0;
+	}
+	
+	
 	if(poisonTime > 0){
 		hp -= .1;
-	} else if(eventTrigger[Event.gotHealingHeart]){
-		hp = clamp(hp + .01, 0, hpMax);
+	} else {
+		if(eventTrigger[Event.gotHealingHeart]){ hp = clamp(hp + .01, 0, hpMax); }
+		if(eventTrigger[Event.gotShield3] && sp >= spMax){ hp = clamp(hp + .01, 0, hpMax); }
 	}
 	
 	var mpGain = .01;
 	if(eventTrigger[Event.gotMPShell]){ mpGain += .01; }
+	if(eventTrigger[Event.gotMPShell2]){ mpGain += .01; }
 	mp = clamp(mp + mpGain, 0, mpMax);
+	
+	if(eventTrigger[Event.gotPowderHorn2] && bombs < bombsMax()){
+		freeBombCD --; if(freeBombCD < 1){
+			freeBombCD = freeBombCDMax;
+			bombs ++;
+		}
+	}
 	
 	if(eventTrigger[Event.gotShield]){
 		var canSlash = false;

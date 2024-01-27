@@ -92,6 +92,10 @@ function worldGetRoomCave(xxx, yyy){
 		worldGetCaveDuck();
 		ww.txt = "Don't worry too much when pushing the sliding blocks around.\n\nIt may look like you can trap yourself, but that's actually impossible.";
 	}
+	if(xxx == 2 && yyy == 3){
+		worldGetCaveDuck();
+		ww.txt = "Pushing on gravestones is dangerous, but may prove worth it if you search carefully.";
+	}
 	if(xxx == 14 && yyy == 1){
 		ww.bmap[7, 6] = imgNPCMouse;
 		ww.txt = "The SPACE DOOR on the beach holds an incredible secret. Don't kill the pencil monster and something will happen.\n\nDon't tell them I told you.";
@@ -105,6 +109,20 @@ function worldGetRoomCave(xxx, yyy){
 		if(!pc.eventTrigger[Event.gotBombBag]){
 			ww.txt = "I bet you'd like to have more bombs.";
 			var s = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupBombBag);
+		}
+	}
+	if(xxx == 11 && yyy == 6){
+		ww.bmap[7, 6] = imgNPCFox;
+		if(!pc.eventTrigger[Event.gotCoinBag]){
+			ww.txt = "I bet you'd like to hold more coins.";
+			var s = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupCoinBag);
+		}
+	}
+	if(xxx == 18 && yyy == 4){
+		ww.bmap[7, 6] = imgNPCFox;
+		if(!pc.eventTrigger[Event.gotStrangePaw]){
+			ww.txt = "I bet you'd like to have more MP.";
+			var s = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupStrangePaw);
 		}
 	}
 	
@@ -174,6 +192,8 @@ function worldGetRoomCave(xxx, yyy){
 		|| (xxx == 5 && yyy == 3) 
 		|| (xxx == 6 && yyy == 3) 
 		|| (xxx == 13 && yyy == 7) 
+		|| (xxx == 1 && yyy == 2) 
+		|| (xxx == 1 && yyy == 3) 
 		){ // dog gifts
 		ww.bmap[7, 5] = imgNPCDog;
 		if(ww.caveCoins[pc.xMap, pc.yMap] > 0){
@@ -190,6 +210,8 @@ function worldGetRoomCave(xxx, yyy){
 	worldGetRoomCaveCarrot(xxx, yyy, 7, 8, Event.gotCarrot10);
 	worldGetRoomCaveCarrot(xxx, yyy, 5, 8, Event.gotCarrot11);
 	worldGetRoomCaveCarrot(xxx, yyy, 4, 4, Event.gotCarrot12);
+	worldGetRoomCaveCarrot(xxx, yyy, 0, 4, Event.gotCarrot13);
+	worldGetRoomCaveCarrot(xxx, yyy, 2, 1, Event.gotCarrot14);
 	
 	
 	if( (xxx == 7 && yyy == 3) ){ // rang cat
@@ -249,10 +271,16 @@ function worldGetRoomCave(xxx, yyy){
 	if( (xxx == 7 && yyy = 2) ||
 		(xxx == 0 && yyy = 8) ||
 		(xxx == 2 && yyy = 0) ||
+		(xxx == 9 && yyy = 0) ||
 		(xxx == 16 && yyy = 9) ){ 
 		ww.bmap[7, 5] = imgNPCMouse;
 		ww.txt = "Come by any time you're feeling tired, and I will help.";
 		pc.fullHealing = true;
+	}
+	if(xxx == 9 && yyy == 0){ //quicksand
+		ww.fmap[1, 5] = imgSandQuick; ww.fmap[1, 6] = imgSandQuick; ww.fmap[1, 7] = imgSandQuick; ww.fmap[1, 8] = imgSandQuick; ww.fmap[1, 9] = imgSandQuick; ww.fmap[1, 10] = imgSandQuick;
+		ww.fmap[2, 5] = imgSandQuick; ww.fmap[2, 6] = imgSandQuick; ww.fmap[2, 7] = imgSandQuick; ww.fmap[2, 8] = imgSandQuick; ww.fmap[2, 9] = imgSandQuick; ww.fmap[2, 10] = imgSandQuick;
+		ww.fmap[3, 8] = imgSandQuick; ww.fmap[3, 9] = imgSandQuick; ww.fmap[3, 10] = imgSandQuick;
 	}
 	
 	ww.mapRow = 0;

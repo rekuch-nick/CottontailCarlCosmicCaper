@@ -155,10 +155,12 @@ if(ww.state == State.play){
 		pc.mutter = "";
 	}
 	
-	if(pc.eventTrigger[Event.gotGlasses] && !ww.secExposed[pc.xMap, pc.yMap] && ww.secX != -1 && pc.inOverworld && !ww.lakeDrained){
-		draw_set_alpha(random_range(.2, .4));
-		draw_rectangle(ww.secX * 64, ww.secY * 64, ww.secX * 64 + 64, ww.secY * 64 + 64, false);
-		draw_set_alpha(1);
+	if(inBoundsMap(pc.xMap, pc.yMap)){
+		if(pc.eventTrigger[Event.gotGlasses] && !ww.secExposed[pc.xMap, pc.yMap] && ww.secX != -1 && pc.inOverworld && !ww.lakeDrained){
+			draw_set_alpha(random_range(.2, .4));
+			draw_rectangle(ww.secX * 64, ww.secY * 64, ww.secX * 64 + 64, ww.secY * 64 + 64, false);
+			draw_set_alpha(1);
+		}
 	}
 }
 

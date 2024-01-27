@@ -51,9 +51,9 @@ if(mutter != ""){
 */
 
 
-if(eventTrigger[Event.gotCape2]){
+if(eventTrigger[Event.gotCape2] && inQuickSand < 1){
 	draw_sprite_ext(imgPlayerKnight2, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
-} else if(eventTrigger[Event.gotCape]){
+} else if(eventTrigger[Event.gotCape] && inQuickSand < 1){
 	draw_sprite_ext(imgPlayerKnight, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
 } else {
 	draw_self();
@@ -64,8 +64,10 @@ if(inSpace){
 
 
 
-if(sp >= spMax && ww.state == State.play){
+if(sp >= spMax && ww.state == State.play && inQuickSand < 1){
 	var s = imgPlayerShield;
+	if(eventTrigger[Event.gotShield2]){ s = imgPlayerShield2; }
+	if(eventTrigger[Event.gotShield3]){ s = imgPlayerShield3; }
 	var xo = getDirection(pc.image_xscale) == 1 ? -16 : -48;
 	var yo = -20;
 	if(pc.image_index == 1){ yo += 4; }
@@ -73,6 +75,12 @@ if(sp >= spMax && ww.state == State.play){
 }
 
 creatureDrawBuffs();
+if(inQuickSand > 0){
+	var y2 = clamp(y + 32 - (inQuickSand/2), y - 32, y + 32);
+	draw_rectangle_color(x-24, y+32, x+23, y2, #7F7800, #7F7800, #7F7800, #7F7800, false);
+}
+
+
 
 if(windUP){
 	draw_sprite_ext(imgWindShield, 0, x, y, 4, 4, windAngle, c_white, random_range(.5, .8));

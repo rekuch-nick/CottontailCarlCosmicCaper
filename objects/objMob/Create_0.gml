@@ -79,7 +79,10 @@ wob = false;
 weakToFire = noone;
 dieToFire = false;
 weakToRang = false;
+weakToNinjaStars = false;
 goldFrame = noone;
+showedWeak = false;
+flickerBeforeThink = false;
 
 increaseShootSpeed = false;
 increaseShootSpeedMin = 30;

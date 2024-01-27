@@ -7,7 +7,7 @@ shotKind = objMobShotShort;
 
 shootCD = shootCDMax - choose(0, 10, 20);
 
-
+weakToNinjaStars = true;
 bumpPow = 20;
 
 

@@ -20,6 +20,10 @@ function playerStepPlayOrPause(){
 		}
 	}
 	
+	if(debug && keyboard_check_pressed(vk_pageup)){
+		wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
+	}
+	
 	if(debug && keyboard_check_pressed(vk_insert)){
 		for(var i=0; i<300; i++){ eventTrigger[i] = true; }
 		for(var i=0; i<11; i++){ wepLevels[i] = max(wepLevels[i], 1); }
