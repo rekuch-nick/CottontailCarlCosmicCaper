@@ -1,7 +1,7 @@
 event_inherited();
 
-hp = 180;
-hpMax = 180;
+hp = 140;
+hpMax = 140;
 
 shotKind = noone;
 

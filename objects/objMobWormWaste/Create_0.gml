@@ -19,3 +19,4 @@ driftMove = Move.randomPoint;
 turnOnThink = true;
 
 thinkCDMax = choose(110, 120, 130);
+dropChance = 0;

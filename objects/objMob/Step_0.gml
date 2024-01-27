@@ -58,6 +58,8 @@ if(thinkCD < 1){
 		if(xSpeed > 0 && image_xscale < 0){ image_xscale *= -1; }
 		if(xSpeed < 0 && image_xscale > 0){ image_xscale *= -1; }
 	}
+	
+	if(irandom_range(0, 99) < jumpChance){ jumping = true; yJumpSpeed = jumpPow; }
 }
 
 if(frozenTime > 0 || stunTime > 0){ xSpeed = 0; ySpeed = 0; }
@@ -69,6 +71,12 @@ if(stopAtDis){
 	if(disToTarget < 1){
 		xSpeed = 0; ySpeed = 0;
 	}
+}
+
+if(jumping){
+	yJump += yJumpSpeed;
+	yJumpSpeed ++;
+	if(yJump >= 0){ yJump = 0; jumping = false; }
 }
 
 
@@ -135,7 +143,7 @@ if(shotKind != noone && frozenTime < 1 && stunTime < 1){
 		}
 		
 		repeat(shootRepeat){
-			var s = instance_create_depth(x, y, ww.layerE, shotKind);
+			var s = instance_create_depth(x, y+yJump, ww.layerE, shotKind);
 			s.dropChance = 0;
 		}
 		

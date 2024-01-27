@@ -108,13 +108,14 @@ function worldGetRoomLongGrass(xxx, yyy){
 	
 	if(xxx == 13 && yyy == 4){
 		biome(Zone.longGrass);
+		ww.secBlock = imgBushGrass; ww.secX = 6; ww.secY = 6; ww.secType = Sec.burn;
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
-		wmap("...............");
-		wmap("...............");
+		wmap("......bb.......");
+		wmap("......=b.......");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
@@ -156,8 +157,8 @@ function worldGetRoomLongGrass(xxx, yyy){
 	
 	if(xxx == 13 && yyy == 3){
 		biome(Zone.longGrass);
-		wmap("~~...........##");
-		wmap("~#...........##");
+		wmap("~~%%%..%..%%%##");
+		wmap("~#.%...%...%%##");
 		wmap("~..............");
 		wmap("~..............");
 		wmap("~..............");
@@ -174,14 +175,14 @@ function worldGetRoomLongGrass(xxx, yyy){
 		biome(Zone.longGrass);
 		wmap("###############");
 		wmap("##...........##");
+		wmap(".............%%");
+		wmap("..............%");
+		wmap(".............%%");
+		wmap(".............%%");
 		wmap("...............");
 		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
+		wmap("..............%");
+		wmap(".............%%");
 		wmap("##...........##");
 		wmap("##...........##");
 	}

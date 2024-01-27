@@ -128,6 +128,10 @@ if(gotIt){
 	if(sprite_index == imgPupRubberBand){ pc.eventTrigger[Event.gotRubberBand] = true; }
 	if(sprite_index == imgPlayerRang2){ pc.eventTrigger[Event.gotRang2] = true; }
 	if(sprite_index == imgPlayerRang3){ pc.eventTrigger[Event.gotRang2] = true; pc.eventTrigger[Event.gotRang3] = true; }
+	if(sprite_index == imgPlayerRang4){ pc.eventTrigger[Event.gotRang2] = true; pc.eventTrigger[Event.gotRang3] = true; pc.eventTrigger[Event.gotRang4] = true; }
+	
+	if(sprite_index == imgPowderHorn){ pc.eventTrigger[Event.gotPowderHorn] = true; }
+	if(sprite_index == imgPowderHorn2){ pc.eventTrigger[Event.gotPowderHorn2] = true; pc.eventTrigger[Event.gotPowderHorn] = true; }
 	
 	if(sprite_index == imgPupFeather){ pc.eventTrigger[Event.gotFeather] = true; }
 	if(sprite_index == imgPupPinwheel){ pc.eventTrigger[Event.gotPinwheel] = true; }

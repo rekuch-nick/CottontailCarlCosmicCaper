@@ -12,6 +12,7 @@ shotKind = objMobShotTracer;
 shootCDMax = 30 * 3;
 shootCD = shootCDMax;
 
+showHP = true;
 
 bumpPow = 20;
 
@@ -23,3 +24,4 @@ dropsBombs = true;
 drop = pc.eventTrigger[Event.gotMightShot] ? objPupCoin : objPupMightCharm;
 dropChance = 100;
 dropEventNumber = noone;
+isDragon = true;

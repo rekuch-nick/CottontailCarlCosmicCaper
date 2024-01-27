@@ -174,6 +174,8 @@ enum Event {
 	gotCrowbar,
 	gotWindStone2,
 	gotFeather,
+	gotPowderHorn,
+	gotPowderHorn2,
 	
 	haveBombs,
 	
@@ -228,6 +230,7 @@ enum Event {
 	gotCarrotDragonYellowSpike,
 	gotCarrotDragonRed,
 	gotCarrotDragonDoubleGreen,
+	gotCarrotWitchBoss,
 }
 
 shotPower = noone;

@@ -57,6 +57,9 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 		} else if(!pc.eventTrigger[Event.gotPoisonVial]){
 			t = objPupPoisonVial; p = 155;
 			desc = "Throwing stars now poison foes.";
+		} else if(!pc.eventTrigger[Event.gotPowderHorn]){
+			t = objPupPowderHorn; p = 215;
+			desc = "Bombs have bigger explosions.";
 		}
 		
 	}

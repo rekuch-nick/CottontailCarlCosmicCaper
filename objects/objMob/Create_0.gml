@@ -105,3 +105,7 @@ becomeRocketCD = 30 * 3;
 
 fadePulseDir = 0;
 fadePulseSpawn = noone;
+
+jumpChance = 0;
+jumping = false;
+yJump = 0; yJumpSpeed = 0;

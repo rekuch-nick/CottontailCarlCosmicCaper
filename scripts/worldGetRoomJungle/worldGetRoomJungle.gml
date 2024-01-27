@@ -164,6 +164,7 @@ function worldGetRoomJungle(xxx, yyy){
 	
 	if(xxx == 16 && yyy == 6){
 		biome(Zone.jungle);
+		ww.secBlock = imgRockWallGrass; ww.secX = 7; ww.secY = 6; ww.secType = Sec.bomb;
 		wmap("%ppp.......pppp");
 		wmap("%p...........%p");
 		wmap("...............");
@@ -171,7 +172,7 @@ function worldGetRoomJungle(xxx, yyy){
 		wmap("......////.....");
 		wmap("....///////....");
 		wmap("....///////....");
-		wmap(".....////......");
+		wmap("...../=//......");
 		wmap("...............");
 		wmap("...............");
 		wmap("pp...........%%");

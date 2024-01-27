@@ -1,7 +1,8 @@
 function worldLoadRoom(dir){
 	
 	pc.timeOnScreen = 0;
-	
+	pc.xPushBlock = 0;
+	pc.yPushBlock = 0;
 	with(objEffect){ instance_destroy(); }
 	with(objMob){ instance_destroy(); }
 	with(objPup){ instance_destroy(); }
@@ -53,6 +54,7 @@ function worldLoadRoom(dir){
 			var s = instance_create_depth(a * 64 + xo, b * 64 + yo, ww.layerB - b, objBlock);
 			s.sprite_index = ww.bmap[a, b];
 			if(s.sprite_index == imgPushBlock){ s.canPush = true; }
+			if(s.sprite_index == imgPushBlockGrass){ s.canPush = true; }
 			if(s.sprite_index == imgMobArmorStillGrass){ s.canPush = true; }
 			ww.bmap[a, b] = s;
 			

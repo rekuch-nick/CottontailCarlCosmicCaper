@@ -111,7 +111,13 @@ if(timeCD < 1){
 	}
 	
 	if(object_index == objPlayerBomb){
+		var t = objPlayerBlastMed;
+		//if(pc.eventTrigger[Event.gotPowderHorn]){ t = objPlayerBlastLarge; }
 		var s = instance_create_depth(x, y, depth, objPlayerBlastMed);
+		if(pc.eventTrigger[Event.gotPowderHorn]){ 
+			s.image_xscale = 6;
+			s.image_yscale = 6;
+		}
 		s.pow = 40;
 	}
 	

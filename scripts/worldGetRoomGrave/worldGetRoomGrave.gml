@@ -87,11 +87,12 @@ function worldGetRoomGrave(xxx, yyy){
 	
 	if(xxx == 0 && yyy == 5){
 		biome(Zone.grave);
-		ww.mobList = [1, objMobGhostBoss];
+		//ww.mobList = [1, objMobGhostBoss];
+		ww.canLion = false; ww.noMobs = true;
 		wmap("//...........##");
-		wmap("//...........##");
-		wmap("//............#");
-		wmap("/.............#");
+		wmap("//.........AA##");
+		wmap("//........AAAA#");
+		wmap("/..........g.A#");
 		wmap("/.............#");
 		wmap("/.............#");
 		wmap("/.....G ......#");
@@ -209,6 +210,6 @@ function worldGetRoomGrave(xxx, yyy){
 		wmap("..............#");
 		wmap("........g.....#");
 		wmap("##...........##");
-		wmap("##...........##");
+		wmap("####...########");
 	}
 }

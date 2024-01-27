@@ -172,9 +172,9 @@ function playerStepPlay(){
 				bp = clamp(bp - 15, 0, bpMax);
 			}
 			shootCD = shootCDMax;
-			if(pc.shotPower == Shot.rapid){ shootCD -= 10; }
-			if(eventTrigger[Event.gotSpeedShot]){ shootCD -= 5; }
-			if(eventTrigger[Event.gotSpeedShot2]){ shootCD -= 5; }
+			if(pc.shotPower == Shot.rapid){ shootCD -= 7; }
+			if(eventTrigger[Event.gotSpeedShot]){ shootCD -= 4; }
+			if(eventTrigger[Event.gotSpeedShot2]){ shootCD -= 4; }
 			var n = pc.shotAmount;
 			if(eventTrigger[Event.gotMoreShot]){ n ++; }
 			if(eventTrigger[Event.gotMoreShot2]){ n ++; }
@@ -185,9 +185,7 @@ function playerStepPlay(){
 				var nn = ceil(i / 2) * 2;
 				if(i % 2 == 1){ nn *= -1; }
 				s.offSet = nn;
-				if(bp >= bpThresh && beamType == objPlayerBeams){ s.sprite_index = imgPlayerBeamsCharged; }
-				if(eventTrigger[Event.gotMightShot]){ s.pow += 5; }
-				if(eventTrigger[Event.gotMightShot2]){ s.pow += 5; }
+				if(nn == 0 && bp >= bpThresh && beamType == objPlayerBeams){ s.sprite_index = imgPlayerBeamsCharged; }
 			}
 			if(wepSelected == 5 && wepLevels[5] > 0 && irandom_range(1, 100) < 60){
 				instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerIceShotSmall);
@@ -209,6 +207,7 @@ function playerStepPlay(){
 				var t = objPlayerRang;
 				if(eventTrigger[Event.gotRang2]){ t = objPlayerRang2; }
 				if(eventTrigger[Event.gotRang3]){ t = objPlayerRang3; }
+				if(eventTrigger[Event.gotRang4]){ t = objPlayerRang4; }
 				instance_create_depth(x, y, ww.layerE, t);
 			
 		}

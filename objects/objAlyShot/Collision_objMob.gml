@@ -28,17 +28,26 @@ if(!arrayContains(hitList, other)){
 	
 	if(isRang){ ///
 		if(bounces > 0){
-			var m = getChainMob(other, chainRange, true);
+			var m = getChainMob(other.id, chainRange, true);
 			if(m != noone){
 				xTar = m.x;
 				yTar = m.y;
-				//angleSpeed();
+				
+				angleSpeed();
 			}
 			
 			bounces --;
+			
+			
 		} else {
+			if(bounces == 0 && object_index == objPlayerRang4){
+				bounces --;
+				instance_create_depth(other.x, other.y, ww.layerE, objLightning, {image_angle: 90});
+				other.hp -= 20;
+			}
+			
 			xTar = pc.x; yTar = pc.y;
+			angleSpeed();
 		}
-		angleSpeed();
 	}
 }

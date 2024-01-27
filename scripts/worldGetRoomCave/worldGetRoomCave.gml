@@ -185,6 +185,11 @@ function worldGetRoomCave(xxx, yyy){
 	worldGetRoomCaveCarrot(xxx, yyy, 5, 2, Event.gotCarrot02);
 	worldGetRoomCaveCarrot(xxx, yyy, 12, 8, Event.gotCarrot04);
 	worldGetRoomCaveCarrot(xxx, yyy, 12, 7, Event.gotCarrot05);
+	worldGetRoomCaveCarrot(xxx, yyy, 16, 6, Event.gotCarrot08);
+	worldGetRoomCaveCarrot(xxx, yyy, 13, 4, Event.gotCarrot09);
+	worldGetRoomCaveCarrot(xxx, yyy, 7, 8, Event.gotCarrot10);
+	worldGetRoomCaveCarrot(xxx, yyy, 5, 8, Event.gotCarrot11);
+	worldGetRoomCaveCarrot(xxx, yyy, 4, 4, Event.gotCarrot12);
 	
 	
 	if( (xxx == 7 && yyy == 3) ){ // rang cat

@@ -21,8 +21,8 @@ palace 6 - beach (ice locked) ; wand
 palace 7 - grave (wand locked)
 palace 8 - hills
 palace 9 - deep forest
-palace 10 - volcano
-palace 11 - dark (wand locked)
+palace 10 - volcano ; portal
+palace 11 - dark (wand locked, portal locked)
 
 
 

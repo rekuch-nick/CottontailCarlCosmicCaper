@@ -138,7 +138,7 @@ function worldGetRoomDesert(xxx, yyy){
 		wmap("....%..%..=....");
 		wmap("...............");
 		wmap("///////......./");
-		wmap("//////////..../");
+		wmap("/////////....//");
 	}
 	
 	if(xxx == 7 && yyy == 1){
@@ -206,7 +206,7 @@ function worldGetRoomDesert(xxx, yyy){
 		wmap("............../");
 		wmap("....%..%..%.../");
 		wmap("/............//");
-		wmap("/...../////////");
+		wmap("//..../////////");
 	}
 	
 	

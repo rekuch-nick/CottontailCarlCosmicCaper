@@ -31,7 +31,9 @@ if(pc.xPushBlock == xSpot && pc.yPushBlock == ySpot){
 	} else if (sprite_index == imgGrave) {
 		if(!used){
 			used = true;
-			var m = instance_create_depth(x + 32, y + 32, ww.layerM, objMobGhost);
+			var t = objMobGhost;
+			if(pc.xMap == 0 && pc.yMap == 5){ t = objMobGhostBoss; }
+			var m = instance_create_depth(x + 32, y + 32, ww.layerM, t);
 			m.hurtTime = 20;
 		}
 	}

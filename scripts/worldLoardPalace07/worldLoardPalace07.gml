@@ -3,7 +3,7 @@ function worldLoardPalace07(){
 	
 	
 	var egg = pc.eventTrigger[Event.palace7Clear] ? objPupCoinPile : objPupEgg;
-	var itm = pc.eventTrigger[Event.gotWand] ? noone : objPupWand; // ??
+	var itm = pc.eventTrigger[Event.gotWand] ? noone : objPupWand;
 	pc.palaceWaves = [
 		{
 			initMobs: [objMobFrankFace, objMobFrankFace, objMobFrankFace],

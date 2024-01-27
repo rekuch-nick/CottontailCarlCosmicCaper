@@ -95,6 +95,7 @@ im = imgBlank;
 if(pc.wepSelected == 0){ im = imgPlayerRang; }
 if(pc.wepSelected == 0 && pc.eventTrigger[Event.gotRang2]){ im = imgPlayerRang2; }
 if(pc.wepSelected == 0 && pc.eventTrigger[Event.gotRang3]){ im = imgPlayerRang3; }
+if(pc.wepSelected == 0 && pc.eventTrigger[Event.gotRang4]){ im = imgPlayerRang4; }
 if(pc.wepSelected == 1){ im = imgPlayerStar; }
 if(pc.wepSelected == 2){ im = imgPupTorch; }
 if(pc.wepSelected == 3){ im = imgPupBomb; }

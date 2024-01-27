@@ -13,8 +13,8 @@
     "path": "folders/Objects/playerStuff.yy",
   },
   "parentObjectId": {
-    "name": "objAlyShot",
-    "path": "objects/objAlyShot/objAlyShot.yy",
+    "name": "objPlayerRang",
+    "path": "objects/objPlayerRang/objPlayerRang.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
