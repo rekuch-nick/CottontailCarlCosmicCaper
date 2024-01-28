@@ -1,9 +1,9 @@
 event_inherited();
 
-hp = 455;
-hpMax = 455;
+hp = 555;
+hpMax = 555;
 
-shotKind = objMobShotSeek;
+shotKind = objMobShotFuse;
 shootCD = shootCDMax - choose(0, 10, 20);
 
 
@@ -23,16 +23,14 @@ isDragon = true;
 canFreeze = false;
 
 showHP = true;
-regen = .5;
 
+spec = imgLightning;
+specCD = 120;
+specCDMax = 180;
 
 drop = objPupCoin;
-if(!pc.eventTrigger[Event.gotCarrotDragonDoubleGreen]){
+if(!pc.eventTrigger[Event.gotCarrotDragonBlack]){
 	drop = objPupCarrot;
-	dropEventNumber = Event.gotCarrotDragonDoubleGreen;
+	dropEventNumber = Event.gotCarrotDragonBlack;
 }
 dropChance = 100;
-
-
-headSpawn = objMobDragonHead;
-headSpawnNum = 3;

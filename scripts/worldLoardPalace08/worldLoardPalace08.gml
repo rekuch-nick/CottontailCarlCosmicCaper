@@ -21,7 +21,7 @@ function worldLoardPalace08(){
 			rockKind: noone, rockChance: 100, rockWait: 90,
 		},
 		{
-			initMobs: [objMobDragonDoubleGreen],
+			initMobs: [objMobDragonBlack],
 			laterMobs: [],
 			waitBetweenMobs: 60,
 			waitForPups: true,

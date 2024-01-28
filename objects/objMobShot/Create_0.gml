@@ -55,3 +55,5 @@ speedupRate = 1;
 inertTime = 0;
 inertSprite = noone;
 dontMove = false;
+quarterTurnChance = 0;
+sprayOnQuarterTurn = 0;

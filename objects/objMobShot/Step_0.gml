@@ -60,7 +60,12 @@ if(seek > 0){
 
 
 
-
+if(irandom_range(0, 99) < quarterTurnChance){ 
+	image_angle += 90; 
+	repeat(sprayOnQuarterTurn){
+		instance_create_depth(x, y, depth, objMobShotSmallRandom);
+	}
+}
 
 
 

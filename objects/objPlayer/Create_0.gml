@@ -238,6 +238,7 @@ enum Event {
 	gotCarrotDragonRed,
 	gotCarrotDragonDoubleGreen,
 	gotCarrotWitchBoss,
+	gotCarrotDragonBlack,
 }
 
 shotPower = noone;

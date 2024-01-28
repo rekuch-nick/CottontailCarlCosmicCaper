@@ -23,5 +23,7 @@ function playerEnterQuicksand(){
 	ww.state = State.scroll;
 	pc.x = pc.xWarpPoint;
 	pc.y = pc.yWarpPoint;
+	
+	instance_create_depth(pc.x, 0, ww.layerE, objFallingPlayer);
 
 }

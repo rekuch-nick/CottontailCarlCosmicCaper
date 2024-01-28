@@ -29,7 +29,10 @@ function mobStepDamage(){
 				spt.incincTime = 7;
 			}
 		}
-	
+		
+		if(headSpawn != noone){ repeat(headSpawnNum){
+			instance_create_depth(x + choose(-64, 0, 64), y+choose(-64, 0, 64), depth, headSpawn);
+		}}
 	
 	
 		if(object_index == objMobEagle){ instance_create_depth(x, y, ww.layerE, objEagleLeave); }
