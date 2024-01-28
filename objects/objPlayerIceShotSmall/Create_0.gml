@@ -14,3 +14,4 @@ yTar = mouse_y + choose(-50, -25, 0, 25, 50);
 
 
 
+isIce = true;

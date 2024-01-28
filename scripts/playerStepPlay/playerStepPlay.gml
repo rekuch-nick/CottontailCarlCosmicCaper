@@ -51,7 +51,11 @@ function playerStepPlay(){
 		if(yPush > 0){ yPush ++; }
 	}
 	
-	
+	if(swordDashTime > 0){
+		swordDashTime --;
+		xSpeed = xSwordDash * 15;
+		ySpeed = ySwordDash * 15;
+	}
 	
 	
 	var bumped = false;
@@ -78,7 +82,7 @@ function playerStepPlay(){
 	}
 	
 	
-	if(bumped){
+	if(bumped && swordDashTime < 1){
 		pushingTime ++;
 		if(xIn == 0 || yIn == 0){
 			var xx = floor(x / 64) + xIn;
@@ -175,12 +179,11 @@ function playerStepPlay(){
 	
 	
 	
-	
-	
-	
-		// beams
 	if(shootCD > 0){ shootCD --; }
 	if(stunTime > 0 && shootCD < 1){ shootCD = 1; }
+		
+			
+		// beams
 	if(mouseLHold){
 		if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
 		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
@@ -309,7 +312,23 @@ function playerStepPlay(){
 		}
 		playerUseWand();
 		
-		
+			//sword
+		if(wepSelected == 9){
+			if(mouseRHold && shootCD < 1 && (xIn != 0 || yIn != 0) ){
+			
+				if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
+				if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
+				shootCD = wepCDMax[wepSelected];
+				instance_create_depth(x, y, ww.layerE, objPlayerSwordSlash);
+				swordDashTime = 15; xSwordDash = xIn; ySwordDash = yIn;
+				
+			} else if(mouseRHold && shootCD < 1){
+				if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
+				if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
+				instance_create_depth(x, y, ww.layerE, objPlayerSwordSlash);
+				shootCD = wepCDMax[wepSelected];
+			}
+		}
 		
 			
 			

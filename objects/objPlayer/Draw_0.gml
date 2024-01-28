@@ -51,6 +51,11 @@ if(mutter != ""){
 */
 
 
+if(swordDashTime > 0){
+	draw_sprite_ext(imgPlayer, image_index, x + (xSwordDash * -40), y + (ySwordDash * -40), image_xscale, image_yscale, choose(-1, 1), c_white, .6);
+	draw_sprite_ext(imgPlayer, image_index, x + (xSwordDash * -80), y + (ySwordDash * -80), image_xscale, image_yscale, choose(-1, 1), c_white, .3);
+}
+
 if(eventTrigger[Event.gotCape2] && inQuickSand < 1){
 	draw_sprite_ext(imgPlayerKnight2, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
 } else if(eventTrigger[Event.gotCape] && inQuickSand < 1){
@@ -58,11 +63,17 @@ if(eventTrigger[Event.gotCape2] && inQuickSand < 1){
 } else {
 	draw_self();
 }
+
+
+
+
 if(inSpace){
 	draw_sprite_stretched(imgPupStar, 0, x-(8 * image_yscale), y, 16 * image_yscale, 16 * image_yscale);
 }
 
-
+if(wepSelected == 9 && instance_number(objPlayerSwordSlash) < 1){
+	draw_sprite_ext(imgPlayerSword, 0, x-(8*getDirection(image_xscale)), y+16, image_xscale, image_yscale, 0, c_white, 1);
+}
 
 if(sp >= spMax && ww.state == State.play && inQuickSand < 1){
 	var s = imgPlayerShield;

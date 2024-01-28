@@ -14,6 +14,8 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6af47047-cd59-4d77-8f63-b0fa4fbdb4d0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1ba793ab-926f-4d58-acab-0f38c0514d17",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c44d5e60-dcef-486b-a93c-cee3a220606b",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -43,7 +45,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 3.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -55,6 +57,8 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6af47047-cd59-4d77-8f63-b0fa4fbdb4d0","path":"sprites/imgDirtLight/imgDirtLight.yy",},},},"Disabled":false,"id":"fd621850-de25-4297-90e8-e1653e303cac","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1ba793ab-926f-4d58-acab-0f38c0514d17","path":"sprites/imgDirtLight/imgDirtLight.yy",},},},"Disabled":false,"id":"eb643533-269e-48ab-8ce7-932497f6eb34","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c44d5e60-dcef-486b-a93c-cee3a220606b","path":"sprites/imgDirtLight/imgDirtLight.yy",},},},"Disabled":false,"id":"a104bdc2-0356-4aec-b27e-7f61fb56c6c2","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

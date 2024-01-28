@@ -104,6 +104,7 @@ if(pc.wepSelected == 4 && pc.eventTrigger[Event.gotWindStone2]){ im = imgPupWind
 if(pc.wepSelected == 5){ im = imgPupIceStone; }
 if(pc.wepSelected == 7){ im = imgPupHole; }
 if(pc.wepSelected == 8){ im = imgPupWand; }
+if(pc.wepSelected == 9){ im = imgPupSword; }
 if(pc.wepSelected == 10){ im = imgPupPhiloStone; }
 draw_sprite_stretched(im, 0, x + (128), y + (68 * 4), 64, 64);
 

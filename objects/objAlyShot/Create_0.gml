@@ -38,9 +38,14 @@ destroyOnHit = true;
 
 isNinjaStar = false;
 isBasicShot = true;
+isFire = false;
+isIce = false;
+isWind = false;
+isSword = false;
 secType = noone;
 
 cloneAwayFromPlayer = false;
 speedChange = 1;
 chain = 0;
 chainRange = 1000;
+followPlayer = false;

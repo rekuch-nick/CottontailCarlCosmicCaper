@@ -78,6 +78,7 @@ if(gotIt){
 	//if(sprite_index == imgPlayerRang){ pc.wepLevels[0] = max(pc.wepLevels[0], 1); }
 	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); pc.eventTrigger[Event.gotStars] = true; }
 	if(sprite_index == imgPupTorch){ pc.wepLevels[2] = max(pc.wepLevels[2], 1); pc.eventTrigger[Event.gotTorch] = true; }
+	if(sprite_index == imgPupSword){ pc.wepLevels[9] = max(pc.wepLevels[9], 1); pc.eventTrigger[Event.gotSword] = true; }
 	
 	if(sprite_index == imgPupWindStoneCrack){ pc.wepLevels[4] = max(pc.wepLevels[4], 1); pc.eventTrigger[Event.gotWindStone] = true; }
 	if(sprite_index == imgPupWindStone){ pc.wepLevels[4] = max(pc.wepLevels[4], 1); pc.eventTrigger[Event.gotWindStone] = true; pc.eventTrigger[Event.gotWindStone2] = true; }
@@ -191,6 +192,21 @@ if(gotIt){
 		}}
 	}
 	
+	
+	if(sprite_index == imgPupSwordInStone){
+		for(var a=4; a<11; a++){
+			ww.bmap[a, 0] = instance_create_depth(a * 64, 0, ww.layerB, objBlock);
+			ww.bmap[a, 0].sprite_index = imgRockWall;
+		}
+		instance_create_depth(ww.roomWidth / 2, 128, ww.layerM, objMobBearSwordBoss);
+	}
+	
+	if(sprite_index == imgPupSword){
+		for(var a=4; a<11; a++){
+			instance_destroy(ww.bmap[a, 0]);
+			ww.bmap[a, 0] = noone;
+		}
+	}
 
 	instance_destroy();
 	

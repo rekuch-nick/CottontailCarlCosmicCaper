@@ -1,3 +1,4 @@
+if(ww.state == State.scroll){ return; }
 draw_self();
 
 if(coinPrice > 0){

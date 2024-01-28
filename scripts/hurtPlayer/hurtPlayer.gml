@@ -15,7 +15,6 @@ function hurtPlayer(dmg, isBlockableShot){
 		return;
 	}
 	
-	
 	pc.shotPower = noone;
 	
 	

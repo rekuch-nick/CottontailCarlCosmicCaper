@@ -191,6 +191,18 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 				instance_create_depth(14*64+32, b*64+32, ww.layerE, objMobShotWindLeft);
 			}
 		}
+		if(spec == objMobShotWave){ 
+			if(choose(true, false)){
+				for(var b=1; b<11; b++){
+					instance_create_depth(0 * 64 + 32, b * 64 + 32, ww.layerE, objMobShotWave);
+				}
+			} else {
+				for(var b=1; b<11; b++){
+					instance_create_depth(14 * 64 + 32, b * 64 + 32, ww.layerE, objMobShotWaveLeft);
+				}
+			}
+			
+		}
 		
 		if(specLimit != -1){
 			specLimit --;

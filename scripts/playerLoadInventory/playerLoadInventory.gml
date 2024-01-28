@@ -94,6 +94,10 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotWand; s.img[0] = imgPupWand;
 	s.desc[0] = "Waving this wand can have all kinds of wild effects. Make sure to try it out in different places.";
 	
+	var s = instance_create_depth(11 * 64, 3 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotSword; s.img[0] = imgPupSword;
+	s.desc[0] = "Deflect shots and make dash attacks.";
+	
 	var s = instance_create_depth(12 * 64, 3 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotPhiloStone; s.img[0] = imgPupPhiloStone;
 	s.desc[0] = "With the Philosopher's Stone you can transmute gold into lead! (bullets)";

@@ -11,3 +11,4 @@ bumpPow = 20;
 moveSpeed = 2;
 thinkCDMax = 60;
 
+weakToSword = true;

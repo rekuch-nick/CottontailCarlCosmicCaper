@@ -58,7 +58,7 @@ rangsMax = 1;
 wepSelected = 0;
 wepLevels = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
 wepCost = [10, 2, 10, 0, .5, 2, 2, 20, 20, 0 , 0];
-wepCDMax = [10, 12, 25, 30, 1, 30, 30, 30, 45, 30, 1];
+wepCDMax = [10, 12, 25, 30, 1, 30, 30, 30, 45, 20, 1];
 
 
 lionCD = irandom_range(5, 7);
@@ -118,6 +118,10 @@ xPushBlock = 0; yPushBlock = 0;
 pushBlockDir = 0;
 timeOnScreen = 0;
 invulnTime = 0;
+
+swordDashTime = 0;
+xSwordDash = 0; 
+ySwordDash = 0;
 
 
 playerReset();
@@ -183,6 +187,7 @@ enum Event {
 	gotPowderHorn,
 	gotPowderHorn2,
 	gotStrangePaw,
+	gotSword,
 	
 	haveBombs,
 	

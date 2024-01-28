@@ -32,6 +32,11 @@ image_alpha -= fade;
 x += xSpeed;
 y += ySpeed;
 
+if(followPlayer){ 
+	image_xscale = pc.image_xscale;
+	x = pc.x; y = pc.y; 
+}
+
 xTile = floor(x / 64);
 yTile = floor(y / 64);
 if(!passWall && passWallTime < 1){

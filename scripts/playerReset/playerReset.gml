@@ -36,7 +36,7 @@ pc.yCave = y;
 pc.hp = pc.hpMax;
 pc.mp = pc.mpMax;
 
-
+//pc.wepLevels[9] = 1; pc.eventTrigger[Event.gotSword] = true; ////
 //pc.hp = 1; pc.eventTrigger[Event.gotFeather] = true; //////
 
 pc.featherCD = 0;

@@ -23,3 +23,4 @@ gro = .1;
 isBasicShot = false;
 secType = Sec.burn;
 
+isFire = true;

@@ -22,3 +22,5 @@ agro = .1;
 
 cloneAwayFromPlayer = true;
 speedChange = .9;
+
+isIce = true;

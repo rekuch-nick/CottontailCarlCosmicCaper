@@ -254,6 +254,7 @@ function worldGetRoomHills(xxx, yyy){
 	
 	if(xxx == 12 && yyy == 3){
 		biome(Zone.hills);
+		ww.canLion = false; ww.noMobs = true;
 		wmap("~~~~.......~~~~");
 		wmap("~~~~.......~~~~");
 		wmap("~~...........~~");
@@ -266,6 +267,9 @@ function worldGetRoomHills(xxx, yyy){
 		wmap("~~...........~~");
 		wmap("~~~~~~~~~~~~~~~");
 		wmap("~~~~~~~~~~~~~~~");
+		if(!pc.eventTrigger[Event.gotSword]){
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupSwordInStone);
+		}
 	}
 	
 	

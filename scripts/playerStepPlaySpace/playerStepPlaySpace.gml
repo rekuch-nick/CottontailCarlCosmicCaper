@@ -6,8 +6,9 @@ function playerStepPlaySpace(){
 	if(eventTrigger[Event.gotHoneycomb]){
 		if(instance_number(objPlayerBee) < 2){
 			if(irandom_range(1, 600) == 1){
+				var xo = -64; with(objPlayerBee){ if(xo == xOff){ xo = 64; } }
 				var bee = instance_create_depth(x, room_height, ww.layerE + 1, objPlayerBee);
-				bee.xOff = instance_number(objPlayerBee) == 1 ? -64 : 64;
+				bee.xOff = xo;
 				bee.image_xscale = instance_number(objPlayerBee) == 1 ? -4 : 4;
 			}
 		}

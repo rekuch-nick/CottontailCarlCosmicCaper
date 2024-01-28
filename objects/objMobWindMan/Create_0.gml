@@ -22,3 +22,5 @@ dropsBombs = true;
 moveSpeed = 6;
 thinkCDMax = 10;
 huntChance = 85;
+
+weakToWind = true;
