@@ -118,3 +118,7 @@ yJump = 0; yJumpSpeed = 0;
 
 headSpawnNum = 0;
 headSpawn = noone;
+
+speedUpChanceOnThink = 0;
+speedUpMax = 10;
+shieldBreaker = false;

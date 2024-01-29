@@ -37,6 +37,9 @@ if(thinkCD < 1 && stunTime > 0){ thinkCD = 1; }
 if(frozenTime > 0 && thinkCD < 1){ thinkCD = 1; }
 if(thinkCD < 1){
 	thinkCD = thinkCDMax;
+	
+	if(irandom_range(0, 99) < speedUpChanceOnThink){ moveSpeed = clamp(moveSpeed + 1, 0, speedUpMax); }
+	
 	if(turnOnThink){
 		image_angle += choose(90, -90);
 	}
