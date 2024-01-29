@@ -192,6 +192,7 @@ function worldGetRoomCave(xxx, yyy){
 		|| (xxx == 5 && yyy == 3) 
 		|| (xxx == 6 && yyy == 3) 
 		|| (xxx == 13 && yyy == 7) 
+		|| (xxx == 6 && yyy == 7) 
 		|| (xxx == 1 && yyy == 2) 
 		|| (xxx == 1 && yyy == 3) 
 		){ // dog gifts
@@ -212,6 +213,7 @@ function worldGetRoomCave(xxx, yyy){
 	worldGetRoomCaveCarrot(xxx, yyy, 4, 4, Event.gotCarrot12);
 	worldGetRoomCaveCarrot(xxx, yyy, 0, 4, Event.gotCarrot13);
 	worldGetRoomCaveCarrot(xxx, yyy, 2, 1, Event.gotCarrot14);
+	worldGetRoomCaveCarrot(xxx, yyy, 7, 6, Event.gotCarrot15);
 	
 	
 	if( (xxx == 7 && yyy == 3) ){ // rang cat
@@ -372,6 +374,29 @@ function worldGetRoomCave(xxx, yyy){
 	repeat(ww.caveCoins[pc.xMap, pc.yMap]){
 		instance_create_depth(irandom_range(150, ww.roomWidth - 150), irandom_range(480, 500), ww.layerP, objPupCoin);
 	}
+	
+	
+	
+	if(xxx == 10 && yyy == 3){
+		worldRowReset();
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("~~~~~~~~~~~~~~~");
+		wmap("/~~~~~~~~~~~~~~");
+		wmap("/~~~~~~~~~~~~~/");
+		wmap("//~~~~~~~~~~~//");
+		wmap("/~~~~~~~~~~~~//");
+		wmap("/..~~~~~~~~.../");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("//////...//////");
+		
+		
+		var s = instance_create_depth(7 * 64 + 32, 7 * 64 + 32, ww.layerP, objPupSurfboard);
+		s.coinPrice = 40; s.desc = "";
+	}
+	
 	
 	
 }

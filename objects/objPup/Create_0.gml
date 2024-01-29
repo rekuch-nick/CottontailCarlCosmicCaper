@@ -22,3 +22,5 @@ desc = "";
 coinPrice = 0;
 slowFall = noone;
 moveToPlayer = false;
+waveScroll = false;
+surfTime = 0;

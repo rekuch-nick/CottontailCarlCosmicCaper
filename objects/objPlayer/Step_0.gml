@@ -28,6 +28,8 @@ if(ww.state == State.inventory){ playerStepInventory(); }
 if(ww.state == State.enteringSpace){ playerStepEnterSpace(); }
 if(ww.state == State.leaveSpace){ playerStepLeaveSpace(); }
 if(ww.state == State.dying){ playerStepDying(); }
+if(ww.state == State.surfStart){ playerStepSurfStarting(); }
+if(ww.state == State.surfGame){ playerStepSurf(); }
 
 
 

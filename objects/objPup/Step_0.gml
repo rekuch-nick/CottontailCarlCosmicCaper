@@ -1,4 +1,4 @@
-if(ww.state != State.play){ return; }
+if(ww.state != State.play && ww.state != State.surfGame){ return; }
 
 if(pc.inSpace){
 	if(isMajor && y > room_height - 128){ y --; }
@@ -7,6 +7,11 @@ if(pc.inSpace){
 		y ++;
 		if(y > room_height + 20){ instance_destroy(); }
 	}
+}
+
+if(waveScroll){
+	x -= 2;
+	if(x < -60){ instance_destroy(); }
 }
 
 if(sprite_index == imgCoin && (pc.inOverworld || pc.inSpace) && pc.eventTrigger[Event.gotMagnet]){
@@ -49,6 +54,10 @@ if(gotIt){
 	pc.bp = clamp(pc.bp + bpGain, 0, pc.bpMax);
 	pc.coins = clamp(pc.coins + coinValue, 0, coinsMax());
 	pc.bombs = clamp(pc.bombs + bombValue, 0, bombsMax());
+	
+	if(surfTime != 0){
+		pc.surfTime = clamp(pc.surfTime + surfTime, 0, pc.surfTimeMax);
+	}
 	
 	if(sprite_index == imgHealingHeart){ pc.eventTrigger[Event.gotHealingHeart] = true; }
 	if(sprite_index == imgPupFindShotUpMore){ pc.eventTrigger[Event.gotMonocule] = true; }
@@ -207,6 +216,14 @@ if(gotIt){
 			ww.bmap[a, 0] = noone;
 		}
 	}
+	
+	if(sprite_index == imgPupSurfboard){
+		ww.state = State.surfStart;
+	}
+	
+	var e = instance_create_depth(x, y, ww.layerE, objEffect);
+	e.ySpeed = -2; e.fade = .03;
+	e.sprite_index = sprite_index;
 
 	instance_destroy();
 	

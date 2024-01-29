@@ -13,6 +13,22 @@ if(ww.state == State.dying){
 	return;
 }
 
+if(ww.state == State.surfGame){
+	draw_rectangle_color(x, y, room_width, room_height, c_black, c_black, c_black, c_black, false);
+	
+	var x1 = x + 8;
+	var w = max((pc.surfTime / pc.surfTimeMax) * 304, 0);
+	var y1 = y + (44 * 4);
+	var y2 = y1 + 32;
+	var c1 = c_yellow; var c2 = c_orange;
+	draw_rectangle_color(x1, y1, x1 + w, y2, c2, c2, c1, c1, false);
+	
+	
+	return;
+}
+
+
+
 draw_self();
 frameCount ++;
 if(frameCount >= 30){ frameCount = 0; }

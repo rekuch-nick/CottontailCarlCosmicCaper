@@ -126,7 +126,8 @@ ySwordDash = 0;
 
 playerReset();
 
-
+surfBoardImg = imgPupSurfboard;
+yBoard = 0;
 
 
 enum Event {
