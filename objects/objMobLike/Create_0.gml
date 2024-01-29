@@ -13,6 +13,7 @@ moveSpeed = 2;
 
 speedUpChanceOnThink = 50;
 speedUpMax = 14;
+thinkFasterOnThinkChance = 50;
 
 gridMove = false;
 driftMove = Move.hunt;

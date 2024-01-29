@@ -49,3 +49,5 @@ speedChange = 1;
 chain = 0;
 chainRange = 1000;
 followPlayer = false;
+
+directionless = false;

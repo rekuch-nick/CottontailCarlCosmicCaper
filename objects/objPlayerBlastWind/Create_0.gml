@@ -21,3 +21,4 @@ passWall = true;
 image_alpha = random_range(.4, .6);
 
 isWind = true;
+directionless = true;

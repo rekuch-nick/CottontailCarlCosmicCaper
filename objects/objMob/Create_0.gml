@@ -122,3 +122,8 @@ headSpawn = noone;
 speedUpChanceOnThink = 0;
 speedUpMax = 10;
 shieldBreaker = false;
+
+thinkFasterOnThinkChance = 0;
+thinkFasterMin = 20;
+blockBySpeed = false;
+ignoreStatus = false;

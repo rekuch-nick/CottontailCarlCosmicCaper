@@ -56,8 +56,9 @@ potion = noone;
 rangsMax = 1;
 
 wepSelected = 0;
+//rang, stars, torch, bombs, wind, ice, ?, hole, wand, sword, philo
 wepLevels = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
-wepCost = [10, 2, 10, 0, .5, 2, 2, 20, 20, 0 , 0];
+wepCost = [5, 2, 10, 0, .5, 2, 2, 20, 20, 0 , 0];
 wepCDMax = [10, 12, 25, 30, 1, 30, 30, 30, 45, 20, 1];
 
 

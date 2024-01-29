@@ -101,6 +101,8 @@ enum Move {
 	huntLine,
 	bullTop,
 	randomWarp,
+	randomOrth,
+	huntOrth,
 }
 
 enum Sec {

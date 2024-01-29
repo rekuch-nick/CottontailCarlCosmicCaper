@@ -1,7 +1,7 @@
 event_inherited();
 
-hp = 445;
-hpMax = 445;
+hp = 545;
+hpMax = 545;
 
 shotKind = objMobShot2;
 shootCDMax = 190;

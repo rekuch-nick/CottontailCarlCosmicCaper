@@ -70,6 +70,14 @@ function worldLoardPalace02(){
 			rockKind: objSpaceRock, rockChance: 100, rockWait: 90,
 		},
 		{
+			initMobs: [objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJellyYel, objMobSpaceJellyYel],
+			laterMobs: [],
+			waitBetweenMobs: 60,
+			waitForPups: true,
+			floorItem: noone,
+			rockKind: objSpaceRock, rockChance: 100, rockWait: 90,
+		},
+		{
 			initMobs: [objMobSpaceSnake],
 			laterMobs: [objMobSpaceSnake, objMobSpaceSnake, objMobSpaceSnake],
 			waitBetweenMobs: 60,

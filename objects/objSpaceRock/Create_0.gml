@@ -12,3 +12,8 @@ blockShots = true;
 blockPlayer = true;
 bounceOnSide = true;
 slowPlayer = false;
+
+shootCD = 0;
+shootCDMax = 90;
+shotKind = noone;
+shotChance = 0;

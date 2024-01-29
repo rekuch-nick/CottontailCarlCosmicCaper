@@ -24,8 +24,8 @@ function worldLoardPalace04(){
 		},
 		{
 			initMobs: [objMobWormSniper, objMobWormSniper, objMobWormSniper, objMobWormSniper],
-			laterMobs: [],
-			waitBetweenMobs: 120,
+			laterMobs: [objMobSpaceJelly, objMobSpaceJellyYel],
+			waitBetweenMobs: 60,
 			waitForPups: false,
 			floorItem: noone,
 			rockKind: objSpaceRockSlow, rockChance: 80, rockWait: 90,
@@ -56,7 +56,7 @@ function worldLoardPalace04(){
 		},
 		{
 			initMobs: [objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth],
-			laterMobs: [objMobSpaceSnakePurple, objMobSpaceSnakePurple],
+			laterMobs: [objMobSpaceSnakePurple, objMobSpaceSnakePurple, objMobSpaceJellyOrng],
 			waitBetweenMobs: 70,
 			waitForPups: false,
 			floorItem: noone,

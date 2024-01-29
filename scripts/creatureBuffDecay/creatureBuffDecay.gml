@@ -1,6 +1,6 @@
 function creatureBuffDecay(){
 	
-	if(isDragon){
+	if(isDragon || ignoreStatus){
 		burnTime = 0;
 		poisonTime = 0;
 		stunTime = 0;
@@ -15,5 +15,6 @@ function creatureBuffDecay(){
 	if(muteTime > 0){ muteTime --; }
 	if(stunTime > 0){ stunTime --; }
 	if(frozenTime > 0){ frozenTime --; }
+	if(shieldBreakTime > 0){ shieldBreakTime --; }
 	
 }

@@ -36,6 +36,9 @@ thinkCD --;
 if(thinkCD < 1 && stunTime > 0){ thinkCD = 1; }
 if(frozenTime > 0 && thinkCD < 1){ thinkCD = 1; }
 if(thinkCD < 1){
+	if(irandom_range(0, 99) < thinkFasterOnThinkChance){ thinkCDMax = clamp(thinkCDMax - 1, thinkFasterMin, thinkCDMax); }
+	
+	
 	thinkCD = thinkCDMax;
 	
 	if(irandom_range(0, 99) < speedUpChanceOnThink){ moveSpeed = clamp(moveSpeed + 1, 0, speedUpMax); }
@@ -69,6 +72,16 @@ if(frozenTime > 0 || stunTime > 0){ xSpeed = 0; ySpeed = 0; }
 x += xSpeed;
 y += ySpeed;
 ySpeed += grav;
+
+
+if(blockBySpeed){
+	if(image_xscale < 0){ image_xscale *= -1; }
+	if(xSpeed < 0){ image_angle = -90; }
+	if(xSpeed > 0){ image_angle = 90; }
+	if(ySpeed > 0){ image_angle = 0; }
+	if(ySpeed < 0){ image_angle = 180; }
+}
+
 if(stopAtDis){
 	disToTarget -= moveSpeed;
 	if(disToTarget < 1){

@@ -54,6 +54,14 @@ function worldLoardPalace06(){
 			rockKind: noone, rockChance: 40, rockWait: 30,
 		},
 		{
+			initMobs: [objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth],
+			laterMobs: [objMobSpaceJellyOrng, objMobSpaceJellyOrng, objMobSpaceJellyOrng, objMobSpaceJellyOrng],
+			waitBetweenMobs: 60,
+			waitForPups: false,
+			floorItem: noone,
+			rockKind: noone, rockChance: 40, rockWait: 30,
+		},
+		{
 			initMobs: [],
 			laterMobs: [],
 			waitBetweenMobs: 30,
@@ -64,6 +72,14 @@ function worldLoardPalace06(){
 		{
 			initMobs: [objMobWormBig, objMobBat, objMobBat, objMobBat, objMobBat, objMobWormSniper, objMobWormSniper],
 			laterMobs: [objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobSpaceSnake, objMobSpaceSnake, objMobSpaceSnakePurple, objMobSpaceSnakePurple, objMobSpaceSnakePurple, objMobSpaceSnakePurple, objMobDragonBlue],
+			waitBetweenMobs: 25,
+			waitForPups: false,
+			floorItem: noone,
+			rockKind: noone, rockChance: 40, rockWait: 30,
+		},
+		{
+			initMobs: [objMobSpaceTroll, objMobSpaceTroll],
+			laterMobs: [objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJellyYel, objMobSpaceJellyYel],
 			waitBetweenMobs: 25,
 			waitForPups: false,
 			floorItem: noone,

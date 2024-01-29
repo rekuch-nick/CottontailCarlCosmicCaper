@@ -4,7 +4,7 @@ function worldLoardPalace10(){
 	var itm = pc.eventTrigger[Event.gotHole] ? noone : objPupHole;
 	pc.palaceWaves = [
 		{
-			initMobs: [objMobFrankFace],
+			initMobs: [objMobKnight],
 			laterMobs: [],
 			waitBetweenMobs: 60,
 			waitForPups: false,

@@ -15,6 +15,12 @@ function mobChooseMoveTarget(){
 		yTar = irandom_range(32, room_height - 32);
 	}
 	
+	if(driftMove == Move.randomOrth){
+		xTar = irandom_range(32, ww.roomWidth - 32);
+		yTar = irandom_range(32, room_height - 32);
+		if(choose(true, false)){ xTar = x; } else { yTar = y; }
+	}
+	
 	if(driftMove == Move.avoid){
 		do {
 			xTar = irandom_range(32, ww.roomWidth - 32);
@@ -39,6 +45,12 @@ function mobChooseMoveTarget(){
 	if(driftMove == Move.hunt){
 		xTar = pc.x;
 		yTar = pc.y;
+	}
+	
+	if(driftMove == Move.huntOrth){
+		xTar = pc.x;
+		yTar = pc.y;
+		if(choose(true, false)){ xTar = x; } else { yTar = y; }
 	}
 	
 	if(driftMove == Move.huntLine){

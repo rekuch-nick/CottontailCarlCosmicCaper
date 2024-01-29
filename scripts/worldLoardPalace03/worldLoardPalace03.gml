@@ -22,7 +22,7 @@ function worldLoardPalace03(){
 		},
 		{
 			initMobs: [objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb, objMobSpaceBulb],
-			laterMobs: [objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJelly],
+			laterMobs: [objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJellyYel],
 			waitBetweenMobs: 120,
 			waitForPups: false,
 			floorItem: noone,
@@ -75,6 +75,14 @@ function worldLoardPalace03(){
 			waitForPups: true,
 			floorItem: noone,
 			rockKind: objSpaceRock, rockChance: 80, rockWait: 90,
+		},
+		{
+			initMobs: [objMobDesertFace],
+			laterMobs: [],
+			waitBetweenMobs: 60,
+			waitForPups: true,
+			floorItem: noone,
+			rockKind: objSpaceRock, rockChance: 60, rockWait: 90,
 		},
 		{
 			initMobs: [objMobDragonYellow],

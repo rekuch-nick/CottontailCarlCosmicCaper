@@ -426,6 +426,7 @@ function playerStepPlay(){
 		if(sp < spMax && eventTrigger[Event.gotCape]){ canSlash = true; }
 		var val = 1;
 		if(eventTrigger[Event.gotCape2]){ val += 3; }
+		if(shieldBreakTime > 0){ val = 0; }
 		sp = clamp(sp + val, -900, spMax);
 		if(sp >= spMax && canSlash){
 			playerKnightSlash();

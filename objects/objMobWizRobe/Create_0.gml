@@ -4,7 +4,7 @@ hp = 60;
 hpMax = 60;
 
 shotKind = objMobShot2;
-shootCDMax = 30;
+shootCDMax = 45;
 shootCD = shootCDMax;
 
 thinkCDMax = 150;

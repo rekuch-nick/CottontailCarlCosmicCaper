@@ -11,7 +11,7 @@ shootCD = shootCDMax - choose(0, 10, 20);
 bumpPow = 20;
 
 
-moveSpeed = 2;
+moveSpeed = 3;
 
 gridMove = false;
 driftMove = Move.stayTop;

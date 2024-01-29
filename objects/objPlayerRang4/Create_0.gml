@@ -12,7 +12,7 @@ rot = 15;
 passWall = true;
 
 isRang = true;
-bounces = 2;
+bounces = choose(2, 3);
 destroyOnHit = false;
 
 stunChance = 100;

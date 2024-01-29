@@ -9,5 +9,9 @@ if(harmlessWhileBlocking && blockTime > 0){ return; }
 inert = noone;
 hurtPlayer(bumpPow, false);
 pc.poisonTime = max(pc.poisonTime, bumpPoison);
-if(shieldBreaker){ pc.sp = -900; }
+if(shieldBreaker){ 
+	pc.sp = 0;
+	pc.shieldBreakTime = 30 * 20;
+	//pc.sp = -900; 
+}
 

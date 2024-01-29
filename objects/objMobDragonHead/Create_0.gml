@@ -4,7 +4,7 @@ hp = 175;
 hpMax = 175;
 
 shotKind = objMobShotTracer;
-shootCDMax = 50;
+shootCDMax = 60;
 shootCD = 40;
 //shotSwap = [objMobShotSilly, objMobShotBounce];
 
@@ -20,7 +20,7 @@ driftMove = Move.stayTop;
 thinkCDMax = 20;
 
 
-isDragon = true;
+//isDragon = true;
 canFreeze = false;
 
 

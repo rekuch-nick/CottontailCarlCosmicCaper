@@ -29,6 +29,7 @@ if(firstFrame){
 	
 	if(isFall){
 		xSpeed = 0;
+		if(fallDrift){ xSpeed = choose(-2, -1, 0, 1, 2); }
 		ySpeed = moveSpeed;
 		if(sprite_index == imgFrozenEffect){ ySpeed = irandom_range(-6, -4); }
 	}
@@ -67,7 +68,11 @@ if(irandom_range(0, 99) < quarterTurnChance){
 	}
 }
 
-
+if(isFall && fallHunt){
+	xSpeed = 0;
+	if(pc.x < x){ xSpeed = -3; }
+	if(pc.x > x){ xSpeed = 3; }
+}
 
 x += xSpeed;
 y += ySpeed;

@@ -24,3 +24,4 @@ isBasicShot = false;
 secType = Sec.burn;
 
 isFire = true;
+directionless = true;

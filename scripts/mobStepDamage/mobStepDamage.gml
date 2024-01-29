@@ -1,4 +1,17 @@
 function mobStepDamage(){
+	
+	if(headSpawn != noone){ 
+		if(	(headSpawnNum >= 3 && hp / hpMax < .75) ||
+			(headSpawnNum >= 2 && hp / hpMax < .5) ||
+			(headSpawnNum >= 1 && hp / hpMax < .25) ){
+		
+			headSpawnNum --;
+			instance_create_depth(x + choose(-64, 0, 64), y+choose(-64, 0, 64), depth, headSpawn);
+		}
+	}
+	
+	
+	
 	if(hp < 1){
 		
 		if(speedUpOnKill){ with(objMob){ if(speedUpOnKill){ moveSpeed ++; thinkCD = 0; } } }
@@ -30,9 +43,7 @@ function mobStepDamage(){
 			}
 		}
 		
-		if(headSpawn != noone){ repeat(headSpawnNum){
-			instance_create_depth(x + choose(-64, 0, 64), y+choose(-64, 0, 64), depth, headSpawn);
-		}}
+		
 	
 	
 		if(object_index == objMobEagle){ instance_create_depth(x, y, ww.layerE, objEagleLeave); }

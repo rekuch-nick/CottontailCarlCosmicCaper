@@ -4,6 +4,15 @@ if(!arrayContains(hitList, other)){
 	arrayAdd(hitList, other);
 	
 	if(other.basicImmunity && isBasicShot){ 
+		///plink sound effect
+	} else if (other.blockBySpeed && !directionless && (
+			(other.xSpeed < 0 && x < other.x) ||
+			(other.xSpeed > 0 && x > other.x) ||
+			(other.ySpeed < 0 && y < other.y) ||
+			(other.ySpeed > 0 && y > other.y) ) ){
+		///plink sound effect
+		
+		
 		
 	} else {
 		other.hurtTime = 20;
@@ -40,14 +49,16 @@ if(!arrayContains(hitList, other)){
 			
 			
 		} else {
-			if(bounces == 0 && object_index == objPlayerRang4){
-				bounces --;
-				instance_create_depth(other.x, other.y, ww.layerE, objLightning, {image_angle: 90});
-				other.hp -= 20;
-			}
+			
 			
 			xTar = pc.x; yTar = pc.y;
 			angleSpeed();
+		}
+		
+		if(bounces >= 1 && object_index == objPlayerRang4 && choose(true, false)){
+			bounces --;
+			instance_create_depth(other.x, other.y, ww.layerE, objLightning, {image_angle: 90});
+			other.hp -= 20;
 		}
 	}
 }

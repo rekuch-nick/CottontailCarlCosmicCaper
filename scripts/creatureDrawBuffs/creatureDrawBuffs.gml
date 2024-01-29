@@ -32,4 +32,12 @@ function creatureDrawBuffs(){
 		draw_sprite_stretched(imgStunEffect, irandom_range(0, 9), x-w/2, y-h/2, w, h);
 		draw_set_alpha(1);
 	}
+	
+	if(shieldBreakTime > 0){
+		draw_set_alpha(.5);
+		var w = abs(sprite_width);
+		var h = sprite_height;
+		draw_sprite_stretched(imgPlayerShieldBroken, irandom_range(0, 1), x-w/2, y-h/2, w, h);
+		draw_set_alpha(1);
+	}
 }

@@ -30,7 +30,7 @@ function worldLoardPalace05(){
 		},
 		{
 			initMobs: [objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat, objMobBat,objMobBat, objMobBat],
-			laterMobs: [objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJelly],
+			laterMobs: [objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJellyYel, objMobSpaceJellyYel],
 			waitBetweenMobs: 30,
 			waitForPups: false,
 			floorItem: noone,
@@ -39,6 +39,14 @@ function worldLoardPalace05(){
 		{
 			initMobs: [objMobWorm, objMobWorm, objMobWorm, objMobWorm, objMobWormSniper, objMobWormSniper],
 			laterMobs: [],
+			waitBetweenMobs: 30,
+			waitForPups: false,
+			floorItem: noone,
+			rockKind: noone, rockChance: 50, rockWait: 30,
+		},
+		{
+			initMobs: [objMobSpaceJellyOrng, objMobSpaceJellyOrng, objMobSpaceJellyOrng, objMobSpaceJellyOrng],
+			laterMobs: [objMobWormBig, objMobWormBig, objMobWormBig],
 			waitBetweenMobs: 30,
 			waitForPups: false,
 			floorItem: noone,
@@ -62,7 +70,7 @@ function worldLoardPalace05(){
 		},
 		{
 			initMobs: [objMobSpaceWitchBoss],
-			laterMobs: [],
+			laterMobs: [objMobSpaceJellyOrng, objMobSpaceJellyOrng],
 			waitBetweenMobs: 30,
 			waitForPups: true,
 			floorItem: noone,

@@ -123,7 +123,7 @@ function mobSpawn(){
 		}
 		
 		if(ww.inBiome == Zone.hills){
-			t = choose(objMobCrasher, objMobHopper);
+			t = choose(objMobCrasher, objMobHopper, objMobHopper);
 		}
 		
 		if(ww.inBiome == Zone.volcano){

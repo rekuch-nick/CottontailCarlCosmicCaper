@@ -96,6 +96,11 @@ function worldGetRoomCave(xxx, yyy){
 		worldGetCaveDuck();
 		ww.txt = "Pushing on gravestones is dangerous, but may prove worth it if you search carefully.";
 	}
+	if(xxx == 8 && yyy == 2){
+		worldGetCaveDuck();
+		ww.txt = "Quack";
+		//ww.txt = "Some monsters have shots that bounce around or follow you. Soemtimes the screen will fill up and make dodging seem impossible.\n\nA Wind Stone would be perfect in situations like that.";
+	}
 	if(xxx == 14 && yyy == 1){
 		ww.bmap[7, 6] = imgNPCMouse;
 		ww.txt = "The SPACE DOOR on the beach holds an incredible secret. Don't kill the pencil monster and something will happen.\n\nDon't tell them I told you.";

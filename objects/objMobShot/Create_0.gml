@@ -57,3 +57,6 @@ inertSprite = noone;
 dontMove = false;
 quarterTurnChance = 0;
 sprayOnQuarterTurn = 0;
+
+fallDrift = false;
+fallHunt = false;
