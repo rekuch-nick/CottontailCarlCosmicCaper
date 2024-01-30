@@ -147,6 +147,8 @@ if(gotIt){
 	if(sprite_index == imgPowderHorn2){ pc.eventTrigger[Event.gotPowderHorn2] = true; pc.eventTrigger[Event.gotPowderHorn] = true; }
 	
 	if(sprite_index == imgPupFeather){ pc.eventTrigger[Event.gotFeather] = true; }
+	if(sprite_index == imgLuckyCoin){ pc.eventTrigger[Event.gotLuckyCoin] = true; }
+	if(sprite_index == imgPupChair){ pc.eventTrigger[Event.gotChair] = true; }
 	if(sprite_index == imgPupPinwheel){ pc.eventTrigger[Event.gotPinwheel] = true; }
 	if(sprite_index == imgPupGlasses){ pc.eventTrigger[Event.gotGlasses] = true; }
 	if(sprite_index == imgPupPoisonVial){ pc.eventTrigger[Event.gotPoisonVial] = true; }

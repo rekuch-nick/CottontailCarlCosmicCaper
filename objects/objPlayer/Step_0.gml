@@ -1,4 +1,5 @@
-
+frames ++;
+if(frames > 60 * 1){ frames = 0; }
 
 playerInput();
 
@@ -30,6 +31,7 @@ if(ww.state == State.leaveSpace){ playerStepLeaveSpace(); }
 if(ww.state == State.dying){ playerStepDying(); }
 if(ww.state == State.surfStart){ playerStepSurfStarting(); }
 if(ww.state == State.surfGame){ playerStepSurf(); }
+if(ww.state == State.birdScene){ playerStepBirdScene(); }
 
 
 

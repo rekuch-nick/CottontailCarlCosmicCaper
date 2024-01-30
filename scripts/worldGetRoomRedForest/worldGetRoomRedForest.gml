@@ -2,8 +2,9 @@ function worldGetRoomRedForest(xxx, yyy){
 	
 	if(xxx == 3 && yyy == 6){
 		biome(Zone.redForest);
+		ww.secBlock = imgBushGrass; ww.secX = 5; ww.secY = 1; ww.secType = Sec.burn;
 		wmap("%%%%%%%%%%%%%%%");
-		wmap("%%%%%....%%..%%");
+		wmap("%%%%%=...%%..%%");
 		wmap("%%%%..........%");
 		wmap("%%............%");
 		wmap("%..............");
@@ -108,12 +109,13 @@ function worldGetRoomRedForest(xxx, yyy){
 	
 	if(xxx == 4 && yyy == 8){
 		biome(Zone.redForest);
+		ww.secBlock = imgBushRedGrass; ww.secX = 6; ww.secY = 5; ww.secType = Sec.burn;
 		wmap("%%%%%%...%%%%%%");
 		wmap("%%..........%%%");
 		wmap("%.........%%%%%");
 		wmap("%.........%%..%");
 		wmap("....%%%........");
-		wmap(".....%%........");
+		wmap(".....%=........");
 		wmap(".....%.........");
 		wmap(".........%%....");
 		wmap("%%.......%%...%");

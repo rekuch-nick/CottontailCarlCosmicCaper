@@ -29,7 +29,7 @@ function playerUseWand(){
 			blockMobSpawn = true; shootCD = 2;
 		} else if (playerOnArraySpot(drainLakeSpots)) {
 			with(objTile){
-				if(sprite_index == ww.waterKind){
+				if(sprite_index == ww.waterKind){ if(floor(x/64) != 14 && ( floor(y/64) != 0 && floor(y/64) != 11  ) ) {
 							
 					var t = instance_create_depth(x, y, depth, objTile);
 					if(floor(x/64) == ww.secX && floor(y/64) == ww.secY){
@@ -44,7 +44,7 @@ function playerUseWand(){
 					instance_destroy();
 					ww.lakeDrained = true;
 				}
-			}
+			}}
 		} else if (pc.xMap == 10 && pc.yMap == 5 && !pc.eventTrigger[Event.gotCarrot06]) {
 			with(objPup){ if(sprite_index == imgCarrot){
 				slowFall = 300;

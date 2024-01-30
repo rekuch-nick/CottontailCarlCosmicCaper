@@ -44,7 +44,19 @@ pc.featherCD = 0;
 
 pc.holdWandTime = 0;
 
-
+	/*
+pc.eventTrigger[Event.palace1Clear] = true;
+pc.eventTrigger[Event.palace2Clear] = true;
+pc.eventTrigger[Event.palace3Clear] = true;
+pc.eventTrigger[Event.palace4Clear] = true;
+pc.eventTrigger[Event.palace5Clear] = true;
+pc.eventTrigger[Event.palace6Clear] = true;
+pc.eventTrigger[Event.palace7Clear] = true;
+pc.eventTrigger[Event.palace8Clear] = true;
+pc.eventTrigger[Event.palace9Clear] = true;
+pc.eventTrigger[Event.palace10Clear] = true;
+pc.eventTrigger[Event.palace11Clear] = true;
+	*/
 
 
 pc.fullHealing = false;
@@ -65,7 +77,8 @@ pc.killMemory = [
 ];
 
 
-
+pc.birdSceneStep = 0;
+pc.birdSceneTime = 0;
 
 pc.slowDown = false;
 

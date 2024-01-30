@@ -16,6 +16,8 @@ pushingTime = 0;
 //xMap = 10; yMap = 7;
 	//xMap = 4; yMap = 7;
 
+frames = 0;
+
 xWarpPoint = x;
 yWarpPoint = y;
 blockMobSpawn = false;
@@ -79,6 +81,7 @@ drainLakeSpots = [
 	{a: 11, b: 6},
 	{a: 14, b: 1},
 	{a: 18, b: 4},
+	{a: 18, b: 1},
 ];
 
 
@@ -124,6 +127,7 @@ swordDashTime = 0;
 xSwordDash = 0; 
 ySwordDash = 0;
 
+noMoveTime = 0;
 
 playerReset();
 
@@ -190,6 +194,8 @@ enum Event {
 	gotPowderHorn2,
 	gotStrangePaw,
 	gotSword,
+	gotLuckyCoin,
+	gotChair,
 	
 	haveBombs,
 	
@@ -246,6 +252,8 @@ enum Event {
 	gotCarrotDragonDoubleGreen,
 	gotCarrotWitchBoss,
 	gotCarrotDragonBlack,
+	
+	gotBird,
 }
 
 shotPower = noone;

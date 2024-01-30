@@ -278,6 +278,7 @@ function worldGetRoomHills(xxx, yyy){
 	
 	if(xxx == 13 && yyy == 1){
 		biome(Zone.hills);
+		ww.canLion = false; ww.noMobs = true;
 		wmap("///////////////");
 		wmap("//////////::://");
 		wmap("........./::://");

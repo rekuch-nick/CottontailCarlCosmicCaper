@@ -39,10 +39,23 @@ if(pc.xPushBlock == xSpot && pc.yPushBlock == ySpot){
 	}
 }
 
+var moved = false;
 var ms = pc.eventTrigger[Event.gotCrowbar] ? 16 : 2;
-if(x < xSpot * 64){ x += ms; pc.cantStair = 1; }
-if(x > xSpot * 64){ x -= ms; pc.cantStair = 1; }
-if(y < ySpot * 64){ y += ms; pc.cantStair = 1; }
-if(y > ySpot * 64){ y -= ms; pc.cantStair = 1; }
+if(x < xSpot * 64){ x += ms; pc.cantStair = 1; moved = true; }
+if(x > xSpot * 64){ x -= ms; pc.cantStair = 1; moved = true; }
+if(y < ySpot * 64){ y += ms; pc.cantStair = 1; moved = true; }
+if(y > ySpot * 64){ y -= ms; pc.cantStair = 1; moved = true; }
+
+if(moved && xSpot == x / 64 && ySpot == y / 64){
+	if(ww.fmap[xSpot, ySpot] != noone && ww.fmap[xSpot, ySpot].sprite_index = imgBlockDone){
+		instance_create_depth(x + 8, y + 8, ww.layerE, objChip);
+		instance_create_depth(x + 8, y + 56, ww.layerE, objChip);
+		instance_create_depth(x + 56, y + 8, ww.layerE, objChip);
+		instance_create_depth(x + 56, y + 56, ww.layerE, objChip);
+		ww.bmap[xSpot, ySpot] = noone;
+		instance_destroy();
+	}
+}
+
 
 

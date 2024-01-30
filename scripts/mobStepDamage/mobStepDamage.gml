@@ -22,6 +22,13 @@ function mobStepDamage(){
 		if(irandom_range(0, 99) < dropChance || (dropsBombs && pc.bombCounter >= 8 && dropChance > 0) ){
 			var d = instance_create_depth(x, y, ww.layerP, mobRollDrop());
 			if(dropEventNumber != noone){ d.eventNumber = dropEventNumber; }
+			
+			if(pc.eventTrigger[Event.gotLuckyCoin] && d.sprite_index == imgCoin && irandom_range(1, 4) == 1){
+				instance_create_depth(x + choose(-15, 15), y + choose(-15 + 15), ww.layerP, objPupCoin);
+				if(irandom_range(1, 4) == 1){
+					instance_create_depth(x + choose(-25, 25), y + choose(-25 + 25), ww.layerP, objPupCoin);
+				}
+			}
 		}
 		
 		if(isDragon){ with(objMobShot){ instance_destroy(); }}
@@ -47,6 +54,13 @@ function mobStepDamage(){
 	
 	
 		if(object_index == objMobEagle){ instance_create_depth(x, y, ww.layerE, objEagleLeave); }
+		
+		if(object_index == objMobDarkness){ with(objBlock){
+			if(sprite_index == imgEggShellsBlock){
+				ww.bmap[floor(x / 64), floor(y / 64)] = noone;
+				instance_destroy();
+			}
+		}}
 		
 		instance_destroy();
 	}

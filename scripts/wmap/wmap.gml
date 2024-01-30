@@ -129,12 +129,15 @@ function wmap(s){
 		
 		if(c == ":"){ ww.fmap[a, b] = imgBlackTile; }
 		if(c == "+"){ ww.fmap[a, b] = imgLadder; }
+		if(c == "o"){ ww.fmap[a, b] = imgBridge; }
 		
 		if(c == "W"){ ww.fmap[a, b] = imgWarpSpot; }
 		
 		
 		if(c == "z"){ ww.fmap[a, b] = imgCheeseFloor; }
 		if(c == "Z"){ ww.bmap[a, b] = imgCheeseBlock; }
+		
+		if(c == "?"){ ww.fmap[a, b] = imgBlockDone; }
 		
 		
 		

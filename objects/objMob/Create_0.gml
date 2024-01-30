@@ -127,3 +127,8 @@ thinkFasterOnThinkChance = 0;
 thinkFasterMin = 20;
 blockBySpeed = false;
 ignoreStatus = false;
+
+overImage = noone;
+overFrame = 0;
+overFrameMax = 3;
+overFrameChance = 20;

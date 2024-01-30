@@ -35,8 +35,9 @@ function worldGetRoomBeach(xxx, yyy){
 	if(xxx == 12 && yyy == 9){
 		biome(Zone.beach);
 		ww.mobList = [5, objMobBeachTroll, objMobBeachTroll, objMobBeachTroll, objMobBeachTroll, objMobBeachTroll];
+		ww.secBlock = imgPalmTreeSand; ww.secX = 5 ww.secY = 1; ww.secType = Sec.burn;
 		wmap("ppppppppppppppp");
-		wmap("pp.............");
+		wmap("ppppp=pppp.....");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
@@ -68,11 +69,12 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 14 && yyy == 9){
 		biome(Zone.beach);
+		ww.secBlock = imgPalmTreeSand; ww.secX = 5 ww.secY = 4; ww.secType = Sec.burn;
 		wmap("ppppppppppppppp");
 		wmap("ppppppppppppppp");
 		wmap("ppppppppppppppp");
 		wmap("ppppppppppp....");
-		wmap("pppppppp.......");
+		wmap("ppppp=pp.......");
 		wmap("ppp............");
 		wmap("...............");
 		wmap("...............");
@@ -84,9 +86,10 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 15 && yyy == 9){
 		biome(Zone.beach);
+		ww.secBlock = imgPalmTreeSand; ww.secX = 11; ww.secY = 2; ww.secType = Sec.burn;
 		wmap("ppppppppppppppp");
 		wmap("ppppppppppppppp");
-		wmap("ppppppppppppppp");
+		wmap("ppppppppppp=ppp");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
@@ -119,9 +122,10 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 17 && yyy == 9){
 		biome(Zone.beach);
+		ww.secBlock = imgPalmTreeSand; ww.secX = 11; ww.secY = 2; ww.secType = Sec.burn;
 		wmap("ppppp%..%%%%ppp");
 		wmap("pppppp..%%ppppp");
-		wmap("pppppp..ppppppp");
+		wmap("pppppp..ppp=ppp");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
@@ -187,9 +191,11 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 18 && yyy == 6){
 		biome(Zone.beach);
+		ww.secBlock = imgRockBrownSand; ww.secX = 7; ww.secY = 2; ww.secType = Sec.push;
+		ww.pushableList = [{a:7, b:2}];
 		wmap("pp##########~~~");
 		wmap("pp###...####~~~");
-		wmap("%p.#...#..#.~~~");
+		wmap("%p.#...=..#.~~~");
 		wmap("pp...#......~~~");
 		wmap("pp..........~~~");
 		wmap("............~~~");

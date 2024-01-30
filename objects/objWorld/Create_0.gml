@@ -67,6 +67,7 @@ enum State {
 	surfStart,
 	surfGame,
 	surfEnd,
+	birdScene,
 }
 
 enum Zone {

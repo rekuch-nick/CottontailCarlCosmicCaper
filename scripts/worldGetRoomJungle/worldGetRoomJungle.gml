@@ -18,10 +18,11 @@ function worldGetRoomJungle(xxx, yyy){
 	
 	if(xxx == 16 && yyy == 8){
 		biome(Zone.jungle);
+		ww.secBlock = imgBushGrass; ww.secX = 7; ww.secY = 3; ww.secType = Sec.burn;
 		wmap("%pppp%pp%%%%ppp");
 		wmap("%p%p%ppp%%ppppp");
 		wmap("...............");
-		wmap("....p..%..p....");
+		wmap("....p..=..p....");
 		wmap("...............");
 		wmap("....p..p..%....");
 		wmap("...............");
@@ -70,12 +71,12 @@ function worldGetRoomJungle(xxx, yyy){
 		wmap("%pppp%%%%%%%ppp");
 		wmap("%p..........%pp");
 		wmap("p..............");
-		wmap("p..............");
-		wmap("p.............%");
-		wmap("p.............%");
-		wmap("p............pp");
-		wmap("p...........pp%");
-		wmap("p..............");
+		wmap("p..ssssss......");
+		wmap("p...ssssssss..%");
+		wmap("p.ssss///ss...%");
+		wmap("p...ss/=/ss..pp");
+		wmap("p..sssssss..pp%");
+		wmap("p...s.sss.s....");
 		wmap("p..............");
 		wmap("ppp%ppp%%%%%%p%p");
 		wmap("p%pppppppp%%pp%");
@@ -85,30 +86,31 @@ function worldGetRoomJungle(xxx, yyy){
 	if(xxx == 14 && yyy == 7){
 		biome(Zone.jungle);
 		wmap("%pppp%%%%%%%ppp");
-		wmap("%p..........%pp");
-		wmap("p..............");
-		wmap("p..............");
-		wmap("p..............");
-		wmap("p..............");
-		wmap("%..............");
-		wmap("%..............");
-		wmap("%..............");
-		wmap("p..............");
-		wmap("pp...........pp");
+		wmap("%p..p[[...pp%pp");
+		wmap("p...[.[.[.[....");
+		wmap("p...%[.[..[....");
+		wmap("p.....[..[%....");
+		wmap("p......[[.p....");
+		wmap("%%pp%...[[p....");
+		wmap("%pp=%..[..p....");
+		wmap("%p...?....p....");
+		wmap("ppp%%....%%....");
+		wmap("pppp%%p%p%p..pp");
 		wmap("p%...........pp");
 	}
 	
 	if(xxx == 15 && yyy == 7){
 		biome(Zone.jungle);
+		ww.secBlock = imgBushGrass; ww.secX = 7; ww.secY = 5; ww.secType = Sec.burn;
 		wmap("%pppp%%%%%%%ppp");
-		wmap("%p..........%pp");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
+		wmap("%p%...%p...p%pp");
+		wmap("..p........p%..");
+		wmap("..p........[...");
+		wmap("..p...%p...[...");
+		wmap("..[...p=...%...");
+		wmap("..[........p...");
+		wmap("..%.%....%p....");
+		wmap("...%%%%ppp.....");
 		wmap("...............");
 		wmap("pp...........%p");
 		wmap("p%...........pp");
@@ -116,30 +118,30 @@ function worldGetRoomJungle(xxx, yyy){
 	
 	if(xxx == 16 && yyy == 7){
 		biome(Zone.jungle);
-		wmap("%pppp%%%%%%%ppp");
-		wmap("%p..........%pp");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("pp...........pp");
-		wmap("p%pppp%%p%p%%pp");
+		wmap("%pppp%%%~%%%ppp");
+		wmap("%p...%..~...%pp");
+		wmap("........~.....%");
+		wmap("........~....p%");
+		wmap(".......~~.....%");
+		wmap("...%...~......p");
+		wmap(".......o.......");
+		wmap(".......o.......");
+		wmap(".......~...%...");
+		wmap(".......~.......");
+		wmap("pp....~~.....pp");
+		wmap("p%pppp~%p%p%%pp");
 	}
 	
 	if(xxx == 17 && yyy == 7){
 		biome(Zone.jungle);
-		wmap("%p...........pp");
+		wmap("%p....%......pp");
 		wmap("%p...........%p");
-		wmap(".............pp");
-		wmap("............ppp");
-		wmap("...........%ppp");
-		wmap("........p%pppp%");
+		wmap("p............pp");
+		wmap("pp...%......ppp");
+		wmap("%..........%ppp");
+		wmap("p.......p%pppp%");
 		wmap("...........p%pp");
-		wmap("...........p%pp");
+		wmap("....%......p%pp");
 		wmap(".........ppp%p%");
 		wmap(".......%%%pp%p%");
 		wmap("pp...ppp%%pppp%");
@@ -156,10 +158,10 @@ function worldGetRoomJungle(xxx, yyy){
 		wmap(".....p%.....sss");
 		wmap(".....%%..s...ss");
 		wmap(".....p%....s..p");
-		wmap(".....p%.......%");
-		wmap("......%.......%");
+		wmap(".....p........%");
+		wmap("..............%");
 		wmap("pp...........pp");
-		wmap("p%...........pp");
+		wmap("p%....p......pp");
 	}
 	
 	if(xxx == 16 && yyy == 6){
@@ -169,7 +171,7 @@ function worldGetRoomJungle(xxx, yyy){
 		wmap("%p...........%p");
 		wmap("...............");
 		wmap("...............");
-		wmap("......////.....");
+		wmap(".....p////.....");
 		wmap("....///////....");
 		wmap("....///////....");
 		wmap("...../=//......");

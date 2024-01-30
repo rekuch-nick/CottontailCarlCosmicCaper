@@ -311,4 +311,12 @@ if(hp < hpMax){ inert = noone; }
 hpLast = hp;
 
 
+if(overImage != noone){
+	if(irandom_range(0, 99) < overFrameChance){
+		overFrame ++;
+		if(overFrame > overFrameMax){ overFrame = 0; }
+	}
+}
+
+
 depth = ww.layerM - floor(y / 10);

@@ -11,6 +11,7 @@ function playerStepPlay(){
 	creatureBuffDecay();
 	
 	if(inSpace){ playerStepPlaySpace(); }
+	noMoveTime = clamp(noMoveTime + 1, 0, 30 * 30);
 	
 	
 	if(invulnTime > 0){ invulnTime --; }
@@ -18,6 +19,7 @@ function playerStepPlay(){
 	
 	
 	playerEventCheck();
+	
 	
 	
 	if(xIn < 0 && image_xscale > 0){ image_xscale *= -1; }
@@ -36,6 +38,8 @@ function playerStepPlay(){
 	
 	xSpeed = xIn * spd;
 	ySpeed = yIn * spd;
+	
+	if(xSpeed != 0 || ySpeed != 0){ noMoveTime = 0; }
 	
 	if(xPush != 0){
 		pushingTime = 0;
@@ -185,6 +189,8 @@ function playerStepPlay(){
 			
 		// beams
 	if(mouseLHold){
+		noMoveTime = 0;
+		
 		if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
 		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
 		if(shootCD < 1){
@@ -218,6 +224,8 @@ function playerStepPlay(){
 		}
 		
 	} else if(mouseRHold){
+		noMoveTime = 0;
+		
 		if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
 		if(mouse_x > x && image_xscale < 0){ image_xscale *= -1; }
 		
@@ -412,6 +420,7 @@ function playerStepPlay(){
 	var mpGain = .01;
 	if(eventTrigger[Event.gotMPShell]){ mpGain += .01; }
 	if(eventTrigger[Event.gotMPShell2]){ mpGain += .01; }
+	if(eventTrigger[Event.gotChair] && noMoveTime > 30 * 4){ mpGain = 1; }
 	mp = clamp(mp + mpGain, 0, mpMax);
 	
 	if(eventTrigger[Event.gotPowderHorn2] && bombs < bombsMax()){
@@ -420,8 +429,8 @@ function playerStepPlay(){
 			bombs ++;
 		}
 	}
-	
-	if(eventTrigger[Event.gotShield]){
+	//if(eventTrigger[Event.gotChair] && noMoveTime > 30 * 4){
+	if(eventTrigger[Event.gotShield]  ){
 		var canSlash = false;
 		if(sp < spMax && eventTrigger[Event.gotCape]){ canSlash = true; }
 		var val = 1;

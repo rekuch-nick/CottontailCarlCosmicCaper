@@ -29,6 +29,11 @@ if(blockFrame != noone && blockTime > 0){
 } else {
 	draw_sprite_ext(sprite_index, image_index, a, b, image_xscale, image_yscale, image_angle, c_white, image_alpha);
 }
+
+if(overImage != noone){
+	draw_sprite_ext(overImage, overFrame, a, b, image_xscale, image_yscale, image_angle, c_white, image_alpha);
+}
+
 creatureDrawBuffs();
 
 

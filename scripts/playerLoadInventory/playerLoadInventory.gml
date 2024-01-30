@@ -33,7 +33,10 @@ function playerLoadInventory(){
 	s.eve[1] = Event.gotMoreShot2; s.img[1] = imgPupMoreCharm2;
 	s.desc[1] = "This charm will increase the number of beams from your lazer eyes.";
 	
-	
+	var s = instance_create_depth(8 * 64, 2 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotLuckyCoin; s.img[0] = imgLuckyCoin;
+	s.desc[0] = "Find more coins";
+
 	var s = instance_create_depth(9 * 64, 2 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotCoinBag; s.img[0] = imgCoinBag;
 	s.desc[0] = "With this, you can hold up to 999 coins instead of just 255.";
@@ -150,6 +153,10 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotPowderHorn; s.img[0] = imgPowderHorn; s.desc[0] = "Your bombs have larger explosions.";
 	s.eve[1] = Event.gotPowderHorn2; s.img[1] = imgPowderHorn2; s.desc[1] = "Your bombs have larger explosions. Gain a bomb every 15 seconds.";
 	
+	var s = instance_create_depth(11 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotChair; s.img[0] = imgPupChair;
+	s.desc[0] = "Recover MP if you stand still for a few seconds.";
+	
 	var s = instance_create_depth(12 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotStrangePaw; s.img[0] = imgPupStrangePaw;
 	s.desc[0] = "Can store more MP.";
@@ -218,45 +225,56 @@ function playerLoadInventory(){
 	var s = instance_create_depth(2 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace1Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(3 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace2Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(4 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace3Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(5 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace4Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(6 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace5Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(7 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace6Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(8 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace7Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(9 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace8Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(10 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace9Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(11 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace9Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(12 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.palace9Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
+	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 }

@@ -176,6 +176,7 @@ function worldGetRoomDark(xxx, yyy){
 	}
 	if(xxx == 18 && yyy == 1){
 		biome(Zone.darkHills);
+		ww.secX = 13; ww.secY = 6;
 		wmap("//.........~~~~");
 		wmap("//.........~~~~");
 		wmap("//...........~~");
@@ -185,7 +186,7 @@ function worldGetRoomDark(xxx, yyy){
 		wmap("//...........~~");
 		wmap("//...........~~");
 		wmap("//...........~~");
-		wmap("//...........~~");
+		wmap("//............~");
 		wmap("//.........~~~~");
 		wmap("//.........~~~~");
 	}
