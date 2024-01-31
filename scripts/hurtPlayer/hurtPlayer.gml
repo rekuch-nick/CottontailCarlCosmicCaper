@@ -19,11 +19,11 @@ function hurtPlayer(dmg, isBlockableShot){
 	
 	
 	if(pc.eventTrigger[Event.gotRing3]){
-		dmg = dmg * .25;
+		dmg = dmg * .85;
 	} else if(pc.eventTrigger[Event.gotRing2]){
-		dmg = dmg * .5;
+		dmg = dmg * .7;
 	} else if(pc.eventTrigger[Event.gotRing1]){
-		dmg = dmg * .75;
+		dmg = dmg * .55;
 	}
 	
 	

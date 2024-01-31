@@ -200,6 +200,12 @@ function worldGetRoomCave(xxx, yyy){
 		|| (xxx == 6 && yyy == 7) 
 		|| (xxx == 1 && yyy == 2) 
 		|| (xxx == 1 && yyy == 3) 
+		|| (xxx == 15 && yyy == 3) 
+		|| (xxx == 17 && yyy == 3) 
+		|| (xxx == 15 && yyy == 7) 
+		|| (xxx == 16 && yyy == 8) 
+		|| (xxx == 8 && yyy == 0) 
+		|| (xxx == 8 && yyy == 1) 
 		){ // dog gifts
 		ww.bmap[7, 5] = imgNPCDog;
 		if(ww.caveCoins[pc.xMap, pc.yMap] > 0){
@@ -219,6 +225,25 @@ function worldGetRoomCave(xxx, yyy){
 	worldGetRoomCaveCarrot(xxx, yyy, 0, 4, Event.gotCarrot13);
 	worldGetRoomCaveCarrot(xxx, yyy, 2, 1, Event.gotCarrot14);
 	worldGetRoomCaveCarrot(xxx, yyy, 7, 6, Event.gotCarrot15);
+	worldGetRoomCaveCarrot(xxx, yyy, 12, 1, Event.gotCarrot17);
+	worldGetRoomCaveCarrot(xxx, yyy, 16, 3, Event.gotCarrot18);
+	worldGetRoomCaveCarrot(xxx, yyy, 12, 9, Event.gotCarrot19);
+	worldGetRoomCaveCarrot(xxx, yyy, 14, 9, Event.gotCarrot20);
+	worldGetRoomCaveCarrot(xxx, yyy, 15, 9, Event.gotCarrot21);
+	worldGetRoomCaveCarrot(xxx, yyy, 2, 2, Event.gotCarrot22);
+	worldGetRoomCaveCarrot(xxx, yyy, 0, 3, Event.gotCarrot23);
+	
+	
+	
+	if( (xxx == 6 && yyy == 6) ){ // chair sloth
+		ww.bmap[7, 5] = imgNPCSloth;
+		if(pc.eventTrigger[Event.gotChair]){
+			ww.txt = "It's important to rest from time to time.";
+		} else {
+			ww.txt = "When your MP is low, stand still for a moment to sit down.";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupChair);
+		}
+	}
 	
 	
 	if( (xxx == 7 && yyy == 3) ){ // rang cat
@@ -232,6 +257,15 @@ function worldGetRoomCave(xxx, yyy){
 	}
 	
 	
+	if( (xxx == 1 && yyy == 0) ){ // cross mouse
+		ww.bmap[7, 5] = imgNPCMouse2;
+		if(pc.eventTrigger[Event.gotCross]){
+			ww.txt = "We're all counting on you.";
+		} else {
+			ww.txt = "Please take this. It will protect you from skeletons.";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupCross);
+		}
+	}
 	
 	if( xxx == 8 && yyy = 5 ){ //bee shop
 		ww.bmap[2, 5] = imgNPCBee; ww.bmap[3, 5] = imgNPCBee; ww.bmap[5, 5] = imgNPCBee; ww.bmap[7, 5] = imgNPCBee; ww.bmap[8, 5] = imgNPCBee; ww.bmap[10, 5] = imgNPCBee; ww.bmap[11, 5] = imgNPCBee; ww.bmap[13, 5] = imgNPCBee;

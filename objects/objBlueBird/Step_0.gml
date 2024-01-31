@@ -1,5 +1,6 @@
 if(!pc.eventTrigger[Event.gotBird]){ return; }
 if(!ww.state == State.play){ return; }
+if(pc.inSpace){ return; }
 
 x = pc.x;
 y = pc.y - 100;

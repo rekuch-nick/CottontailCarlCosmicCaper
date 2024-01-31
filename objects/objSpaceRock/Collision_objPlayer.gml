@@ -12,6 +12,6 @@ if(blockPlayer){
 	
 }
 
-if(slowPlayer){
+if(slowPlayer && !pc.eventTrigger[Event.gotWax]){
 	pc.slowDown = true;
 }

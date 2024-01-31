@@ -43,6 +43,15 @@ if(thinkCD < 1){
 	
 	if(irandom_range(0, 99) < speedUpChanceOnThink){ moveSpeed = clamp(moveSpeed + 1, 0, speedUpMax); }
 	
+	if(irandom_range(0, 99) < forceBlockChanceOnThink){
+		var xx = floor(x/64); var yy = floor(y/64);
+		if(inBoundsTile(xx, yy)){
+			if(ww.bmap[xx, yy] == noone){
+				ww.bmap[xx, yy] = instance_create_depth(xx * 64, yy * 64, ww.layerB - yy, objBlockForce);
+			}
+		}
+	}
+	
 	if(turnOnThink){
 		image_angle += choose(90, -90);
 	}
@@ -148,6 +157,9 @@ if(shotKind != noone && frozenTime < 1 && stunTime < 1){
 		if(increaseShootSpeed){
 			shootCDMax = clamp(shootCDMax - 4, increaseShootSpeedMin, shootCD);
 		}
+		if(randomizeShootMax){
+			shootCD = irandom_range(randomizeShootMaxMin, randomizeShootMaxMax);
+		}
 		
 		if(shotClusterMax > 0){
 			if(shotCuster > 0){
@@ -159,7 +171,12 @@ if(shotKind != noone && frozenTime < 1 && stunTime < 1){
 		}
 		
 		repeat(shootRepeat){
-			var s = instance_create_depth(x, y+yJump, ww.layerE, shotKind);
+			var xx = x; var yy = y;
+			if(shootOffsetRange != 0){
+				xx += irandom_range(-shootOffsetRange, shootOffsetRange);
+				yy += irandom_range(-shootOffsetRange, shootOffsetRange);
+			}
+			var s = instance_create_depth(xx, yy+yJump, ww.layerE, shotKind);
 			s.dropChance = 0;
 		}
 		
@@ -188,7 +205,7 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 			pc.stunTime = max(pc.stunTime, 20);
 		}
 		
-		if(spec == objMobShotFire){ repeat(specNum){
+		if(spec == objMobShotFire || spec == objMobShotFireDark){ repeat(specNum){
 			var a = irandom_range(0, 14);
 			var b = irandom_range(0, 12);
 			instance_create_depth(a*64+32, b*64+32, ww.layerE, spec);
@@ -250,9 +267,26 @@ if(blockFrame != noone){
 			instance_create_depth(x + irandom_range(-64, 64), y + 64, ww.layerE, objDirtChip);
 			blockTime ++;
 		}
+		
+		if(object_index == objMobDragonWood){
+			regen = .5;
+			thinkCD = 0;
+			driftMove = Move.centerish;
+			if(irandom_range(1, 6) == 1){ instance_create_depth(irandom_range(16, ww.roomWidth-16), 32, ww.layerE, objMobShotFall2); }
+		}
+		
 	} else {
 		blockCD --;
-		xSpeed = 0; ySpeed = 0;
+		
+		if(object_index == objMobDragonWood){
+			driftMove = Move.randomPoint;
+			regen = 0;
+		} else {
+			xSpeed = 0; ySpeed = 0;
+		}
+		
+		
+		
 		if(blockCD < 1){
 			blockCD = blockCDMax;
 			blockTime = blockCDMax;
@@ -266,6 +300,13 @@ if(shatterAtHalf && hp / hpMax <= .5){
 	if(object_index == objMobGolemBoss){
 		shotKind = objMobShotRandom;
 		shootRepeat = 8;
+	} else if (object_index == objMobDragonBlack) {
+		sprite_index = imgMobDragonBlackShift;
+		moveSpeed -= 1;
+		shotKind = objMobShot2;
+		shootCDMax = 17;
+		regen = .5;
+		repeat(10){ instance_create_depth(x, y, ww.layerE, objMobShotRandom); }
 	} else {
 		repeat(20){ instance_create_depth(x, y, ww.layerE, objMobShotRandom); }
 	}

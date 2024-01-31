@@ -31,6 +31,7 @@ if(firstFrame){
 		xSpeed = 0;
 		if(fallDrift){ xSpeed = choose(-2, -1, 0, 1, 2); }
 		ySpeed = moveSpeed;
+		if(fallBounce){ ySpeed = -6; grav = 1; gravMax = 26; }
 		if(sprite_index == imgFrozenEffect){ ySpeed = irandom_range(-6, -4); }
 	}
 	
@@ -42,6 +43,9 @@ if(firstFrame){
 
 if(inertTime > 0){
 	inertTime --;
+	if(inertTime == 0 && inertOver != noone){
+		instance_create_depth(x, y, depth, inertOver);
+	}
 	return;
 }
 
@@ -77,6 +81,9 @@ if(isFall && fallHunt){
 x += xSpeed;
 y += ySpeed;
 ySpeed += grav;
+if(gravMax != 0 && ySpeed > gravMax){
+	ySpeed = gravMax;
+}
 
 if(bounce){
 	while(x < 0 || y < 0 || x >= ww.roomWidth || y >= room_height){

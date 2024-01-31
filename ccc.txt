@@ -12,15 +12,15 @@ philo stone
 
 
 //////////
-palace 1 - sparce ; map
-palace 2 - desert ; charge charm
-palace 3 - long grass ; wind stone
-palace 4 - red forest ; magnet
-palace 5 - snow ; ice stone 
-palace 6 - beach (ice locked) ; wand
-palace 7 - grave (wand locked) ; shield2
-palace 8 - hills ; cauldren 2
-palace 9 - deep forest
+palace 1 - sparce ; map >green
+palace 2 - desert ; charge charm >blue
+palace 3 - long grass ; wind stone >yellow
+palace 4 - red forest ; magnet >yellow stag
+palace 5 - snow ; ice stone  >ice
+palace 6 - beach (ice locked) ; wand >red
+palace 7 - grave (wand locked) ; shield2 >hydra
+palace 8 - hills ; cauldren 2 >purp
+palace 9 - deep forest		>wood
 palace 10 - volcano ; portal
 palace 11 - dark (wand locked, portal locked)
 

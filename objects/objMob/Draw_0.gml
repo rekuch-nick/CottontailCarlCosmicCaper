@@ -35,6 +35,9 @@ if(overImage != noone){
 }
 
 creatureDrawBuffs();
+if(object_index == objMobDragonWood && blockTime > 0){
+	draw_sprite_ext(imgMobDragonLeafShield, 0, x, y, image_xscale, image_yscale, choose(90, 0, -90, 180), c_white, choose(.4, .5));
+}
 
 
-
+//draw_text(x, y, string(x) + ", " + string(y));

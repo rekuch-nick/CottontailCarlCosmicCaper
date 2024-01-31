@@ -17,6 +17,14 @@ if(healingC2){
 	mp = clamp(mp + 1, 0, mpMax);
 	if(hp >= hpMax / 2 && mp >= mpMax){ healingC2 = false; }
 }
+if(healingHP > 0){
+	healingHP --;
+	hp = clamp(hp + 1, 0, hpMax);
+}
+if(healingMP > 0){
+	healingMP --;
+	mp = clamp(mp + 1, 0, mpMax);
+}
 
 
 if(ww.state == State.rocketing){ playerStepRocket(); }

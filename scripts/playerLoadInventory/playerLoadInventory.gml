@@ -153,6 +153,10 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotPowderHorn; s.img[0] = imgPowderHorn; s.desc[0] = "Your bombs have larger explosions.";
 	s.eve[1] = Event.gotPowderHorn2; s.img[1] = imgPowderHorn2; s.desc[1] = "Your bombs have larger explosions. Gain a bomb every 15 seconds.";
 	
+	var s = instance_create_depth(10 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotWax; s.img[0] = imgPupWax;
+	s.desc[0] = "Blue space-gas won't slow you down any more.";
+	
 	var s = instance_create_depth(11 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotChair; s.img[0] = imgPupChair;
 	s.desc[0] = "Recover MP if you stand still for a few seconds.";
@@ -170,9 +174,9 @@ function playerLoadInventory(){
 	s.desc[1] = "Just holding this seashell causes your MP to recover faster.";
 	
 	var s = instance_create_depth(3 * 64, 6 * 64, hud.depth - 1, objItemTooltip);
-	s.eve[0] = Event.gotRing1; s.img[0] = imgPupRing; s.desc[0] = "Reduces damage taken by 25%.";
-	s.eve[1] = Event.gotRing2; s.img[1] = imgPupRing2; s.desc[1] = "Reduces damage taken by 50%.";
-	s.eve[2] = Event.gotRing3; s.img[2] = imgPupRing3; s.desc[2] = "Reduces damage taken by 75%.";
+	s.eve[0] = Event.gotRing1; s.img[0] = imgPupRing; s.desc[0] = "Reduces damage taken by 15%.";
+	s.eve[1] = Event.gotRing2; s.img[1] = imgPupRing2; s.desc[1] = "Reduces damage taken by 30%.";
+	s.eve[2] = Event.gotRing3; s.img[2] = imgPupRing3; s.desc[2] = "Reduces damage taken by 45%.";
 	
 	var s = instance_create_depth(4 * 64, 6 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotShield; s.img[0] = imgPlayerShield; s.desc[0] = "Blocks minor enemy shots once every 30 seconds.";
@@ -180,8 +184,8 @@ function playerLoadInventory(){
 	s.eve[2] = Event.gotShield3; s.img[2] = imgPlayerShield3; s.desc[2] = "Blocks minor enemy shots once every 30 seconds. 50% chance to stay up. Heal while up.";
 	
 	var s = instance_create_depth(5 * 64, 6 * 64, hud.depth - 1, objItemTooltip);
-	s.eve[0] = Event.gotCauldren1; s.img[0] = imgPupCauldren1; s.desc[0] = "Using any potion while under half HP will also heal you some.";
-	s.eve[1] = Event.gotCauldren2; s.img[1] = imgPupCauldren2; s.desc[1] = "Using any potion will restore MP and HP up to half.";
+	s.eve[0] = Event.gotCauldren1; s.img[0] = imgPupCauldren1; s.desc[0] = "Using any potion heals you for half your HP.";
+	s.eve[1] = Event.gotCauldren2; s.img[1] = imgPupCauldren2; s.desc[1] = "Using any potion will restore MP and half HP.";
 	s.eve[2] = Event.gotCauldren3; s.img[2] = imgPupCauldren3; s.desc[2] = "Using any potion will heal your HP and MP.";
 	
 	var s = instance_create_depth(6 * 64, 6 * 64, hud.depth - 1, objItemTooltip);

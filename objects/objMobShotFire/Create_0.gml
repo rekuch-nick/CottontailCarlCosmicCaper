@@ -1,7 +1,7 @@
 event_inherited();
 
 dontMove = true;
-pow = 20;
+pow = 25;
 
 inertTime = 60;
 inertSprite = imgInertShotWarning;
@@ -9,3 +9,5 @@ inertSprite = imgInertShotWarning;
 destroyOnHit = false;
 timeCD = 30 * 8;
 
+isBlockable = false;
+isWindDeflectable = false;

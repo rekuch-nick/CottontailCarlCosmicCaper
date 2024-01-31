@@ -22,6 +22,8 @@ pc.xMap = 10; pc.yMap = 7;
 		//pc.xMap = 18; pc.yMap = 9; ///
 
 
+pc.inOverworld = true; // ???
+
 pc.xWarpPoint = x;
 pc.yWarpPoint = y;
 pc.inOverworld = true;
@@ -44,24 +46,26 @@ pc.featherCD = 0;
 
 pc.holdWandTime = 0;
 
-	/*
-pc.eventTrigger[Event.palace1Clear] = true;
-pc.eventTrigger[Event.palace2Clear] = true;
-pc.eventTrigger[Event.palace3Clear] = true;
-pc.eventTrigger[Event.palace4Clear] = true;
-pc.eventTrigger[Event.palace5Clear] = true;
-pc.eventTrigger[Event.palace6Clear] = true;
-pc.eventTrigger[Event.palace7Clear] = true;
-pc.eventTrigger[Event.palace8Clear] = true;
-pc.eventTrigger[Event.palace9Clear] = true;
-pc.eventTrigger[Event.palace10Clear] = true;
-pc.eventTrigger[Event.palace11Clear] = true;
-	*/
+/*	
+pc.eventTrigger[Event.palace1Clear] = true;//
+pc.eventTrigger[Event.palace2Clear] = true;//
+pc.eventTrigger[Event.palace3Clear] = true;//
+pc.eventTrigger[Event.palace4Clear] = true;//
+pc.eventTrigger[Event.palace5Clear] = true;//
+pc.eventTrigger[Event.palace6Clear] = true;//
+pc.eventTrigger[Event.palace7Clear] = true;//
+pc.eventTrigger[Event.palace8Clear] = true;//
+pc.eventTrigger[Event.palace9Clear] = true;//
+pc.eventTrigger[Event.palace10Clear] = true;//
+pc.eventTrigger[Event.palace11Clear] = true;//
+*/	
 
 
 pc.fullHealing = false;
 pc.healingC1 = false;
 pc.healingC2 = false;
+pc.healingHP = 0;
+pc.healingMP = 0;
 pc.beamChargeCD = 30;
 pc.killMemory = [
 	{a: 0, b: 0, mobsLeft: 10},

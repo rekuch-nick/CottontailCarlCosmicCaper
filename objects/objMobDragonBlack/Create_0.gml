@@ -34,3 +34,5 @@ if(!pc.eventTrigger[Event.gotCarrotDragonBlack]){
 	dropEventNumber = Event.gotCarrotDragonBlack;
 }
 dropChance = 100;
+
+shatterAtHalf = true;

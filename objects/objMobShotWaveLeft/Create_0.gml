@@ -11,3 +11,6 @@ destroyOnHit = false;
 
 
 timeCD = 48;
+
+isBlockable = false;
+isWindDeflectable = false;

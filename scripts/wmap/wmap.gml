@@ -133,6 +133,8 @@ function wmap(s){
 		
 		if(c == "W"){ ww.fmap[a, b] = imgWarpSpot; }
 		
+		if(c == "j"){ ww.fmap[a, b] = imgDirt; }
+		
 		
 		if(c == "z"){ ww.fmap[a, b] = imgCheeseFloor; }
 		if(c == "Z"){ ww.bmap[a, b] = imgCheeseBlock; }

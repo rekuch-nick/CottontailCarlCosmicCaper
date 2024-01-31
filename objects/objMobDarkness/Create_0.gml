@@ -24,3 +24,9 @@ overImage = imgMobDarknessFace;
 
 spawnOnShoot = objMobDarkGoon;
 spawnOnShootChance = 25;
+
+
+spec = objMobShotFireDark;
+specNum = 1;
+specCDMax = 45;
+specCD = specCDMax;

@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgPupCauldren1",
-    "path": "sprites/imgPupCauldren1/imgPupCauldren1.yy",
+    "name": "imgPupChair",
+    "path": "sprites/imgPupChair/imgPupChair.yy",
   },
   "spriteMaskId": null,
   "visible": true,

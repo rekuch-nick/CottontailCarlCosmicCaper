@@ -8,3 +8,6 @@ image_alpha = .6;
 rightOnly = true;
 
 destroyOnHit = false;
+
+isBlockable = false;
+isWindDeflectable = false;

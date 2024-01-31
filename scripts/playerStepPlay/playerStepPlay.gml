@@ -347,9 +347,6 @@ function playerStepPlay(){
 	if(potPressed && potion != noone){
 		potionUse(potion);
 		potion = noone;
-		if(eventTrigger[Event.gotCauldren1]){ healingC1 = true; }
-		if(eventTrigger[Event.gotCauldren2]){ healingC2 = true; }
-		if(eventTrigger[Event.gotCauldren3]){ fullHealing = true; }
 	}
 	
 	if(hurtTime > 0){ hurtTime --; }

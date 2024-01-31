@@ -15,6 +15,11 @@ function mobChooseMoveTarget(){
 		yTar = irandom_range(32, room_height - 32);
 	}
 	
+	if(driftMove == Move.centerish){
+		xTar = ww.roomWidth/2;
+		yTar = room_height/2;
+	}
+	
 	if(driftMove == Move.randomOrth){
 		xTar = irandom_range(32, ww.roomWidth - 32);
 		yTar = irandom_range(32, room_height - 32);

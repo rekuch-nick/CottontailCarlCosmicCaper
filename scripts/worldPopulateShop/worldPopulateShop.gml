@@ -19,7 +19,7 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 			desc = carrotDesc;
 		} else if(!pc.eventTrigger[Event.gotRing1]){
 			var t = objPupRing1; var p = 250;
-			desc = "Reduce damage taken by 25%";
+			desc = "Reduce damage taken by 15%";
 		} else if(!pc.eventTrigger[Event.gotShopCarrot02]){
 			var t = objPupCarrot; var p = 40; e = Event.gotShopCarrot02;
 			desc = carrotDesc;
@@ -31,7 +31,7 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 			desc = carrotDesc;
 		} else if(!pc.eventTrigger[Event.gotRing2]){
 			var t = objPupRing2; var p = 280;
-			desc = "Reduce damage taken by 50%";
+			desc = "Reduce damage taken by 30%";
 		} else if(!pc.eventTrigger[Event.gotShopCarrot05]){
 			var t = objPupCarrot; var p = 160; e = Event.gotShopCarrot05;
 			desc = carrotDesc;
@@ -39,7 +39,7 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 			var t = objPupCarrot; var p = 200; e = Event.gotShopCarrot06;
 			desc = carrotDesc;
 		} else if(!pc.eventTrigger[Event.gotGlasses]){
-			var t = objPupGlasses; var p = 800;
+			var t = objPupGlasses; var p = 540;
 			desc = "See all secret doors";
 		}
 		

@@ -132,3 +132,10 @@ overImage = noone;
 overFrame = 0;
 overFrameMax = 3;
 overFrameChance = 20;
+shootOffsetRange = 0;
+
+randomizeShootMax = false;
+randomizeShootMaxMin = 10;
+randomizeShootMaxMax = 40;
+
+forceBlockChanceOnThink = 0;

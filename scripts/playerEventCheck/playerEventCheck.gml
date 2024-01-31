@@ -61,17 +61,20 @@ function playerEventCheck(){
 		ww.state = State.birdScene;
 	}
 	if(!pc.eventTrigger[Event.gotBird] && pc.xMap == 13 && pc.yMap == 1 && pc.birdSceneStep == 4){
-		if(pc.birdSceneTime == 30 * 10){
+		if(pc.birdSceneTime == 30 * 10 * 7){ ////
 			with(objEggWob){ instance_destroy(); }
 			for(var i=0; i<15; i++){
 				var l = instance_create_depth(i * 64 + 32, 11 * 64, ww.layerE, objLightning);
 				l.image_angle = 90;
 			}
+			with(objMobShot){ instance_destroy(); }
 			pc.eventTrigger[Event.gotBird] = true;
 			with(objMob){ if(object_index = objMobDarkness){
 				regen = 0;
 				hpMax = 1000;
 				hp = clamp(hp, 1, hpMax);
+				specCDMax -= 10;
+				shootCDMax -= 10;
 			}}
 		}
 	}

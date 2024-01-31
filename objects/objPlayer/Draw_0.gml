@@ -80,7 +80,11 @@ if(eventTrigger[Event.gotCape2] && inQuickSand < 1){
 
 
 if(inSpace){
-	draw_sprite_stretched(imgPupStar, 0, x-(8 * image_yscale), y, 16 * image_yscale, 16 * image_yscale);
+	if(eventTrigger[Event.gotBird]){
+		draw_sprite_stretched(bluebird, choose(0, 1), x-(8 * image_yscale), y, 16 * image_yscale, 16 * image_yscale);
+	} else {
+		draw_sprite_stretched(imgPupStar, 0, x-(8 * image_yscale), y, 16 * image_yscale, 16 * image_yscale);
+	}
 }
 
 if(wepSelected == 9 && instance_number(objPlayerSwordSlash) < 1){

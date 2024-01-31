@@ -3,6 +3,7 @@ image_yscale = 4;
 xSpeed = 0;
 ySpeed = 0;
 grav = 0;
+gravMax = 0;
 
 flicker = false;
 rightOnly = false;
@@ -47,6 +48,7 @@ speedUpOnSeek = false;
 isFall = false;
 driftChance = 0;
 changeChance = 0;
+fallBounce = false;
 
 lineHunt = false;
 
@@ -60,3 +62,4 @@ sprayOnQuarterTurn = 0;
 
 fallDrift = false;
 fallHunt = false;
+inertOver = noone;

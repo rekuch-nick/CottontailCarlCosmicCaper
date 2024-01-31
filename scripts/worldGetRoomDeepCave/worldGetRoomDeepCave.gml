@@ -68,5 +68,29 @@ function worldGetRoomDeepCave(xxx, yyy){
 			s.coinPrice = 210; s.desc = "";
 		}
 	}
+	
+	
+	
+	
+	
+	if(pc.xMap == 1 && pc.yMap == 12){
+		biome(Zone.deepCave);
+		ww.noMobs = true; ww.canLion = false;
+		wmap("//...........//");
+		wmap("//...........//");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("//...........//");
+		wmap("///////////////");
+		ww.bmap[5, 9] = imgNPCWorms;
+		ww.bmap[6, 9] = imgNPCWorms;
+		ww.bmap[8, 9] = imgNPCWorms;
+	}
 
 }

@@ -60,7 +60,7 @@ rangsMax = 1;
 wepSelected = 0;
 //rang, stars, torch, bombs, wind, ice, ?, hole, wand, sword, philo
 wepLevels = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
-wepCost = [5, 2, 10, 0, .5, 2, 2, 20, 20, 0 , 0];
+wepCost = [5, 2, 6, 0, .5, 2, 2, 20, 20, 0 , 0];
 wepCDMax = [10, 12, 25, 30, 1, 30, 30, 30, 45, 20, 1];
 
 
@@ -196,6 +196,7 @@ enum Event {
 	gotSword,
 	gotLuckyCoin,
 	gotChair,
+	gotWax,
 	
 	haveBombs,
 	
@@ -233,6 +234,15 @@ enum Event {
 	gotCarrot18,
 	gotCarrot19,
 	gotCarrot20,
+	gotCarrot21,
+	gotCarrot22,
+	gotCarrot23,
+	gotCarrot24,
+	gotCarrot25,
+	gotCarrot26,
+	gotCarrot27,
+	gotCarrot28,
+	gotCarrot29,
 	
 	gotShopCarrot01,
 	gotShopCarrot02,
@@ -252,6 +262,7 @@ enum Event {
 	gotCarrotDragonDoubleGreen,
 	gotCarrotWitchBoss,
 	gotCarrotDragonBlack,
+	gotCarrotDragonWood,
 	
 	gotBird,
 }

@@ -35,8 +35,8 @@ if(frameCount >= 30){ frameCount = 0; }
 
 
 
-var s = string(pc.xMap) + ", " + string(pc.yMap);
-draw_text(x + 10, 244, s);
+//var s = string(pc.xMap) + ", " + string(pc.yMap);
+//draw_text(x + 10, 244, s);
 
 if(pc.eventTrigger[Event.gotMap]){
 	draw_sprite_stretched(imgMap002, 0, x + 8, y + 8, 76 * 4, 40 * 4);
