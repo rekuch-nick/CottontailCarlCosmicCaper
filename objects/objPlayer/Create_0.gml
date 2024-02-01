@@ -197,6 +197,7 @@ enum Event {
 	gotLuckyCoin,
 	gotChair,
 	gotWax,
+	gotKeyCard,
 	
 	haveBombs,
 	

@@ -4,6 +4,7 @@ function worldLoardPalace07(){
 	
 	var egg = pc.eventTrigger[Event.palace7Clear] ? objPupCoinPile : objPupEgg;
 	var itm = pc.eventTrigger[Event.gotShield2] ? noone : objPupShield2;
+	var itm2 = pc.eventTrigger[Event.gotKeyCard] ? noone : objPupKeyCard;
 	pc.palaceWaves = [
 		{
 			initMobs: [objMobFrankFace, objMobFrankFace],
@@ -76,6 +77,14 @@ function worldLoardPalace07(){
 			waitForPups: false,
 			floorItem: noone,
 			rockKind: objSpaceRockNova, rockChance: 40, rockWait: 90,
+		},
+		{
+			initMobs: [],
+			laterMobs: [],
+			waitBetweenMobs: 30,
+			waitForPups: true,
+			floorItem: itm,
+			rockKind: objSpaceRockNova, rockChance: 100, rockWait: 30,
 		},
 		{
 			initMobs: [objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJelly, objMobSpaceJelly],

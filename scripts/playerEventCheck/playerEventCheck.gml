@@ -55,7 +55,7 @@ function playerEventCheck(){
 		s.mobKind = objMobWormWaste;
 	}
 	
-	if(!pc.eventTrigger[Event.gotBird] && pc.xMap == 13 && pc.yMap == 1 && pc.xTile == 11 && pc.yTile == 4 && pc.birdSceneStep == 0){
+	if(!pc.eventTrigger[Event.gotBird] && pc.xMap == 13 && pc.yMap == 1 && pc.xTile == 11 && pc.yTile == 4 && pc.birdSceneStep == 0 && lowestPalaceCleared() >= 11){
 		pc.birdSceneTime = 0;
 		pc.birdSceneStep = 1;
 		ww.state = State.birdScene;
@@ -76,6 +76,38 @@ function playerEventCheck(){
 				specCDMax -= 10;
 				shootCDMax -= 10;
 			}}
+		}
+	}
+	
+	if(pc.eventTrigger[Event.gotKeyCard] && pc.yMap == 4){
+		if(!ww.usedKeyCard && (pc.y > 200 && pc.y < room_height - 200) ){
+			var doIt = false;
+			
+			if(pc.xMap == 0){
+				if(pc.x < 140){
+					doIt = true;
+				}
+			}
+			if(pc.xMap == 18){
+				if(pc.x > ww.roomWidth - 140){
+					doIt = true;
+				}
+			}
+			
+			if(doIt){
+				ww.usedKeyCard = true;
+				with(objBlock){
+					if(sprite_index == imgVaultDoor){
+						var e = instance_create_depth(x + 32, y + 64, ww.layerE, objChip);
+						e.sprite_index = sprite_index;
+					}
+					if(sprite_index == imgVaultDoor || sprite_index == imgBlank){
+						ww.bmap[floor(x/64), floor(y/64)] = noone;
+						instance_destroy();
+					}
+				}
+				
+			}
 		}
 	}
 	

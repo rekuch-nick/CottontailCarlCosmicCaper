@@ -15,6 +15,10 @@ function potionUse(k){
 		with(objMob){ poisonTime = max(poisonTime, 150); }
 	}
 	
+	if(k == imgPupPotionStun){
+		with(objMob){ stunTime = max(stunTime, 200); }
+	}
+	
 	
 	
 }

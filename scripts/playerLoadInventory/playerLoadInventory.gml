@@ -153,6 +153,10 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotPowderHorn; s.img[0] = imgPowderHorn; s.desc[0] = "Your bombs have larger explosions.";
 	s.eve[1] = Event.gotPowderHorn2; s.img[1] = imgPowderHorn2; s.desc[1] = "Your bombs have larger explosions. Gain a bomb every 15 seconds.";
 	
+	var s = instance_create_depth(9 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotKeyCard; s.img[0] = imgPupKeyCard;
+	s.desc[0] = "Opens the wrap-around gate on the edges of the kingdom.";
+	
 	var s = instance_create_depth(10 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotWax; s.img[0] = imgPupWax;
 	s.desc[0] = "Blue space-gas won't slow you down any more.";
@@ -272,12 +276,12 @@ function playerLoadInventory(){
 	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(11 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
-	s.eve[0] = Event.palace9Clear; s.img[0] = imgEgg;
+	s.eve[0] = Event.palace10Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
 	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	
 	var s = instance_create_depth(12 * 64, 7 * 64, hud.depth - 1, objItemTooltip);
-	s.eve[0] = Event.palace9Clear; s.img[0] = imgEgg;
+	s.eve[0] = Event.palace11Clear; s.img[0] = imgEgg;
 	s.desc[0] = "A small decorated egg, taken from a dragon. Who knows what it could become?";
 	if(pc.eventTrigger[Event.gotBird]){  s.eve[0] = Event.gotBird; s.img[0] = imgEggShells; s.desc[0] = "The legendary Bluebird came from these eggs. It's time to face the Drgon Queen!"; }
 	

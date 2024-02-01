@@ -2,8 +2,8 @@ function worldLoardPalace08(){
 	
 	
 	var egg = pc.eventTrigger[Event.palace8Clear] ? objPupCoinPile : objPupEgg;
-	var itm = pc.eventTrigger[Event.gotWand] ? noone : objPupCauldren2;
-	var itm2 = pc.eventTrigger[Event.gotWand] ? noone : objPupCauldren2;
+	var itm = pc.eventTrigger[Event.gotCauldren2] ? noone : objPupCauldren2;
+	var itm2 = pc.eventTrigger[Event.gotCauldren2] ? noone : objPupCauldren2;
 	pc.palaceWaves = [
 		{
 			initMobs: [objMobLike, objMobLike, objMobLike, objMobLike],

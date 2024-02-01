@@ -9,8 +9,10 @@ if(pc.xPushBlock == xSpot && pc.yPushBlock == ySpot){
 		if(pc.pushBlockDir == 2){ xx ++; }
 		if(pc.pushBlockDir == 3){ yy ++; }
 		if(pc.pushBlockDir == 4){ xx --; }
+		if(ww.fmap[xSpot, ySpot] != noone && ww.fmap[xSpot, ySpot].sprite_index == imgBlockDone){
+			xx = xSpot; yy = ySpot;
+		}
 		if(inBoundsTile(xx, yy)){
-		
 		
 			if(ww.bmap[xx, yy] == noone){
 			
@@ -18,13 +20,10 @@ if(pc.xPushBlock == xSpot && pc.yPushBlock == ySpot){
 					ww.secExposed[pc.xMap, pc.yMap] = true;
 				}
 			
-			
 				ww.bmap[xx, yy] = ww.bmap[xSpot, ySpot];
 				ww.bmap[xSpot, ySpot] = noone;
 				xSpot = xx;
 				ySpot = yy;
-			
-			
 			
 			}
 		}
@@ -47,7 +46,7 @@ if(y < ySpot * 64){ y += ms; pc.cantStair = 1; moved = true; }
 if(y > ySpot * 64){ y -= ms; pc.cantStair = 1; moved = true; }
 
 if(moved && xSpot == x / 64 && ySpot == y / 64){
-	if(ww.fmap[xSpot, ySpot] != noone && ww.fmap[xSpot, ySpot].sprite_index = imgBlockDone){
+	if(ww.fmap[xSpot, ySpot] != noone && ww.fmap[xSpot, ySpot].sprite_index == imgBlockDone){
 		instance_create_depth(x + 8, y + 8, ww.layerE, objChip);
 		instance_create_depth(x + 8, y + 56, ww.layerE, objChip);
 		instance_create_depth(x + 56, y + 8, ww.layerE, objChip);

@@ -12,7 +12,7 @@ function mobRollDrop(){
 	if(r == 5 && pc.eventTrigger[Event.gotChargeShot]){ t = objPupBPOrb; }
 	
 	
-	if(r == 17 && dropsPotions){ t = choose(objPupPotionFire, objPupPotionPoison); }
+	if(r == 17 && dropsPotions){ t = choose(objPupPotionFire, objPupPotionPoison, objPupPotionStun); }
 	if(r == 18 && dropsBombs){ t = objPupBomb; }
 	if(r == 19 && pc.shotPower == noone && pc.eventTrigger[Event.gotMonocule]){ t = choose(objPupShotUpBurst, objPupShotUpRapid, objPupShotUpWide); }
 	if(r == 20){ t = choose(objPupShotUpBurst, objPupShotUpRapid, objPupShotUpWide); }

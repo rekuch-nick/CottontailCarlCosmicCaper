@@ -78,13 +78,16 @@ function worldGetRoomGrave(xxx, yyy){
 		wmap("bb..b.....b...#");
 		wmap("/b........b...#");
 		wmap("//............#");
-		wmap("//..b........g#");
-		wmap("//..g...=....g#");
+		wmap("....b........g#");
+		wmap("....g...=....g#");
 		wmap("//............#");
 		wmap("//............#");
 		wmap("//..g...b..g..#");
 		wmap("//............#");
 		wmap("//...........##");
+		if(pc.x > 64){
+			ww.bmap[0, 5] = imgVaultDoor; ww.bmap[0, 6] = imgBlank;
+		}
 	}
 	
 	if(xxx == 0 && yyy == 5){

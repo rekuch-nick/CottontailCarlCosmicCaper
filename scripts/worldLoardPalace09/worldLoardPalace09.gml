@@ -53,8 +53,8 @@ function worldLoardPalace09(){
 		},
 		{
 			initMobs: [objMobMouth, objMobMouth, objMobMouth, objMobMouth],
-			laterMobs: [],
-			waitBetweenMobs: 120,
+			laterMobs: [objMobSpaceEnt],
+			waitBetweenMobs: 30,
 			waitForPups: true,
 			floorItem: itm,
 			rockKind: noone, rockChance: 100, rockWait: 90,

@@ -127,6 +127,8 @@ function playerStepPlay(){
 			var inLostHills = pc.xMap == 11 && pc.yMap == 0;
 			var inLostCaves = pc.xMap == 1 && pc.yMap == 11;
 			var inLostCavesExit = pc.xMap == 0 && pc.yMap == 11;
+			var inGraveWrap = pc.xMap == 0 && pc.yMap == 4;
+			var inDeepWrap = pc.xMap == 18 && pc.yMap == 4;
 			
 			playerKillMemoryUpdate();
 			var n = 1;
@@ -155,6 +157,9 @@ function playerStepPlay(){
 			else if (pc.xLostCaves > 3 && xMap == 2){}
 			else if(inLostCaves && pc.yMap == 12){ pc.yMap = 11; }
 			else if(inLostCaves && pc.xMap == 2){ pc.xMap = 1; pc.xLostCaves ++; }
+			
+			if(inGraveWrap && pc.xMap == -1){ pc.xMap = 18; }
+			if(inDeepWrap && pc.xMap == 19){ pc.xMap = 0; }
 			
 			
 			if(	(pc.xMap == 9 && pc.yMap == 0) ||

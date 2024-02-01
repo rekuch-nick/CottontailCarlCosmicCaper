@@ -21,13 +21,18 @@ function playerStepPlayOrPause(){
 	}
 	
 	if(debug && keyboard_check_pressed(vk_pageup)){
+		wepLevels[5] = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
+		wepLevels[1] = 1; eventTrigger[Event.gotStars] = true; // stars
 		wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
 		wepLevels[4]  = 1; eventTrigger[Event.gotWindStone] = true; // windstone
 		eventTrigger[Event.gotMoreShot] = true;
 		eventTrigger[Event.gotMightShot] = true;
 		eventTrigger[Event.gotSpeedShot] = true;
+		
 		eventTrigger[Event.gotCauldren1] = true;
 		eventTrigger[Event.gotHealingHeart] = true;
+		eventTrigger[Event.gotPinwheel] = true;
+		eventTrigger[Event.gotMagnet] = true;
 		
 		eventTrigger[Event.gotRangPack] = true;
 		eventTrigger[Event.gotRang2] = true;

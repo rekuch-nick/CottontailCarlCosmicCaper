@@ -147,6 +147,7 @@ if(gotIt){
 	if(sprite_index == imgPowderHorn2){ pc.eventTrigger[Event.gotPowderHorn2] = true; pc.eventTrigger[Event.gotPowderHorn] = true; }
 	
 	if(sprite_index == imgPupWax){ pc.eventTrigger[Event.gotWax] = true; }
+	if(sprite_index == imgPupKeyCard){ pc.eventTrigger[Event.gotKeyCard] = true; }
 	if(sprite_index == imgPupFeather){ pc.eventTrigger[Event.gotFeather] = true; }
 	if(sprite_index == imgLuckyCoin){ pc.eventTrigger[Event.gotLuckyCoin] = true; }
 	if(sprite_index == imgPupChair){ pc.eventTrigger[Event.gotChair] = true; }
@@ -190,7 +191,7 @@ if(gotIt){
 	
 	if(sprite_index == imgPlayerRangPack){ pc.eventTrigger[Event.gotRangPack] = true; pc.rangsMax = 3; }
 	
-	if(sprite_index == imgPupPotionFire || sprite_index == imgPupPotionPoison){
+	if(sprite_index == imgPupPotionFire || sprite_index == imgPupPotionPoison || sprite_index == imgPupPotionStun){
 		if(pc.potion == noone){ pc.potion = sprite_index; } else { potionUse(sprite_index); }
 	}
 	
