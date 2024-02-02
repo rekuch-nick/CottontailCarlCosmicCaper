@@ -90,7 +90,7 @@ function mobSpawn(){
 		}
 		
 		if(ww.inBiome == Zone.snow){
-			t = choose(objMobIceSlime);
+			t = choose(objMobIceSlime, objMobYeti);
 		}
 		
 		if(ww.inBiome == Zone.deepForest){
@@ -123,7 +123,7 @@ function mobSpawn(){
 		}
 		
 		if(ww.inBiome == Zone.hills){
-			t = choose(objMobCrasher, objMobHopper, objMobHopper);
+			t = choose(objMobCrasher, objMobCrasher, objMobHopper, objMobHopper, objMobHopper);
 		}
 		
 		if(ww.inBiome == Zone.volcano){

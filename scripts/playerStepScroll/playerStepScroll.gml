@@ -80,6 +80,24 @@ function playerStepScroll(){
 		///star bombs
 		
 		if(
+			(pc.xMap == 1 && pc.yMap == 3) ||
+			(pc.xMap == 2 && pc.yMap == 3) ||
+			(pc.xMap == 3 && pc.yMap == 3) ||
+			(pc.xMap == 9 && pc.yMap == 3) ||
+			(pc.xMap == 7 && pc.yMap == 3) ||
+			(pc.xMap == 11 && pc.yMap == 3) ||
+			(pc.xMap == 13 && pc.yMap == 3) ||
+			(pc.xMap == 16 && pc.yMap == 3) ||
+			
+			(pc.xMap == 1 && pc.yMap == 5) ||
+			(pc.xMap == 2 && pc.yMap == 5) ||
+			(pc.xMap == 3 && pc.yMap == 5) ||
+			(pc.xMap == 9 && pc.yMap == 5) ||
+			(pc.xMap == 8 && pc.yMap == 5) ||
+			(pc.xMap == 11 && pc.yMap == 5) ||
+			(pc.xMap == 13 && pc.yMap == 5) ||
+			(pc.xMap == 16 && pc.yMap == 5) ||
+			
 			(pc.xMap == 0 && pc.yMap == 7) ||
 			(pc.xMap == 2 && pc.yMap == 7) ||
 			(pc.xMap == 9 && pc.yMap == 7) ||

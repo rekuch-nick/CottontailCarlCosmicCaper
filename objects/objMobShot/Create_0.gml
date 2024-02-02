@@ -63,3 +63,6 @@ sprayOnQuarterTurn = 0;
 fallDrift = false;
 fallHunt = false;
 inertOver = noone;
+
+splitStrike = noone;
+lineHuntReverse = false;

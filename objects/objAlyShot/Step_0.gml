@@ -17,10 +17,10 @@ if(firstFrame){
 		image_angle = point_direction(x, y, xTar, yTar);
 	}
 	
-	if(sprite_index == imgPlayerBeamsCharged){ pow += 10; }
+	if(sprite_index == imgPlayerBeamsCharged){ pow += 5; }
 	if(sprite_index == imgPlayerBeams || sprite_index == imgPlayerBeamsCharged || sprite_index == imgPlayerBeamsPhilo){
-		if(pc.eventTrigger[Event.gotMightShot]){ pow += 5; }
-		if(pc.eventTrigger[Event.gotMightShot2]){ pow += 5; }
+		if(pc.eventTrigger[Event.gotMightShot]){ pow += 2.5; }
+		if(pc.eventTrigger[Event.gotMightShot2]){ pow += 2.5; }
 	}
 	
 }
@@ -110,7 +110,7 @@ if(cloneAwayFromPlayer && timeCD == 10){
 if(timeCD < 1){
 	
 	
-	if((object_index == objPlayerBeams) && pc.shotPower == Shot.burst){
+	if((object_index == objPlayerBeams) && pc.shotPower == Shot.burst && choose(true, false)){
 		var s = instance_create_depth(x, y, depth, objPlayerBlastSmall);
 		s.pow = pow;
 	}

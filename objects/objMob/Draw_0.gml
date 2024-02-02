@@ -16,7 +16,7 @@ if(showHPTop && inert == noone){
 }
 
 if(flickerBeforeThink && thinkCD < 30 && choose(true, false)){ return; }
-if(hurtTime > 0 && hurtTime % 2 == 1){ return; }
+if(hurtTime > 0 && hurtTime % 2 == 1 && ww.state == State.play){ return; }
 if(frozenTime > 0 || stunTime > 0){ image_index = 0; }
 
 var a = x; var b = y;

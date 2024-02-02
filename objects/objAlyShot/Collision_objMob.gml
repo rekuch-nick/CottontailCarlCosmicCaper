@@ -18,7 +18,12 @@ if(!arrayContains(hitList, other)){
 		other.hurtTime = 20;
 		other.burnTime = max(other.burnTime, burnPow);
 		other.poisonTime = max(other.poisonTime, poisonPow);
-		if(other.canFreeze && irandom_range(1, 100) < freezeChance){
+		if(	other.canFreeze && (
+			irandom_range(1, 100) < freezeChance || (other.weakToIce && irandom_range(1, 100) < freezeChance)
+			)
+		){
+			
+			
 			other.frozenTime = max(other.frozenTime, freezePow);
 		}
 		if(other.canStun && irandom_range(1, 100) < stunChance){

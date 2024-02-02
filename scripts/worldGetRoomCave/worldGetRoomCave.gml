@@ -98,8 +98,11 @@ function worldGetRoomCave(xxx, yyy){
 	}
 	if(xxx == 8 && yyy == 2){
 		worldGetCaveDuck();
-		ww.txt = "Quack";
-		//ww.txt = "Some monsters have shots that bounce around or follow you. Soemtimes the screen will fill up and make dodging seem impossible.\n\nA Wind Stone would be perfect in situations like that.";
+		ww.txt = "UP, UP, UP, UP, UP. It's the only way to reach the top of the mountian.";
+	}
+	if(xxx == 11 && yyy == 1){
+		worldGetCaveDuck();
+		ww.txt = "EAST, EAST, EAST, EAST, EAST. Down deep in the dark, seek out the blind builders.";
 	}
 	if(xxx == 14 && yyy == 1){
 		ww.bmap[7, 6] = imgNPCMouse;
@@ -206,6 +209,10 @@ function worldGetRoomCave(xxx, yyy){
 		|| (xxx == 16 && yyy == 8) 
 		|| (xxx == 8 && yyy == 0) 
 		|| (xxx == 8 && yyy == 1) 
+		|| (xxx == 14 && yyy == 2) 
+		|| (xxx == 17 && yyy == 9) 
+		|| (xxx == 12 && yyy == 6) 
+		|| (xxx == 4 && yyy == 8) 
 		){ // dog gifts
 		ww.bmap[7, 5] = imgNPCDog;
 		if(ww.caveCoins[pc.xMap, pc.yMap] > 0){
@@ -232,6 +239,12 @@ function worldGetRoomCave(xxx, yyy){
 	worldGetRoomCaveCarrot(xxx, yyy, 15, 9, Event.gotCarrot21);
 	worldGetRoomCaveCarrot(xxx, yyy, 2, 2, Event.gotCarrot22);
 	worldGetRoomCaveCarrot(xxx, yyy, 0, 3, Event.gotCarrot23);
+	worldGetRoomCaveCarrot(xxx, yyy, 7, 5, Event.gotCarrot24);
+	worldGetRoomCaveCarrot(xxx, yyy, 4, 1, Event.gotCarrot25);
+	worldGetRoomCaveCarrot(xxx, yyy, 3, 6, Event.gotCarrot26);
+	worldGetRoomCaveCarrot(xxx, yyy, 18, 6, Event.gotCarrot27);
+	worldGetRoomCaveCarrot(xxx, yyy, 1, 8, Event.gotCarrot28);
+	worldGetRoomCaveCarrot(xxx, yyy, 7, 0, Event.gotCarrot29);
 	
 	
 	
@@ -267,6 +280,40 @@ function worldGetRoomCave(xxx, yyy){
 		}
 	}
 	
+	if( (xxx == 14 && yyy == 8) ){ // pig beads
+		ww.bmap[7, 5] = imgNPCPig;
+		if(!pc.eventTrigger[Event.gotBlueBead]){
+			ww.txt = "Have you been figuring out which weapons the monsters are weak to? If so, this is going to keep your MP full.";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupBlueBead);
+		}
+	}
+	if( (xxx == 4 && yyy == 9) ){ // pig beads
+		ww.bmap[7, 5] = imgNPCPig;
+		if(!pc.eventTrigger[Event.gotGreenFlake]){
+			ww.txt = "Have you been figuring out which weapons the monsters are weak to? If so, this is going to keep your health full.";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupGreenFlake);
+		}
+	}
+	if( (xxx == 3 && yyy == 1) ){ // porky bangle
+		ww.bmap[7, 5] = imgNPCPorkey;
+		if(!pc.eventTrigger[Event.gotSpikeBangle]){
+			ww.txt = "If you're getting bumped a lot, this could help.";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupSpikeBangle);
+		}
+	}
+	if( (xxx == 18 && yyy == 3) ){ // tactics animal
+		ww.bmap[7, 5] = imgNPCFrog;
+		ww.txt = "I can always provide combat advice, for a few coins..";
+		var e = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupPaperTac);
+		e.coinPrice = 10;
+		
+	}
+	
+	
+	
+	
+	
+	
 	if( xxx == 8 && yyy = 5 ){ //bee shop
 		ww.bmap[2, 5] = imgNPCBee; ww.bmap[3, 5] = imgNPCBee; ww.bmap[5, 5] = imgNPCBee; ww.bmap[7, 5] = imgNPCBee; ww.bmap[8, 5] = imgNPCBee; ww.bmap[10, 5] = imgNPCBee; ww.bmap[11, 5] = imgNPCBee; ww.bmap[13, 5] = imgNPCBee;
 		ww.bmap[1, 6] = imgNPCBee; ww.bmap[2, 6] = imgNPCBee; ww.bmap[5, 6] = imgNPCBee; ww.bmap[6, 6] = imgNPCBee; ww.bmap[7, 6] = imgNPCBee; ww.bmap[8, 6] = imgNPCBee; ww.bmap[12, 6] = imgNPCBee; ww.bmap[13, 6] = imgNPCBee;
@@ -300,7 +347,7 @@ function worldGetRoomCave(xxx, yyy){
 		} else if (!pc.eventTrigger[Event.gotRang3]) {
 			ww.txt = "The Side-Striker 3000 is an unparalleled design. Only something impossible like a magical boomerang taken from a dragon could possibly be better.";
 			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupRang3);
-			s.coinPrice = 210;
+			s.coinPrice = 110;
 			s.desc = "";
 		} else if (pc.eventTrigger[Event.gotRang4]) {
 			ww.txt = "Now way, how did you get a boomerang like THAT??";

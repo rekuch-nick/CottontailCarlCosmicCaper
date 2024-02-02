@@ -1,5 +1,7 @@
 function hurtMonster(mob, shot){
 	
+
+	
 	var weak = false;
 	var dmg = shot.pow;
 	if(shot.isRang && mob.weakToRang){ dmg *= 7; weak = true; }
@@ -16,6 +18,10 @@ function hurtMonster(mob, shot){
 		var e = instance_create_depth(mob.x, mob.y - mob.sprite_height / 2, ww.layerE, objEffect);
 		e.txt = "Ouch!";
 		e.txtC1 = c_yellow; e.txtC2 = c_red; e.ySpeed = -1;
+		
+		if(pc.eventTrigger[Event.gotBlueBead]){ pc.healingMP += 10; }
+		if(pc.eventTrigger[Event.gotGreenFlake]){ pc.healingHP += 10; }
+		
 	}
 	
 	

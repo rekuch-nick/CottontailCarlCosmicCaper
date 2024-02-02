@@ -15,3 +15,7 @@ if(shieldBreaker){
 	//pc.sp = -900; 
 }
 
+if(pc.eventTrigger[Event.gotSpikeBangle]){
+	hp -= 20; 
+	hurtTime = 20;
+}

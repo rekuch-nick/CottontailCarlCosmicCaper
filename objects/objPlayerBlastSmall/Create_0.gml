@@ -3,7 +3,7 @@ event_inherited();
 
 aly = 1;
 
-pow = 10;
+pow = 5;
 
 moveSpeed = 0;
 
@@ -20,3 +20,5 @@ image_alpha = .4;
 
 isBasicShot = false;
 
+secType = Sec.bomb;
+directionless = true;

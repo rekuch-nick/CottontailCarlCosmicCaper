@@ -153,6 +153,15 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotPowderHorn; s.img[0] = imgPowderHorn; s.desc[0] = "Your bombs have larger explosions.";
 	s.eve[1] = Event.gotPowderHorn2; s.img[1] = imgPowderHorn2; s.desc[1] = "Your bombs have larger explosions. Gain a bomb every 15 seconds.";
 	
+	var s = instance_create_depth(6 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotSpikeBangle; s.img[0] = imgPupSpikeBangle; s.desc[0] = "Monsters who hurt you by bump you also take some damage.";
+	
+	var s = instance_create_depth(7 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotBlueBead; s.img[0] = imgPupBlueBead; s.desc[0] = "When you hit a monster with the weapon it is weak to, gain some MP";
+	
+	var s = instance_create_depth(8 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotGreenFlake; s.img[0] = imgPupGreenFlake; s.desc[0] = "When you hit a monster with the weapon it is weak to, recover some HP";
+	
 	var s = instance_create_depth(9 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotKeyCard; s.img[0] = imgPupKeyCard;
 	s.desc[0] = "Opens the wrap-around gate on the edges of the kingdom.";

@@ -13,3 +13,4 @@ thinkCDMax = 16;
 
 dropsBombs = true;
 
+weakToIce = true;

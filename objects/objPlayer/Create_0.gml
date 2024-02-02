@@ -60,8 +60,8 @@ rangsMax = 1;
 wepSelected = 0;
 //rang, stars, torch, bombs, wind, ice, ?, hole, wand, sword, philo
 wepLevels = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
-wepCost = [5, 2, 6, 0, .5, 2, 2, 20, 20, 0 , 0];
-wepCDMax = [10, 12, 25, 30, 1, 30, 30, 30, 45, 20, 1];
+wepCost = [5, 2, 6, 0, .5, 8, 2, 20, 20, 0 , 0];
+wepCDMax = [10, 12, 25, 30, 1, 20, 30, 30, 45, 20, 1];
 
 
 lionCD = irandom_range(5, 7);
@@ -82,6 +82,7 @@ drainLakeSpots = [
 	{a: 14, b: 1},
 	{a: 18, b: 4},
 	{a: 18, b: 1},
+	{a: 5, b: 0},
 ];
 
 
@@ -198,6 +199,9 @@ enum Event {
 	gotChair,
 	gotWax,
 	gotKeyCard,
+	gotSpikeBangle,
+	gotBlueBead,
+	gotGreenFlake,
 	
 	haveBombs,
 	
@@ -244,6 +248,16 @@ enum Event {
 	gotCarrot27,
 	gotCarrot28,
 	gotCarrot29,
+	gotCarrot30,
+	gotCarrot31,
+	gotCarrot32,
+	gotCarrot33,
+	gotCarrot34,
+	gotCarrot35,
+	gotCarrot36,
+	gotCarrot37,
+	gotCarrot38,
+	gotCarrot39,
 	
 	gotShopCarrot01,
 	gotShopCarrot02,
@@ -264,6 +278,8 @@ enum Event {
 	gotCarrotWitchBoss,
 	gotCarrotDragonBlack,
 	gotCarrotDragonWood,
+	gotCarrotElementalBoss,
+	gotCarrotWindBoss,
 	
 	gotBird,
 }

@@ -2,13 +2,15 @@ function worldGetRoomSparse(xxx, yyy){
 	
 	if(xxx == 6 && yyy == 5){
 		biome(Zone.sparse);
+		ww.secBlock = imgRockBrownGrass; ww.secX = 7; ww.secY = 6; ww.secType = Sec.push;
+		ww.pushableList = [{a:7, b:6}];
 		wmap("#########ssss##");
 		wmap("##s..ss...s..##");
 		wmap("...s.....s.....");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
-		wmap("......rr.......");
+		wmap("......r=.......");
 		wmap("...............");
 		wmap("...............");
 		wmap("...............");
@@ -72,6 +74,8 @@ function worldGetRoomSparse(xxx, yyy){
 	
 	if(xxx == 7 && yyy == 5){
 		biome(Zone.sparse);
+		ww.secBlock = imgRockBrownGrass; ww.secX = 7; ww.secY = 7; ww.secType = Sec.push;
+		ww.pushableList = [{a:7, b:7}];
 		wmap("##ssss#########");
 		wmap("##s..ssssss..##");
 		wmap("...s..ss...s..#");
@@ -79,7 +83,7 @@ function worldGetRoomSparse(xxx, yyy){
 		wmap("..............#");
 		wmap("..............#");
 		wmap("..............#");
-		wmap(".......r......#");
+		wmap(".......=......#");
 		wmap("..............#");
 		wmap("..............#");
 		wmap("##...........##");

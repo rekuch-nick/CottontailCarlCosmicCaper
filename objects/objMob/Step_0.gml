@@ -21,7 +21,7 @@ if(burnTime > 0){
 	if(pc.eventTrigger[Event.gotOil]){ hp -= .05; }
 	if(weakToFire != noone){
 		sprite_index = weakToFire;
-		regen = 0;
+		regen -= .5;
 		moveSpeed -= 2;
 		weakToFire = noone;
 	}
@@ -130,9 +130,10 @@ if(!overMove){
 }
 	
 
-
-image_angle += rot * getDirection(image_xscale);
-if(wob){ image_angle += choose(-4, 4); }
+if(stunTime < 1 && frozenTime < 1){
+	image_angle += rot * getDirection(image_xscale);
+	if(wob){ image_angle += choose(-4, 4); }
+}
 
 xTile = floor(x / 64); yTile = floor(y / 64);
 
@@ -208,6 +209,13 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 		if(spec == objMobShotFire || spec == objMobShotFireDark){ repeat(specNum){
 			var a = irandom_range(0, 14);
 			var b = irandom_range(0, 12);
+			if(object_index == objMobWindManBoss){
+				if(choose(true, false)){
+					a = choose(0, 1, 13, 14);
+				} else {
+					b = choose(0, 1, 11, 12);
+				}
+			}
 			instance_create_depth(a*64+32, b*64+32, ww.layerE, spec);
 		}}
 		
@@ -307,6 +315,8 @@ if(shatterAtHalf && hp / hpMax <= .5){
 		shootCDMax = 17;
 		regen = .5;
 		repeat(10){ instance_create_depth(x, y, ww.layerE, objMobShotRandom); }
+	} else if (object_index == objMobSpaceArmor) {
+		repeat(10){ instance_create_depth(x, y, ww.layerE, objMobShotSilly2); }
 	} else {
 		repeat(20){ instance_create_depth(x, y, ww.layerE, objMobShotRandom); }
 	}

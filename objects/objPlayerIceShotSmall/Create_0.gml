@@ -3,7 +3,7 @@ event_inherited();
 
 aly = 1;
 
-pow = 5;
+pow = 10;
 
 
 moveSpeed = 22;

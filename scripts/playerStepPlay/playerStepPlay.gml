@@ -208,13 +208,16 @@ function playerStepPlay(){
 				bp = clamp(bp - 15, 0, bpMax);
 			}
 			shootCD = shootCDMax;
-			if(pc.shotPower == Shot.rapid){ shootCD -= 7; }
-			if(eventTrigger[Event.gotSpeedShot]){ shootCD -= 4; }
-			if(eventTrigger[Event.gotSpeedShot2]){ shootCD -= 4; }
+			if(pc.shotPower == Shot.rapid){ shootCD -= 6; }
+			if(eventTrigger[Event.gotSpeedShot]){ shootCD -= 2; }
+			if(eventTrigger[Event.gotSpeedShot2]){ shootCD -= 2; }
 			var n = pc.shotAmount;
-			if(eventTrigger[Event.gotMoreShot]){ n ++; }
-			if(eventTrigger[Event.gotMoreShot2]){ n ++; }
-			if(pc.shotPower == Shot.wide){ n += 2; }
+			if(eventTrigger[Event.gotMoreShot] && choose(true, false)){ n ++; }
+			if(eventTrigger[Event.gotMoreShot2] && choose(true, false)){ n ++; }
+			if(pc.shotPower == Shot.wide){ 
+				if(choose(true, false)){ n ++; }
+				if(choose(true, false)){ n ++; }
+			}
 			var xo = image_xscale > 0 ? 20 : -20;
 			for(var i=0; i<n; i++){
 				var s = instance_create_depth(x + xo, y - 12, ww.layerE, beamType);

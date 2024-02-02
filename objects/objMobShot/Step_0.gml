@@ -95,6 +95,13 @@ if(bounce){
 	}
 }
 
+if(splitStrike != noone){
+	if(abs(x - pc.x) < 20 || abs(y - pc.y) < 20){
+		timeCD = 0;
+		instance_create_depth(x, y, depth, splitStrike);
+	}
+}
+
 if(speedupRate != 1){
 	xSpeed *= speedupRate;
 	ySpeed *= speedupRate;

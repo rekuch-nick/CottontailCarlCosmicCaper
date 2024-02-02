@@ -36,6 +36,13 @@ caveCoins[15, 7] = 30;
 caveCoins[16, 8] = 30;
 caveCoins[8, 0] = 35;
 caveCoins[8, 1] = 35;
+caveCoins[14, 2] = 35;
+caveCoins[17, 9] = 50;
+caveCoins[12, 6] = 35;
+caveCoins[4, 8] = 60;
+caveCoins[5, 0] = 200;
+
+
 
 
 for(var a=0; a<ww.W; a++){ for(var b=0; b<ww.H; b++){
