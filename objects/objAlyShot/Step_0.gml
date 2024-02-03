@@ -26,6 +26,13 @@ if(firstFrame){
 }
 
 
+if(object_index == objPlayerTadpole && irandom_range(1, 20) == 1){
+	xTar = irandom_range(0, ww.roomWidth);
+	yTar = irandom_range(0, room_height);
+	angleSpeed();
+	image_angle = point_direction(x, y, xTar, yTar);
+}
+
 
 image_alpha -= fade;
 

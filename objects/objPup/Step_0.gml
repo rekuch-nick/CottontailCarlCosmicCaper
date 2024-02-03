@@ -146,6 +146,7 @@ if(gotIt){
 	if(sprite_index == imgPowderHorn){ pc.eventTrigger[Event.gotPowderHorn] = true; }
 	if(sprite_index == imgPowderHorn2){ pc.eventTrigger[Event.gotPowderHorn2] = true; pc.eventTrigger[Event.gotPowderHorn] = true; }
 	
+	if(sprite_index == imgTadpole){ pc.eventTrigger[Event.gotFrog] = true; }
 	if(sprite_index == imgPupBlueBead){ pc.eventTrigger[Event.gotBlueBead] = true; }
 	if(sprite_index == imgPupGreenFlake){ pc.eventTrigger[Event.gotGreenFlake] = true; }
 	if(sprite_index == imgPupSpikeBangle){ pc.eventTrigger[Event.gotSpikeBangle] = true; }
@@ -182,7 +183,7 @@ if(gotIt){
 		pc.eventTrigger[Event.gotCauldren3] = true; 
 	}
 	
-	if(sprite_index == imgPupPaperTac){ ww.txt = paperTac(); }
+	if(sprite_index == imgPupPaperTac){ ww.txtTime = 0; pc.frogBuys ++; ww.txt = paperTac(); }
 	
 	if(sprite_index == imgPupStrangePaw){ pc.eventTrigger[Event.gotStrangePaw] = true; pc.mpMax += 100; pc.mp = pc.mpMax; }
 	

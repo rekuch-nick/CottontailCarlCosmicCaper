@@ -17,7 +17,7 @@ if(img[i] != noone){
 		
 		if(mouse_x >= x && mouse_x < x + sprite_width){
 			if(mouse_y >= y && mouse_y < y + sprite_height){
-				draw_text_ext(90, 600, desc[i], 32, 800);
+				draw_text_ext(90, 600, desc[i], 32, 760);
 			}
 		}
 	}

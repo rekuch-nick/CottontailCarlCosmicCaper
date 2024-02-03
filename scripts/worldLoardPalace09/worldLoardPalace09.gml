@@ -60,6 +60,14 @@ function worldLoardPalace09(){
 			rockKind: noone, rockChance: 100, rockWait: 90,
 		},
 		{
+			initMobs: [objMobSpaceCrab, objMobSpaceCrab, objMobSpaceCrab, objMobSpaceCrab],
+			laterMobs: [],
+			waitBetweenMobs: 120,
+			waitForPups: false,
+			floorItem: noone,
+			rockKind: noone, rockChance: 100, rockWait: 90,
+		},
+		{
 			initMobs: [objMobDragonWood],
 			laterMobs: [],
 			waitBetweenMobs: 60,

@@ -28,6 +28,7 @@ function playerStepPlay(){
 	
 	
 	var spd = moveSpeed;
+	//if(mouseLHold || mouseRHold){ spd -= 2; }
 	if(slowDown){ spd *= .3; }
 	if(hurtTime > 0 && eventTrigger[Event.gotRubberBand]){ spd += 4; }
 	if(debug){ spd *= 4; }
@@ -221,6 +222,7 @@ function playerStepPlay(){
 			var xo = image_xscale > 0 ? 20 : -20;
 			for(var i=0; i<n; i++){
 				var s = instance_create_depth(x + xo, y - 12, ww.layerE, beamType);
+				if(beamType == objPlayerBeamsPhilo){ s.isBasicShot = false; }
 				var nn = ceil(i / 2) * 2;
 				if(i % 2 == 1){ nn *= -1; }
 				s.offSet = nn;
@@ -228,6 +230,9 @@ function playerStepPlay(){
 			}
 			if(wepSelected == 5 && wepLevels[5] > 0 && irandom_range(1, 100) < 60){
 				instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerIceShotSmall);
+			}
+			if(eventTrigger[Event.gotFrog] && irandom_range(1, 100) < 60){
+				instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerTadpole);
 			}
 		}
 		

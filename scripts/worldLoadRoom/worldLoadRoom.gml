@@ -27,8 +27,10 @@ function worldLoadRoom(dir){
 		if(ww.fmap[a, b] != noone){
 			var s = instance_create_depth(a * 64 + xo, b * 64 + yo, ww.layerF, objTile);
 			s.sprite_index = ww.fmap[a, b];
+			//if(s.sprite_index != imgWater){
 			if(a % 2 == 0 && b % 2 == 0){ s.image_index = 1; }
 			if(a % 3 == 0 && b % 3 == 0){ s.image_index = 2; }
+			//}
 			
 			if(s.sprite_index == imgWater){ s.isWater = true; s.isLand = false; }
 			if(s.sprite_index == imgWaterDark){ s.isWater = true; s.isLand = false; }

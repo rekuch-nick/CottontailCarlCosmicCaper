@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgWater",
-    "path": "sprites/imgWater/imgWater.yy",
+    "name": "imgWaterExperiment",
+    "path": "sprites/imgWaterExperiment/imgWaterExperiment.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -41,6 +41,9 @@ caveCoins[17, 9] = 50;
 caveCoins[12, 6] = 35;
 caveCoins[4, 8] = 60;
 caveCoins[5, 0] = 200;
+caveCoins[9, 6] = 40;
+caveCoins[9, 3] = 30;
+caveCoins[10, 2] = 100;
 
 
 

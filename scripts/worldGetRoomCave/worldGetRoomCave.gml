@@ -208,6 +208,9 @@ function worldGetRoomCave(xxx, yyy){
 		|| (xxx == 15 && yyy == 7) 
 		|| (xxx == 16 && yyy == 8) 
 		|| (xxx == 8 && yyy == 0) 
+		|| (xxx == 9 && yyy == 6) 
+		|| (xxx == 9 && yyy == 3) 
+		|| (xxx == 10 && yyy == 2) 
 		|| (xxx == 8 && yyy == 1) 
 		|| (xxx == 14 && yyy == 2) 
 		|| (xxx == 17 && yyy == 9) 
@@ -245,6 +248,9 @@ function worldGetRoomCave(xxx, yyy){
 	worldGetRoomCaveCarrot(xxx, yyy, 18, 6, Event.gotCarrot27);
 	worldGetRoomCaveCarrot(xxx, yyy, 1, 8, Event.gotCarrot28);
 	worldGetRoomCaveCarrot(xxx, yyy, 7, 0, Event.gotCarrot29);
+	worldGetRoomCaveCarrot(xxx, yyy, 9, 5, Event.gotCarrot30);
+	worldGetRoomCaveCarrot(xxx, yyy, 8, 4, Event.gotCarrot31);
+	worldGetRoomCaveCarrot(xxx, yyy, 14, 4, Event.gotCarrot33);
 	
 	
 	
@@ -303,12 +309,23 @@ function worldGetRoomCave(xxx, yyy){
 	}
 	if( (xxx == 18 && yyy == 3) ){ // tactics animal
 		ww.bmap[7, 5] = imgNPCFrog;
-		ww.txt = "I can always provide combat advice, for a few coins..";
-		var e = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupPaperTac);
-		e.coinPrice = 10;
+		if(!pc.eventTrigger[Event.gotFrog] && pc.frogBuys >= 10){
+			ww.txt = "I wager you've learned enough by now you can help pass it on to 3 or 4 hundred thousand of my children.";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupFrog);
+		} else {
+			ww.txt = "I can always provide combat advice, for a few coins..\n\nI'll give different tip depending on your progress.";
+			var e = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupPaperTac);
+			e.coinPrice = 10;
+		}
 		
 	}
-	
+	if( (xxx == 9 && yyy == 4) ){ // lucky coin
+		ww.bmap[7, 5] = imgNPCDog2;
+		if(!pc.eventTrigger[Event.gotLuckyCoin]){
+			ww.txt = "How do dogs have so many coins? I'll let you in on the secret..";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupLuckyCoin);
+		}
+	}
 	
 	
 	

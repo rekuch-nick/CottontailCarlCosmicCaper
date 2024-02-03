@@ -90,7 +90,7 @@ function worldGetRoomLongGrass(xxx, yyy){
 	if(xxx == 12 && yyy == 4){
 		biome(Zone.longGrass);
 		ww.overrideWet = objMobJellyRed;
-		ww.mobList = [4, objMobHeart, objMobHeart, objMobHeart, objMobHeart];
+		ww.mobList = [4, objMobHeartBoss, objMobHeart, objMobHeart, objMobHeart];
 		ww.canLion = false;
 		wmap("~~~~~~~~~~~~~~~");
 		wmap("~~~~~~~~~~~~~~~");
@@ -128,15 +128,16 @@ function worldGetRoomLongGrass(xxx, yyy){
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
+		wmap("..../////......");
+		wmap("..[[//=/.[.....");
+		wmap("..[[....[[.....");
+		wmap("..[[[[[[.......");
+		wmap("...[[[[[....[..");
 		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
-		wmap("...............");
+		wmap("......[........");
 		wmap("##...........##");
 		wmap("##...........##");
+		ww.fmap[8, 4] = imgRockWallGreyGrass;
 	}
 	
 	if(xxx == 15 && yyy == 4){

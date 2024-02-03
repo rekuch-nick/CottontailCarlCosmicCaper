@@ -17,21 +17,25 @@ function playerLoadInventory(){
 	
 	var s = instance_create_depth(4 * 64, 2 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotSpeedShot; s.img[0] = imgPupSpeedCharm;
-	s.desc[0] = "This charm will make your lazer eyes a little faster.";
+	s.desc[0] = "This charm will make your lazer eyes fire 10% faster.";
 	s.eve[1] = Event.gotSpeedShot2; s.img[1] = imgPupSpeedCharm2;
-	s.desc[1] = "This charm will make your lazer eyes a little faster.";
+	s.desc[1] = "This charm will make your lazer eyes fire 20% faster.";
 	
 	var s = instance_create_depth(5 * 64, 2 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotMightShot; s.img[0] = imgPupMightCharm;
-	s.desc[0] = "This charm will increase the power of your lazer eyes.";
+	s.desc[0] = "This charm will increase the power of your lazer eyes 25%.";
 	s.eve[1] = Event.gotMightShot2; s.img[1] = imgPupMightCharm2;
-	s.desc[1] = "This charm will increase the power of your lazer eyes.";
+	s.desc[1] = "This charm will increase the power of your lazer eyes 50%.";
 	
 	var s = instance_create_depth(6 * 64, 2 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotMoreShot; s.img[0] = imgPupMoreCharm;
-	s.desc[0] = "This charm will increase the number of beams from your lazer eyes.";
+	s.desc[0] = "This charm will grant a 50% chance to shoot an extra beam from your lazer eyes.";
 	s.eve[1] = Event.gotMoreShot2; s.img[1] = imgPupMoreCharm2;
-	s.desc[1] = "This charm will increase the number of beams from your lazer eyes.";
+	s.desc[1] = "This charm will grant two 50% chances to shoot an extra beam from your lazer eyes.";
+	
+	var s = instance_create_depth(7 * 64, 2 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotFrog; s.img[0] = imgTadpole;
+	s.desc[0] = "Frog the battle master's children will aid you in battle.";
 	
 	var s = instance_create_depth(8 * 64, 2 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotLuckyCoin; s.img[0] = imgLuckyCoin;

@@ -135,6 +135,7 @@ playerReset();
 surfBoardImg = imgPupSurfboard;
 yBoard = 0;
 
+frogBuys = 0;
 
 enum Event {
 	owlMarksStar,
@@ -202,6 +203,7 @@ enum Event {
 	gotSpikeBangle,
 	gotBlueBead,
 	gotGreenFlake,
+	gotFrog,
 	
 	haveBombs,
 	
