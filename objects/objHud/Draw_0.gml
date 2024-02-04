@@ -57,9 +57,11 @@ if(pc.eventTrigger[Event.owlMarksStar] && !pc.eventTrigger[Event.gotStar]){
 }
 
 s = "$ " + string(pc.coins);
-draw_text(x + 10, 422, s);
+var c = pc.coins < coinsMax() ? c_white: c_grey;
+draw_text_color(x + 10, 422, s, c, c, c, c, 1);
 s = "B " + string(pc.bombs);
-draw_text(x + 210, 422, s);
+var c = pc.bombs < bombsMax() ? c_white: c_grey;
+draw_text_color(x + 210, 422, s, c, c, c, c, 1);
 
 
 /// bars

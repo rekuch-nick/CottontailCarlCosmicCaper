@@ -11,3 +11,7 @@ bumpPow = 20;
 
 dropsBombs = true;
 
+if(choose(true, false)){
+	drop = objPupBomb;
+	dropChance = 100;
+}
