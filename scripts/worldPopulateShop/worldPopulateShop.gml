@@ -72,7 +72,7 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 			t = objPupOil; p = 220;
 			desc = "Torch is more powerful.";
 		} else if (!pc.eventTrigger[Event.gotCrowbar]) {
-			t = objPupCrowbar; p = 45;
+			t = objPupCrowbar; p = 25;
 			desc = "Pushing blocks hurts monsters.";
 		}
 	}

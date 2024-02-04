@@ -3,70 +3,23 @@ function playerStepPlayOrPause(){
 	if(debugPossible && keyboard_check_pressed(vk_backspace)){
 		debug = !debug;
 		if(debug){
-			hpMax = 300;
+			//hpMax = 300;
 			hp = hpMax;
 			mp = mpMax;
 			coins = coinsMax();
 			bombs = bombsMax();
 			eventTrigger[Event.gotStar] = true;
 			eventTrigger[Event.gotMap] = true;
-			//eventTrigger[Event.gotGlasses] = true;
 			wepLevels[2]  = 1; eventTrigger[Event.gotTorch] = true; // torch
-			//wepLevels[5] = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
-			//wepLevels[7] = 1; eventTrigger[Event.gotHole] = true; // portable hole
-			//wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
 			with(objMob){ hp = 0; }
-			
 		}
 	}
-	
-	if(debug && keyboard_check_pressed(vk_pageup)){
-		wepLevels[5] = 1; eventTrigger[Event.gotIceStone] = true; // ice stone
-		wepLevels[1] = 1; eventTrigger[Event.gotStars] = true; // stars
-		wepLevels[8] = 1; eventTrigger[Event.gotWand] = true; // wand
-		wepLevels[4]  = 1; eventTrigger[Event.gotWindStone] = true; // windstone
-		eventTrigger[Event.gotMoreShot] = true;
-		eventTrigger[Event.gotMightShot] = true;
-		eventTrigger[Event.gotSpeedShot] = true;
-		
-		eventTrigger[Event.gotCauldren1] = true;
-		eventTrigger[Event.gotHealingHeart] = true;
-		eventTrigger[Event.gotPinwheel] = true;
-		eventTrigger[Event.gotMagnet] = true;
-		
-		eventTrigger[Event.gotRangPack] = true;
-		eventTrigger[Event.gotRang2] = true;
-		eventTrigger[Event.gotPinwheel] = true;
-		
-		eventTrigger[Event.gotFeather] = true;
-		eventTrigger[Event.gotShield] = true;
-		eventTrigger[Event.gotShield2] = true;
-		eventTrigger[Event.gotHoneycomb] = true;
-		
-		eventTrigger[Event.gotPoisonVial] = true;
-		eventTrigger[Event.gotOil] = true;
-		
-		potion = imgPupPotionFire;
-		
-		
-	}
-	
+	debugSetLevelCleated();
 	if(debug && keyboard_check_pressed(vk_insert)){
 		for(var i=0; i<300; i++){ eventTrigger[i] = true; }
 		for(var i=0; i<11; i++){ wepLevels[i] = max(wepLevels[i], 1); }
 	}
 	
-	if(debugPossible && keyboard_check_pressed(vk_home)){
-		pc.eventTrigger[Event.gotCoinBag] = true;
-		
-		pc.eventTrigger[Event.gotBlueBead] = true;
-		pc.eventTrigger[Event.gotGreenFlake] = true;
-		
-		pc.eventTrigger[Event.gotCape] = false;
-		pc.eventTrigger[Event.gotCape2] = false;
-		pc.eventTrigger[Event.gotCross] = false;
-		coins = coinsMax();
-	}
 	
 	if(charPressed == "1" && wepLevels[0] > 0){ wepSelected = 0; }
 	if(charPressed == "2" && wepLevels[1] > 0){ wepSelected = 1; }

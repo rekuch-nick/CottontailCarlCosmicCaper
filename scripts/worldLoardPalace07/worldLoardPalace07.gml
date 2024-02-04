@@ -83,7 +83,7 @@ function worldLoardPalace07(){
 			laterMobs: [],
 			waitBetweenMobs: 30,
 			waitForPups: true,
-			floorItem: itm,
+			floorItem: itm2,
 			rockKind: objSpaceRockNova, rockChance: 100, rockWait: 30,
 		},
 		{

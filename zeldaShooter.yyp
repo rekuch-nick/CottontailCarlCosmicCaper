@@ -742,6 +742,7 @@
     {"id":{"name":"arrayContains","path":"scripts/arrayContains/arrayContains.yy",},},
     {"id":{"name":"imgBushIce","path":"sprites/imgBushIce/imgBushIce.yy",},},
     {"id":{"name":"objMobMouth","path":"objects/objMobMouth/objMobMouth.yy",},},
+    {"id":{"name":"debugSetLevelCleated","path":"scripts/debugSetLevelCleated/debugSetLevelCleated.yy",},},
     {"id":{"name":"imgMobTube","path":"sprites/imgMobTube/imgMobTube.yy",},},
     {"id":{"name":"imgBushGrass","path":"sprites/imgBushGrass/imgBushGrass.yy",},},
     {"id":{"name":"imgMobDragonBlackShift","path":"sprites/imgMobDragonBlackShift/imgMobDragonBlackShift.yy",},},

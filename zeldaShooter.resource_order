@@ -711,6 +711,7 @@
     {"name":"arrayContains","order":19,"path":"scripts/arrayContains/arrayContains.yy",},
     {"name":"imgBushIce","order":5,"path":"sprites/imgBushIce/imgBushIce.yy",},
     {"name":"objMobMouth","order":42,"path":"objects/objMobMouth/objMobMouth.yy",},
+    {"name":"debugSetLevelCleated","order":96,"path":"scripts/debugSetLevelCleated/debugSetLevelCleated.yy",},
     {"name":"imgMobTube","order":25,"path":"sprites/imgMobTube/imgMobTube.yy",},
     {"name":"imgBushGrass","order":53,"path":"sprites/imgBushGrass/imgBushGrass.yy",},
     {"name":"imgMobDragonBlackShift","order":17,"path":"sprites/imgMobDragonBlackShift/imgMobDragonBlackShift.yy",},

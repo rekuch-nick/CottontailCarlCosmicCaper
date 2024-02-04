@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgPupCauldren3",
-    "path": "sprites/imgPupCauldren3/imgPupCauldren3.yy",
+    "name": "imgPowderHorn",
+    "path": "sprites/imgPowderHorn/imgPowderHorn.yy",
   },
   "spriteMaskId": null,
   "visible": true,

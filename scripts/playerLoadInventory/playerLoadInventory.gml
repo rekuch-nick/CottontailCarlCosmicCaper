@@ -66,10 +66,10 @@ function playerLoadInventory(){
 	
 	
 	var s = instance_create_depth(2 * 64, 3 * 64, hud.depth - 1, objItemTooltip);
-	s.eve[0] = Event.gotRang; s.img[0] = imgPlayerRang;
-	s.desc[0] = "Your trusty boomarang, as useful for picking up far away items as it is for bashing monsters.";
-	s.eve[1] = Event.gotRang2; s.img[1] = imgPlayerRang2;
-	s.desc[1] = "A slim metal boomarang, as useful for picking up far away items as it is for bashing monsters.";
+	s.eve[0] = Event.gotRang; s.img[0] = imgPlayerRang; s.desc[0] = "Your trusty boomarang, as useful for picking up far away items as it is for bashing monsters.";
+	s.eve[1] = Event.gotRang2; s.img[1] = imgPlayerRang2; s.desc[1] = "A slim metal boomarang, as useful for picking up far away items as it is for bashing monsters.";
+	s.eve[2] = Event.gotRang3; s.img[2] = imgPlayerRang3; s.desc[2] = "A state-of-ther-art boomarang will bounce into multiple monsters.";
+	s.eve[3] = Event.gotRang4; s.img[3] = imgPlayerRang4; s.desc[3] = "A magical boomarang with a chance to call lightning.";
 	
 	var s = instance_create_depth(3 * 64, 3 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotStars; s.img[0] = imgPlayerStar;
