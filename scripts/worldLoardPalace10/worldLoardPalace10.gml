@@ -13,7 +13,7 @@ function worldLoardPalace10(){
 			rockKind: noone, rockChance: 40, rockWait: 30,
 		},
 		{
-			initMobs: [objMobLike, objMobLike, objMobLike, objMobLike, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth],
+			initMobs: [objMobLike, objMobLike, objMobLike, objMobLike, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2],
 			laterMobs: [objMobWormSniper, objMobWormSniper, objMobWormSniper, objMobWormSniper, objMobWormSniper],
 			waitBetweenMobs: 30,
 			waitForPups: false,

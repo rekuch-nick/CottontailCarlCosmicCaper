@@ -139,3 +139,4 @@ randomizeShootMaxMin = 10;
 randomizeShootMaxMax = 40;
 
 forceBlockChanceOnThink = 0;
+isTough = false;

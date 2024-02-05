@@ -29,6 +29,7 @@ shieldBreakTime = 0;
 
 isSandworm = false;
 isDragon = false;
+isTough = false;
 basicImmunity = false;
 canFreeze = true;
 canStun = true;

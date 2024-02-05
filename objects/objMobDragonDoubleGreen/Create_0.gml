@@ -23,7 +23,7 @@ isDragon = true;
 canFreeze = false;
 
 showHP = true;
-regen = .5;
+regen = .4;
 
 
 drop = objPupCoin;

@@ -1,14 +1,14 @@
 event_inherited();
 
-hp = 755;
-hpMax = 755;
+hp = 955;
+hpMax = 955;
 
 shotKind = objMobShotSeek;
 shootCDMax = 40;
 shootCD = shootCDMax;
 
 
-bumpPow = 20;
+bumpPow = 30;
 
 
 moveSpeed = 8;
@@ -26,8 +26,8 @@ canFreeze = false;
 showHP = true;
 
 spec = imgLightning;
-specCD = 60;
-specCDMax = 60;
+specCD = 55;
+specCDMax = 55;
 
 
 drop = objPupCoin;

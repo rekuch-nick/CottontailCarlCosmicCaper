@@ -15,7 +15,7 @@ function worldLoardPalace08(){
 		},
 		{
 			initMobs: [objMobLike, objMobLike, objMobLike, objMobLike],
-			laterMobs: [objMobSpaceJelly2],
+			laterMobs: [objMobSpaceJelly2, objMobMouth2],
 			waitBetweenMobs: 30,
 			waitForPups: false,
 			floorItem: noone,
@@ -95,7 +95,15 @@ function worldLoardPalace08(){
 		},
 		{
 			initMobs: [objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth],
-			laterMobs: [objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth],
+			laterMobs: [objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2],
+			waitBetweenMobs: 30,
+			waitForPups: false,
+			floorItem: noone,
+			rockKind: noone, rockChance: 100, rockWait: 90,
+		},
+		{
+			initMobs: [objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2, objMobSpaceJelly2, objMobSpaceJelly2, objMobSpaceJelly2, objMobSpaceJelly2],
+			laterMobs: [],
 			waitBetweenMobs: 30,
 			waitForPups: false,
 			floorItem: noone,

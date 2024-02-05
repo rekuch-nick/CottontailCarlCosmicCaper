@@ -62,7 +62,7 @@ if(!arrayContains(hitList, other)){
 		
 		if(bounces >= 1 && object_index == objPlayerRang4 && choose(true, false)){
 			bounces --;
-			instance_create_depth(other.x, other.y, ww.layerE, objLightning, {image_angle: 90});
+			instance_create_depth(other.x, other.y - 960 , ww.layerE, objLightning, {image_angle: -90});
 			other.hp -= 20;
 		}
 	}

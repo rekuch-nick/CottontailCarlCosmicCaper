@@ -4,7 +4,15 @@ function worldLoardPalace09(){
 	var itm = pc.eventTrigger[Event.gotMightShot2] ? noone : objPupMightCharm2;
 	pc.palaceWaves = [
 		{
-			initMobs: [objMobKnight, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobWormSniper, objMobWormSniper],
+			initMobs: [objMobMouth2, objMobMouth2, objMobMouth, objMobMouth],
+			laterMobs: [],
+			waitBetweenMobs: 45,
+			waitForPups: false,
+			floorItem: noone,
+			rockKind: noone, rockChance: 40, rockWait: 30,
+		},
+		{
+			initMobs: [objMobKnight, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth, objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2, objMobWormSniper, objMobWormSniper],
 			laterMobs: [objMobWormSniper, objMobWormSniper, objMobWormSniper],
 			waitBetweenMobs: 45,
 			waitForPups: false,
@@ -44,7 +52,7 @@ function worldLoardPalace09(){
 			rockKind: noone, rockChance: 100, rockWait: 90,
 		},
 		{
-			initMobs: [objMobMouth, objMobMouth, objMobMouth, objMobMouth],
+			initMobs: [objMobMouth2, objMobMouth2, objMobMouth2, objMobMouth2],
 			laterMobs: [],
 			waitBetweenMobs: 120,
 			waitForPups: false,
@@ -52,7 +60,7 @@ function worldLoardPalace09(){
 			rockKind: noone, rockChance: 100, rockWait: 90,
 		},
 		{
-			initMobs: [objMobMouth, objMobMouth, objMobMouth, objMobMouth],
+			initMobs: [objMobMouth2, objMobMouth2, objMobMouth, objMobMouth],
 			laterMobs: [objMobSpaceEnt],
 			waitBetweenMobs: 30,
 			waitForPups: true,

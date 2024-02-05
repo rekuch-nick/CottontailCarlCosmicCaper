@@ -1,6 +1,6 @@
 function creatureBuffDecay(){
 	
-	if(isDragon || ignoreStatus){
+	if(isDragon || ignoreStatus || isTough){
 		burnTime = 0;
 		poisonTime = 0;
 		stunTime = 0;

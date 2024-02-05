@@ -20,7 +20,7 @@ driftMove = Move.stayTop;
 thinkCDMax = 20;
 
 
-isDragon = true;
+isTough = true;
 canFreeze = false;
 
 

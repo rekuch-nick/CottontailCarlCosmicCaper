@@ -204,6 +204,13 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 			l.image_angle = point_direction(x, y, pc.x, pc.y);
 			hurtPlayer(bumpPow, false);
 			pc.stunTime = max(pc.stunTime, 20);
+			
+			if(object_index == objMobDragonSnapYellow){
+				repeat(irandom_range(3, 6)){
+					instance_create_depth(irandom_range(0, 14) * 64 + 32, 32, ww.layerE, objMobShotFallDriftYel);
+				}
+			}
+			
 		}
 		
 		if(spec == objMobShotFire || spec == objMobShotFireDark){ repeat(specNum){
@@ -313,8 +320,9 @@ if(shatterAtHalf && hp / hpMax <= .5){
 		moveSpeed -= 1;
 		shotKind = objMobShot2;
 		shootCDMax = 17;
-		regen = .5;
+		hp = hpMax;
 		repeat(10){ instance_create_depth(x, y, ww.layerE, objMobShotRandom); }
+		repeat(4){ instance_create_depth(x, y, ww.layerM, objMobSpaceWitch); }
 	} else if (object_index == objMobSpaceArmor) {
 		repeat(10){ instance_create_depth(x, y, ww.layerE, objMobShotSilly2); }
 	} else {
