@@ -13,7 +13,11 @@ if(falling){
 	return;
 }
 
-
+if(healHP > 0){
+	healHP -= 10;
+	hp = clamp(hp + 10, 0, hpMax);
+	if(hp >= hpMax){ healHP = 0; }
+}
 
 creatureBuffDecay();
 if(burnTime > 0){ 
@@ -250,6 +254,11 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 				}
 			}
 			
+		}
+		
+		if(specSummon){
+			var s = instance_create_depth(x, y, depth, spec);
+			s.dropChance = 0;
 		}
 		
 		if(specLimit != -1){

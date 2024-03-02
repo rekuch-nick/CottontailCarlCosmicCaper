@@ -11,6 +11,36 @@ function mobStepDamage(){
 	}
 	
 	
+	if(object_index == objMobDragonBoneKing){
+		if(healHP <= 0 && hp / hpMax < .15){
+			if(phase == 1){
+				hpMax = 1000;
+				phase = 2; healHP = hpMax;
+				shotKind = objMobShotHalfTracer;
+				shootCDMax = 100;
+				instance_create_depth(x, y, depth, objMobGhostBone);
+				instance_create_depth(x, y, depth, objMobGhostBone);
+				return;
+			}
+			if(phase == 2){
+				hpMax = 1100;
+				phase = 3; healHP = hpMax;
+				shotKind = objMobShot2;
+				shootCDMax = 90;
+				shotCuster = 2; shotClusterMax = 2; shotClusterCDMas = 10;
+				spec = objMobCubeSmall;
+				specSummon = true;
+				specLimit = 2;
+				specCD = 120;
+				specCDMax = 1800;
+				instance_create_depth(x, y, depth, objMobGhostBone);
+				instance_create_depth(x, y, depth, objMobGhostBone);
+				return;
+			}
+		}
+	}
+	
+	
 	
 	if(hp < 1){
 		
@@ -32,6 +62,8 @@ function mobStepDamage(){
 		}
 		
 		if(isDragon){ with(objMobShot){ instance_destroy(); }}
+		
+		if(object_index == objMobDragonBoneKing){ with(objMobGhostBone){ instance_destroy(); }}
 
 	
 		if(cubeSplitOnDeath){
@@ -42,11 +74,13 @@ function mobStepDamage(){
 				if(s < 2 && o == objMobCube){ o = objMobCubeSmall; s = 6; }
 				if(s < 2){ break; }
 		
-				dropChance = 0;
+				
 				var spt = instance_create_depth(x, y, depth, o);
 				spt.image_xscale = s;
 				spt.image_yscale = s;
 				spt.incincTime = 7;
+				spt.dropChance = dropChance;
+				dropChance = 0;
 			}
 		}
 		

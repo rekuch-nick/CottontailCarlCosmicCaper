@@ -39,6 +39,8 @@ function playerStepSurf(){
 	
 	if(irandom_range(1, 30) == 1){
 		instance_create_depth(ww.roomWidth + 20, ocean.y, ww.layerP, objWave);
+	} else if (irandom_range(1, 8) == 1) {
+		instance_create_depth(ww.roomWidth + 20, ocean.y, ww.layerP, objWaveVisual);
 	}
 	
 	if(irandom_range(1, 60) == 1){
@@ -49,6 +51,7 @@ function playerStepSurf(){
 	if(surfTime < 1){
 		instance_destroy(ocean);
 		with(objWave){ instance_destroy(); }
+		with(objWaveVisual){ instance_destroy(); }
 		with(objEffect){ instance_destroy(); }
 		with(objPup){ instance_destroy(); }
 		

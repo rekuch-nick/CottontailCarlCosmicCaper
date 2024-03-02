@@ -19,6 +19,8 @@ if(flickerBeforeThink && thinkCD < 30 && choose(true, false)){ return; }
 if(hurtTime > 0 && hurtTime % 2 == 1 && ww.state == State.play){ return; }
 if(frozenTime > 0 || stunTime > 0){ image_index = 0; }
 
+if(flicker){ image_alpha = random_range(.2, .7); }
+
 var a = x; var b = y;
 if(jumping){ b = y + yJump; }
 

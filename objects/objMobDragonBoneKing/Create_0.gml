@@ -1,7 +1,7 @@
 event_inherited();
 
-hp = 1255;
-hpMax = 1255;
+hp = 755;
+hpMax = 755;
 
 shotKind = objMobShotSeek;
 shootCD = shootCDMax - choose(0, 10, 20);
@@ -27,8 +27,8 @@ showHP = true;
 
 
 drop = objPupCoin;
-if(!pc.eventTrigger[Event.gotCarrotDragonGreen]){
+if(!pc.eventTrigger[Event.gotCarrotDragonBoneKing]){
 	drop = objPupCarrot;
-	dropEventNumber = Event.gotCarrotDragonGreen;
+	dropEventNumber = Event.gotCarrotDragonBoneKing;
 }
 dropChance = 100;

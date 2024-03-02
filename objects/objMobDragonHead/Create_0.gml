@@ -4,7 +4,8 @@ hp = 175;
 hpMax = 175;
 
 shotKind = objMobShotTracer;
-shootCDMax = 60;
+shotKind = objMobShotTracerFade;
+shootCDMax = 70;
 shootCD = 40;
 //shotSwap = [objMobShotSilly, objMobShotBounce];
 

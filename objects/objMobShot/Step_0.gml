@@ -140,6 +140,11 @@ if(spawn != noone){
 	spawnCD --; if(spawnCD < 1){
 		spawnCD = spawnCDMax;
 		instance_create_depth(x, y, depth, spawn);
+		if(object_index == objMobShotTracerFade){
+			image_xscale -= .01;
+			image_yscale -= .01;
+			timeCD -= 15;
+		}
 	}
 }
 

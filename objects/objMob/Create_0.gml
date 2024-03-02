@@ -66,6 +66,7 @@ blockCDMax = 90;
 harmlessWhileBlocking = false;
 
 spec = noone;
+specSummon = false;
 specCD = 0;
 specCDMax = 0;
 specLimit = -1;
@@ -85,7 +86,9 @@ weakToIce = false;
 weakToWind = false;
 goldFrame = noone;
 showedWeak = false;
+weakToStun = false;
 flickerBeforeThink = false;
+flicker = false;
 
 increaseShootSpeed = false;
 increaseShootSpeedMin = 30;
@@ -140,3 +143,7 @@ randomizeShootMaxMax = 40;
 
 forceBlockChanceOnThink = 0;
 isTough = false;
+
+phase = 1;
+healHP = 0;
+immuneToAll = false;

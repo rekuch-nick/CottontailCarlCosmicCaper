@@ -282,6 +282,7 @@ enum Event {
 	gotCarrotDragonWood,
 	gotCarrotElementalBoss,
 	gotCarrotWindBoss,
+	gotCarrotDragonBoneKing,
 	
 	gotBird,
 }

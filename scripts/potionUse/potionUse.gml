@@ -16,7 +16,12 @@ function potionUse(k){
 	}
 	
 	if(k == imgPupPotionStun){
-		with(objMob){ stunTime = max(stunTime, 200); }
+		with(objMob){ 
+			stunTime = max(stunTime, 200); 
+			if(weakToStun){
+				stunTime = max(stunTime, 1200); 
+			}
+		}
 	}
 	
 	

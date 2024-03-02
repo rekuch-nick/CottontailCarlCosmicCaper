@@ -1,5 +1,6 @@
 if(other.blockTime > 0){ return; }
 if(other.incincTime > 0){ return; }
+if(other.immuneToAll){ return; }
 if(!arrayContains(hitList, other)){
 	arrayAdd(hitList, other);
 	
