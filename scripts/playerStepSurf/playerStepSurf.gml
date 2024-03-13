@@ -1,5 +1,7 @@
 function playerStepSurf(){
 	
+	pc.beenSurfing = clamp(pc.beenSurfing + 1, 0, 30 * 60 * 60 * 2);
+	
 	xSpeed = moveSpeed * xIn;
 	x += xSpeed;
 	while(x < 32){ x ++; }
@@ -47,6 +49,11 @@ function playerStepSurf(){
 		instance_create_depth(ww.roomWidth + 20, irandom_range(0, 200), ww.layerP, objWaveCoin);
 	}
 	
+	var skellyChance = max(60 - floor(pc.beenSurfing / 30), 10);
+	if(irandom_range(1, skellyChance) == 1){
+		instance_create_depth(ww.roomWidth + 20, irandom_range(0, 200), ww.layerM, objWaveSkelly);
+	}
+	
 	surfTime --;
 	if(surfTime < 1){
 		instance_destroy(ocean);
@@ -58,6 +65,7 @@ function playerStepSurf(){
 		ww.state = State.play;
 		x = ww.roomWidth / 2;
 		y = room_height - 128;
+		image_angle = 0;
 		worldLoadRoom(0);
 		pc.stunTime = 20;
 		

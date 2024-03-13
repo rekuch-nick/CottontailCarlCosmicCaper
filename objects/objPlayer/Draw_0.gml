@@ -25,6 +25,10 @@ if(ww.state == State.rocketing){
 	return;
 }
 if(ww.state == State.surfStart || ww.state == State.surfGame || ww.state == State.surfEnd ){
+	if(hurtTime > 0){
+		image_index = 10;
+		hurtTime --;
+	} else { image_index = 1; }
 	draw_self();
 	draw_sprite_ext(surfBoardImg, 0, x, max(y+32, yBoard), 4, 4, -90, c_white, 1);
 }

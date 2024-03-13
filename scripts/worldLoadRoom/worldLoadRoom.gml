@@ -58,6 +58,7 @@ function worldLoadRoom(dir){
 			s.sprite_index = ww.bmap[a, b];
 			if(s.sprite_index == imgPushBlock){ s.canPush = true; }
 			if(s.sprite_index == imgPushBlockGrass){ s.canPush = true; }
+			if(s.sprite_index == imgPushBlockSnow){ s.canPush = true; }
 			if(s.sprite_index == imgMobArmorStillGrass){ s.canPush = true; }
 			ww.bmap[a, b] = s;
 			

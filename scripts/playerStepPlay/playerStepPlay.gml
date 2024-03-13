@@ -424,6 +424,8 @@ function playerStepPlay(){
 		hp -= .1;
 	} else {
 		if(eventTrigger[Event.gotHealingHeart]){ hp = clamp(hp + .01, 0, hpMax); }
+		if( hp/hpMax < .6 && eventTrigger[Event.gotHealingHeart]){ hp = clamp(hp + .01, 0, hpMax); }
+		if( hp/hpMax < .3 && eventTrigger[Event.gotHealingHeart]){ hp = clamp(hp + .01, 0, hpMax); }
 		if(eventTrigger[Event.gotShield3] && sp >= spMax){ hp = clamp(hp + .01, 0, hpMax); }
 	}
 	

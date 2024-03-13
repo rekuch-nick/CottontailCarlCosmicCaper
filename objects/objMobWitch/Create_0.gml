@@ -20,3 +20,5 @@ dropsBombs = true;
 rejectBeam = true;
 rejectBeamCDMax = 5;
 rejectBeamRange = 96;
+
+weakToNinjaStars = true;

@@ -2,4 +2,4 @@ event_inherited();
 
 coinValue = 1;
 waveScroll = true;
-surfTime = 45;
+surfTime = 30 * 3;
