@@ -68,13 +68,13 @@ function worldGetRoomJungle(xxx, yyy){
 	
 	if(xxx == 13 && yyy == 8){
 		biome(Zone.jungle);
-		wmap("%pppp%%%%%%%ppp");
-		wmap("%p..........%pp");
-		wmap("p..............");
-		wmap("p..ssssss......");
-		wmap("p...ssssssss..%");
-		wmap("p.ssss///ss...%");
-		wmap("p...ss/=/ss..pp");
+		wmap("%pppplllll%%ppp");
+		wmap("%p...lllll..%pp");
+		wmap("p....lllll.....");
+		wmap("p..sslllll.....");
+		wmap("p...slllllss..%");
+		wmap("p.sssllllls...%");
+		wmap("p...sll=lls..pp");
 		wmap("p..sssssss..pp%");
 		wmap("p...s.sss.s....");
 		wmap("p..............");

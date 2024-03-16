@@ -1,9 +1,10 @@
-function surfPlayerOnGround(){
+function surfPlayerOnGround(movingUp){
 	
-	
-	if(collision_point(pc.x, pc.y, objWave, true, true)){
-		pc.isBouncing = true;
-		return true;
+	if(!movingUp){
+		if(collision_point(pc.x, pc.y, objWave, true, true)){
+			pc.isBouncing = true;
+			return true;
+		}
 	}
 	
 	

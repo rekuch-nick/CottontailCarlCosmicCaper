@@ -19,7 +19,8 @@ pc.image_yscale = 4;
 pc.pushingTime = 0;
 
 pc.xMap = 10; pc.yMap = 7;
-		//pc.xMap = 18; pc.yMap = 9; ///
+		//pc.xMap = 1; pc.yMap = 4; ///
+		//if(pc.coins < 100){ pc.coins = 100; }
 
 
 pc.inOverworld = true; // ???

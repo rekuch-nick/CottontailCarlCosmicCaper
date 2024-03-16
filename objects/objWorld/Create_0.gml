@@ -84,6 +84,12 @@ enum State {
 	surfGame,
 	surfEnd,
 	birdScene,
+	digStart,
+	digGame,
+	digEnd,
+	jumpStart,
+	jumpGame,
+	jumpEnd,
 }
 
 enum Zone {

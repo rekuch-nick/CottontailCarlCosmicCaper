@@ -40,7 +40,8 @@ if(ww.state == State.dying){ playerStepDying(); }
 if(ww.state == State.surfStart){ playerStepSurfStarting(); }
 if(ww.state == State.surfGame){ playerStepSurf(); }
 if(ww.state == State.birdScene){ playerStepBirdScene(); }
-
+if(ww.state == State.digStart){ playerStepDigStarting(); }
+if(ww.state == State.digGame){ playerStepDig(); }
 
 
 

@@ -23,6 +23,38 @@ if(ww.state == State.surfGame){
 	var c1 = c_yellow; var c2 = c_orange;
 	draw_rectangle_color(x1, y1, x1 + w, y2, c2, c2, c1, c1, false);
 	
+	var v = floor( (pc.surfTime * 100) / 30);
+	var vv = v / 100;
+	draw_text(x1 + 4, y1 + 4, vv);
+	
+	s = "$ " + string(pc.coins);
+	var c = pc.coins < coinsMax() ? c_white: c_grey;
+	draw_text_color(x + 10, 422, s, c, c, c, c, 1);
+
+	var s = "Move: AD\nJump: LClick/Space/W";
+	draw_text_ext_transformed(x + 4, 600, s, 32, 600, .5, .5, 0);
+	
+	return;
+}
+
+
+if(ww.state == State.digGame){
+	draw_rectangle_color(x, y, room_width, room_height, $031E33, $031E33, $031E33, $031E33, false);
+	
+	var x1 = x + 8;
+	var y1 = y + (44 * 4);
+	for(var i=0; i<pc.digHP; i++){
+		draw_rectangle_color(x1, y1, x1+16, y1+16, c_red, c_purple, c_orange, c_white, false);
+		x1 += 20;
+	}
+	
+	
+	s = "$ " + string(pc.coins);
+	var c = pc.coins < coinsMax() ? c_white: c_grey;
+	draw_text_color(x + 10, 422, s, c, c, c, c, 1);
+
+	var s = "Move: AD\nJump: LClick/Space/W\nDig:ASD";
+	draw_text_ext_transformed(x + 4, 600, s, 32, 600, .5, .5, 0);
 	
 	return;
 }

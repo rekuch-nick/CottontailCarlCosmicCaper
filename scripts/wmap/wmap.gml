@@ -94,6 +94,8 @@ function wmap(s){
 		
 		if(c == "S"){ ww.bmap[a, b] = imgRockWallSnow; }
 		
+		if(c == "l"){ ww.bmap[a, b] = imgTreeTrunk; }
+		
 		if(c == "d"){ ww.bmap[a, b] = imgBushDead; }
 		
 		if(c == "P"){ ww.bmap[a, b] = imgPalaceWall; }

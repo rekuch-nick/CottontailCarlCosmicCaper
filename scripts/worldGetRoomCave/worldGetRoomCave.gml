@@ -502,4 +502,47 @@ function worldGetRoomCave(xxx, yyy){
 	
 	
 	
+	
+	if(xxx == 13 && yyy == 8){
+		worldRowReset();
+		wmap("lllllllllllllll");
+		wmap("lll.........lll");
+		wmap("lll.........lll");
+		wmap("lll+lllllllllll");
+		wmap("lll+lllllllllll");
+		wmap("lll+lllllllllll");
+		wmap("lll+lllllllllll");
+		wmap("lll.........lll");
+		wmap("lll..F...F..lll");
+		wmap("lll.........lll");
+		wmap("lll.........lll");
+		wmap("llllll...llllll");
+		
+		
+		var s = instance_create_depth(7 * 64 + 32, 2 * 64 + 32, ww.layerP, objPupSurfboard);
+		s.coinPrice = 40; s.desc = "";
+	}
+	
+	if(xxx == 1 && yyy == 4){
+		worldRowReset();
+		wmap("////////../////");
+		wmap("//.//////./////");
+		wmap("//..///////////");
+		wmap("///////////////");
+		wmap("/..//////..////");
+		wmap("//.//.......///");
+		wmap("////.......///.");
+		wmap("///.........//.");
+		wmap("///..........//");
+		wmap("////....///////");
+		wmap("..///....//////");
+		wmap("//////...//////");
+		
+		
+		var s = instance_create_depth(7 * 64 + 32, 7 * 64 + 32, ww.layerP, objPupPick);
+		s.coinPrice = 40; s.desc = "";
+	}
+	
+	
+	
 }

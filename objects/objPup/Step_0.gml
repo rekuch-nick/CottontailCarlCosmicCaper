@@ -230,6 +230,9 @@ if(gotIt){
 	if(sprite_index == imgPupSurfboard){
 		ww.state = State.surfStart;
 	}
+	if(sprite_index == imgPupPick){
+		ww.state = State.digStart; /////
+	}
 	
 	var e = instance_create_depth(x, y, ww.layerE, objEffect);
 	e.ySpeed = -2; e.fade = .03;

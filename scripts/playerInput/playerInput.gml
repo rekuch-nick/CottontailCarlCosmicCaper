@@ -56,7 +56,7 @@ function playerInput(){
 	potPressed = keyboard_check_pressed(ord("Q"));
 	
 	
-	surfJumpPressed = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || mouse_check_button_pressed(mb_left);
-	surfJumpHeld = keyboard_check(vk_up) || keyboard_check(ord("W")) || mouse_check_button(mb_left);
+	surfJumpPressed = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || mouse_check_button_pressed(mb_left) || keyboard_check_pressed(vk_space);
+	surfJumpHeld = keyboard_check(vk_up) || keyboard_check(ord("W")) || mouse_check_button(mb_left) || keyboard_check(vk_space);
 
 }

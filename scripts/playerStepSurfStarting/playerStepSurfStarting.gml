@@ -22,8 +22,8 @@ function playerStepSurfStarting(){
 		pc.yBoard = y;
 		pc.image_xscale = 4;
 		
-		pc.surfTime = 30 * 45; //
-		pc.surfTimeMax = 12 * 60;
+		pc.surfTime = 20 * 30; //
+		pc.surfTimeMax = 30 * 30;
 		pc.beenSurfing = 0;
 		
 	}
