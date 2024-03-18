@@ -439,17 +439,18 @@ function worldGetRoomCave(xxx, yyy){
 		|| (xxx == 18 && yyy == 1)
 				){ 
 		wmap("///////////////");
-		wmap("//...F...F...//");
-		wmap("/.F....AAA.FF./");
-		wmap("/AA.FAA...AA.F/");
-		wmap("/..AA.......A./");
-		wmap("/......0.....A/");
+		wmap("//...........//");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/............./");
+		wmap("/......0....../");
 		wmap("/............./");
 		wmap("/............./");
 		wmap("/............./");
 		wmap("/............./");
 		wmap("//...........//");
 		wmap("//////...//////");
+		worldGetCaveSkulls(xxx, yyy);
 		
 		if( (xxx == 8 && yyy == 6 && pc.eventTrigger[Event.palace1Clear])
 			|| (xxx == 7 && yyy == 1 && pc.eventTrigger[Event.palace2Clear])
@@ -468,6 +469,8 @@ function worldGetRoomCave(xxx, yyy){
 			ww.fmap[5, 5] = imgGrassFlowers; ww.fmap[6, 5] = imgGrassFlowers; ww.fmap[8, 5] = imgGrassFlowers; ww.fmap[9, 5] = imgGrassFlowers;
 			ww.fmap[6, 6] = imgGrassFlowers; ww.fmap[7, 6] = imgGrassFlowers; ww.fmap[8, 6] = imgGrassFlowers;
 			ww.fmap[6, 7] = imgGrassFlowers; ww.fmap[7, 7] = imgGrassFlowers;
+		} else {
+			
 		}
 	}
 	

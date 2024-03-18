@@ -66,3 +66,7 @@ inertOver = noone;
 
 splitStrike = noone;
 lineHuntReverse = false;
+isLobTall = false;
+
+splitInto = noone;
+splitNumber = 0;

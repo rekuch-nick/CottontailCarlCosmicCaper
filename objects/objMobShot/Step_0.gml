@@ -5,6 +5,10 @@ if(firstFrame){
 	if(isLob){
 		ySpeed = -10; grav = 1;
 		xTar = pc.x >= x ? 1000 : - 10;
+		if(isLobTall){
+			xTar = choose(true, false) ? 1000 : - 10;
+			ySpeed = -30;
+		}
 	}
 	
 	if(lineHunt){
@@ -160,5 +164,9 @@ if(x < 0 || y < 0 || x > ww.roomWidth || y > room_height){
 	timeCD = 0;
 }
 if(timeCD < 1){
+	if(splitNumber > 0){ repeat(splitNumber){
+		instance_create_depth(x, y, depth, splitInto);
+	}}
+	
 	instance_destroy();
 }

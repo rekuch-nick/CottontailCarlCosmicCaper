@@ -36,6 +36,8 @@ function worldGetRoomLongGrass(xxx, yyy){
 	
 	if(xxx == 14 && yyy == 5){
 		biome(Zone.longGrass);
+		ww.mobList = [1, objMobLobberBoss];
+		ww.canLion = false;
 		wmap("##...........##");
 		wmap("##...........##");
 		wmap("...............");
