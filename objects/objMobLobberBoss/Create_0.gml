@@ -4,10 +4,10 @@ image_xscale = 6; image_yscale = 6;
 hp = 140;
 hpMax = 140;
 
-shotKind = objMobShotLob;
+shotKind = objMobShotLobOther;
 shootCD = 20;
 shotCDMax = 30;
-shotCuster = 1; shotClusterMax = 1; shotClusterCDMas = 10;
+shotCuster = 7; shotClusterMax = 7; shotClusterCDMas = 10;
 
 
 bumpPow = 20;

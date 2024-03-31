@@ -152,6 +152,7 @@ if(pc.wepSelected == 3){ im = imgPupBomb; }
 if(pc.wepSelected == 4){ im = imgPupWindStoneCrack; }
 if(pc.wepSelected == 4 && pc.eventTrigger[Event.gotWindStone2]){ im = imgPupWindStone; }
 if(pc.wepSelected == 5){ im = imgPupIceStone; }
+if(pc.wepSelected == 6){ im = imgPupOrbit; }
 if(pc.wepSelected == 7){ im = imgPupHole; }
 if(pc.wepSelected == 8){ im = imgPupWand; }
 if(pc.wepSelected == 9){ im = imgPupSword; }

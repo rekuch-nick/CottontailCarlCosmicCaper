@@ -40,6 +40,7 @@ function debugSetLevelCleated(){ with(objPlayer) {
 		eventTrigger[Event.gotMoreShot] = true;
 		eventTrigger[Event.gotHoneycomb] = true;
 		eventTrigger[Event.gotFarShot] = true;
+		wepLevels[6]  = 1; eventTrigger[Event.gotOrbit] = true; // Orbit / flail
 	}
 	
 	if(debugPossible && keyboard_check(vk_shift) && keyboard_check(vk_delete) && charPressed == "5"){

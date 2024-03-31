@@ -58,9 +58,9 @@ potion = noone;
 rangsMax = 1;
 
 wepSelected = 0;
-//rang, stars, torch, bombs, wind, ice, ?, hole, wand, sword, philo
+//rang, stars, torch, bombs, wind, ice, flail, hole, wand, sword, philo
 wepLevels = [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0];
-wepCost = [5, 2, 6, 0, .5, 8, 2, 20, 20, 0 , 0];
+wepCost = [5, 2, 6, 0, .5, 8, 10, 20, 20, 0 , 0];
 wepCDMax = [10, 12, 25, 30, 1, 20, 30, 30, 45, 20, 1];
 
 
@@ -206,8 +206,10 @@ enum Event {
 	gotFrog,
 	gotFarShot,
 	gotDoll,
-	
+	gotOrbit,
 	haveBombs,
+	gotWorkPass,
+	gotShoe,
 	
 	
 	palace1Clear,

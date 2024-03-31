@@ -119,14 +119,14 @@ function worldGetRoomSnow(xxx, yyy){
 	
 	if(xxx == 1 && yyy == 8){
 		biome(Zone.snow);
-		ww.secBlock = imgPushBlockSnow; ww.secX = 7; ww.secY = 5;
+		ww.secBlock = imgPushBlockSnow; ww.secX = 7; ww.secY = 6;
 		wmap("##...........bb");
 		wmap("##...........bb");
 		wmap("...............");
 		wmap("...............");
 		wmap("....b[[.[[b....");
-		wmap("....[..=..b....");
-		wmap("....b..[..[....");
+		wmap("....[..[..b....");
+		wmap("....b..=..[....");
 		wmap("....b[[.[[b....");
 		wmap("...............");
 		wmap("...............");

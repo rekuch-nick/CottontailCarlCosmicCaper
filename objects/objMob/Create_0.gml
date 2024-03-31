@@ -84,6 +84,7 @@ weakToNinjaStars = false;
 weakToSword = false;
 weakToIce = false;
 weakToWind = false;
+weakToOrbit = false;
 goldFrame = noone;
 showedWeak = false;
 weakToStun = false;

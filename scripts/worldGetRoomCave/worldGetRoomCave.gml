@@ -326,6 +326,7 @@ function worldGetRoomCave(xxx, yyy){
 			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupSpikeBangle);
 		}
 	}
+	
 	if( (xxx == 18 && yyy == 3) ){ // tactics animal
 		ww.bmap[7, 5] = imgNPCFrog;
 		if(!pc.eventTrigger[Event.gotFrog] && pc.frogBuys >= 10){
@@ -347,6 +348,22 @@ function worldGetRoomCave(xxx, yyy){
 	}
 	
 	
+	if( (xxx == 3 && yyy == 7) ){ // work pass
+		ww.bmap[7, 5] = imgNPCDog2;
+		ww.txt = "Looking to make some extra coins?\nIn the wastes just north of here, there's a place where you can work in the Mines. Likewise you can surf in the forest, and climb the big tree in the jungle.";
+		if(!pc.eventTrigger[Event.gotWorkPass]){
+			ww.txt += "\n\nShow this pass to get in for half price!";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupWorkPass);
+		}
+	}
+	
+	if( (xxx == 11 && yyy == 8) ){ // shoe
+		ww.bmap[7, 5] = imgNPCChicken;
+		if(!pc.eventTrigger[Event.gotShoe]){
+			ww.txt = "Be careful out there. Don't let the monsters catch you.";
+			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupShoe);
+		}
+	}
 	
 	
 	
@@ -520,6 +537,7 @@ function worldGetRoomCave(xxx, yyy){
 		
 		var s = instance_create_depth(7 * 64 + 32, 7 * 64 + 32, ww.layerP, objPupSurfboard);
 		s.coinPrice = 40; s.desc = "";
+		if(pc.eventTrigger[Event.gotWorkPass]){ s.coinPrice = 20; }
 	}
 	
 	
@@ -543,6 +561,7 @@ function worldGetRoomCave(xxx, yyy){
 		
 		var s = instance_create_depth(7 * 64 + 32, 2 * 64 + 32, ww.layerP, objPupSurfboard);
 		s.coinPrice = 40; s.desc = "";
+		if(pc.eventTrigger[Event.gotWorkPass]){ s.coinPrice = 20; }
 	}
 	
 	if(xxx == 1 && yyy == 4){
@@ -563,6 +582,7 @@ function worldGetRoomCave(xxx, yyy){
 		
 		var s = instance_create_depth(7 * 64 + 32, 7 * 64 + 32, ww.layerP, objPupPick);
 		s.coinPrice = 40; s.desc = "";
+		if(pc.eventTrigger[Event.gotWorkPass]){ s.coinPrice = 20; }
 	}
 	
 	

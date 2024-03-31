@@ -15,6 +15,12 @@ if(firstFrame){
 	if(isLob){
 		ySpeed = -10; grav = 1;
 		xTar = aaa >= x ? 1000 : - 10;
+		if(object_index = objMobShotLobOther){
+			///if(pc.y >= y){
+			//	ySpeed = 0;
+			//}
+		}
+		
 		if(isLobTall){
 			xTar = choose(true, false) ? 1000 : - 10;
 			ySpeed = -30;

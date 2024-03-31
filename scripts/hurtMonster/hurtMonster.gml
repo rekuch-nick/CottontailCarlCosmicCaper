@@ -10,6 +10,7 @@ function hurtMonster(mob, shot){
 	if(shot.isFire && mob.weakToFire){ weak = true; }
 	if(shot.isFire && mob.dieToFire){ weak = true; }
 	if(shot.isWind && mob.weakToWind){ weak = true; dmg *= 4; }
+	if(shot.isOrbit && mob.weakToOrbit){ weak = true; dmg *= 4; }
 	if(shot.isIce && mob.weakToIce){ weak = true; dmg *= 4; }
 	if(shot.isSword && mob.weakToSword){ weak = true; dmg *= 4; }
 	

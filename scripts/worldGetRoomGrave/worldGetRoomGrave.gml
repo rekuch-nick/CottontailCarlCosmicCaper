@@ -2,9 +2,10 @@ function worldGetRoomGrave(xxx, yyy){
 	
 	
 	if(xxx == 0 && yyy == 0){
+		ww.noMobs = true; ww.canLion = false;
 		biome(Zone.grave);
-		wmap("////TTT////####");
-		wmap("/...PPP......##");
+		wmap("///////////####");
+		wmap("/...TTT......##");
 		wmap("/...PPP........");
 		wmap("/...PPP........");
 		wmap("/..fPPPf.......");

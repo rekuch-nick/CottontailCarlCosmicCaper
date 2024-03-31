@@ -93,6 +93,10 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotIceStone; s.img[0] = imgPupIceStone;
 	s.desc[0] = "Call blistering cold to freeze monsters and water.";
 	
+	var s = instance_create_depth(8 * 64, 3 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotOrbit; s.img[0] = imgPupOrbit;
+	s.desc[0] = "Swings around you smashing foes.";
+	
 	var s = instance_create_depth(9 * 64, 3 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotHole; s.img[0] = imgPupHole;
 	s.desc[0] = "Toss this portable hole anywhere to pop out the other side.";
@@ -146,6 +150,14 @@ function playerLoadInventory(){
 	var s = instance_create_depth(9 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotDoll; s.img[0] = imgPlayerDupe;
 	s.desc[0] = "Leave a decoy when you use the Portable Hole.";
+	
+	var s = instance_create_depth(10 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotShoe; s.img[0] = imgPupShoe;
+	s.desc[0] = "Move a tiny bit faster when not attacking.";
+	
+	var s = instance_create_depth(12 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotWorkPass; s.img[0] = imgPupWorkPass;
+	s.desc[0] = "50% discount for Surfing, Mining, and Tree Climbing.";
 	
 	
 	

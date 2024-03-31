@@ -42,6 +42,7 @@ isFire = false;
 isIce = false;
 isWind = false;
 isSword = false;
+isOrbit = false;
 secType = noone;
 
 cloneAwayFromPlayer = false;

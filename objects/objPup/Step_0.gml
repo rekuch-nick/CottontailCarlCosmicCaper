@@ -87,6 +87,7 @@ if(gotIt){
 	//if(sprite_index == imgPlayerRang){ pc.wepLevels[0] = max(pc.wepLevels[0], 1); }
 	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); pc.eventTrigger[Event.gotStars] = true; }
 	if(sprite_index == imgPupTorch){ pc.wepLevels[2] = max(pc.wepLevels[2], 1); pc.eventTrigger[Event.gotTorch] = true; }
+	if(sprite_index == imgPupOrbit){ pc.wepLevels[6] = max(pc.wepLevels[6], 1); pc.eventTrigger[Event.gotOrbit] = true; }
 	if(sprite_index == imgPupSword){ pc.wepLevels[9] = max(pc.wepLevels[9], 1); pc.eventTrigger[Event.gotSword] = true; }
 	
 	if(sprite_index == imgPupWindStoneCrack){ pc.wepLevels[4] = max(pc.wepLevels[4], 1); pc.eventTrigger[Event.gotWindStone] = true; }
@@ -126,6 +127,8 @@ if(gotIt){
 		ww.state = State.rocketing; 
 	}
 	
+	if(sprite_index == imgPupShoe){ pc.eventTrigger[Event.gotShoe] = true; }
+	if(sprite_index == imgPupWorkPass){ pc.eventTrigger[Event.gotWorkPass] = true; }
 	if(sprite_index == imgPupChargeCharm){ pc.eventTrigger[Event.gotChargeShot] = true; }
 	if(sprite_index == imgPupChargeCharm2){ pc.eventTrigger[Event.gotChargeShot2] = true; pc.eventTrigger[Event.gotChargeShot] = true; }
 	if(sprite_index == imgPupMightCharm){ pc.eventTrigger[Event.gotMightShot] = true; }

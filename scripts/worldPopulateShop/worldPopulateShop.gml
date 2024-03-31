@@ -81,6 +81,9 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 		if(!pc.eventTrigger[Event.gotShield]){
 			t = objPupShield; p = 110;
 			desc = "Absorb one lesser enemy bullet every 30 seconds."
+		} else if(!pc.eventTrigger[Event.gotOrbit]) {
+			t = objPupOrbit; p = 160;
+			desc = "Smash nearby monsters all around you."
 		} else if (pc.potion == noone){
 			t = choose(objPupPotionFire, objPupPotionPoison, objPupPotionStun); p = 40;
 			desc = "Press Q to attack all monsters on the screen once."

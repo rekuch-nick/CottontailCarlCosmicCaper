@@ -14,3 +14,5 @@ moveSpeed = 32;
 thinkCDMax = 10;
 
 dropsBombs = true;
+
+weakToOrbit = true;

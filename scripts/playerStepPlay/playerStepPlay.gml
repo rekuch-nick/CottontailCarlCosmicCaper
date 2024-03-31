@@ -28,7 +28,7 @@ function playerStepPlay(){
 	
 	
 	var spd = moveSpeed;
-	//if(mouseLHold || mouseRHold){ spd -= 2; }
+	if( eventTrigger[Event.gotShoe] && !(mouseLHold || mouseRHold) ){ spd += 2; }
 	if(slowDown){ spd *= .3; }
 	if(hurtTime > 0 && eventTrigger[Event.gotRubberBand]){ spd += 4; }
 	if(debug){ spd *= 4; }
@@ -315,6 +315,24 @@ function playerStepPlay(){
 				instance_create_depth(x, y, ww.layerE, objPlayerColdBlast);
 				
 		}
+		
+			//torch
+		if(wepSelected == 6 && wepLevels[6] > 0 && shootCD < 1 && 
+							mp >= wepCost[wepSelected]
+			){
+				shootCD = wepCDMax[wepSelected];
+				mp -= wepCost[wepSelected];
+				
+				with(objPlayerOrbit){ instance_destroy(); }
+				for(var i=0; i<4; i++){
+					var s = instance_create_depth(x, y, ww.layerE, objPlayerOrbit);
+					s.offSet = i * 90;
+				}
+				
+				
+			
+		}
+		
 			//hole
 		if(wepSelected == 7 && wepLevels[7] > 0 && shootCD < 1 && mp >= wepCost[wepSelected]){
 				shootCD = wepCDMax[wepSelected];
