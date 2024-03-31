@@ -51,3 +51,5 @@ chainRange = 1000;
 followPlayer = false;
 
 directionless = false;
+
+disTravled = 0;

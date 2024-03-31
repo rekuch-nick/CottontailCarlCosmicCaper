@@ -254,6 +254,17 @@ function worldGetRoomCave(xxx, yyy){
 	
 	
 	
+	
+	if(xxx == 14 && yyy == 7){
+		ww.bmap[7, 6] = imgNPCChicken;
+		if(!pc.eventTrigger[Event.gotFarShot]){
+			ww.txt = "Keep your distance whenever you can, it'll pay off.";
+			var s = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupScope);
+		}
+	}
+	
+	
+	
 	if( (xxx == 6 && yyy == 6) ){ // chair sloth
 		ww.bmap[7, 5] = imgNPCSloth;
 		if(pc.eventTrigger[Event.gotChair]){

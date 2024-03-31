@@ -139,6 +139,9 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotPinwheel; s.img[0] = imgPupPinwheel;
 	s.desc[0] = "Using the Wind Stone will draw in HP and MP orbs.";
 	
+	var s = instance_create_depth(7 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotFarShot; s.img[0] = imgPupScope;
+	s.desc[0] = "Your lazers will power up if you shoot far away targets.";
 	
 	
 	var s = instance_create_depth(2 * 64, 5 * 64, hud.depth - 1, objItemTooltip);

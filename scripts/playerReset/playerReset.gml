@@ -21,6 +21,8 @@ pc.pushingTime = 0;
 pc.xMap = 10; pc.yMap = 7;
 		//pc.xMap = 1; pc.yMap = 4; ///
 		//if(pc.coins < 100){ pc.coins = 100; }
+		
+//pc.eventTrigger[Event.gotFarShot] = true; ////
 
 
 pc.inOverworld = true; // ???

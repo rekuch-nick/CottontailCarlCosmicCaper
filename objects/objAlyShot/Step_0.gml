@@ -39,6 +39,13 @@ image_alpha -= fade;
 x += xSpeed;
 y += ySpeed;
 
+disTravled += abs(xSpeed) + abs(ySpeed);
+
+if(sprite_index == imgPlayerBeams && pc.eventTrigger[Event.gotFarShot] && disTravled >= 450){
+	sprite_index = imgPlayerBeamsCharged;
+	pow += 5;
+}
+
 if(followPlayer){ 
 	image_xscale = pc.image_xscale;
 	x = pc.x; y = pc.y; 
