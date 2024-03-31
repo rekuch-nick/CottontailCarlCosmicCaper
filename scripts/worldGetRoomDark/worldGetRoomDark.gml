@@ -39,6 +39,7 @@ function worldGetRoomDark(xxx, yyy){
 	}
 	if(xxx == 14 && yyy == 1){
 		biome(Zone.darkHills);
+		ww.mobList = [15, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2, objMobSpaceBulb2];
 		ww.canLion = false;
 		ww.secX = 8; ww.secY = 7;
 		wmap("//...........//");

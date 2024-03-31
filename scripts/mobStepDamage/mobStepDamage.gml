@@ -37,6 +37,23 @@ function mobStepDamage(){
 				instance_create_depth(x, y, depth, objMobGhostBone);
 				return;
 			}
+			if(phase == 3){
+				hpMax = 1100;
+				phase = 4; healHP = hpMax;
+				shotKind = objMobShot3;
+				shootCDMax = 12;
+				shotCuster = 0; shotClusterMax = 0; shotClusterCDMas = 10;
+				spec = imgLightning;
+				specSummon = false;
+				specLimit = -1;
+				specCD = 150;
+				specCDMax = 150;
+				instance_create_depth(x, y, depth, objMobGhostBone);
+				instance_create_depth(x, y, depth, objMobGhostBone);
+				instance_create_depth(x, y, depth, objMobGhostBone);
+				instance_create_depth(x, y, depth, objMobGhostBone);
+				return;
+			}
 		}
 	}
 	
