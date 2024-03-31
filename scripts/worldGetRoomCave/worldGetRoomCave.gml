@@ -263,6 +263,14 @@ function worldGetRoomCave(xxx, yyy){
 		}
 	}
 	
+	if(xxx == 13 && yyy == 6){
+		ww.bmap[7, 6] = imgNPCChicken;
+		if(!pc.eventTrigger[Event.gotDoll]){
+			ww.txt = "Leave this doll when you warp, some of the monsters might be dumb enough to shoot at it.";
+			var s = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupDoll);
+		}
+	}
+	
 	
 	
 	if( (xxx == 6 && yyy == 6) ){ // chair sloth

@@ -143,6 +143,11 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotFarShot; s.img[0] = imgPupScope;
 	s.desc[0] = "Your lazers will power up if you shoot far away targets.";
 	
+	var s = instance_create_depth(9 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotDoll; s.img[0] = imgPlayerDupe;
+	s.desc[0] = "Leave a decoy when you use the Portable Hole.";
+	
+	
 	
 	var s = instance_create_depth(2 * 64, 5 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotMap; s.img[0] = imgMap;

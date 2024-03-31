@@ -320,6 +320,10 @@ function playerStepPlay(){
 				shootCD = wepCDMax[wepSelected];
 				mp -= wepCost[wepSelected];
 				instance_create_depth(x, y, ww.layerE, objEffPlayerHole);
+				if(eventTrigger[Event.gotDoll]){
+					with(objPlayerDupe){ instance_destroy(); }
+					instance_create_depth(x, y, ww.layerE, objPlayerDupe);
+				}
 				
 				var angle = arctan2(y - mouse_y, x - mouse_x);
 				var aa = cos(angle) * 10;

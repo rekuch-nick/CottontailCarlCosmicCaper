@@ -1,19 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objMobShot",
+  "name": "objPlayerDupe",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"objPlayerDupe","path":"objects/objPlayerDupe/objPlayerDupe.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "mobShots",
-    "path": "folders/Objects/mobShots.yy",
+    "name": "playerStuff",
+    "path": "folders/Objects/playerStuff.yy",
   },
   "parentObjectId": {
     "name": "objEffect",
@@ -35,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgShot",
-    "path": "sprites/imgShot/imgShot.yy",
+    "name": "imgPlayerDupe",
+    "path": "sprites/imgPlayerDupe/imgPlayerDupe.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -2,9 +2,19 @@ if(ww.state != State.play){ return; }
 if(firstFrame){
 	firstFrame = false;
 	
+	var aaa = pc.x; var bbb = pc.y;
+	
+	with(objPlayerDupe){
+		if(choose(true, false)){
+			aaa = x; bbb = y;
+			other.xTar = aaa;
+			other.yTar = bbb;
+		}
+	}
+	
 	if(isLob){
 		ySpeed = -10; grav = 1;
-		xTar = pc.x >= x ? 1000 : - 10;
+		xTar = aaa >= x ? 1000 : - 10;
 		if(isLobTall){
 			xTar = choose(true, false) ? 1000 : - 10;
 			ySpeed = -30;
@@ -12,12 +22,12 @@ if(firstFrame){
 	}
 	
 	if(lineHunt){
-		if(abs(x - pc.x) >= abs(y - pc.y)){
+		if(abs(x - aaa) >= abs(y - bbb)){
 			yTar = y;
-			xTar = pc.x < x ? -100 : 1000;
+			xTar = aaa < x ? -100 : 1000;
 		} else {
 			xTar = x;
-			yTar = pc.y < y ? -100 : 1000;
+			yTar = bbb < y ? -100 : 1000;
 		}
 	}
 	

@@ -205,6 +205,7 @@ enum Event {
 	gotGreenFlake,
 	gotFrog,
 	gotFarShot,
+	gotDoll,
 	
 	haveBombs,
 	

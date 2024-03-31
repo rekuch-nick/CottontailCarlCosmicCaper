@@ -147,6 +147,7 @@ if(gotIt){
 	if(sprite_index == imgPowderHorn2){ pc.eventTrigger[Event.gotPowderHorn2] = true; pc.eventTrigger[Event.gotPowderHorn] = true; }
 	
 	if(sprite_index == imgPupScope){ pc.eventTrigger[Event.gotFarShot] = true; }
+	if(sprite_index == imgPlayerDupe){ pc.eventTrigger[Event.gotDoll] = true; }
 	if(sprite_index == imgTadpole){ pc.eventTrigger[Event.gotFrog] = true; }
 	if(sprite_index == imgPupBlueBead){ pc.eventTrigger[Event.gotBlueBead] = true; }
 	if(sprite_index == imgPupGreenFlake){ pc.eventTrigger[Event.gotGreenFlake] = true; }

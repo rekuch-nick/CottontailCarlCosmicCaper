@@ -39,6 +39,7 @@ function debugSetLevelCleated(){ with(objPlayer) {
 		eventTrigger[Event.gotCauldren1] = true;
 		eventTrigger[Event.gotMoreShot] = true;
 		eventTrigger[Event.gotHoneycomb] = true;
+		eventTrigger[Event.gotFarShot] = true;
 	}
 	
 	if(debugPossible && keyboard_check(vk_shift) && keyboard_check(vk_delete) && charPressed == "5"){
@@ -103,6 +104,7 @@ function debugSetLevelCleated(){ with(objPlayer) {
 		eventTrigger[Event.gotCauldren3] = true;
 		eventTrigger[Event.gotMPShell2] = true;
 		eventTrigger[Event.palace11Clear] = true;
+		eventTrigger[Event.gotDoll] = true;
 	}
 
 }}
