@@ -14,6 +14,7 @@ moveSpeed = 8;
 
 gridMove = false;
 driftMove = Move.randomPoint;
+avoidEdges = 3;
 
 
 thinkCDMax = 30;

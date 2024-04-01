@@ -1,6 +1,5 @@
 function playerStepTitle(){
 	
-	show_debug_message(123123123)
 
 	if(pc.bagPressed){
 		pc.bagPressed = false;

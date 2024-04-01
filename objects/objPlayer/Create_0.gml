@@ -290,6 +290,7 @@ enum Event {
 	gotCarrotDragonBoneKing,
 	gotCarrotLobberBoss,
 	gotCarrotGreenSlimeBoss,
+	gotCarrotMossBoss,
 	
 	gotBird,
 }

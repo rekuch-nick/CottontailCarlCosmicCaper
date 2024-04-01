@@ -10,6 +10,25 @@ function mobStepDamage(){
 		}
 	}
 	
+	if(object_index == objMobDragonQueen){
+		if(healHP <= 0 && hp / hpMax < .15){
+			if(phase == 1){
+				phase = 2; healHP = 0;
+				image_xscale = 4; image_yscale = 4;
+				image_alpha = 1;
+				immuneToAll = true;
+				shotKind = noone;
+				image_speed = 30;
+			}
+		}
+		if(phase == 2 && healHP <= 0){
+			//image_index = 0;
+			moveSpeed = 0; xSpeed = 0; ySpeed = 0;
+			image_alpha -= .004;
+			hp = 1;
+			if(image_alpha < 0){ hp = 0; }
+		}
+	}
 	
 	if(object_index == objMobDragonBoneKing){
 		if(healHP <= 0 && hp / hpMax < .15){

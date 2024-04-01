@@ -19,6 +19,7 @@ function debugSetLevelCleated(){ with(objPlayer) {
 		eventTrigger[Event.gotSpeedShot] = true;
 		eventTrigger[Event.gotRubberBand] = true;
 		eventTrigger[Event.gotChair] = true;
+		eventTrigger[Event.gotShoe] = true;
 	}
 	
 	if(debugPossible && keyboard_check(vk_shift) && keyboard_check(vk_delete) && charPressed == "3"){

@@ -114,7 +114,7 @@ function playerEventCheck(){
 	
 	if(pc.eventTrigger[Event.gotBird] && pc.xMap == 18 && pc.yMap == 7 && !pc.inSpace){
 		if(instance_number(objStarWave) > 0 && instance_number(objMob) < 1){
-			//win the game!!!
+			instance_create_depth(0, 0, -8001, objScreenWin);
 			ww.state = State.win;
 		}
 	}

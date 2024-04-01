@@ -1,18 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objScreenWin",
+  "name": "objMobShotGrobie",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "mobShots",
+    "path": "folders/Objects/mobShots.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objMobShot",
+    "path": "objects/objMobShot/objMobShot.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgScreenWin",
-    "path": "sprites/imgScreenWin/imgScreenWin.yy",
+    "name": "imgShotBig",
+    "path": "sprites/imgShotBig/imgShotBig.yy",
   },
   "spriteMaskId": null,
   "visible": true,

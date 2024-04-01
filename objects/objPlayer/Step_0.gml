@@ -1,4 +1,3 @@
-show_debug_message(ww.state)
 
 frames ++;
 if(frames > 60 * 1){ frames = 0; }

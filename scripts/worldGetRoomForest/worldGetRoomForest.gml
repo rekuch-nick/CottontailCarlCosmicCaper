@@ -20,6 +20,7 @@ function worldGetRoomForest(xxx, yyy){
 	if(xxx == 8 && yyy == 5){
 		biome(Zone.forest);
 		ww.secBlock = imgBushGrass; ww.secX = 10; ww.secY = 2; ww.secType = Sec.burn;
+		ww.mobList = [6, objMobMossman2, objMobMossman2];
 		wmap("%%%%%%...%%%%%%");
 		wmap("%%%%.........%%");
 		wmap("%%%.......=..%%");
@@ -41,6 +42,7 @@ function worldGetRoomForest(xxx, yyy){
 	if(xxx == 9 && yyy == 2){
 		biome(Zone.forest);
 		ww.secBlock = imgBushGrass; ww.secX = 13; ww.secY = 4; ww.secType = Sec.burn;
+		ww.canLion = false; ww.mobList = [1, objMobMossmanBoss];
 		wmap("%%%%%%%%%%%%%%%");
 		wmap("%%B %........%%");
 		wmap("%%  %........B ");
@@ -75,6 +77,8 @@ function worldGetRoomForest(xxx, yyy){
 	if(xxx == 9 && yyy == 4){
 		biome(Zone.forest);
 		ww.secBlock = imgBushGrass; ww.secX = 8; ww.secY = 5; ww.secType = Sec.burn;
+		ww.mobList = [6, objMobMossman2, objMobMossman2];
+		ww.canLion = false;
 		wmap("%%%%%%...%%%%%%");
 		wmap("%%..........%%%");
 		wmap("%%..........%%%");
@@ -230,6 +234,7 @@ function worldGetRoomForest(xxx, yyy){
 	
 	if(xxx == 11 && yyy == 4){
 		biome(Zone.forest);
+		ww.mobList = [6, objMobMossman2, objMobMossman2];
 		wmap("%%%%%%...%%%%%%");
 		wmap("%%...%.......%%");
 		wmap("%%...........%%");

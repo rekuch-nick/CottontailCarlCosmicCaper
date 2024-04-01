@@ -1,5 +1,17 @@
 function playerStepLeaveSpace(){
 	
+	if(pc.spaceLevel == 12){
+		
+		pc.x = pc.xCave;
+		pc.y = pc.yCave;
+		
+		pc.inSpace = false;
+		ww.state = State.play;
+		return;
+		
+	}
+	
+	
 	var n = .04;
 	
 	pc.image_yscale -= n;
