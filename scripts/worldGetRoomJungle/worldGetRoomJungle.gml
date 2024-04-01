@@ -35,6 +35,8 @@ function worldGetRoomJungle(xxx, yyy){
 	
 	if(xxx == 15 && yyy == 8){
 		biome(Zone.jungle);
+		ww.mobList = [4, objMobSlimeGreenBoss, objMobSlimeGreen, objMobSlimeGreen, objMobSlimeGreen];
+		ww.canLion = false;
 		wmap("%p...........pp");
 		wmap("%p...........pp");
 		wmap("...............");

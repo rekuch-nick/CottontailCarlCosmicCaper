@@ -49,6 +49,10 @@ function worldGetRoomCave(xxx, yyy){
 			ww.txt = "In the north mountians, where the rock melts and fire flows like water. Can you feel the eggs start to pulse?";
 		} else if(p == 10 ){
 			ww.txt = "There is a cursed land in the north-east, blighted by darkness. The shore there holds a secret.";
+		} else if (p == 11 && !pc.eventTrigger[Event.gotBird]) {
+			ww.txt = "It's time to hatch the eggs.\n\nOnly with the power of the Cosmic Bluebird can you hope you challegne the Dragon Queen.";
+		} else if (p == 11 && pc.eventTrigger[Event.gotBird]) {
+			ww.txt = "The Cosmic Bluebird, I can't believe it!\n\nIt's time.\n\nThe Dragon Queen hovers above the ocean. Fly out from the Eastern dock.";
 		}
 	}
 	if(xxx == 11 && yyy == 9){ // owl's house

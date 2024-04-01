@@ -66,6 +66,9 @@ lakeDrained = false;
 deadTime = 0;
 starYMod = 0;
 
+
+instance_create_depth(0, 0, -8000, objScreenTitle);
+
 enum State {
 	play,
 	title,
@@ -90,6 +93,7 @@ enum State {
 	jumpStart,
 	jumpGame,
 	jumpEnd,
+	win,
 }
 
 enum Zone {

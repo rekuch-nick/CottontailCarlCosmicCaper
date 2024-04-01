@@ -175,15 +175,16 @@ function worldGetRoomBeach(xxx, yyy){
 	
 	if(xxx == 18 && yyy == 7){
 		biome(Zone.beach);
+		ww.noMobs = true; ww.canLion = false;
 		wmap("pp..........~~~");
 		wmap("pp..........~~~");
 		wmap("pp..........~~~");
-		wmap("pp..........~~~");
-		wmap("pp..........~~~");
-		wmap("pp..........~~~");
-		wmap("pp..........~~~");
-		wmap("pp..........~~~");
-		wmap("pp..........~~~");
+		wmap("pp.......F..~~~");
+		wmap("pp.........A~~~");
+		wmap("pp..........oo~");
+		wmap("pp..........oo~");
+		wmap("pp.........A~~~");
+		wmap("pp.......F..~~~");
 		wmap("pp..........~~~");
 		wmap("pp..........~~~");
 		wmap("pp..........~~~");

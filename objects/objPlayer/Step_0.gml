@@ -1,3 +1,5 @@
+show_debug_message(ww.state)
+
 frames ++;
 if(frames > 60 * 1){ frames = 0; }
 
@@ -26,7 +28,8 @@ if(healingMP > 0){
 	mp = clamp(mp + 1, 0, mpMax);
 }
 
-
+if(ww.state == State.win){ return; }
+if(ww.state == State.title){ playerStepTitle(); return; }
 if(ww.state == State.rocketing){ playerStepRocket(); }
 if(ww.state == State.birdRez){ playerStepBirdRez(); }
 if(ww.state == State.scroll){ playerStepScroll(); }

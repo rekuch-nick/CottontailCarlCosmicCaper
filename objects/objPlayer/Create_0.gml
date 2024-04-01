@@ -131,6 +131,7 @@ ySwordDash = 0;
 noMoveTime = 0;
 
 playerReset();
+ww.state = State.title;
 
 surfBoardImg = imgPupSurfboard;
 yBoard = 0;
@@ -288,6 +289,7 @@ enum Event {
 	gotCarrotWindBoss,
 	gotCarrotDragonBoneKing,
 	gotCarrotLobberBoss,
+	gotCarrotGreenSlimeBoss,
 	
 	gotBird,
 }

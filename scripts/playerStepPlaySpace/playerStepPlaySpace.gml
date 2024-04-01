@@ -1,6 +1,10 @@
 function playerStepPlaySpace(){
 	
-	instance_create_depth(irandom_range(1, ww.roomWidth - 1), -1, 0, objStar);
+	if(pc.spaceLevel == 12){
+		instance_create_depth(ww.roomWidth, irandom_range(0, room_height - 1), 0, objStarWave);
+	} else {
+		instance_create_depth(irandom_range(1, ww.roomWidth - 1), -1, 0, objStar);
+	}
 	
 	
 	if(eventTrigger[Event.gotHoneycomb]){

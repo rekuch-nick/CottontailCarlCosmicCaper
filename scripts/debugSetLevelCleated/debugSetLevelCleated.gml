@@ -107,7 +107,13 @@ function debugSetLevelCleated(){ with(objPlayer) {
 		eventTrigger[Event.palace11Clear] = true;
 		eventTrigger[Event.gotDoll] = true;
 	}
-
+	if(debugPossible && keyboard_check(vk_shift) && keyboard_check(vk_delete) && keyboard_check_pressed(187)){
+		pc.eventTrigger[Event.gotBird] = true;
+	}
+	
+	
+	
+	
 }}
 
 

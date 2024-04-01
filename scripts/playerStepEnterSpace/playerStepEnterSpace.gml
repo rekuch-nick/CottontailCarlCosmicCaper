@@ -13,8 +13,14 @@ function playerStepEnterSpace(){
 			ww.bmap[a, b] = noone;
 		}}
 		
-		for(var b = 0; b<room_height; b+=3){
-			instance_create_depth(irandom_range(1, ww.roomWidth - 1), b, 0, objStar);
+		if(pc.spaceLevel == 12){
+			for(var b = 0; b<room_height; b+=3){
+				instance_create_depth(irandom_range(1, ww.roomWidth - 1), b, 0, objStarWave);
+			}
+		} else {
+			for(var b = 0; b<room_height; b+=3){
+				instance_create_depth(irandom_range(1, ww.roomWidth - 1), b, 0, objStar);
+			}
 		}
 		
 		ww.state = State.play;
