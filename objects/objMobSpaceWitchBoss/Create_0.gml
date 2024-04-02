@@ -31,6 +31,7 @@ grav = .2; //
 stopAtDis = false;
 overMove = true;
 
+weakToOrbit = true;
 
 //gotCarrotWitchBoss
 drop = pc.eventTrigger[Event.gotCarrotWitchBoss] ? objPupCoin : objPupCarrot;

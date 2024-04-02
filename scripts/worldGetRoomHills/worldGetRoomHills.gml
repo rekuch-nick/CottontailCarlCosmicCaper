@@ -3,6 +3,8 @@ function worldGetRoomHills(xxx, yyy){
 	if(xxx == 8 && yyy == 0){
 		biome(Zone.hills);
 		ww.secBlock = imgRockWallDirt; ww.secX = 4; ww.secY = 1; ww.secType = Sec.bomb;
+		ww.canLion = false;
+		ww.mobList = [4, objMobWizRobeBoss, objMobWizRobe2, objMobWizRobe2, objMobWizRobe2];
 		wmap("///////////////");
 		wmap("////=//////////");
 		wmap("/........//....");

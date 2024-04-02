@@ -88,6 +88,7 @@ if(gotIt){
 	if(sprite_index == imgPlayerStar){ pc.wepLevels[1] = max(pc.wepLevels[1], 1); pc.eventTrigger[Event.gotStars] = true; }
 	if(sprite_index == imgPupTorch){ pc.wepLevels[2] = max(pc.wepLevels[2], 1); pc.eventTrigger[Event.gotTorch] = true; }
 	if(sprite_index == imgPupOrbit){ pc.wepLevels[6] = max(pc.wepLevels[6], 1); pc.eventTrigger[Event.gotOrbit] = true; }
+	if(sprite_index == imgPupOrbit2){ pc.wepLevels[6] = max(pc.wepLevels[6], 1); pc.eventTrigger[Event.gotOrbit2] = true; }
 	if(sprite_index == imgPupSword){ pc.wepLevels[9] = max(pc.wepLevels[9], 1); pc.eventTrigger[Event.gotSword] = true; }
 	
 	if(sprite_index == imgPupWindStoneCrack){ pc.wepLevels[4] = max(pc.wepLevels[4], 1); pc.eventTrigger[Event.gotWindStone] = true; }
@@ -214,6 +215,11 @@ if(gotIt){
 			instance_create_depth(x, y, ww.layerE, objFoxGo);
 			instance_destroy();
 		}}
+	}
+	
+	if(sprite_index == imgCarrotPile){
+		pc.hp += 45; pc.hpMax += 45;
+		pc.eventTrigger[eventNumber] = true;
 	}
 	
 	

@@ -156,7 +156,8 @@ function playerStepPlay(){
 			
 			if(inLostCaves && pc.yMap == 10){ pc.yMap = 11; }
 			else if (pc.xLostCaves > 3 && xMap == 2){}
-			else if(inLostCaves && pc.yMap == 12){ pc.yMap = 11; }
+			else if(inLostCaves && pc.yMap == 12 && pc.yLostCaves > 3){}
+			else if(inLostCaves && pc.yMap == 12){ pc.yMap = 11; pc.yLostCaves ++; }
 			else if(inLostCaves && pc.xMap == 2){ pc.xMap = 1; pc.xLostCaves ++; }
 			
 			if(inGraveWrap && pc.xMap == -1){ pc.xMap = 18; }
@@ -324,9 +325,16 @@ function playerStepPlay(){
 				mp -= wepCost[wepSelected];
 				
 				with(objPlayerOrbit){ instance_destroy(); }
-				for(var i=0; i<4; i++){
-					var s = instance_create_depth(x, y, ww.layerE, objPlayerOrbit);
-					s.offSet = i * 90;
+				if(eventTrigger[Event.gotOrbit2]){
+					for(var i=0; i<6; i++){
+						var s = instance_create_depth(x, y, ww.layerE, objPlayerOrbit);
+						s.offSet = i * 60;
+					}
+				} else {
+					for(var i=0; i<4; i++){
+						var s = instance_create_depth(x, y, ww.layerE, objPlayerOrbit);
+						s.offSet = i * 90;
+					}
 				}
 				
 				

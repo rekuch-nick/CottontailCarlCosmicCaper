@@ -66,6 +66,10 @@ function worldGetRoomDeepCave(xxx, yyy){
 			ww.txt = "Look at this, a Master Cauldren. With this all your potions would heal you to full.";
 			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupCauldren3);
 			s.coinPrice = 210; s.desc = "";
+		}  else if(pc.hpMax >= 150 && pc.eventTrigger[Event.gotOrbit] && !pc.eventTrigger[Event.gotOrbit2]){
+			ww.txt = "Look at this, an upgraded Flail. It should swing a little faster than your old one.";
+			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupOrbit2);
+			s.coinPrice = 160; s.desc = "";
 		}
 	}
 	
@@ -76,21 +80,23 @@ function worldGetRoomDeepCave(xxx, yyy){
 	if(pc.xMap == 1 && pc.yMap == 12){
 		biome(Zone.deepCave);
 		ww.noMobs = true; ww.canLion = false;
+		ww.pushableList = [{a:3, b:3},{a:7, b:3}];
 		wmap("//...........//");
-		wmap("//...........//");
+		wmap("//........mmm//");
+		wmap("/.m.....mm..../");
+		wmap("/..m.m.m....m./");
+		wmap("/m..m.m......./");
+		wmap("/....m...m..../");
+		wmap("/....m.....m../");
 		wmap("/............./");
-		wmap("/............./");
-		wmap("/............./");
-		wmap("/............./");
-		wmap("/............./");
-		wmap("/............./");
-		wmap("/............./");
-		wmap("/............./");
-		wmap("//...........//");
+		wmap("/.m......m..../");
+		wmap("/....m......../");
+		wmap("//.mm........//");
 		wmap("///////////////");
-		ww.bmap[5, 9] = imgNPCWorms;
-		ww.bmap[6, 9] = imgNPCWorms;
-		ww.bmap[8, 9] = imgNPCWorms;
+		if(!pc.eventTrigger[Event.gotCarrotPileDeepCave]){
+			var p = instance_create_depth(11 * 64, 9 * 64, ww.layerP, objPupCarrotPile);
+			p.eventNumber = Event.gotCarrotPileDeepCave;
+		}
 	}
 
 }

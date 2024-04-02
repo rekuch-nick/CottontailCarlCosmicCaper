@@ -3,7 +3,7 @@ function worldGetRoomDark(xxx, yyy){
 	if(xxx == 13 && yyy == 0){
 		biome(Zone.darkHills);
 		ww.canLion = false;
-		//ww.mobList = [24, objMob, objMob, objMob, objMob, objMob, objMob];
+		ww.mobList = [12, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2];
 		wmap("///////////////");
 		wmap("///////////////");
 		wmap("..........///..");
@@ -154,6 +154,7 @@ function worldGetRoomDark(xxx, yyy){
 	if(xxx == 17 && yyy == 1){
 		biome(Zone.darkHills);
 		ww.canLion = false;
+		ww.mobList = [12, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2, objMobPuffball2];
 		wmap("///////////////");
 		wmap("//...........//");
 		wmap("............../");

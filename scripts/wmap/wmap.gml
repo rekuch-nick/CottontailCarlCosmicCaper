@@ -102,6 +102,8 @@ function wmap(s){
 		if(c == "T"){ ww.bmap[a, b] = imgPalaceWallTop; }
 		if(c == "M"){ ww.bmap[a, b] = imgPalaceWallBottom; }
 		
+		if(c == "m"){ ww.bmap[a, b] = imgNPCWorms; }
+		
 		
 		if(c == "A"){ ww.bmap[a, b] = imgSkullBlock; }
 		if(c == "F"){ ww.bmap[a, b] = imgFireBlock; }

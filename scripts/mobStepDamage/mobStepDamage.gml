@@ -82,6 +82,10 @@ function mobStepDamage(){
 		
 		if(speedUpOnKill){ with(objMob){ if(speedUpOnKill){ moveSpeed ++; thinkCD = 0; } } }
 		
+		if(shatterAtDeath){
+			repeat(20){ instance_create_depth(x, y, ww.layerE, objMobShotRandom); }
+		}
+		
 		
 		
 		if(dropsBombs && dropChance > 0){ pc.bombCounter ++; }

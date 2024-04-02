@@ -28,7 +28,7 @@ grav = .2; //
 stopAtDis = false;
 overMove = true;
 
-
+weakToOrbit = true;
 
 
 //spec = objMobShotWind;

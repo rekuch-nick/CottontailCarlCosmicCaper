@@ -208,6 +208,7 @@ enum Event {
 	gotFarShot,
 	gotDoll,
 	gotOrbit,
+	gotOrbit2,
 	haveBombs,
 	gotWorkPass,
 	gotShoe,
@@ -291,6 +292,9 @@ enum Event {
 	gotCarrotLobberBoss,
 	gotCarrotGreenSlimeBoss,
 	gotCarrotMossBoss,
+	gotCarrotWizBoss,
+	
+	gotCarrotPileDeepCave,
 	
 	gotBird,
 }

@@ -44,6 +44,7 @@ shootRepeat = 1;
 onlyShootWhilePlayerShoots = false;
 revengeShot = false;
 shatterAtHalf = false;
+shatterAtDeath = false;
 inert = noone;
 
 bumpPow = 20;

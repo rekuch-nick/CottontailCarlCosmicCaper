@@ -66,7 +66,7 @@ if(swordDashTime > 0){
 	draw_sprite_ext(imgPlayer, image_index, x + (xSwordDash * -80), y + (ySwordDash * -80), image_xscale, image_yscale, choose(-1, 1), c_white, .3);
 }
 
-if(eventTrigger[Event.gotChair] && noMoveTime > 30 * 4){
+if(eventTrigger[Event.gotChair] && noMoveTime > 30 * 4 && mp < mpMax){
 	if(image_xscale < 0){ image_xscale *= -1; }
 	image_index = 1;
 	draw_sprite_ext(imgPupChair, 0, x-5, y+25, image_xscale, image_yscale, -30, c_white, 1);

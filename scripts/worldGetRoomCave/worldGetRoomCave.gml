@@ -112,6 +112,17 @@ function worldGetRoomCave(xxx, yyy){
 		ww.bmap[7, 6] = imgNPCMouse;
 		ww.txt = "The SPACE DOOR on the beach holds an incredible secret. Don't kill the pencil monster and something will happen.\n\nDon't tell them I told you.";
 	}
+	if(xxx == 9 && yyy == 2){
+		worldGetCaveDuck();
+		ww.txt = "In the old forest, seek out Frog.\n\nHe was a great warrior in his youth, and trains for a price.\n\nSeek his advice often enough, he may grant you a boon.";
+		if(pc.eventTrigger[Event.gotFrog]){
+			ww.txt = "I see you've found Frog.\n\nTake his advice to heart.";
+		}
+	}
+	if(xxx == 6 && yyy == 5){
+		worldGetCaveDuck();
+		ww.txt = "When you're lost in the deep dark caves, go South. Go South and South some more.\n\nIt's not the way out but you'll find a snack, as long as you don't mind worms.";
+	}
 	
 	
 	

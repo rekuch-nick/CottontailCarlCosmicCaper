@@ -96,6 +96,8 @@ function playerLoadInventory(){
 	var s = instance_create_depth(8 * 64, 3 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotOrbit; s.img[0] = imgPupOrbit;
 	s.desc[0] = "Swings around you smashing foes.";
+	s.eve[1] = Event.gotOrbit2; s.img[1] = imgPupOrbit2;
+	s.desc[1] = "Swings around you smashing foes.";
 	
 	var s = instance_create_depth(9 * 64, 3 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotHole; s.img[0] = imgPupHole;
