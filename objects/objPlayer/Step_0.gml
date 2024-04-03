@@ -44,6 +44,8 @@ if(ww.state == State.surfGame){ playerStepSurf(); }
 if(ww.state == State.birdScene){ playerStepBirdScene(); }
 if(ww.state == State.digStart){ playerStepDigStarting(); }
 if(ww.state == State.digGame){ playerStepDig(); }
+if(ww.state == State.jumpStart){ playerStepJumpGameStarting(); }
+if(ww.state == State.jumpGame){ playerStepJumpGame(); }
 
 
 

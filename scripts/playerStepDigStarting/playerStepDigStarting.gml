@@ -12,6 +12,7 @@ function playerStepDigStarting(){
 		with(objMob){ instance_destroy(); }
 		with(objEffect){ instance_destroy(); }
 		with(objPup){ instance_destroy(); }
+		with(objDigBlock){ instance_destroy(); }
 		
 		for(var a=0; a<15; a++){ for(var b=0; b<12; b++){
 			ww.bmap[a][b] = noone;
@@ -26,6 +27,10 @@ function playerStepDigStarting(){
 				var ii = ww.bmap[a, b];
 				ww.bmap[a, b] = instance_create_depth(a*64, b*64, ww.layerB, objDigBlock);
 				ww.bmap[a, b].img = ii;
+				if(ii == imgDigDirt){
+					ww.bmap[a, b].hp = 20;
+					ww.bmap[a, b].hpMax = 20;
+				}
 			} else {
 				ww.bmap[a, b] = instance_create_depth(a*64, b*64, ww.layerB, objDigBlock);
 				ww.bmap[a, b].img = noone;
@@ -33,6 +38,20 @@ function playerStepDigStarting(){
 			ww.bmap[a, b].xSpot = a;
 			ww.bmap[a, b].ySpot = b;
 		}}
+		
+		var n = 8 + pc.digStage;
+		var tries = 0;
+		while(n > 0 && tries < 10000000){
+			tries ++;
+			var a = irandom_range(0, 14);
+			var b = irandom_range(3, 11);
+			if(ww.bmap[a, b] != noone){
+				ww.bmap[a, b].img = imgDigRockGold;
+				n --;
+				ww.bmap[a, b].hp = 80;
+				ww.bmap[a, b].hpMax = 80;
+			}
+		}
 		
 		//pc.ocean = instance_create_depth(0, room_height - 128, ww.layerE, objSurfOcean);
 		

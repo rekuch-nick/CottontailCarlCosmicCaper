@@ -574,7 +574,8 @@ function worldGetRoomCave(xxx, yyy){
 		wmap("llllll...llllll");
 		
 		
-		var s = instance_create_depth(7 * 64 + 32, 2 * 64 + 32, ww.layerP, objPupSurfboard);
+		var s = instance_create_depth(7 * 64 + 32, 2 * 64 + 32, ww.layerP, objPupTramp);
+		//var s = instance_create_depth(7 * 64 + 32, 10 * 64 + 32, ww.layerP, objPupTramp);
 		s.coinPrice = 40; s.desc = "";
 		if(pc.eventTrigger[Event.gotWorkPass]){ s.coinPrice = 20; }
 	}

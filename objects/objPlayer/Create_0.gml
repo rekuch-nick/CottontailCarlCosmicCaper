@@ -137,6 +137,18 @@ surfBoardImg = imgPupSurfboard;
 yBoard = 0;
 
 frogBuys = 0;
+digStage = 0;
+
+
+jumps = 0;
+jumpsMax = 1;
+ySpeed = 0;
+jumpPow = -20;
+xPush = 0;
+jumpRow = 0;
+xLastPlat = 6;
+
+
 
 enum Event {
 	owlMarksStar,

@@ -242,7 +242,11 @@ if(gotIt){
 		ww.state = State.surfStart;
 	}
 	if(sprite_index == imgPupPick){
+		pc.digStage = 0;
 		ww.state = State.digStart; /////
+	}
+	if(sprite_index == imgPupTramp){
+		ww.state = State.jumpStart; /////
 	}
 	
 	var e = instance_create_depth(x, y, ww.layerE, objEffect);

@@ -93,7 +93,7 @@ function playerStepDig(){
 	
 	
 	
-	
+	var goldLeft = 0;
 	
 	with(objDigBlock){
 		if(!seen){
@@ -129,6 +129,12 @@ function playerStepDig(){
 				}
 			}
 		}
+		
+		if(img == imgDigRockGold){ goldLeft ++; }
+	}
+	if(goldLeft == 0){
+		ww.state = State.digStart; //
+		pc.digStage ++;
 	}
 	
 	
@@ -136,7 +142,8 @@ function playerStepDig(){
 	if(timeInDig > 30){
 		var n = 1;
 		if(timeInDig > 30 * 15){ 
-			n = floor(timeInDig / (450) );
+			var tt = timeInDig + (pc.digStage * 120);
+			n = floor(tt / (450) );
 			n = min(n, 40);
 		}
 		if(instance_number(objDigSkelly) < n && irandom_range(1, 60) == 1){
