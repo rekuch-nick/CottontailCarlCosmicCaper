@@ -74,6 +74,7 @@
     {"id":{"name":"playerStepPlay","path":"scripts/playerStepPlay/playerStepPlay.yy",},},
     {"id":{"name":"objMobEagle","path":"objects/objMobEagle/objMobEagle.yy",},},
     {"id":{"name":"objPupPaperTac","path":"objects/objPupPaperTac/objPupPaperTac.yy",},},
+    {"id":{"name":"imgPalmTreeSand_","path":"sprites/imgPalmTreeSand_/imgPalmTreeSand_.yy",},},
     {"id":{"name":"imgMobDragonSnapPurp","path":"sprites/imgMobDragonSnapPurp/imgMobDragonSnapPurp.yy",},},
     {"id":{"name":"objEggChip","path":"objects/objEggChip/objEggChip.yy",},},
     {"id":{"name":"objMobPencil","path":"objects/objMobPencil/objMobPencil.yy",},},

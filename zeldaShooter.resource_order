@@ -57,6 +57,7 @@
     {"name":"playerStepPlay","order":1,"path":"scripts/playerStepPlay/playerStepPlay.yy",},
     {"name":"objMobEagle","order":58,"path":"objects/objMobEagle/objMobEagle.yy",},
     {"name":"objPupPaperTac","order":81,"path":"objects/objPupPaperTac/objPupPaperTac.yy",},
+    {"name":"imgPalmTreeSand_","order":129,"path":"sprites/imgPalmTreeSand_/imgPalmTreeSand_.yy",},
     {"name":"imgMobDragonSnapPurp","order":7,"path":"sprites/imgMobDragonSnapPurp/imgMobDragonSnapPurp.yy",},
     {"name":"objEggChip","order":23,"path":"objects/objEggChip/objEggChip.yy",},
     {"name":"objMobPencil","order":50,"path":"objects/objMobPencil/objMobPencil.yy",},

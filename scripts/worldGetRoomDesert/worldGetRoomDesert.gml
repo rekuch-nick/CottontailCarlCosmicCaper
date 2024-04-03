@@ -54,20 +54,21 @@ function worldGetRoomDesert(xxx, yyy){
 		wmap("//...........//");
 	}
 	
+	
 	if(xxx == 5 && yyy == 4){
 		biome(Zone.desert);
-		ww.secBlock = imgCactusSand; ww.secX = 4; ww.secY = 9; ww.secType = Sec.burn;
+		ww.secBlock = imgCactusSand; ww.secX = 7; ww.secY = 3; ww.secType = Sec.burn;
 		wmap("//...........//");
 		wmap("//...........//");
-		wmap("/.........%....");
-		wmap("/...%..........");
 		wmap("/..............");
-		wmap("/rrrrr.........");
-		wmap("/...rrrr..%....");
-		wmap("/......r.......");
+		wmap("/.%....=...%...");
 		wmap("/..............");
-		wmap("/...=%....r....");
-		wmap("//.....rr.rrr//");
+		wmap("/..............");
+		wmap("/..............");
+		wmap("/..............");
+		wmap("/.%....%...%...");
+		wmap("/..............");
+		wmap("///////////////");
 		wmap("///////////////");
 	}
 	
@@ -141,18 +142,19 @@ function worldGetRoomDesert(xxx, yyy){
 		wmap("/////////....//");
 	}
 	
+	
 	if(xxx == 7 && yyy == 1){
 		biome(Zone.desert);
-		ww.secBlock = imgCactusSand; ww.secX = 7; ww.secY = 3; ww.secType = Sec.burn;
+		ww.secBlock = imgCactusSand; ww.secX = 8; ww.secY = 2; ww.secType = Sec.burn;
 		wmap("///////////////");
-		wmap("//...........//");
+		wmap("//.r.........//");
+		wmap("/.......=%..../");
 		wmap("............../");
-		wmap("..%....=...%../");
+		wmap("....%..rrrr.../");
+		wmap(".........rrrrr/");
 		wmap("............../");
-		wmap("............../");
-		wmap("............../");
-		wmap("............../");
-		wmap("..%....%...%../");
+		wmap("....%........./");
+		wmap("..........%.../");
 		wmap("............../");
 		wmap("//...........//");
 		wmap("//...........//");
@@ -165,7 +167,7 @@ function worldGetRoomDesert(xxx, yyy){
 		wmap("//...........//");
 		wmap("........%%..../");
 		wmap("............../");
-		wmap("....%%......=%/");
+		wmap("....%%......=./");
 		wmap("............../");
 		wmap("............../");
 		wmap("....%%......%%/");
