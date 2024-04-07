@@ -129,14 +129,16 @@ xSwordDash = 0;
 ySwordDash = 0;
 
 noMoveTime = 0;
-
+frogBuys = 0;
 playerReset();
+fileLoad();
+
 ww.state = State.title;
 
 surfBoardImg = imgPupSurfboard;
 yBoard = 0;
 
-frogBuys = 0;
+
 digStage = 0;
 
 
@@ -146,7 +148,8 @@ ySpeed = 0;
 jumpPow = -20;
 xPush = 0;
 jumpRow = 0;
-xLastPlat = 6;
+x1LastPlat = 6;
+x2LastPlat = 7;
 
 
 

@@ -1,5 +1,7 @@
 function worldLoadRoom(dir){
 	
+	fileSave();
+	
 	pc.timeOnScreen = 0;
 	pc.xPushBlock = 0;
 	pc.yPushBlock = 0;
