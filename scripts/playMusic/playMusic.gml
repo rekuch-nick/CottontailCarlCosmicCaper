@@ -15,14 +15,17 @@ function playMusic(s){
 		}
 	}
 	
+	ww.currentSong = s;
 	
-	
-	if(ww.volSfx < 1){ return; }
+	if(ww.volMusic < 100){ 
+		audio_stop_all();
+		return; 
+	}
 	if(s == noone){ audio_stop_all(); }
 	
 	audio_stop_sound(ww.song);
 	ww.song = audio_play_sound(s, 10, true);
-	ww.currentSong = s;
+	
 	
 	
 }

@@ -21,6 +21,13 @@ function fileLoad(){
 	}}
 	ww.volMusic = ini_read_real("Main", "volMusic", 100);
 	ww.volSfx = ini_read_real("Main", "volSfx", 100);
+	with(objButtonMusic){ image_index = ww.volMusic == 100 ? 0 : 1; }
+	with(objButtonSfx){ image_index = ww.volSfx == 100 ? 0 : 1; }
+	if(ww.volMusic < 100){ 
+		//playMusic(noone);
+		audio_stop_all(); 
+	}
+	
 	
 	ini_close();
 	

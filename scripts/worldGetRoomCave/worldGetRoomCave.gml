@@ -427,7 +427,7 @@ function worldGetRoomCave(xxx, yyy){
 	///healing mouse
 	if( (xxx == 7 && yyy = 2) ||
 		(xxx == 0 && yyy = 8) ||
-		(xxx == 2 && yyy = 0) ||
+		(xxx == 0 && yyy = 2) ||
 		(xxx == 9 && yyy = 0) ||
 		(xxx == 16 && yyy = 9) ){ 
 		ww.bmap[7, 5] = imgNPCMouse;
