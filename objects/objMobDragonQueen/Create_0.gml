@@ -1,6 +1,6 @@
 event_inherited();
 playSfx(sfxDragonspawn);
-if(pc.spaceLevel == 12){ playMusic(songBoss03); isMusicBoss = true; }
+if(pc.spaceLevel == 12){ playMusic(songBoss04); isMusicBoss = true; }
 
 hp = 755;
 hpMax = 755;
@@ -29,9 +29,3 @@ showHP = true;
 
 
 
-drop = objPupCoin;
-if(!pc.eventTrigger[Event.gotCarrotDragonBoneKing]){
-	drop = objPupCarrot;
-	dropEventNumber = Event.gotCarrotDragonBoneKing;
-}
-dropChance = 100;

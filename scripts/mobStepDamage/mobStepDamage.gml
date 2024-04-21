@@ -13,7 +13,18 @@ function mobStepDamage(){
 	if(object_index == objMobDragonQueen){
 		if(healHP <= 0 && hp / hpMax < .15){
 			if(phase == 1){
-				phase = 2; healHP = 0;
+				hpMax = 1000;
+				phase = 2; healHP = hpMax;
+				shootCDMax = 20;
+				spec = objMobShotFallDragon;
+				specCD = 120;
+				specCDMax = 180;
+				return;
+			}
+			
+			
+			if(phase == 2){
+				phase = 3; healHP = 0;
 				image_xscale = 4; image_yscale = 4;
 				image_alpha = 1;
 				immuneToAll = true;
@@ -21,7 +32,7 @@ function mobStepDamage(){
 				image_speed = 30;
 			}
 		}
-		if(phase == 2 && healHP <= 0){
+		if(phase == 3 && healHP <= 0){
 			//image_index = 0;
 			moveSpeed = 0; xSpeed = 0; ySpeed = 0;
 			image_alpha -= .004;
@@ -138,6 +149,7 @@ function mobStepDamage(){
 		if(isMusicBoss){
 			playMusic(noone);
 			playSfx(sfxRest);
+			ww.songChange = true;
 		}
 		
 		playSfx(choose(sfxCry01, sfxCry02, sfxCry03));

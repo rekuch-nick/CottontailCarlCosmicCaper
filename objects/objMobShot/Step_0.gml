@@ -168,6 +168,7 @@ if(spawn != noone){
 	}
 }
 
+if(flicker){ image_alpha = random_range(.5, 1); }
 
 if(fade != 0){
 	image_alpha -= fade;

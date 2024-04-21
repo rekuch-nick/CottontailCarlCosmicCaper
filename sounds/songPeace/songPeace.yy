@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "Battle",
+  "name": "songPeace",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 78.0039,
+  "duration": 96.00782,
   "parent": {
     "name": "bgm",
     "path": "folders/Sounds/bgm.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "Battle.ogg",
+  "soundFile": "songPeace.ogg",
   "type": 0,
   "volume": 1.0,
 }

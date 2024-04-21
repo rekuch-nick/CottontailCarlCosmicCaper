@@ -120,8 +120,8 @@ function worldGetRoomDeepForest(xxx, yyy){
 		wmap("%.........%%%%%");
 		wmap("%%%%%%%%%%%%%%%");
 		wmap("%%%%%%...s..s.%");
-		wmap("%.........sss.%");
-		wmap("%.......s.sss.%");
+		wmap("%.........sss..");
+		wmap("%.......s.sss..");
 		wmap("%%........ss.%%");
 		wmap("%%%%%%...%%%%%%");
 	}
@@ -189,8 +189,8 @@ function worldGetRoomDeepForest(xxx, yyy){
 		wmap("%...%r.%...%r.%");
 		wmap("%.r.%..%%..%..%");
 		wmap("%...%...%..%..%");
-		wmap("%...%...%..%..%");
-		wmap("%...%.r.%.r...%");
+		wmap("....%...%..%..%");
+		wmap("....%.r.%.r...%");
 		wmap("%%...........%%");
 		wmap("%%........%%%%%");
 	}

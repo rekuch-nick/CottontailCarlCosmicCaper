@@ -4,8 +4,12 @@ function playMusic(s){
 		if(pc.inSpace){
 			s = songSpace;
 		} else if (pc.inOverworld) {
-			//s = songOverworld;
-			s = songMain;
+			s = noone;
+			if(pc.xMap >= 0 && pc.yMap >= 0 && pc.xMap <= 18 && pc.yMap <= 9){
+				s = songMain;
+			} else if(pc.xMap >= 20){
+				s = songPeace;
+			}
 		} else if (ww.inShop) {
 			s = songShop;
 		} else if (ww.inDungeonEntrence) {

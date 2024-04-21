@@ -12,6 +12,7 @@ if(x >= pc.x){
 
 if(x > room_width){
 	pc.visible = true;
+	ww.songChange = true;
 	worldLoadRoom(2);
 	pc.scrollTime = room_height;
 	pc.scrollDir = 2;

@@ -1,14 +1,16 @@
 event_inherited();
+playSfx(sfxDragonspawn);
+playMusic(songBoss01); isMusicBoss = true;
 
-hp = 255;
-hpMax = 255;
+hp = 455;
+hpMax = 455;
 
 shotKind = objMobShotSilly;
 shootCDMax = 28;
 shootCD = 20;
 
 
-bumpPow = 20;
+bumpPow = 40;
 
 
 moveSpeed = 16;

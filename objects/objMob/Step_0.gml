@@ -230,7 +230,7 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 			instance_create_depth(a*64+32, b*64+32, ww.layerE, spec);
 		}}
 		
-		if(spec == objMobShotFallIce){ 
+		if(spec == objMobShotFallIce || objMobShotFallDragon){ 
 			var a = irandom_range(0, 14);
 			instance_create_depth(a*64+32, 32, ww.layerE, spec);
 		}

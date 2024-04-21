@@ -150,8 +150,8 @@ function worldGetRoomRedForest(xxx, yyy){
 	if(xxx == 5 && yyy == 6){
 		biome(Zone.redForest);
 		wmap("%%%%%%%%%%%%%%%");
-		wmap("%%....%%.....%%");
-		wmap("......%%.......");
+		wmap("%%....%%///..%%");
+		wmap("......%%/=/....");
 		wmap("...............");
 		wmap("....%%.......%%");
 		wmap("....%%........%");

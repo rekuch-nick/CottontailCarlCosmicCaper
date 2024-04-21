@@ -42,9 +42,9 @@ function worldGetRoomCave(xxx, yyy){
 		} else if(p == 6 ){
 			ww.txt = "The graveyard to the noth-west calls. You'll need to use you WAND at the right place.";
 		} else if(p == 7 ){
-			ww.txt = "It's time to go to the mountians in the north. Leave no stone unturned.";
+			ww.txt = "It's time to go to the mountians in the north.\n\nThe palace is in plain sight, but leave no stone unturned if you want the best equipment.";
 		} else if(p == 8 ){
-			ww.txt = "The deep forest in the east, near where you found the STAR. Be brave, something terrible is there.";
+			ww.txt = "The deep forest in the east, near where you found the STAR. Be brave, the monsters there are something terrible.";
 		} else if(p == 9 ){
 			ww.txt = "In the north mountians, where the rock melts and fire flows like water. Can you feel the eggs start to pulse?";
 		} else if(p == 10 ){
@@ -73,12 +73,30 @@ function worldGetRoomCave(xxx, yyy){
 		}
 	}
 	
+	if(xxx == 5 && yyy == 6){ // red forest cat house
+		ww.bmap[7, 5] = imgNPCCat;
+		ww.txt = "So the joke with the philosopher's stone is, instead of lead into gold, the stone turns gold into lead.\n\nAnd lead is an old slang word for bullets... Seems dumb.";
+		if(!pc.eventTrigger[Event.gotCauldren1]){
+			ww.txt = "The witch in this forest has somehting to make your potions stronger, but you'll have to take it.";
+		} else if(!pc.eventTrigger[Event.gotPhiloStone]) {
+			if(pc.eventTrigger[Event.gotWand]){
+				ww.txt = "Your wand could wake up the sleeping dragon, you know, if you feel like dying today.";
+			} else {
+				ww.txt = "The dragon sleeping in the forest won't wake up without some kind of magic, which is probably for the best.";
+			}
+		}
+	}
+	
 	
 	
 	//advice mallards
 	if(xxx == 8 && yyy == 8){
 		worldGetCaveDuck();
 		ww.txt = "The Purple Crab Monsters shoot while you're shooting.\n\nTry just tapping the shoot button while fighting them.";
+	}
+	if(xxx == 5 && yyy == 4){
+		worldGetCaveDuck();
+		ww.txt = "Have you noticed some monsters drop a CARROT when beaten? Don't expect more when fighting them again.\n\nOf course, that does mean you'll need to fight new monsters when you discover them if you want all the carrots.";
 	}
 	if(xxx == 11 && yyy == 7){
 		worldGetCaveDuck();

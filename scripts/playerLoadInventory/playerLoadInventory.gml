@@ -113,7 +113,7 @@ function playerLoadInventory(){
 	
 	var s = instance_create_depth(12 * 64, 3 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotPhiloStone; s.img[0] = imgPupPhiloStone;
-	s.desc[0] = "With the Philosopher's Stone you can transmute gold into lead! (bullets)";
+	s.desc[0] = "With the Philosopher's Stone you can spend coins to fire Super-Shots that pass through walls and foes.";
 	
 	
 	
