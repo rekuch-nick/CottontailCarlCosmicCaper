@@ -149,3 +149,5 @@ isTough = false;
 phase = 1;
 healHP = 0;
 immuneToAll = false;
+
+isMusicBoss = false;

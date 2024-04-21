@@ -31,6 +31,7 @@ function playerStepLeaveSpace(){
 		pc.x = pc.xCave;
 		pc.y = pc.yCave;
 		
+		ww.songChange = true;
 		pc.inSpace = false;
 		worldLoadRoom(0);
 		ww.state = State.play;

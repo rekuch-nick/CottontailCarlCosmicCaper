@@ -135,7 +135,12 @@ function mobStepDamage(){
 				instance_destroy();
 			}
 		}}
+		if(isMusicBoss){
+			playMusic(noone);
+			playSfx(sfxRest);
+		}
 		
+		playSfx(choose(sfxCry01, sfxCry02, sfxCry03));
 		instance_destroy();
 	}
 }

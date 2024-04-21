@@ -1,4 +1,6 @@
 event_inherited();
+playSfx(sfxDragonspawn);
+if(pc.spaceLevel == 6){ playMusic(songBoss01); isMusicBoss = true; }
 
 hp = 545;
 hpMax = 545;

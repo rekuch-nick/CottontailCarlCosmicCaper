@@ -15,6 +15,7 @@ function worldLoadRoom(dir){
 	ww.pushableList = noone;
 	ww.secX = 0; ww.secY = 0;
 	
+	
 	var xo = 0;
 	var yo = 0;
 	
@@ -82,5 +83,10 @@ function worldLoadRoom(dir){
 		}
 	}}
 	
+	
+	if(ww.songChange){
+		playMusic();
+		ww.songChange = false;
+	}
 	
 }

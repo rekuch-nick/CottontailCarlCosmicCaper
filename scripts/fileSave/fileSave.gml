@@ -18,9 +18,11 @@ function fileSave(){
 		ini_write_real("Main", "secExposed" + string(a) + " " + string(b), ww.secExposed[a, b]);
 		ini_write_real("Main", "caveCoins" + string(a) + " " + string(b), ww.caveCoins[a, b]);
 	}}
+	ini_write_real("Main", "volMusic", ww.volMusic);
+	ini_write_real("Main", "volSfx", ww.volSfx);
+	
 	
 	ini_close();
 	
-	show_debug_message("Saved File");
 	
 }

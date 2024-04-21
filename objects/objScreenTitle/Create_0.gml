@@ -4,3 +4,5 @@ image_yscale = 4;
 
 
 ww.state = State.title;
+
+playMusic(songTitle);

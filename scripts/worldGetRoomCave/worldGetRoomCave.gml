@@ -196,6 +196,7 @@ function worldGetRoomCave(xxx, yyy){
 		|| (xxx == 18 && yyy == 8)
 		|| (xxx == 12 && yyy == 2)
 			){ // lizard shop
+		ww.inShop = true;		
 		ww.bmap[6, 5] = imgNPCLizard;
 		ww.bmap[7, 5] = imgBlank; ww.bmap[8, 5] = imgBlank;
 		ww.txt = "In dangerous times like these, Lizard Brothers Retail is the only store you can trust.";
@@ -502,6 +503,7 @@ function worldGetRoomCave(xxx, yyy){
 		wmap("//...........//");
 		wmap("//////...//////");
 		worldGetCaveSkulls(xxx, yyy);
+		ww.inDungeonEntrence = true;
 		
 		if( (xxx == 8 && yyy == 6 && pc.eventTrigger[Event.palace1Clear])
 			|| (xxx == 7 && yyy == 1 && pc.eventTrigger[Event.palace2Clear])

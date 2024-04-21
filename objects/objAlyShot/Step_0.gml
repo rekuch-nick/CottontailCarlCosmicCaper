@@ -77,6 +77,7 @@ if(!ww.secExposed[pc.xMap, pc.yMap]){
 			if(dis <= disMax){
 				xTile = floor(x / 64); yTile = floor(y / 64);
 				ww.secExposed[pc.xMap, pc.yMap] = true;
+				playSfx(sfxFinddoor);
 				ww.bmap[xTile, yTile] = noone;
 				instance_destroy();
 			}

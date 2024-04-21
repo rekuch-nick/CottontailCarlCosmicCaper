@@ -24,7 +24,8 @@ canFreeze = false;
 
 showHP = true;
 
-
+playSfx(sfxDragonspawn);
+if(pc.spaceLevel == 1){ playMusic(songBoss01); isMusicBoss = true; }
 
 drop = objPupCoin;
 if(!pc.eventTrigger[Event.gotCarrotDragonGreen]){

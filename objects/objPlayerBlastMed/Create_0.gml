@@ -1,5 +1,5 @@
 event_inherited();
-
+playSfx(sfxBlast);
 
 aly = 1;
 

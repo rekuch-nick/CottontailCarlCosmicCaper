@@ -15,6 +15,9 @@ gridMove = false;
 driftMove = Move.randomPoint;
 
 
+playSfx(sfxDragonspawn);
+if(pc.spaceLevel == 2){ playMusic(songBoss01); isMusicBoss = true; }
+
 thinkCDMax = 35;
 
 

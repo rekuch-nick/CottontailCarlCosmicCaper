@@ -1,6 +1,6 @@
-if(ww.state != State.play && ww.state != State.surfGame){ return; }
+if(ww.state != State.play && ww.state != State.surfGame && ww.state != State.jumpGame){ return; }
 
-if(pc.inSpace){
+if(pc.inSpace || ww.state == State.jumpGame){
 	if(isMajor && y > room_height - 128){ y --; }
 	
 	if(!isMajor || y < room_height / 2){
@@ -248,6 +248,8 @@ if(gotIt){
 	if(sprite_index == imgPupTramp){
 		ww.state = State.jumpStart; /////
 	}
+	
+	playSfx(collectionSound);
 	
 	var e = instance_create_depth(x, y, ww.layerE, objEffect);
 	e.ySpeed = -2; e.fade = .03;

@@ -1,6 +1,16 @@
 function playerStepJumpGame(){
 	
 	
+	if(irandom_range(0, 30) == 1){
+		instance_create_depth(irandom_range(0, 14) * 64 + 32, 20, ww.layerM, objTreeSkelly);
+	}
+	if(pc.jumpRow > 40 && irandom_range(0, 30) == 1){
+		instance_create_depth(irandom_range(0, 14) * 64 + 32, 20, ww.layerM, objTreeSkelly);
+	}
+	
+	if(irandom_range(0, 90) == 1){
+		instance_create_depth(irandom_range(0, 14) * 64 + 32, 20, ww.layerP, objPupCoin);
+	}
 	
 	
 	if(xIn < 0){
@@ -69,6 +79,8 @@ function playerStepJumpGame(){
 		if(x == 0 && y == 0){ jumpGameRow(-1); }
 		if(y > room_height + 32){ instance_destroy(); }
 	}
+	
+
 	
 	pc.y ++;
 

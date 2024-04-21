@@ -24,3 +24,5 @@ slowFall = noone;
 moveToPlayer = false;
 waveScroll = false;
 surfTime = 0;
+
+collectionSound = sfxItemBig;

@@ -23,6 +23,7 @@ function playerEventCheck(){
 			ww.bmap[14, 7] != noone ){
 			instance_destroy(ww.bmap[2, 1]);
 			ww.secExposed[pc.xMap, pc.yMap] = true; 
+			playSfx(sfxFinddoor);
 		}
 	}
 	

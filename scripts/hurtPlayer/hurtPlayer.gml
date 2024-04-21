@@ -9,6 +9,7 @@ function hurtPlayer(dmg, isBlockableShot){
 		if(irandom_range(0, 99) < keepShieldChance){
 			
 		} else {
+			playSfx(sfxClank);
 			pc.sp = 0;
 		}
 		
@@ -16,6 +17,10 @@ function hurtPlayer(dmg, isBlockableShot){
 	}
 	
 	pc.shotPower = noone;
+	
+	
+	if(pc.inSpace && pc.spaceLevel >= 10){ dmg *= 3; }
+	else if(pc.inSpace && pc.spaceLevel >= 7){ dmg *= 1.5; }
 	
 	
 	if(pc.eventTrigger[Event.gotRing3]){
@@ -26,7 +31,7 @@ function hurtPlayer(dmg, isBlockableShot){
 		dmg = dmg * .55;
 	}
 	
-	
+	playSfx(sfxHit);
 	pc.bombCounter = 0;
 	pc.hp -= dmg; ///
 	pc.hurtTime = 30; ///

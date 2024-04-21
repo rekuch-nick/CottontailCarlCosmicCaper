@@ -20,9 +20,13 @@ txtTime = 0;
 
 fileResetWorld();
 
-
-
-
+volMusic = 100;
+volSfx = 100;
+songChange = true;
+currentSong = noone;
+song = noone;
+inShop = false;
+inDungeonEntrence = false;
 
 
 for(var a=0; a<ww.W; a++){ for(var b=0; b<ww.H; b++){

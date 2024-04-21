@@ -11,7 +11,7 @@ function playerStepTitle(){
 		}
 		
 		
-		
+		ww.songChange = true;
 		pc.bagPressed = false;
 		pc.blockInput = true;
 		ww.state = State.load;

@@ -19,9 +19,10 @@ function fileLoad(){
 		ww.secExposed[a, b] = ini_read_real("Main", "secExposed" + string(a) + " " + string(b), ww.secExposed[a, b]);
 		ww.caveCoins[a, b] = ini_read_real("Main", "caveCoins" + string(a) + " " + string(b), ww.caveCoins[a, b]);
 	}}
+	ww.volMusic = ini_read_real("Main", "volMusic", 100);
+	ww.volSfx = ini_read_real("Main", "volSfx", 100);
 	
 	ini_close();
 	
-	show_debug_message("Loaded File");
 	
 }

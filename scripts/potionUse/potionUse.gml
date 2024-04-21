@@ -24,6 +24,6 @@ function potionUse(k){
 		}
 	}
 	
-	
+	playSfx(sfxItemPotion);
 	
 }

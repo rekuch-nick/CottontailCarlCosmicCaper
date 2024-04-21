@@ -12,7 +12,20 @@ function jumpGameRow(b){
 		
 		if(a == 10 && irandom_range(1, 4) == 1){
 			s.sprite_index = imgTreeBranchRight;
-			s.image_index = irandom_range(0, s.image_number);
+			s.image_index = irandom_range(0, s.image_number - 1);
+		} else if (a == 10 && irandom_range(1, 7) == 1){
+			s.sprite_index = imgTreeBranchRightLong;
+			s.image_index = irandom_range(0, s.image_number - 1);
+			a ++;
+		}
+		
+		if(a == 4 && irandom_range(1, 4) == 1){
+			s.sprite_index = imgTreeBranchLeft;
+			s.image_index = irandom_range(0, s.image_number - 1);
+		} else if (a == 3 && irandom_range(1, 7) == 1){
+			s.sprite_index = imgTreeBranchLeftLong;
+			s.image_index = irandom_range(0, s.image_number - 1);
+			a ++;
 		}
 	}
 	

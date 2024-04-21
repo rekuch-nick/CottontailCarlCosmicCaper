@@ -16,6 +16,7 @@ function playerStepDying(){
 		if(bagPressed){
 			ww.deadTime = 0;
 			playerReset();
+			ww.songChange = true;
 		}
 	}
 }

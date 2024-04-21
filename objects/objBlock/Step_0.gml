@@ -18,6 +18,7 @@ if(pc.xPushBlock == xSpot && pc.yPushBlock == ySpot){
 			
 				if(!ww.secExposed[pc.xMap, pc.yMap] && xSpot == ww.secX && ySpot == ww.secY){
 					ww.secExposed[pc.xMap, pc.yMap] = true;
+					playSfx(sfxFinddoor);
 				}
 			
 				ww.bmap[xx, yy] = ww.bmap[xSpot, ySpot];

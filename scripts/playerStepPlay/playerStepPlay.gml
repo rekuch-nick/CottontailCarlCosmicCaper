@@ -235,6 +235,8 @@ function playerStepPlay(){
 			if(eventTrigger[Event.gotFrog] && irandom_range(1, 100) < 60){
 				instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerTadpole);
 			}
+			
+			playSfx(sfxPlayerShoot);
 		}
 		
 	} else if(mouseRHold){
@@ -278,6 +280,7 @@ function playerStepPlay(){
 		if(wepSelected == 2 && wepLevels[2] > 0 && shootCD < 1 && 
 							mp >= wepCost[wepSelected]
 			){
+				playSfx(sfxFire);
 				shootCD = wepCDMax[wepSelected];
 				mp -= wepCost[wepSelected];
 				if(eventTrigger[Event.gotOil]){
@@ -317,12 +320,13 @@ function playerStepPlay(){
 				
 		}
 		
-			//torch
+			//orbit
 		if(wepSelected == 6 && wepLevels[6] > 0 && shootCD < 1 && 
 							mp >= wepCost[wepSelected]
 			){
 				shootCD = wepCDMax[wepSelected];
 				mp -= wepCost[wepSelected];
+				
 				
 				with(objPlayerOrbit){ instance_destroy(); }
 				if(eventTrigger[Event.gotOrbit2]){
@@ -516,6 +520,8 @@ function playerStepPlay(){
 		if(eventTrigger[Event.gotFeather] && featherCD == 0){
 			ww.state = State.birdRez;
 		} else {
+			playMusic(noone);
+			playSfx(sfxGameOver);
 			ww.state = State.dying; 
 		}
 	}

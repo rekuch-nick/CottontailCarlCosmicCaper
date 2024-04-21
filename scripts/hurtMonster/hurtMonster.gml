@@ -25,7 +25,7 @@ function hurtMonster(mob, shot){
 		
 	}
 	
-	
+	playSfx(sfxMobHurt);
 	
 	mob.hp -= dmg;
 	

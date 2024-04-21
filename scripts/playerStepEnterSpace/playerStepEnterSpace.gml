@@ -23,8 +23,10 @@ function playerStepEnterSpace(){
 			}
 		}
 		
+		
 		ww.state = State.play;
 		pc.inSpace = true;
+		playMusic();
 		worldLoadPalace();
 		pc.newWave = true;
 	}

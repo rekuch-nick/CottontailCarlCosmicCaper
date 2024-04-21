@@ -27,6 +27,7 @@ function playerStepUseStairs(){
 			
 		}
 		inOverworld = !inOverworld;
+		ww.songChange = true;
 		worldLoadRoom(0);
 		if(getOutOfLake){
 			while(ww.fmap[floor(pc.x / 64)][floor(pc.y / 64)].isWater){

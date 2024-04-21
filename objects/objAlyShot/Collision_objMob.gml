@@ -5,13 +5,13 @@ if(!arrayContains(hitList, other)){
 	arrayAdd(hitList, other);
 	
 	if(other.basicImmunity && isBasicShot){ 
-		///plink sound effect
+		playSfx(sfxClank);
 	} else if (other.blockBySpeed && !directionless && (
 			(other.xSpeed < 0 && x < other.x) ||
 			(other.xSpeed > 0 && x > other.x) ||
 			(other.ySpeed < 0 && y < other.y) ||
 			(other.ySpeed > 0 && y > other.y) ) ){
-		///plink sound effect
+		playSfx(sfxClank);
 		
 		
 		
