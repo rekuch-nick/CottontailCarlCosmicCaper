@@ -169,6 +169,7 @@ function playerStepPlay(){
 			
 			
 			if(inLostCavesExit && pc.xMap == 0 && pc.yMap == 10){
+				ww.songChange = true;
 				pc.xMap = 9; pc.yMap = 0; d = 0;
 				pc.x = 32 + 5 * 64;
 				pc.y = 32 + 2 * 64;
@@ -359,11 +360,14 @@ function playerStepPlay(){
 				}
 				playSfx(Arcade_Movement_04);
 				
-				var angle = arctan2(y - mouse_y, x - mouse_x);
+				var yy = clamp(mouse_y, 32, room_height - 32);
+				var xx = clamp(mouse_x, 32, room_width - 32);
+				
+				var angle = arctan2(y - yy, x - xx);
 				var aa = cos(angle) * 10;
 				var bb = sin(angle) * 10;
 				
-				pc.x = mouse_x; pc.y = mouse_y;
+				pc.x = xx; pc.y = yy;
 				while(!creatureCanBeHere(pc)){
 					x += aa; y += bb;
 				}

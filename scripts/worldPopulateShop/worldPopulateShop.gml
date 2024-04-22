@@ -60,6 +60,9 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 		} else if(!pc.eventTrigger[Event.gotPowderHorn]){
 			t = objPupPowderHorn; p = 215;
 			desc = "Bombs have bigger explosions.";
+		} else if(!pc.eventTrigger[Event.gotWax]){
+			t = objPupWax; p = 505;
+			desc = "Blue space gas won't slow you down.";
 		}
 		
 	}
