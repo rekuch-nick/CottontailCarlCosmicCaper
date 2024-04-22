@@ -27,5 +27,10 @@ canFreeze = false;
 
 showHP = true;
 
+spec = imgLightningMana;
+specCD = 120;
+specCDMax = 120;
+specLimit = 1;
 
+windStoneUsed = 0;
 

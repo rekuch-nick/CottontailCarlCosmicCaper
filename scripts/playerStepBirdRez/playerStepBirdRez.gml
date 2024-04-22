@@ -2,6 +2,8 @@ function playerStepBirdRez(){
 	
 	
 	pc.hp = clamp(pc.hp + .5, 0, pc.hpMax);
+	if(pc.hp < pc.hpMax / 3){ pc.hp = clamp(pc.hp + .5, 0, pc.hpMax); }
+	if(pc.hp < (pc.hpMax / 3) * 2 ){ pc.hp = clamp(pc.hp + .5, 0, pc.hpMax); }
 	pc.mp = clamp(pc.mp + 1, 0, pc.mpMax);
 	
 	if(instance_number(objEagleSave) < 1){

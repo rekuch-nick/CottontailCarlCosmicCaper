@@ -146,7 +146,8 @@ function worldGetRoomCave(xxx, yyy){
 		ww.bmap[7, 6] = noone;
 		ww.bmap[7, 7] = imgNPCShark;
 		ww.txt = "My Dad is the most powerful fighter in the whole ocean.";
-		if(!pc.eventTrigger[Event.gotWhistle] && pc.eventTrigger[Event.gotBird]){
+		if(!pc.eventTrigger[Event.gotWhistle] && pc.eventTrigger[Event.gotBird]){ ///
+			ww.txt = "My Dad is the most powerful fighter in the whole ocean.\n\nThis whistle will call him, but don't use it until the final battle.";
 			var e = instance_create_depth( (ww.roomWidth / 4) * 3, 500, ww.layerP, objPupWhistle);
 			e.coinPrice = 460;
 		}
@@ -155,10 +156,18 @@ function worldGetRoomCave(xxx, yyy){
 		ww.bmap[7, 6] = imgNPCMantis;
 		ww.txt = "My claws are sharp, but not as sharp as King Lion's.";
 		if(!pc.eventTrigger[Event.gotWhetstone] && pc.eventTrigger[Event.gotSword]){
-			ww.txt = "Event your fake claw must be sharp.";
+			ww.txt = "Even your fake claw should be sharp.";
 			var e = instance_create_depth( (ww.roomWidth / 2), 500, ww.layerP, objPupWhetstone);
 			e.coinPrice = 360;
 		}
+	}
+	if(xxx == 6 && yyy == 1){
+		worldGetCaveDuck();
+		ww.txt = "There's actually 6 places where using the WAND will drain the liquids and reveal some stairs.\n\nIt'd be a good idea to find them all.";
+	}
+	if(xxx == 16 && yyy == 2){
+		worldGetCaveDuck();
+		ww.txt = "The WAND can do a lot of weird things.\n\nOne use you might not find on your own is that it can be used to exit space:\n\nJust hold down the button for a few seconds.";
 	}
 	
 	
@@ -222,6 +231,20 @@ function worldGetRoomCave(xxx, yyy){
 		}
 	}
 	
+	if(xxx == 18 && yyy == 2){
+		ww.bmap[6, 5] = imgNPCLizardDad;
+		ww.bmap[7, 5] = imgBlank; ww.bmap[8, 5] = imgBlank;
+		if(pc.eventTrigger[Event.gotRing3]){
+			ww.txt = "In dangerous times like these, Lizard Brothers Retail is the only store you can trust.";
+		} else if (pc.eventTrigger[Event.gotRing2]){
+			ww.txt = "There's no finer armor in the world.";
+			var e = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupRing3);
+			e.desc = "Reduce damage taken by 45%";
+			e.coinPrice = 650;
+		} else {
+			ww.txt = "You prove yourself a good enough customer to my sons, and I'll sell you something great.";
+		}
+	}
 	
 	
 	
@@ -461,8 +484,29 @@ function worldGetRoomCave(xxx, yyy){
 		
 	}
 	
+	///potion select
+	if(xxx == 18 && yyy == 5){
+		ww.bmap[7, 5] = imgNPCSquirrel;
+		ww.txt = "Take any one you want.";
+		var s = instance_create_depth(3 * 64 + 32, 8 * 64 , ww.layerP, objPupPotionFire);
+		var s = instance_create_depth(7 * 64 + 32, 8 * 64 , ww.layerP, objPupPotionStun);
+		var s = instance_create_depth(11 * 64 + 32, 8 * 64 , ww.layerP, objPupPotionPoison);
+	}
+	
+	///free glasses
+	if(xxx == 3 && yyy == 0){
+		ww.bmap[7, 5] = imgNPCSquirrel;
+		ww.txt = "Remember, if things seem too hard you're probably just missing an important hidden treasure.\n\nLook around all over!";
+		if(!pc.eventTrigger[Event.gotGlasses]){
+			ww.txt = "Want to know how come I can always find where I burried my snacks?";
+			var s = instance_create_depth(7 * 64 + 32, 8 * 64, ww.layerP, objPupGlasses);
+		}
+		
+	}
+	
 	///healing mouse
 	if( (xxx == 7 && yyy = 2) ||
+		(xxx == 15 && yyy = 2) ||
 		(xxx == 0 && yyy = 8) ||
 		(xxx == 0 && yyy = 2) ||
 		(xxx == 9 && yyy = 0) ||
@@ -494,6 +538,7 @@ function worldGetRoomCave(xxx, yyy){
 		ww.bmap[6, 5] = imgLion;
 		ww.bmap[7, 5] = imgBlank; ww.bmap[6, 6] = imgBlank; ww.bmap[7, 6] = imgBlank;
 		worldPutRug(6, 5)
+		/*
 		if(playerEggCount() < 6){
 			ww.txt = "My place is here; I cannot go galavanting through space while the kingdom burns.\n\nSlay the dragons in my name.";
 			ww.txt += "\n\nCome back with six eggs and I will make you my knight.";
@@ -508,9 +553,23 @@ function worldGetRoomCave(xxx, yyy){
 			instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupCape2);
 		} else {
 			ww.txt = "Ho loyal paladin, how goes the war?";
+		}*/
+		
+		if(pc.eventTrigger[Event.gotCape2]){
+			ww.txt = "Ho loyal paladin, how goes the war?";
+		} else if(playerEggCount() >= 10) {
+			ww.txt = "With this oil I anoint you, great defender of the meek.\n\nMay your spirit remain as pure as your nobel deeds.";
+			instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupCape2);
+		} else if(pc.eventTrigger[Event.gotCape]) {
+			ww.txt = "My place is here; I cannot go galavanting through space while the kingdom burns.\n\nSlay the dragons in my name.";
+			ww.txt += "\n\nCome back with ten eggs and I will make you a lord.";
+		} else if (playerEggCount() >= 6) {
+			ww.txt = "Kneel.\n\nNow Rise; Sir Carl Knight of the relm.\n\nLet your courage fuel our people to victory!";
+			instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupCape);
+		} else {
+			ww.txt = "My place is here; I cannot go galavanting through space while the kingdom burns.\n\nSlay the dragons in my name.";
+			ww.txt += "\n\nCome back with six eggs and I will make you my knight.";
 		}
-		
-		
 		
 	}
 	

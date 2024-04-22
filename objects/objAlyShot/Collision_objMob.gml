@@ -24,7 +24,7 @@ if(!arrayContains(hitList, other)){
 			)
 		){
 			
-			
+			if(other.frozenTime <= 0 && freezePow > 0){ playSfx(sfxIceBreak); }
 			other.frozenTime = max(other.frozenTime, freezePow);
 		}
 		if(other.canStun && irandom_range(1, 100) < stunChance){

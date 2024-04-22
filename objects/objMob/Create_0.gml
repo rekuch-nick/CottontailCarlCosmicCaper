@@ -151,3 +151,4 @@ healHP = 0;
 immuneToAll = false;
 
 isMusicBoss = false;
+windStoneUsed = -1;

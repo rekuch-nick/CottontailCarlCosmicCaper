@@ -219,9 +219,10 @@ function worldGetRoomDeepForest(xxx, yyy){
 	
 	if(xxx == 18 && yyy == 3){
 		biome(Zone.deepForest);
-		wmap("%%%%%%%%%%%~~~~");
-		wmap("%%%%%%%%%%%%%~~");
-		wmap("....%%%%%%%%%%~");
+		ww.secBlock = imgBushDeepGrass; ww.secX = 8; ww.secY = 2; ww.secType = Sec.burn;
+		wmap("%%%%%%%%.%%~~~~");
+		wmap("%%%%%%%%.%%%%~~");
+		wmap("....%%%%.%%%%%~");
 		wmap(".........%=%%%%");
 		wmap(".............%%");
 		wmap(".............%%");
@@ -231,6 +232,8 @@ function worldGetRoomDeepForest(xxx, yyy){
 		wmap("............%%%");
 		wmap("%%...........%%");
 		wmap("%%...........%%");
+		ww.fmap[8, 0] = imgBushDeepGrass;
+		ww.fmap[8, 1] = imgBushDeepGrass;
 	}
 	
 	if(xxx == 18 && yyy == 4){

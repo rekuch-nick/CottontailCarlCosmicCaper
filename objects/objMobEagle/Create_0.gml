@@ -1,4 +1,6 @@
 event_inherited();
+playSfx(eagle_scream_112940);
+playMusic(songBoss02); isMusicBoss = true;
 
 hp = 355;
 hpMax = 355;

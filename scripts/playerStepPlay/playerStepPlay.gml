@@ -236,7 +236,9 @@ function playerStepPlay(){
 				instance_create_depth(x + xo, y - 12, ww.layerE, objPlayerTadpole);
 			}
 			
-			playSfx(sfxPlayerShoot);
+			if(beamType == objPlayerBeamsPhilo){
+				playSfx(sfxPlayerShoot2);
+			} else { playSfx(sfxPlayerShoot); }
 		}
 		
 	} else if(mouseRHold){
@@ -258,7 +260,7 @@ function playerStepPlay(){
 				if(eventTrigger[Event.gotRang3]){ t = objPlayerRang3; }
 				if(eventTrigger[Event.gotRang4]){ t = objPlayerRang4; }
 				instance_create_depth(x, y, ww.layerE, t);
-			
+				playSfx(Sword_Whip_03);
 		}
 		
 			//stars
@@ -267,6 +269,7 @@ function playerStepPlay(){
 			){
 				shootCD = wepCDMax[wepSelected];
 				mp -= wepCost[wepSelected];
+				playSfx(Keys_Drop_01);
 				for(var i=0; i<5; i++){
 					var s = instance_create_depth(x, y, ww.layerE, objPlayerStar);
 					var nn = ceil(i / 2) * 3;
@@ -317,7 +320,7 @@ function playerStepPlay(){
 				xIceTar = a; yIceTar = b;
 				iceFace = image_xscale > 0 ? 1 : -1;
 				instance_create_depth(x, y, ww.layerE, objPlayerColdBlast);
-				
+				playSfx(sfxWind);
 		}
 		
 			//orbit
@@ -326,7 +329,7 @@ function playerStepPlay(){
 			){
 				shootCD = wepCDMax[wepSelected];
 				mp -= wepCost[wepSelected];
-				
+				playSfx(Keys_Drop_01);
 				
 				with(objPlayerOrbit){ instance_destroy(); }
 				if(eventTrigger[Event.gotOrbit2]){
@@ -354,6 +357,7 @@ function playerStepPlay(){
 					with(objPlayerDupe){ instance_destroy(); }
 					instance_create_depth(x, y, ww.layerE, objPlayerDupe);
 				}
+				playSfx(Arcade_Movement_04);
 				
 				var angle = arctan2(y - mouse_y, x - mouse_x);
 				var aa = cos(angle) * 10;
@@ -376,6 +380,7 @@ function playerStepPlay(){
 				shootCD = wepCDMax[wepSelected];
 				instance_create_depth(x, y, ww.layerE, objPlayerSwordSlash);
 				swordDashTime = 15; xSwordDash = xIn; ySwordDash = yIn;
+				playSfx(sfxDash);
 				
 			} else if(mouseRHold && shootCD < 1){
 				if(mouse_x < x && image_xscale > 0){ image_xscale *= -1; }
@@ -411,6 +416,7 @@ function playerStepPlay(){
 		if(xTile >= 0 && yTile >= 0 && xTile < 15 && yTile < 12){
 			if(ww.fmap[xTile, yTile] != noone && ww.fmap[xTile, yTile].sprite_index == imgDoorway){
 				playerKillMemoryUpdate();
+				playSfx(Door_Knock_Muffled);
 				ww.state = State.useStairs;
 				ww.stairAlpha = 0;
 			}

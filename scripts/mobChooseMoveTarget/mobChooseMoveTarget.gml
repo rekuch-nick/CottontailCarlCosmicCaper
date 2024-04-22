@@ -47,6 +47,11 @@ function mobChooseMoveTarget(){
 		yTar = irandom_range(32, 178);
 	}
 	
+	if(driftMove == Move.stayBot){
+		xTar = irandom_range(32, ww.roomWidth - 32);
+		yTar = irandom_range(room_height - 128, room_height - 32);
+	}
+	
 	if(driftMove == Move.hunt){
 		xTar = pc.x;
 		yTar = pc.y;

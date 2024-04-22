@@ -28,7 +28,7 @@ function playMusic(s){
 	if(s == noone){ audio_stop_all(); }
 	
 	audio_stop_sound(ww.song);
-	ww.song = audio_play_sound(s, 10, true);
+	ww.song = audio_play_sound(s, 1, true);
 	
 	
 	

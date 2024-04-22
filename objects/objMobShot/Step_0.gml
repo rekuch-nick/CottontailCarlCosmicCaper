@@ -5,7 +5,8 @@ if(firstFrame){
 	var aaa = pc.x; var bbb = pc.y;
 	
 	with(objPlayerDupe){
-		if(choose(true, false)){
+		//if(choose(true, true)){
+		if(choose(true, true, false)){
 			aaa = x; bbb = y;
 			other.xTar = aaa;
 			other.yTar = bbb;
@@ -53,6 +54,12 @@ if(firstFrame){
 		ySpeed = moveSpeed;
 		if(fallBounce){ ySpeed = -6; grav = 1; gravMax = 26; }
 		if(sprite_index == imgFrozenEffect){ ySpeed = irandom_range(-6, -4); }
+	}
+	
+	if(object_index == objMobShotAxe){
+		xSpeed = getDirection(xSpeed) * irandom_range(4, 8);
+		ySpeed = irandom_range(-30, -20);
+		grav = 1;
 	}
 	
 	if(pointAtTarget){

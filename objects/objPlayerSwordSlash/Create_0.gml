@@ -31,6 +31,7 @@ var xx = x + (32  * getDirection(pc.image_xscale));
 with(objMobShot){ if(isWindDeflectable){
 	if(point_distance(x, y, xx, other.y) < 80){
 		instance_create_depth(x, y, ww.layerE, objShotDeflected);
+		playSfx(sfxClank);
 		instance_destroy();
 	}
 }}

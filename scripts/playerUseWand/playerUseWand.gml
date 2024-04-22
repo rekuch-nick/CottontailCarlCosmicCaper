@@ -8,8 +8,9 @@ function playerUseWand(){
 		shootCD = wepCDMax[wepSelected];
 		mp -= wepCost[wepSelected];
 		instance_create_depth(x, y, ww.layerE, objEffPlayerWand);
+		playSfx(Comical_Pop_and_Swirl);
 			
-		if(holdWandTime > 30 && inSpace){
+		if(holdWandTime > 30 && inSpace && pc.spaceLevel != 12){
 			ww.state = State.leaveSpace;
 			with(objEffect){ if(object_index != objEffPlayerWand){ instance_destroy(); }}
 			with(objSpaceRock){ instance_destroy(); }

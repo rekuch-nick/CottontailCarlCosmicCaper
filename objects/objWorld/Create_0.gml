@@ -103,6 +103,7 @@ enum Move {
 	hunt,
 	huntOff,
 	stayTop,
+	stayBot,
 	avoid,
 	bull,
 	huntHalf,

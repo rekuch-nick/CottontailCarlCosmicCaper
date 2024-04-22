@@ -82,6 +82,7 @@ function playerStepPlaySpace(){
 			//if(spaceLevel == 9){ eventTrigger[Event.palace9Clear] = true; }
 			
 			ww.state = State.leaveSpace;
+			//playSfx(Comical_Descent);
 			with(objEffect){ instance_destroy(); }
 			with(objSpaceRock){ instance_destroy(); }
 			with(objPup){ instance_destroy(); }

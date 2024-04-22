@@ -14,8 +14,9 @@ if(falling){
 }
 
 if(healHP > 0){
-	healHP -= 10;
-	hp = clamp(hp + 10, 0, hpMax);
+	var n = hpMax / 30;
+	healHP -= n;
+	hp = clamp(hp + n, 0, hpMax);
 	if(hp >= hpMax){ healHP = 0; }
 }
 
@@ -217,6 +218,16 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 			
 		}
 		
+		if(spec == imgLightningMana){
+			if(x > pc.x && image_xscale > 0){ image_xscale *= -1; }
+			if(x < pc.x && image_xscale < 0){ image_xscale *= -1; }
+			xSpeed = 0; ySpeed = 0; thinkCD = 30;
+			var l = instance_create_depth(x, y, ww.layerE, objLightningMana);
+			l.image_angle = point_direction(x, y, pc.x, pc.y);
+			pc.mp = 0;
+			pc.stunTime = max(pc.stunTime, 20);
+		}
+		
 		if(spec == objMobShotFire || spec == objMobShotFireDark){ repeat(specNum){
 			var a = irandom_range(0, 14);
 			var b = irandom_range(0, 12);
@@ -275,6 +286,18 @@ if(spec != noone && frozenTime < 1 && stunTime < 1){
 	}
 } // end of spec
 
+
+if(windStoneUsed >= 25){
+	windStoneUsed = 0;
+	if(x > pc.x && image_xscale > 0){ image_xscale *= -1; }
+	if(x < pc.x && image_xscale < 0){ image_xscale *= -1; }
+	xSpeed = 0; ySpeed = 0; thinkCD = 30;
+	var l = instance_create_depth(x, y, ww.layerE, objLightningMana);
+	l.image_angle = point_direction(x, y, pc.x, pc.y);
+	pc.mp = 0;
+	pc.stunTime = max(pc.stunTime, 20);
+}
+
 if(fadePulseDir != 0){
 	image_alpha += fadePulseDir * .02;
 	if(image_alpha < 0 && fadePulseSpawn != noone){
@@ -330,6 +353,7 @@ if(shatterAtHalf && hp / hpMax <= .5){
 		shotKind = objMobShotRandom;
 		shootRepeat = 8;
 	} else if (object_index == objMobDragonBlack) {
+		playSfx(Arcade_Chirp_06);
 		sprite_index = imgMobDragonBlackShift;
 		moveSpeed -= 1;
 		shotKind = objMobShot2;

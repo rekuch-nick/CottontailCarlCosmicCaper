@@ -20,6 +20,7 @@ function mobStepDamage(){
 				specCD = 120;
 				specCDMax = 180;
 				specLimit = 1;
+				playSfx(Arcade_Chirp_06);
 				return;
 			}
 			if(phase == 2){
@@ -29,22 +30,58 @@ function mobStepDamage(){
 				spec = imgLightning;
 				specCD = 45;
 				specCDMax = 45;
-				specLimit = 4;
+				specLimit = 3;
 				shotKind = objMobShotHalfTracer;
+				playSfx(Arcade_Chirp_06);
+				return;
+			}
+			if(phase == 3){
+				hpMax = 2000;
+				phase = 4; healHP = hpMax;
+				shootCDMax = 20;
+				spec = imgLightning;
+				specCD = 45;
+				specCDMax = 45;
+				specLimit = 3;
+				shotKind = objMobShotAxe;
+				driftMove = Move.stayBot;
+				playSfx(Arcade_Chirp_06);
+				return;
+			}
+			if(phase == 4){
+				hpMax = 2000;
+				phase = 5; healHP = hpMax;
+				shootCDMax = 20;
+				spec = imgLightning;
+				specCD = 45;
+				specCDMax = 45;
+				specLimit = 3;
+				shotKind = objMobShot3;
+				driftMove = Move.stayBot;
+				playSfx(Arcade_Chirp_06);
 				return;
 			}
 			
 			
-			if(phase == 3){
-				phase = 4; healHP = 0;
+			
+			if(phase == 5){
+				phase = 6; healHP = 0;
 				image_xscale = 4; image_yscale = 4;
 				image_alpha = 1;
 				immuneToAll = true;
 				shotKind = noone;
+				spec = noone;
 				image_speed = 30;
+				with(objMobShot){ instance_destroy(); }
+			}
+		} else {
+			if(phase == 5 && pc.eventTrigger[Event.gotWhistle]){
+				instance_create_depth(x, room_height, ww.layerE - 1, objShark);
+				xSpeed = 0; ySpeed = 0; thinkCD = 300; healHP = 0;
 			}
 		}
-		if(phase == 4 && healHP <= 0){
+		
+		if(phase == 6 && healHP <= 0){
 			//image_index = 0;
 			moveSpeed = 0; xSpeed = 0; ySpeed = 0;
 			image_alpha -= .004;
@@ -62,6 +99,7 @@ function mobStepDamage(){
 				shootCDMax = 100;
 				instance_create_depth(x, y, depth, objMobGhostBone);
 				instance_create_depth(x, y, depth, objMobGhostBone);
+				playSfx(Arcade_Chirp_06);
 				return;
 			}
 			if(phase == 2){
@@ -77,6 +115,7 @@ function mobStepDamage(){
 				specCDMax = 1800;
 				instance_create_depth(x, y, depth, objMobGhostBone);
 				instance_create_depth(x, y, depth, objMobGhostBone);
+				playSfx(Arcade_Chirp_06);
 				return;
 			}
 			if(phase == 3){
@@ -94,6 +133,7 @@ function mobStepDamage(){
 				instance_create_depth(x, y, depth, objMobGhostBone);
 				instance_create_depth(x, y, depth, objMobGhostBone);
 				instance_create_depth(x, y, depth, objMobGhostBone);
+				playSfx(Arcade_Chirp_06);
 				return;
 			}
 		}
