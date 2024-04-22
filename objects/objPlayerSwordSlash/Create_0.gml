@@ -4,6 +4,7 @@ event_inherited();
 aly = 1;
 
 pow = 20;
+if(pc.eventTrigger[Event.gotWhetstone]){ pow = 50; }
 
 moveSpeed = 0;
 

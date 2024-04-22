@@ -1,5 +1,9 @@
 function debugSetLevelCleated(){ with(objPlayer) {
 	
+	if(keyboard_check_pressed(ord("L"))){
+		instance_create_depth(400, room_height, ww.layerE - 1, objShark);
+	}
+	
 	if(debugPossible && keyboard_check(vk_shift) && keyboard_check(vk_delete) && charPressed == "1"){
 		hpMax += 10; hp += 10;
 		bombs = max(bombs, 4);

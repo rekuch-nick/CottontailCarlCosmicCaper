@@ -1,6 +1,9 @@
 
 justHit = true;
 other.hp -= 1;
+if(other.object_index == objMobDragonBoneKing || other.object_index == objMobDragonQueen){
+	if(hp < 10){ hp = 10; }
+}
 with(other){ mobStepDamage(); }
 
 

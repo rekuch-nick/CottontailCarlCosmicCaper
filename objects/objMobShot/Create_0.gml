@@ -70,3 +70,6 @@ isLobTall = false;
 
 splitInto = noone;
 splitNumber = 0;
+followMob = noone;
+spin = false;
+spinDir = -1;

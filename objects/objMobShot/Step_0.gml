@@ -84,6 +84,12 @@ if(seek > 0){
 }
 
 
+if(spin){
+	image_xscale += 0.1 * spinDir;
+	if(image_xscale >= image_yscale){ spinDir = -1; }
+	if(image_xscale <= -image_yscale){ spinDir = 1; }
+}
+
 
 if(irandom_range(0, 99) < quarterTurnChance){ 
 	image_angle += 90; 
@@ -104,6 +110,13 @@ ySpeed += grav;
 if(gravMax != 0 && ySpeed > gravMax){
 	ySpeed = gravMax;
 }
+
+if(followMob != noone){
+	x = followMob.x;
+	y = followMob.y;
+}
+
+
 
 if(bounce){
 	while(x < 0 || y < 0 || x >= ww.roomWidth || y >= room_height){
@@ -167,6 +180,22 @@ if(spawn != noone){
 		}
 	}
 }
+
+if(object_index == objMobShotSeekMine){
+	if(point_distance(x, y, pc.x, pc.y) < 150){ // && irandom_range(1, 30) == 1){
+		for(var a=x-150; a<=x+150; a+=25){
+			instance_create_depth(a, y, depth, objMobShotStill);
+		}
+		for(var b=y-150; b<=y+150; b+=25){
+			instance_create_depth(x, b, depth, objMobShotStill);
+		}
+		timeCD = 0;
+	}
+	
+}
+
+
+
 
 if(flicker){ image_alpha = random_range(.5, 1); }
 

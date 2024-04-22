@@ -5,7 +5,7 @@ if(pc.spaceLevel == 12){ playMusic(songBoss04); isMusicBoss = true; }
 hp = 755;
 hpMax = 755;
 
-shotKind = objMobShotSeek;
+shotKind = objMobShotSeekMine;
 shootCD = shootCDMax - choose(0, 10, 20);
 
 

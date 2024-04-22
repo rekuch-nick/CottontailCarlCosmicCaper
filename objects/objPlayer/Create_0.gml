@@ -227,6 +227,8 @@ enum Event {
 	haveBombs,
 	gotWorkPass,
 	gotShoe,
+	gotWhistle,
+	gotWhetstone,
 	
 	
 	palace1Clear,

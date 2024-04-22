@@ -128,6 +128,8 @@ if(gotIt){
 		ww.state = State.rocketing; 
 	}
 	
+	if(sprite_index == imgSharkWhistle){ pc.eventTrigger[Event.gotWhistle] = true; }
+	if(sprite_index == imgWhetstone){ pc.eventTrigger[Event.gotWhetstone] = true; }
 	if(sprite_index == imgPupShoe){ pc.eventTrigger[Event.gotShoe] = true; }
 	if(sprite_index == imgPupWorkPass){ pc.eventTrigger[Event.gotWorkPass] = true; }
 	if(sprite_index == imgPupChargeCharm){ pc.eventTrigger[Event.gotChargeShot] = true; }

@@ -19,12 +19,24 @@ function mobStepDamage(){
 				spec = objMobShotFallDragon;
 				specCD = 120;
 				specCDMax = 180;
+				specLimit = 1;
+				return;
+			}
+			if(phase == 2){
+				hpMax = 1000;
+				phase = 3; healHP = hpMax;
+				shootCDMax = 20;
+				spec = imgLightning;
+				specCD = 45;
+				specCDMax = 45;
+				specLimit = 4;
+				shotKind = objMobShotHalfTracer;
 				return;
 			}
 			
 			
-			if(phase == 2){
-				phase = 3; healHP = 0;
+			if(phase == 3){
+				phase = 4; healHP = 0;
 				image_xscale = 4; image_yscale = 4;
 				image_alpha = 1;
 				immuneToAll = true;
@@ -32,7 +44,7 @@ function mobStepDamage(){
 				image_speed = 30;
 			}
 		}
-		if(phase == 3 && healHP <= 0){
+		if(phase == 4 && healHP <= 0){
 			//image_index = 0;
 			moveSpeed = 0; xSpeed = 0; ySpeed = 0;
 			image_alpha -= .004;
@@ -150,6 +162,12 @@ function mobStepDamage(){
 			playMusic(noone);
 			playSfx(sfxRest);
 			ww.songChange = true;
+		}
+		
+		with(objMobShot){
+			if(followMob == other.id){
+				instance_destroy();
+			}
 		}
 		
 		playSfx(choose(sfxCry01, sfxCry02, sfxCry03));

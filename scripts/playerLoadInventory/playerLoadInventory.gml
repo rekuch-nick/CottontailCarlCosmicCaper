@@ -149,6 +149,10 @@ function playerLoadInventory(){
 	s.eve[0] = Event.gotFarShot; s.img[0] = imgPupScope;
 	s.desc[0] = "Your lazers will power up if you shoot far away targets.";
 	
+	var s = instance_create_depth(8 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotWhistle; s.img[0] = imgSharkWhistle;
+	s.desc[0] = "Shark will aid you in the final battle.";
+	
 	var s = instance_create_depth(9 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotDoll; s.img[0] = imgPlayerDupe;
 	s.desc[0] = "Leave a decoy when you use the Portable Hole.";
@@ -156,6 +160,10 @@ function playerLoadInventory(){
 	var s = instance_create_depth(10 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotShoe; s.img[0] = imgPupShoe;
 	s.desc[0] = "Move a tiny bit faster when not attacking.";
+	
+	var s = instance_create_depth(11 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
+	s.eve[0] = Event.gotWhetstone; s.img[0] = imgWhetstone;
+	s.desc[0] = "Keeps your sword sharp.";
 	
 	var s = instance_create_depth(12 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotWorkPass; s.img[0] = imgPupWorkPass;

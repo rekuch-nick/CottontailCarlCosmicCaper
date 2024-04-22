@@ -141,6 +141,25 @@ function worldGetRoomCave(xxx, yyy){
 		worldGetCaveDuck();
 		ww.txt = "When you're lost in the deep dark caves, go South. Go South and South some more.\n\nIt's not the way out but you'll find a snack, as long as you don't mind worms.";
 	}
+	if(xxx == 1 && yyy == 1){
+		worldGetCaveDuck();
+		ww.bmap[7, 6] = noone;
+		ww.bmap[7, 7] = imgNPCShark;
+		ww.txt = "My Dad is the most powerful fighter in the whole ocean.";
+		if(!pc.eventTrigger[Event.gotWhistle] && pc.eventTrigger[Event.gotBird]){
+			var e = instance_create_depth( (ww.roomWidth / 4) * 3, 500, ww.layerP, objPupWhistle);
+			e.coinPrice = 460;
+		}
+	}
+	if(xxx == 5 && yyy == 1){
+		ww.bmap[7, 6] = imgNPCMantis;
+		ww.txt = "My claws are sharp, but not as sharp as King Lion's.";
+		if(!pc.eventTrigger[Event.gotWhetstone] && pc.eventTrigger[Event.gotSword]){
+			ww.txt = "Event your fake claw must be sharp.";
+			var e = instance_create_depth( (ww.roomWidth / 2), 500, ww.layerP, objPupWhetstone);
+			e.coinPrice = 360;
+		}
+	}
 	
 	
 	

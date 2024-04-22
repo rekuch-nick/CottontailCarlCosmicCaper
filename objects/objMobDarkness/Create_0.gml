@@ -1,4 +1,8 @@
 event_inherited();
+playSfx(sfxDragonspawn);
+playMusic(songBoss02); isMusicBoss = true;
+ww.songChange = true;
+playSfx(sfxBossIntro);
 
 hp = 3365;
 hpMax = 3365;
