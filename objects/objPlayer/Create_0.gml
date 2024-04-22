@@ -4,7 +4,7 @@ image_yscale = 4;
 icd = 0;
 depth = -900;
 debug = false;
-debugPossible = true;
+debugPossible = false;
 blockInput = true;
 
 playerInput();
