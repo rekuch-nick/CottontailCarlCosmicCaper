@@ -25,3 +25,4 @@ turnOnThink = true;
 thinkCDMax = choose(110, 120, 130);
 
 rot = 10;
+weakToNinjaStars = true;

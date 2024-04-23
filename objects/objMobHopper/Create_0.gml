@@ -9,7 +9,7 @@ shootCD = shootCDMax - choose(0, 10, 20);
 
 
 bumpPow = 20;
-
+weakToRang = true;
 
 jumpChance = 100;
 jumpPow = -13;

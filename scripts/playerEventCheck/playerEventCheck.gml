@@ -123,6 +123,7 @@ function playerEventCheck(){
 	if(pc.eventTrigger[Event.gotBird] && pc.xMap == 18 && pc.yMap == 7 && !pc.inSpace){
 		if(pc.x > 12 * 64 + 16){
 			if(pc.y > 5 * 64 && pc.y < 7 * 64){
+				pc.inOverworld = false;
 				pc.spaceLevel = 12;
 				ww.state = State.enteringSpace;
 				pc.xCave = 11 * 64;

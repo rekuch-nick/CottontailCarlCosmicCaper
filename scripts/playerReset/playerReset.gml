@@ -5,6 +5,7 @@ with(objMob){ instance_destroy(); }
 with(objEffect){ instance_destroy(); }
 with(objPup){ instance_destroy(); }
 with(objSpaceRock){ instance_destroy(); }
+with(objStar){ instance_destroy(); }
 for(var a=0; a<ww.W; a++){ for(var b=0; b<ww.H; b++){
 	ww.fmap[a, b] = noone;
 	ww.bmap[a, b] = noone;

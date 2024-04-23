@@ -23,3 +23,4 @@ driftMove = Move.huntHalf;
 turnOnThink = true;
 
 thinkCDMax = choose(110, 120, 130);
+weakToOrbit = true;

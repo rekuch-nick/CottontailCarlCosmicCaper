@@ -1,6 +1,6 @@
 function debugSetLevelCleated(){ with(objPlayer) {
 	
-	if(keyboard_check_pressed(ord("L"))){
+	if(debugPossible && keyboard_check_pressed(ord("L"))){
 		instance_create_depth(400, room_height, ww.layerE - 1, objShark);
 	}
 	

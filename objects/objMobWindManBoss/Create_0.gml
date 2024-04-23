@@ -32,7 +32,7 @@ specCD = specCDMax;
 
 
 
-
+weakToWind = true;
 
 drop = objPupCoin;
 if(!pc.eventTrigger[Event.gotCarrotWindBoss]){

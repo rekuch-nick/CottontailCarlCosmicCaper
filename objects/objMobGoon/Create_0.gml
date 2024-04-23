@@ -13,7 +13,7 @@ bumpPow = 20;
 
 dropsBombs = true;
 
-
+weakToIce = true;
 
 moveSpeed = 6;
 thinkCDMax = 10;

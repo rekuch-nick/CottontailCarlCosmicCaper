@@ -13,3 +13,5 @@ dropsBombs = true;
 
 shatterAtHalf = true;
 dropChance = 75;
+
+weakToSword = true;

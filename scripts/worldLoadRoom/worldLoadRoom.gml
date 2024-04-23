@@ -6,6 +6,7 @@ function worldLoadRoom(dir){
 	pc.xPushBlock = 0;
 	pc.yPushBlock = 0;
 	ww.usedKeyCard = false;
+	with(objStar){ instance_destroy(); }
 	with(objEffect){ instance_destroy(); }
 	with(objMob){ instance_destroy(); }
 	with(objPup){ instance_destroy(); }

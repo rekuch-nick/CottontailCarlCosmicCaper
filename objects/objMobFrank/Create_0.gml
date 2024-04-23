@@ -12,6 +12,8 @@ bumpPow = 20;
 dropsBombs = true;
 
 dropChance = 75;
+weakToSword = true;
+
 if(!pc.eventTrigger[Event.gotCross]){
 	dropChance = 100;
 	drop = objFrankToSkelly;

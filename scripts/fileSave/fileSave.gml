@@ -20,6 +20,7 @@ function fileSave(){
 	}}
 	ini_write_real("Main", "volMusic", ww.volMusic);
 	ini_write_real("Main", "volSfx", ww.volSfx);
+	ini_write_real("Main", "frogBuys", pc.frogBuys);
 	
 	
 	ini_close();

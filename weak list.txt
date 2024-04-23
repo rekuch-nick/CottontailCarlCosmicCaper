@@ -1,0 +1,38 @@
+
+
+rang 
+  bats
+  hopper
+  merged slime
+  
+star
+  worms
+  snakes
+  
+torch
+  troll
+  "ent"
+  heart
+  
+ice
+  crasher (mountian block)
+  desert blob
+  likelike
+  goon 
+  
+orbit
+  bear
+  hunter
+  mouth
+  witch
+  
+sword
+  frank / skelly
+  lobber
+
+wind
+  windman
+  
+???
+  mossman
+  wizrobe

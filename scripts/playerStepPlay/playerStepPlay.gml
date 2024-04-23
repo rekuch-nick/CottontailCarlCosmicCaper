@@ -300,6 +300,7 @@ function playerStepPlay(){
 			//bombs
 		if(wepSelected == 3 && wepLevels[3] > 0 && shootCD < 1 && bombs > 0){
 				shootCD = wepCDMax[wepSelected];
+				shootCD = 16;
 				bombs --;
 				instance_create_depth(x, y, ww.layerE, objPlayerBomb);
 		}

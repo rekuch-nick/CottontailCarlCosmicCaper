@@ -16,7 +16,7 @@
     "path": "folders/Sounds/sfx.yy",
   },
   "preload": false,
-  "sampleRate": 44100,
+  "sampleRate": 5512,
   "soundFile": "eagle_scream_112940.mp3",
   "type": 0,
   "volume": 1.0,

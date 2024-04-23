@@ -1,5 +1,5 @@
 event_inherited();
 
-pow = 20;
+pow = 40;
 moveSpeed = 18;
 

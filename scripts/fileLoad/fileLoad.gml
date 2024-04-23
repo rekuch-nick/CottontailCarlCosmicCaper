@@ -27,7 +27,7 @@ function fileLoad(){
 		//playMusic(noone);
 		audio_stop_all(); 
 	}
-	
+	pc.frogBuys = ini_read_real("Main", "frogBuys", 0);
 	
 	ini_close();
 	

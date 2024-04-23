@@ -12,5 +12,5 @@ revengeShot = true;
 
 bumpPow = 20;
 
-
+weakToIce = true;
 

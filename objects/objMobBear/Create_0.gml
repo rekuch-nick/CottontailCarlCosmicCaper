@@ -11,6 +11,8 @@ bumpPow = 20;
 
 dropsBombs = true;
 
+weakToOrbit = true;
+
 if(choose(true, false)){
 	drop = objPupBomb;
 	dropChance = 100;

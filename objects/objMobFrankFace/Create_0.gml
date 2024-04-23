@@ -19,7 +19,7 @@ driftMove = Move.hunt;
 
 
 thinkCDMax = choose(110, 120, 130);
-
+weakToSword = true;
 if(!pc.eventTrigger[Event.gotCross]){
 	dropChance = 100;
 	drop = objFrankToSkellyFace;

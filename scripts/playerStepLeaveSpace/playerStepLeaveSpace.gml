@@ -35,5 +35,6 @@ function playerStepLeaveSpace(){
 		pc.inSpace = false;
 		worldLoadRoom(0);
 		ww.state = State.play;
+		
 	}
 }

@@ -21,3 +21,4 @@ turnOnThink = true;
 
 thinkCDMax = choose(110, 120, 130);
 
+weakToSword = true;

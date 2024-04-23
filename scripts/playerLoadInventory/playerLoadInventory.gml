@@ -163,7 +163,7 @@ function playerLoadInventory(){
 	
 	var s = instance_create_depth(11 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotWhetstone; s.img[0] = imgWhetstone;
-	s.desc[0] = "Keeps your sword sharp.";
+	s.desc[0] = "Keeps your sword sharp. 250% as sharp, to be exact.";
 	
 	var s = instance_create_depth(12 * 64, 4 * 64, hud.depth - 1, objItemTooltip);
 	s.eve[0] = Event.gotWorkPass; s.img[0] = imgPupWorkPass;

@@ -57,8 +57,8 @@ if(firstFrame){
 	}
 	
 	if(object_index == objMobShotAxe){
-		xSpeed = getDirection(xSpeed) * irandom_range(4, 8);
-		ySpeed = irandom_range(-30, -20);
+		xSpeed = getDirection(xSpeed) * irandom_range(4, 9);
+		ySpeed = irandom_range(-34, -20);
 		grav = 1;
 	}
 	

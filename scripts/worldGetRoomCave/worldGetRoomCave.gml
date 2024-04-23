@@ -405,7 +405,7 @@ function worldGetRoomCave(xxx, yyy){
 	
 	if( (xxx == 18 && yyy == 3) ){ // tactics animal
 		ww.bmap[7, 5] = imgNPCFrog;
-		if(!pc.eventTrigger[Event.gotFrog] && pc.frogBuys >= 10){
+		if(!pc.eventTrigger[Event.gotFrog] && pc.frogBuys >= 5){
 			ww.txt = "I wager you've learned enough by now you can help pass it on to 3 or 4 hundred thousand of my children.";
 			instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupFrog);
 		} else {
@@ -491,6 +491,15 @@ function worldGetRoomCave(xxx, yyy){
 		var s = instance_create_depth(3 * 64 + 32, 8 * 64 , ww.layerP, objPupPotionFire);
 		var s = instance_create_depth(7 * 64 + 32, 8 * 64 , ww.layerP, objPupPotionStun);
 		var s = instance_create_depth(11 * 64 + 32, 8 * 64 , ww.layerP, objPupPotionPoison);
+	}
+	
+	///free bombs
+	if(xxx == 6 && yyy == 0){
+		ww.bmap[7, 5] = imgNPCSquirrel;
+		ww.txt = "Come back anytime.";
+		var s = instance_create_depth(6 * 64 + 32 + 16, 8 * 64 , ww.layerP, objPupBomb);
+		var s = instance_create_depth(7 * 64 + 32, 8 * 64 , ww.layerP, objPupBomb);
+		var s = instance_create_depth(8 * 64 + 32 - 16, 8 * 64 , ww.layerP, objPupBomb);
 	}
 	
 	///free glasses
