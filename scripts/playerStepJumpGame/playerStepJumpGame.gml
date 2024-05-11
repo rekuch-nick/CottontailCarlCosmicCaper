@@ -1,14 +1,23 @@
 function playerStepJumpGame(){
 	
 	
-	if(irandom_range(0, 30) == 1){
+	if(irandom_range(0, 60) == 1){
 		instance_create_depth(irandom_range(0, 14) * 64 + 32, 20, ww.layerM, objTreeSkelly);
 	}
-	if(pc.jumpRow > 40 && irandom_range(0, 30) == 1){
+	if(pc.jumpRow > 20 && irandom_range(0, 60) == 1){
+		instance_create_depth(irandom_range(0, 14) * 64 + 32, 20, ww.layerM, objTreeSkelly);
+	}
+	if(pc.jumpRow > 40 && irandom_range(0, 60) == 1){
+		instance_create_depth(irandom_range(0, 14) * 64 + 32, 20, ww.layerM, objTreeSkelly);
+	}
+	if(pc.jumpRow > 60 && irandom_range(0, 60) == 1){
 		instance_create_depth(irandom_range(0, 14) * 64 + 32, 20, ww.layerM, objTreeSkelly);
 	}
 	
 	if(irandom_range(0, 90) == 1){
+		instance_create_depth(irandom_range(0, 14) * 64 + 32, 20, ww.layerP, objPupCoin);
+	}
+	if(pc.jumpRow > 40 && irandom_range(0, 90) == 1){
 		instance_create_depth(irandom_range(0, 14) * 64 + 32, 20, ww.layerP, objPupCoin);
 	}
 	

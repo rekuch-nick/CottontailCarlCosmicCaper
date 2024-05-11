@@ -42,15 +42,15 @@ function worldGetRoomCave(xxx, yyy){
 		} else if(p == 6 ){
 			ww.txt = "The graveyard to the noth-west calls. You'll need to use you WAND at the right place.";
 		} else if(p == 7 ){
-			ww.txt = "It's time to go to the mountians in the north.\n\nThe palace is in plain sight, but leave no stone unturned if you want the best equipment.";
+			ww.txt = "It's time to go to the mountains in the north.\n\nThe palace is in plain sight, but leave no stone unturned if you want the best equipment.";
 		} else if(p == 8 ){
 			ww.txt = "The deep forest in the east, near where you found the STAR. Be brave, the monsters there are something terrible.";
 		} else if(p == 9 ){
-			ww.txt = "In the north mountians, where the rock melts and fire flows like water. Can you feel the eggs start to pulse?";
+			ww.txt = "In the north mountains, where the rock melts and fire flows like water. Can you feel the eggs start to pulse?";
 		} else if(p == 10 ){
 			ww.txt = "There is a cursed land in the north-east, blighted by darkness. The shore there holds a secret.";
 		} else if (p == 11 && !pc.eventTrigger[Event.gotBird]) {
-			ww.txt = "It's time to hatch the eggs.\n\nOnly with the power of the Cosmic Bluebird can you hope you challegne the Dragon Queen.";
+			ww.txt = "It's time to hatch the eggs.\n\nOnly with the power of the Cosmic Bluebird can you hope you challenge the Dragon Queen.";
 		} else if (p == 11 && pc.eventTrigger[Event.gotBird]) {
 			ww.txt = "The Cosmic Bluebird, I can't believe it!\n\nIt's time.\n\nThe Dragon Queen hovers above the ocean. Fly out from the Eastern dock.";
 		}
@@ -69,7 +69,7 @@ function worldGetRoomCave(xxx, yyy){
 		ww.bmap[7, 5] = imgNPCCat;
 		ww.txt = "You're out here looking for the STAR? Well I hope you know better than to try to fight every monster you see.\n\nYou can just run past them and still be a hero, you know.";
 		if(pc.eventTrigger[Event.gotStar]){
-			ww.txt = "King Lion will reward those who help him defend the relm.";
+			ww.txt = "King Lion will reward those who help him defend the realm.";
 		}
 	}
 	
@@ -77,7 +77,7 @@ function worldGetRoomCave(xxx, yyy){
 		ww.bmap[7, 5] = imgNPCCat;
 		ww.txt = "So the joke with the philosopher's stone is, instead of lead into gold, the stone turns gold into lead.\n\nAnd lead is an old slang word for bullets... Seems dumb.";
 		if(!pc.eventTrigger[Event.gotCauldren1]){
-			ww.txt = "The witch in this forest has somehting to make your potions stronger, but you'll have to take it.";
+			ww.txt = "The witch in this forest has something to make your potions stronger, but you'll have to take it.";
 		} else if(!pc.eventTrigger[Event.gotPhiloStone]) {
 			if(pc.eventTrigger[Event.gotWand]){
 				ww.txt = "Your wand could wake up the sleeping dragon, you know, if you feel like dying today.";
@@ -104,7 +104,7 @@ function worldGetRoomCave(xxx, yyy){
 	}
 	if(xxx == 15 && yyy == 5){
 		worldGetCaveDuck();
-		ww.txt = "Your eye lazers are powerful, but don't forget your other weapons.\n\nMost of them do extra damage to particular monster types like boomarangs to bats or fire to trolls.";
+		ww.txt = "Your eye lazers are powerful, but don't forget your other weapons.\n\nMost of them do extra damage to particular monster types like boomerangs to bats or fire to those green potato looking trolls.";
 	}
 	if(xxx == 11 && yyy == 5){
 		worldGetCaveDuck();
@@ -120,7 +120,7 @@ function worldGetRoomCave(xxx, yyy){
 	}
 	if(xxx == 8 && yyy == 2){
 		worldGetCaveDuck();
-		ww.txt = "UP, UP, UP, UP, UP. It's the only way to reach the top of the mountian.";
+		ww.txt = "UP, UP, UP, UP, UP. It's the only way to reach the top of the mountain.";
 	}
 	if(xxx == 11 && yyy == 1){
 		worldGetCaveDuck();
@@ -170,6 +170,13 @@ function worldGetRoomCave(xxx, yyy){
 		ww.txt = "The WAND can do a lot of weird things.\n\nOne use you might not find on your own is that it can be used to exit space:\n\nJust hold down the button for a few seconds.";
 	}
 	
+	if(xxx == 11 && yyy == 4){
+		ww.bmap[7, 6] = imgNPCWorms;
+		if(!pc.eventTrigger[Event.gotSleeperCarrot]){
+			var p = instance_create_depth(11 * 64, 9 * 64, ww.layerP, objPupTripCarrot);
+			p.eventNumber = Event.gotSleeperCarrot;
+		}
+	}
 	
 	
 	///lake treasures
@@ -467,7 +474,7 @@ function worldGetRoomCave(xxx, yyy){
 	if( xxx == 14 && yyy = 6 ){ //rang shop
 		ww.bmap[7, 5] = imgNPCCat;
 		if(!pc.eventTrigger[Event.gotRang2]){
-			ww.txt = "Still using wooden boomarangs? Kind of silly not to upgrade if you can afford it.";
+			ww.txt = "Still using wooden boomerangs? Kind of silly not to upgrade if you can afford it.";
 			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupRang2);
 			s.coinPrice = 30;
 			s.desc = "";
@@ -507,7 +514,7 @@ function worldGetRoomCave(xxx, yyy){
 		ww.bmap[7, 5] = imgNPCSquirrel;
 		ww.txt = "Remember, if things seem too hard you're probably just missing an important hidden treasure.\n\nLook around all over!";
 		if(!pc.eventTrigger[Event.gotGlasses]){
-			ww.txt = "Want to know how come I can always find where I burried my snacks?";
+			ww.txt = "Want to know how come I can always find where I buried my snacks?";
 			var s = instance_create_depth(7 * 64 + 32, 8 * 64, ww.layerP, objPupGlasses);
 		}
 		
@@ -552,7 +559,7 @@ function worldGetRoomCave(xxx, yyy){
 			ww.txt = "My place is here; I cannot go galavanting through space while the kingdom burns.\n\nSlay the dragons in my name.";
 			ww.txt += "\n\nCome back with six eggs and I will make you my knight.";
 		} else if(!pc.eventTrigger[Event.gotCape]){
-			ww.txt = "Kneel.\n\nNow Rise; Sir Carl Knight of the relm.\n\nLet your courage fuel our people to victory!";
+			ww.txt = "Kneel.\n\nNow Rise; Sir Carl Knight of the realm.\n\nLet your courage fuel our people to victory!";
 			instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupCape);
 		} else if(playerEggCount() < 10){
 			ww.txt = "My place is here; I cannot go galavanting through space while the kingdom burns.\n\nSlay the dragons in my name.";
@@ -567,13 +574,13 @@ function worldGetRoomCave(xxx, yyy){
 		if(pc.eventTrigger[Event.gotCape2]){
 			ww.txt = "Ho loyal paladin, how goes the war?";
 		} else if(playerEggCount() >= 10) {
-			ww.txt = "With this oil I anoint you, great defender of the meek.\n\nMay your spirit remain as pure as your nobel deeds.";
+			ww.txt = "With this oil I anoint you, great defender of the meek.\n\nMay your spirit remain as pure as your noble deeds.";
 			instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupCape2);
 		} else if(pc.eventTrigger[Event.gotCape]) {
 			ww.txt = "My place is here; I cannot go galavanting through space while the kingdom burns.\n\nSlay the dragons in my name.";
 			ww.txt += "\n\nCome back with ten eggs and I will make you a lord.";
 		} else if (playerEggCount() >= 6) {
-			ww.txt = "Kneel.\n\nNow Rise; Sir Carl Knight of the relm.\n\nLet your courage fuel our people to victory!";
+			ww.txt = "Kneel.\n\nNow Rise; Sir Carl Knight of the realm.\n\nLet your courage fuel our people to victory!";
 			instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupCape);
 		} else {
 			ww.txt = "My place is here; I cannot go galavanting through space while the kingdom burns.\n\nSlay the dragons in my name.";

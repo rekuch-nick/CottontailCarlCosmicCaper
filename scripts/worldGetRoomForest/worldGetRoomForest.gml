@@ -234,18 +234,18 @@ function worldGetRoomForest(xxx, yyy){
 	
 	if(xxx == 11 && yyy == 4){
 		biome(Zone.forest);
-		ww.mobList = [6, objMobMossman2, objMobMossman2];
+		ww.mobList = [6, objMobMossman2, objMobMossman2, objMobMossman, objMobMossman, objMobMossman, objMobMossman];
 		wmap("%%%%%%...%%%%%%");
 		wmap("%%...%.......%%");
 		wmap("%%...........%%");
 		wmap("%%...........%%");
 		wmap("%%%%.......[[%%");
 		wmap("...%%%%%%%%..%%");
-		wmap(".....[....%..%%");
-		wmap("%%%%%%%...%..%%");
-		wmap("%%.......[%..%%");
-		wmap("%%...........%%");
-		wmap("%%%%%%.......%%");
+		wmap(".....[.......%%");
+		wmap("%%%%%...DDDDD%%");
+		wmap("%%.....DD.D=D%%");
+		wmap("%%....DD....D%%");
+		wmap("%%%%%%DD..DD.%%");
 		wmap("%%%%%%%%%%%%%%%");
 	}
 	

@@ -224,6 +224,11 @@ if(gotIt){
 		pc.eventTrigger[eventNumber] = true;
 	}
 	
+	if(sprite_index == imgTripCarrot){
+		pc.hp += 15; pc.hpMax += 15;
+		pc.eventTrigger[eventNumber] = true;
+	}
+	
 	
 	if(sprite_index == imgPupSwordInStone){
 		for(var a=4; a<11; a++){

@@ -31,5 +31,5 @@ function fileLoad(){
 	
 	ini_close();
 	
-	
+	pc.eventTrigger[Event.gotRang] = true;
 }

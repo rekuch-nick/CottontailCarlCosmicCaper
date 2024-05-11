@@ -4,7 +4,7 @@ image_yscale = 4;
 icd = 0;
 depth = -900;
 debug = false;
-debugPossible = false;
+debugPossible = false; ////
 blockInput = true;
 
 playerInput();
@@ -314,6 +314,8 @@ enum Event {
 	gotCarrotPileDeepCave,
 	
 	gotBird,
+	
+	gotSleeperCarrot,
 }
 
 shotPower = noone;

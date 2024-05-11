@@ -97,6 +97,7 @@ function wmap(s){
 		if(c == "l"){ ww.bmap[a, b] = imgTreeTrunk; }
 		
 		if(c == "d"){ ww.bmap[a, b] = imgBushDead; }
+		if(c == "D"){ ww.bmap[a, b] = imgBushSleeper; }
 		
 		if(c == "P"){ ww.bmap[a, b] = imgPalaceWall; }
 		if(c == "T"){ ww.bmap[a, b] = imgPalaceWallTop; }
