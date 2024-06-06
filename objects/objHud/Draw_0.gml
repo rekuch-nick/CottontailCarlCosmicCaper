@@ -74,10 +74,12 @@ if(pc.eventTrigger[Event.gotMap]){
 	draw_sprite_stretched(imgMap002, 0, x + 8, y + 8, 76 * 4, 40 * 4);
 }
 
-var xx = x + 8 + (pc.xMap * 4 * 4);
-var yy = y + 8 + (pc.yMap * 4 * 4);
-var c = floor(frameCount / 12) % 2 == 1 ? c_white: c_black;
-draw_rectangle_color(xx+4, yy+4, xx+12, yy+12, c, c, c, c, false);
+if(pc.xMap >= 0 && pc.yMap >= 0 && pc.xMap <= 18 && pc.yMap <= 9){
+	var xx = x + 8 + (pc.xMap * 4 * 4);
+	var yy = y + 8 + (pc.yMap * 4 * 4);
+	var c = floor(frameCount / 12) % 2 == 1 ? c_white: c_black;
+	draw_rectangle_color(xx+4, yy+4, xx+12, yy+12, c, c, c, c, false);
+}
 
 
 

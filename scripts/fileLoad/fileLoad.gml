@@ -32,4 +32,5 @@ function fileLoad(){
 	ini_close();
 	
 	pc.eventTrigger[Event.gotRang] = true;
+	pc.hp = pc.hpMax;
 }

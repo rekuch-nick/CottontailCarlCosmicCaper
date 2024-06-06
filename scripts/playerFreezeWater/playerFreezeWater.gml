@@ -17,7 +17,20 @@ function playerFreezeWater(){
 						ww.fmap[a, b].sprite_index = imgWaterFrozen;
 						ww.fmap[a, b].image_alpha = .7;
 						ww.fmap[a, b].isWater = false;
+						ww.fmap[a, b].isLand = true;
 						frozeSomething = true;
+						with(objMob){
+							if(!canWalkLand){
+								if(floor(x / 64) == a && floor(y / 64) == b){
+									shotKind = noone;
+									image_angle = -90;
+									image_speed = 0;
+									image_alpha = .9;
+									moveSpeed = 0;
+									cantBump = true;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -25,6 +38,8 @@ function playerFreezeWater(){
 		
 		if(frozeSomething){
 			//mp -= 5;
+			
+			
 		}
 	}
 

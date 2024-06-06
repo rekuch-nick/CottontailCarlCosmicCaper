@@ -2,7 +2,7 @@ event_inherited();
 image_xscale = 4; image_yscale = 4;
 
 
-
+cantBump = false;
 shadowObj = noone;
 fallSpeed = 0;
 falling = false;

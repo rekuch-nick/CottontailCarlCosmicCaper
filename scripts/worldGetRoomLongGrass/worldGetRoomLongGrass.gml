@@ -176,9 +176,10 @@ function worldGetRoomLongGrass(xxx, yyy){
 	
 	if(xxx == 14 && yyy == 3){
 		biome(Zone.longGrass);
+		ww.secBlock = imgBushRedGrass; ww.secX = 13; ww.secY = 2; ww.secType = Sec.burn;
 		wmap("###############");
 		wmap("##...........##");
-		wmap(".............%%");
+		wmap(".............=%");
 		wmap("..............%");
 		wmap(".............%%");
 		wmap(".............%%");

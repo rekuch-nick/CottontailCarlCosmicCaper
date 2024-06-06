@@ -94,6 +94,10 @@ function worldGetRoomCave(xxx, yyy){
 		worldGetCaveDuck();
 		ww.txt = "The Purple Crab Monsters shoot while you're shooting.\n\nTry just tapping the shoot button while fighting them.";
 	}
+	if(xxx == 14 && yyy == 3){
+		worldGetCaveDuck();
+		ww.txt = "There are a lot of secret doors to find, but never more than one on each screen.";
+	}
 	if(xxx == 5 && yyy == 4){
 		worldGetCaveDuck();
 		ww.txt = "Have you noticed some monsters drop a CARROT when beaten? Don't expect more when fighting them again.\n\nOf course, that does mean you'll need to fight new monsters when you discover them if you want all the carrots.";
