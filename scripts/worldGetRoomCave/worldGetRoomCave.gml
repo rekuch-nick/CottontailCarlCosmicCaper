@@ -162,7 +162,7 @@ function worldGetRoomCave(xxx, yyy){
 		if(!pc.eventTrigger[Event.gotWhetstone] && pc.eventTrigger[Event.gotSword]){
 			ww.txt = "Even your fake claw should be sharp.";
 			var e = instance_create_depth( (ww.roomWidth / 2), 500, ww.layerP, objPupWhetstone);
-			e.coinPrice = 360;
+			e.coinPrice = 260;
 		}
 	}
 	if(xxx == 6 && yyy == 1){
@@ -251,7 +251,7 @@ function worldGetRoomCave(xxx, yyy){
 			ww.txt = "There's no finer armor in the world.";
 			var e = instance_create_depth(ww.roomWidth / 2, 500, ww.layerP, objPupRing3);
 			e.desc = "Reduce damage taken by 45%";
-			e.coinPrice = 650;
+			e.coinPrice = 550;
 		} else {
 			ww.txt = "You prove yourself a good enough customer to my sons, and I'll sell you something great.";
 		}
@@ -487,7 +487,7 @@ function worldGetRoomCave(xxx, yyy){
 		} else if (!pc.eventTrigger[Event.gotRang3]) {
 			ww.txt = "The Side-Striker 3000 is an unparalleled design. Only something impossible like a magical boomerang taken from a dragon could possibly be better.";
 			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupRang3);
-			s.coinPrice = 110;
+			s.coinPrice = 70;
 			s.desc = "";
 		} else if (pc.eventTrigger[Event.gotRang4]) {
 			ww.txt = "Now way, how did you get a boomerang like THAT??";

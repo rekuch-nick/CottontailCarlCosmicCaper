@@ -18,28 +18,28 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 			var t = objPupCarrot; var p = 5; e = Event.gotShopCarrot01;
 			desc = carrotDesc;
 		} else if(!pc.eventTrigger[Event.gotRing1]){
-			var t = objPupRing1; var p = 250;
+			var t = objPupRing1; var p = 210;
 			desc = "Reduce damage taken by 15%";
 		} else if(!pc.eventTrigger[Event.gotShopCarrot02]){
-			var t = objPupCarrot; var p = 40; e = Event.gotShopCarrot02;
+			var t = objPupCarrot; var p = 30; e = Event.gotShopCarrot02;
 			desc = carrotDesc;
 		} else if(!pc.eventTrigger[Event.gotShopCarrot03]){
-			var t = objPupCarrot; var p = 80; e = Event.gotShopCarrot03;
+			var t = objPupCarrot; var p = 60; e = Event.gotShopCarrot03;
 			desc = carrotDesc;
 		} else if(!pc.eventTrigger[Event.gotShopCarrot04]){
-			var t = objPupCarrot; var p = 120; e = Event.gotShopCarrot04;
+			var t = objPupCarrot; var p = 90; e = Event.gotShopCarrot04;
 			desc = carrotDesc;
 		} else if(!pc.eventTrigger[Event.gotRing2]){
 			var t = objPupRing2; var p = 280;
 			desc = "Reduce damage taken by 30%";
 		} else if(!pc.eventTrigger[Event.gotShopCarrot05]){
-			var t = objPupCarrot; var p = 160; e = Event.gotShopCarrot05;
+			var t = objPupCarrot; var p = 120; e = Event.gotShopCarrot05;
 			desc = carrotDesc;
 		} else if(!pc.eventTrigger[Event.gotShopCarrot06]){
-			var t = objPupCarrot; var p = 200; e = Event.gotShopCarrot06;
+			var t = objPupCarrot; var p = 120; e = Event.gotShopCarrot06;
 			desc = carrotDesc;
 		} else if(!pc.eventTrigger[Event.gotGlasses]){
-			var t = objPupGlasses; var p = 540;
+			var t = objPupGlasses; var p = 440;
 			desc = "See all secret doors";
 		}
 		
@@ -55,13 +55,13 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 			t = objPupStars; p = 110;
 			desc = "Low damage, high speed weapon with a wide range.";
 		} else if(!pc.eventTrigger[Event.gotPoisonVial]){
-			t = objPupPoisonVial; p = 155;
+			t = objPupPoisonVial; p = 125;
 			desc = "Throwing stars now poison foes.";
 		} else if(!pc.eventTrigger[Event.gotPowderHorn]){
-			t = objPupPowderHorn; p = 215;
+			t = objPupPowderHorn; p = 195;
 			desc = "Bombs have bigger explosions.";
 		} else if(!pc.eventTrigger[Event.gotWax]){
-			t = objPupWax; p = 505;
+			t = objPupWax; p = 405;
 			desc = "Blue space gas won't slow you down.";
 		}
 		
@@ -72,7 +72,7 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 			t = objPupTorch; p = 60;
 			desc = "Use FIRE to open secret doors and burn enemies."
 		} else if (!pc.eventTrigger[Event.gotOil]) {
-			t = objPupOil; p = 220;
+			t = objPupOil; p = 190;
 			desc = "Torch is more powerful.";
 		} else if (!pc.eventTrigger[Event.gotCrowbar]) {
 			t = objPupCrowbar; p = 25;
@@ -82,10 +82,10 @@ function worldPopulateShop(a){ // 2, 5, 9, 12
 	
 	if(a == 12){
 		if(!pc.eventTrigger[Event.gotShield]){
-			t = objPupShield; p = 110;
+			t = objPupShield; p = 90;
 			desc = "Absorb one lesser enemy bullet every 30 seconds."
 		} else if(!pc.eventTrigger[Event.gotOrbit]) {
-			t = objPupOrbit; p = 160;
+			t = objPupOrbit; p = 120;
 			desc = "Smash nearby monsters all around you."
 		} else if (pc.potion == noone){
 			t = choose(objPupPotionFire, objPupPotionPoison, objPupPotionStun); p = 40;

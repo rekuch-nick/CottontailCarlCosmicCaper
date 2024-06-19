@@ -325,7 +325,7 @@ function worldGetRoomHills(xxx, yyy){
 		} else if (pc.eventTrigger[Event.gotFeather] && !pc.eventTrigger[Event.gotWindStone2]){
 			ww.txt = "I see the Wind Stone you carry is cracked. I could repair it, if you like.";
 			var s = instance_create_depth(7 * 64 + 32, 8 * 64 + 32, ww.layerP, objPupWindStone2);
-			s.coinPrice = 455; s.desc = "";
+			s.coinPrice = 255; s.desc = "";
 		} else {
 			ww.txt = "I see much from this moutian.";
 		}
